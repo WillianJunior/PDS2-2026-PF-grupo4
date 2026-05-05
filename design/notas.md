@@ -1,0 +1,6 @@
+ - story 1: "dado que estou no menu do jogo". isso não é um critério de aceitação.
+ - story 1: está mais próximo de um use case do que um user story.
+ - story de sala 1 está boa, já a sala 2 não. "dado que um personagem está na sala" poderia ser "deve haver exatamente 1 personagem na sala". outros critérios de aceitação: "devem haver de X-Y inimigos", "se o hp do personagem chegar a 0, o combate encerra com game over", "deve haver uma premiação de XXX quando o hp de todos os inimigos for 0", "a sala de combate deve poder gerar uma combinação de inimigos baseada nos seus stats"
+ - os stories de inventário para frente ficaram bem melhores
+ - crc: menu não colabora com sala base? do menu deveria ir para uma sala, não?
+ - notas gerais: excelente trabalho, temos boas TADs, bons módulos, uma quantidade razoável de funcionalidade (com hierarquias e composições) e a modelagem irá facilitar o trabalho de vocês daqui para frente.
