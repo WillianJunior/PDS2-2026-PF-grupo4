@@ -1,22 +1,18 @@
 #ifndef INVENTARIO_H
 #define INVENTARIO_H
 
-#include "Item.hpp"
 #include <iostream>
 #include <string>
 #include <vector>
 
 using namespace std;
 
-using namespace std;
-
 class Inventario{
     public:
-        vector<Item> _lista_de_itens;
-        void mostrarInventario();
-        void novoItem();
-        void trocarItem();
-        void descartarItem();
+        virtual void mostrarInventario() = 0;
+        virtual void novoItem() = 0;
+        virtual void trocarItem() = 0;
+        virtual void descartarItem() = 0;
 };
 
 #endif
