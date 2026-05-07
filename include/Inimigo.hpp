@@ -12,7 +12,9 @@ class Inimigo : public Entidade{
     public:
         Inimigo(double vida, InventarioHabilidade habilidade, std::string nome, bool tipo);
         int escolherHabilidade(Habilidade& habilidade) override;
+        void receberAcao(Habilidade& habilidade) override;
         void alterarVida(int valor) override;
+        bool isMorto() override;
         ~Inimigo();
 };
 

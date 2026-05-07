@@ -5,12 +5,13 @@
 #include "Item.hpp"
 
 class InventarioItem : public Inventario{
-    public:
+    private:
         std::vector<Item> _itens;
-        void mostrarInventario();
-        void novoItem();
-        void trocarItem();
-        void descartarItem();
+    public:
+        void mostrarInventario() override;
+        void novaAcao() override;
+        void trocarAcao() override;
+        void descartarAcao() override;
 };
 
 #endif

@@ -8,9 +8,9 @@
 class Inventario{
     public:
         virtual void mostrarInventario() = 0;
-        virtual void novoItem() = 0;
-        virtual void trocarItem() = 0;
-        virtual void descartarItem() = 0;
+        virtual void novaAcao() = 0;
+        virtual void trocarAcao() = 0;
+        virtual void descartarAcao() = 0;
 };
 
 #endif

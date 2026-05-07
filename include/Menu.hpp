@@ -4,7 +4,7 @@
 #include <iostream>
 
 class Menu{
-    private:
+    public:
         Menu();
         void iniciarJogo();
         void escolherPersonagemInicial();

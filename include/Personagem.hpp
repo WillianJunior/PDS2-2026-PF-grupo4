@@ -41,6 +41,7 @@ class Personagem : public Entidade{
  * @param posicaoItem índice (posição) do item dentro do vetor Items em inventarioItem.
  */
         void escolherItem(int posicaoItem);
+        void receberAcao(Habilidade& habilidade) override;
 
 /**
  * @brief Alterar a vida atual do personagem para mais ou para menos
@@ -49,6 +50,7 @@ class Personagem : public Entidade{
  * @param valor Quantidade de vida a ser somado ou subtraída.
  */
         void alterarVida(int valor) override;
+        bool isMorto() override;
 
 /**
          * @brief Destrutor da classe Personagem.

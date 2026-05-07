@@ -5,12 +5,13 @@
 #include "Habilidade.hpp"
 
 class InventarioHabilidade : public Inventario{
-    public:
+    private:
         std::vector<Habilidade> _habilidades;
-        void mostrarInventario();
-        void novoItem();
-        void trocarItem();
-        void descartarItem();
+    public:
+        void mostrarInventario() override;
+        void novaAcao() override;
+        void trocarAcao() override;
+        void descartarAcao() override;
 };
 
 #endif
