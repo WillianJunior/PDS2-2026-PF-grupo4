@@ -11,9 +11,10 @@ class Acao {
         bool _tipo;
         int _valor;
         Efeito _efeito;
+        bool _alvo;
 
     public:
-        Acao(std::string nome, bool alvo, int valor, Efeito efeito);
+        Acao(std::string nome, bool tipo, int valor, Efeito efeito, bool alvo);
         
         virtual int alterarVida(bool alvo, int valor);
         virtual int aplicarEfeito(bool alvo, Efeito efeito);
