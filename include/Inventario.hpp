@@ -5,8 +5,6 @@
 #include <string>
 #include <vector>
 
-using namespace std;
-
 class Inventario{
     public:
         virtual void mostrarInventario() = 0;

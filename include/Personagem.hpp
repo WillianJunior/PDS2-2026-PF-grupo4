@@ -6,8 +6,6 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 /**
  * @brief Representa o personagem no jogo, herda da classe entidade
  * * Responsável por gerenciar as ações do personagem, como inventário, items, habilidades, vida.
@@ -27,7 +25,7 @@ class Personagem : public Entidade{
 * @param nome Nome do personagem
 * @param inventarioItem Objeto que contém os itens iniciais do personagem
 * */
-        Personagem(int vida, InventarioHabilidade inventarioHabilidade, string nome, InventarioItem inventarioItem);
+        Personagem(int vida, InventarioHabilidade inventarioHabilidade, std::string nome, InventarioItem inventarioItem);
 
 /**
 * @brief Selecionar uma habilidade, visualizar sua ação e executar
@@ -48,9 +46,10 @@ class Personagem : public Entidade{
  * @brief Alterar a vida atual do personagem para mais ou para menos
  * * Deverá ter um valor máximo: P1 tem 100 de vida máxima, tentou curar 60 estando com 50 : fica com 100
  * * Sobrescreve o método da classe mãe (Entidade) para aplicar dano ou curar
+ * @param valor Quantidade de vida a ser somado ou subtraída.
  */
         void alterarVida(int valor) override;
-        
+
 /**
          * @brief Destrutor da classe Personagem.
          * * Libera os recursos alocados pelo personagem quando ele for destruído.

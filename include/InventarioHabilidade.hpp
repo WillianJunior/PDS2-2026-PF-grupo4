@@ -6,7 +6,7 @@
 
 class InventarioHabilidade : public Inventario{
     public:
-        vector<Habilidade> _habilidades;
+        std::vector<Habilidade> _habilidades;
         void mostrarInventario();
         void novoItem();
         void trocarItem();

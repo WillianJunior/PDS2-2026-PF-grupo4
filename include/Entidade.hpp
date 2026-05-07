@@ -5,19 +5,17 @@
 #include <iostream>
 #include <vector>
 
-using namespace std;
-
 //classe responsavel por preparar o terreno para as outras entidades:
 //personagem e ininimgo
 class Entidade{
     protected:
     //atributos que toda entidade tem:
         int _vida;
-        string _nome;
+        std::string _nome;
         InventarioHabilidade _habilidades;
     public:
 
-        Entidade(int vida, string nome, InventarioHabilidade habilidades);
+        Entidade(int vida, std::string nome, InventarioHabilidade habilidades);
 
         //essa funcao vai pegar uma habilidade e usar o efeito dela que estara descrito na habilidade especifica selecionada,
         //isso acontece no momento que o jogador decide atacar e ele escolhe qual habilidade ele vai usar

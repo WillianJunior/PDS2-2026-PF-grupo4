@@ -5,13 +5,12 @@
 #include <iostream>
 #include <string>
 
-using namespace std;
 
 class Inimigo : public Entidade{
     private:
         bool tipo;
     public:
-        Inimigo(double vida, InventarioHabilidade habilidade, string nome, bool tipo);
+        Inimigo(double vida, InventarioHabilidade habilidade, std::string nome, bool tipo);
         int escolherHabilidade(Habilidade& habilidade) override;
         void alterarVida(int valor) override;
         ~Inimigo();

@@ -6,7 +6,7 @@
 
 class InventarioItem : public Inventario{
     public:
-        vector<Item> _itens;
+        std::vector<Item> _itens;
         void mostrarInventario();
         void novoItem();
         void trocarItem();

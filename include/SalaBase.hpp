@@ -3,12 +3,11 @@
 
 #include <iostream>
 #include <string>
-using namespace std;
 
 class SalaBase{
     protected:
-        string _nome;
-        SalaBase(string nome);
+        std::string _nome;
+        SalaBase(std::string nome);
         virtual void encerrarSala() = 0;
         virtual void proximaSala() = 0;
         virtual void mostrarSala() = 0;

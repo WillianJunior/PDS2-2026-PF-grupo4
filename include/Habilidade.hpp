@@ -4,7 +4,6 @@
 #include "Efeito.hpp"
 #include <iostream>
 #include <string>
-using namespace std;
 
 
 //uma habilidade pode alterar vida ou aplicar efeito
@@ -14,13 +13,13 @@ using namespace std;
 //se o alvo for inimigo e aplicar efeito, ele da algum debuff
 class Habilidade{
     private:
-        string _nome;
+        std::string _nome;
         bool _alvo;
         bool _tipo;
         int _valor;
         Efeito _efeito;
     public:
-        Habilidade(string nome, bool alvo, bool tipo, int valor, Efeito efeito);
+        Habilidade(std::string nome, bool alvo, bool tipo, int valor, Efeito efeito);
         int alterarVida(bool alvo, int valor);
         int aplicarEfeito(bool alvo, Efeito efeito);
         void mostrarHabilidade();

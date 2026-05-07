@@ -4,11 +4,10 @@
 #include "SalaBase.hpp"
 #include <iostream>
 #include <string>
-using namespace std;
 
 class SalaCombate : public SalaBase{
     public:
-        SalaCombate(int nome);
+        SalaCombate(std::string nome);
         void encerrarSala() override;
         void proximaSala() override;
         void mostrarSala() override;
