@@ -8,20 +8,53 @@
 
 using namespace std;
 
-//a entidade que vai ser alterada durante o jogo, temos que pensar ainda como ter 5 opçoes iniciais prontas, e ele decide entre as tres
-//alem de ter que decidir quais as diferenças delas e como elas vao ser descritas no codigo (classe ou arquivo.txt)
+/**
+ * @brief Representa o personagem no jogo, herda da classe entidade
+ * * Responsável por gerenciar as ações do personagem, como inventário, items, habilidades, vida.
+ */
+
 class Personagem : public Entidade{
     private:
+/** @brief Guarda os itens que o personagem possui */
         InventarioItem _inventario;
-    public:
-        Personagem(int vida, InventarioHabilidade habilidade, string nome, InventarioItem inventario);
 
-        
+    public:
+/**
+* @brief Construtor padrão do personagem
+* Aloca a vida do personagem, seu inventário de habilidades, seu nome e seu inventario de itens iniciais.
+* @param vida Quantidade inicial de pontos de vida.
+* @param inventarioHabilidade Objeto que contém as habilidades iniciais do personagem
+* @param nome Nome do personagem
+* @param inventarioItem Objeto que contém os itens iniciais do personagem
+* */
+        Personagem(int vida, InventarioHabilidade inventarioHabilidade, string nome, InventarioItem inventarioItem);
+
+/**
+* @brief Selecionar uma habilidade, visualizar sua ação e executar
+* * Sobrescreve o método da classe mãe Entidade
+* * @param habilidade Recebe qual é a habilidade que está sendo usada através de inventarioHabilidade
+* @return Retorna um valor inteiro (dano causado, dano curado ou mudança de estado)
+*/
         int escolherHabilidade(Habilidade& habilidade) override;
 
-        //vai receber qual a posiçao do vetor inventario e 
+/**
+ * @brief Escolher um Item a partir do inventarioItem e utilizá-lo.
+ * * Recebe qual a posição do item no vetor Items contido em inventarioItem para selecionar.
+ * @param posicaoItem índice (posição) do item dentro do vetor Items em inventarioItem.
+ */
         void escolherItem(int posicaoItem);
+
+/**
+ * @brief Alterar a vida atual do personagem para mais ou para menos
+ * * Deverá ter um valor máximo: P1 tem 100 de vida máxima, tentou curar 60 estando com 50 : fica com 100
+ * * Sobrescreve o método da classe mãe (Entidade) para aplicar dano ou curar
+ */
         void alterarVida(int valor) override;
+        
+/**
+         * @brief Destrutor da classe Personagem.
+         * * Libera os recursos alocados pelo personagem quando ele for destruído.
+         */
         ~Personagem(); 
 };
 
