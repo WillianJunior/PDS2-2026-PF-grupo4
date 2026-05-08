@@ -1,0 +1,5 @@
+<map id="SalaCombate" name="SalaCombate">
+<area shape="rect" id="Node000001" title="Classe que representa uma sala focada em conflitos e batalhas." alt="" coords="5,199,157,364"/>
+<area shape="rect" id="Node000002" href="$classSalaBase.html" title="Classe base abstrata que representa uma sala genérica." alt="" coords="21,5,142,151"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,165,84,198,79,198,79,165"/>
+</map>

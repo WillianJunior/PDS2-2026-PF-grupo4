@@ -1,0 +1,103 @@
+\doxysection{Referência da Classe Menu}
+\hypertarget{classMenu}{}\label{classMenu}\index{Menu@{Menu}}
+
+
+Classe responsável por gerenciar o menu principal do jogo.  
+
+
+
+
+{\ttfamily \#include $<$Menu.\+hpp$>$}
+
+
+
+Diagrama de colaboração para Menu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{classMenu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMenu_ad466dd83355124a6ed958430450bfe94}{Menu}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{classMenu}{Menu}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMenu_a9c069086470032c52727299ff48d003c}{iniciar\+Jogo}} ()
+\begin{DoxyCompactList}\small\item\em Inicia a partida. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMenu_a5fb1ae85133f12f56d64b9fc203d10a2}{escolher\+Personagem\+Inicial}} ()
+\begin{DoxyCompactList}\small\item\em Permite a seleção do personagem. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMenu_a831387f51358cfb88cd018e1777bc980}{\texorpdfstring{$\sim$}{\string~}\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{classMenu}{Menu}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe responsável por gerenciar o menu principal do jogo. 
+
+
+\begin{DoxyItemize}
+\item Lida com a interface inicial, permitindo ao jogador iniciar a partida e fazer as escolhas pré-\/jogo. 
+\end{DoxyItemize}
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{classMenu_ad466dd83355124a6ed958430450bfe94}\label{classMenu_ad466dd83355124a6ed958430450bfe94} 
+\index{Menu@{Menu}!Menu@{Menu}}
+\index{Menu@{Menu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{Menu()}{Menu()}}
+{\footnotesize\ttfamily Menu\+::\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor padrão da classe \doxylink{classMenu}{Menu}. 
+
+
+\begin{DoxyItemize}
+\item Prepara a interface e os recursos iniciais necessários para exibir o menu na tela. 
+\end{DoxyItemize}\Hypertarget{classMenu_a831387f51358cfb88cd018e1777bc980}\label{classMenu_a831387f51358cfb88cd018e1777bc980} 
+\index{Menu@{Menu}!````~Menu@{\texorpdfstring{$\sim$}{\string~}Menu}}
+\index{````~Menu@{\texorpdfstring{$\sim$}{\string~}Menu}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Menu()}{\string~Menu()}}
+{\footnotesize\ttfamily Menu\+::\texorpdfstring{$\sim$}{\string~}\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe \doxylink{classMenu}{Menu}. 
+
+
+\begin{DoxyItemize}
+\item Libera da memória os recursos que foram alocados pela interface do menu. 
+\end{DoxyItemize}
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classMenu_a5fb1ae85133f12f56d64b9fc203d10a2}\label{classMenu_a5fb1ae85133f12f56d64b9fc203d10a2} 
+\index{Menu@{Menu}!escolherPersonagemInicial@{escolherPersonagemInicial}}
+\index{escolherPersonagemInicial@{escolherPersonagemInicial}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{escolherPersonagemInicial()}{escolherPersonagemInicial()}}
+{\footnotesize\ttfamily void Menu\+::escolher\+Personagem\+Inicial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permite a seleção do personagem. 
+
+
+\begin{DoxyItemize}
+\item Exibe as opções disponíveis e registra qual personagem o jogador escolheu para iniciar a aventura. 
+\end{DoxyItemize}\Hypertarget{classMenu_a9c069086470032c52727299ff48d003c}\label{classMenu_a9c069086470032c52727299ff48d003c} 
+\index{Menu@{Menu}!iniciarJogo@{iniciarJogo}}
+\index{iniciarJogo@{iniciarJogo}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{iniciarJogo()}{iniciarJogo()}}
+{\footnotesize\ttfamily void Menu\+::iniciar\+Jogo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicia a partida. 
+
+
+\begin{DoxyItemize}
+\item Faz a transição da tela de menu para o loop principal do jogo (gameplay). 
+\end{DoxyItemize}
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Menu_8hpp}{Menu.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,7 @@
+<map id="Entidade" name="Entidade">
+<area shape="rect" id="Node000001" title="Classe abstrata para representar as entidades." alt="" coords="13,388,177,553"/>
+<area shape="rect" id="Node000002" href="$classInventarioHabilidade.html" title="Classe que gerencia o inventário de habilidades de uma entidade." alt="" coords="17,200,173,325"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,326,98,371,93,371,93,326"/>
+<area shape="rect" id="Node000003" href="$classInventario.html" title=" " alt="" coords="5,5,185,151"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="98,164,98,200,93,200,93,164"/>
+</map>

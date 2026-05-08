@@ -1,0 +1,5 @@
+<map id="SalaEscolha" name="SalaEscolha">
+<area shape="rect" id="Node000001" title="Representa uma sala focada em escolhas e eventos interativos." alt="" coords="5,199,145,364"/>
+<area shape="rect" id="Node000002" href="$classSalaBase.html" title="Classe base abstrata que representa uma sala genérica." alt="" coords="15,5,136,151"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,165,78,198,73,198,73,165"/>
+</map>

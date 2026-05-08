@@ -1,0 +1,5 @@
+<map id="InventarioHabilidade" name="InventarioHabilidade">
+<area shape="rect" id="Node000001" title="Classe que gerencia o inventário de habilidades de uma entidade." alt="" coords="17,199,173,324"/>
+<area shape="rect" id="Node000002" href="$classInventario.html" title=" " alt="" coords="5,5,185,151"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,164,98,198,93,198,93,164"/>
+</map>

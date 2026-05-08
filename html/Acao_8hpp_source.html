@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WE CANT CODE THIS GAME: Código-Fonte de include/Acao.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WE CANT CODE THIS GAME
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Acao.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Acao_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef ACAO_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define ACAO_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="Efeito_8hpp.html">Efeito.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="classAcao.html">   13</a></span><span class="keyword">class </span><a class="code hl_class" href="classAcao.html">Acao</a> {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="classAcao.html#aa3edff2abd27b8805294781da8c345e5">   16</a></span>        std::string <a class="code hl_variable" href="classAcao.html#aa3edff2abd27b8805294781da8c345e5">_nome</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="classAcao.html#af673981041cfec0071e4bf3b4ad7c790">   19</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="classAcao.html#af673981041cfec0071e4bf3b4ad7c790">_tipo</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="classAcao.html#a0111acdd90205925932781bfddaf8bf0">   22</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="classAcao.html#a0111acdd90205925932781bfddaf8bf0">_valor</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="classAcao.html#a573b75f29106a5b2668739037a1084d1">   25</a></span>        <a class="code hl_class" href="classEfeito.html">Efeito</a> <a class="code hl_variable" href="classAcao.html#a573b75f29106a5b2668739037a1084d1">_efeito</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classAcao.html#a8f6321d5b689a8c9cabad81bcb7f9e3b">   28</a></span>        <span class="keywordtype">bool</span> <a class="code hl_variable" href="classAcao.html#a8f6321d5b689a8c9cabad81bcb7f9e3b">_alvo</a>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classAcao.html#a30e70a54ae7f2e02523f0efd3b423271">   40</a></span>        <a class="code hl_function" href="classAcao.html#a30e70a54ae7f2e02523f0efd3b423271">Acao</a>(std::string nome, <span class="keywordtype">bool</span> tipo, <span class="keywordtype">int</span> valor, <a class="code hl_class" href="classEfeito.html">Efeito</a> efeito, <span class="keywordtype">bool</span> alvo);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="classAcao.html#aee788d3396efbbfccabe67553d478059">   48</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classAcao.html#aee788d3396efbbfccabe67553d478059">alterarVida</a>(<span class="keywordtype">bool</span> alvo, <span class="keywordtype">int</span> valor);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="classAcao.html#abed01ab38253ffd03e62d82014351380">   56</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classAcao.html#abed01ab38253ffd03e62d82014351380">aplicarEfeito</a>(<span class="keywordtype">bool</span> alvo, <a class="code hl_class" href="classEfeito.html">Efeito</a> efeito);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="classAcao.html#af3878762e26ff4c2bafa795abbe1f69d">   61</a></span>        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classAcao.html#af3878762e26ff4c2bafa795abbe1f69d">mostrarHabilidade</a>();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="classAcao.html#a31951a9e89235dc3a4cfaf10ce9f6b48">   67</a></span>        <span class="keyword">virtual</span> <a class="code hl_function" href="classAcao.html#a31951a9e89235dc3a4cfaf10ce9f6b48">~Acao</a>();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>};</div>
+</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aEfeito_8hpp_html"><div class="ttname"><a href="Efeito_8hpp.html">Efeito.hpp</a></div></div>
+<div class="ttc" id="aclassAcao_html"><div class="ttname"><a href="classAcao.html">Acao</a></div><div class="ttdoc">Classe base para representar qualquer ação do jogo (como Habilidades ou Itens).</div><div class="ttdef"><b>Definição</b> Acao.hpp:13</div></div>
+<div class="ttc" id="aclassAcao_html_a0111acdd90205925932781bfddaf8bf0"><div class="ttname"><a href="classAcao.html#a0111acdd90205925932781bfddaf8bf0">Acao::_valor</a></div><div class="ttdeci">int _valor</div><div class="ttdoc">Valor numérico base da ação (quantidade de dano ou cura).</div><div class="ttdef"><b>Definição</b> Acao.hpp:22</div></div>
+<div class="ttc" id="aclassAcao_html_a30e70a54ae7f2e02523f0efd3b423271"><div class="ttname"><a href="classAcao.html#a30e70a54ae7f2e02523f0efd3b423271">Acao::Acao</a></div><div class="ttdeci">Acao(std::string nome, bool tipo, int valor, Efeito efeito, bool alvo)</div><div class="ttdoc">Construtor padrão da classe Acao.</div></div>
+<div class="ttc" id="aclassAcao_html_a31951a9e89235dc3a4cfaf10ce9f6b48"><div class="ttname"><a href="classAcao.html#a31951a9e89235dc3a4cfaf10ce9f6b48">Acao::~Acao</a></div><div class="ttdeci">virtual ~Acao()</div><div class="ttdoc">Destrutor virtual da classe Acao.</div></div>
+<div class="ttc" id="aclassAcao_html_a573b75f29106a5b2668739037a1084d1"><div class="ttname"><a href="classAcao.html#a573b75f29106a5b2668739037a1084d1">Acao::_efeito</a></div><div class="ttdeci">Efeito _efeito</div><div class="ttdoc">O efeito de status que a ação pode aplicar.</div><div class="ttdef"><b>Definição</b> Acao.hpp:25</div></div>
+<div class="ttc" id="aclassAcao_html_a8f6321d5b689a8c9cabad81bcb7f9e3b"><div class="ttname"><a href="classAcao.html#a8f6321d5b689a8c9cabad81bcb7f9e3b">Acao::_alvo</a></div><div class="ttdeci">bool _alvo</div><div class="ttdoc">Define o alvo da ação (ex: true para si mesmo, false para o oponente).</div><div class="ttdef"><b>Definição</b> Acao.hpp:28</div></div>
+<div class="ttc" id="aclassAcao_html_aa3edff2abd27b8805294781da8c345e5"><div class="ttname"><a href="classAcao.html#aa3edff2abd27b8805294781da8c345e5">Acao::_nome</a></div><div class="ttdeci">std::string _nome</div><div class="ttdoc">Nome da ação.</div><div class="ttdef"><b>Definição</b> Acao.hpp:16</div></div>
+<div class="ttc" id="aclassAcao_html_abed01ab38253ffd03e62d82014351380"><div class="ttname"><a href="classAcao.html#abed01ab38253ffd03e62d82014351380">Acao::aplicarEfeito</a></div><div class="ttdeci">virtual int aplicarEfeito(bool alvo, Efeito efeito)</div><div class="ttdoc">Aplica o efeito de status no alvo determinado.</div></div>
+<div class="ttc" id="aclassAcao_html_aee788d3396efbbfccabe67553d478059"><div class="ttname"><a href="classAcao.html#aee788d3396efbbfccabe67553d478059">Acao::alterarVida</a></div><div class="ttdeci">virtual int alterarVida(bool alvo, int valor)</div><div class="ttdoc">Calcula ou aplica a alteração de vida baseada na ação.</div></div>
+<div class="ttc" id="aclassAcao_html_af3878762e26ff4c2bafa795abbe1f69d"><div class="ttname"><a href="classAcao.html#af3878762e26ff4c2bafa795abbe1f69d">Acao::mostrarHabilidade</a></div><div class="ttdeci">virtual void mostrarHabilidade()</div><div class="ttdoc">Exibe os detalhes da ação (informações da habilidade ou do item).</div></div>
+<div class="ttc" id="aclassAcao_html_af673981041cfec0071e4bf3b4ad7c790"><div class="ttname"><a href="classAcao.html#af673981041cfec0071e4bf3b4ad7c790">Acao::_tipo</a></div><div class="ttdeci">bool _tipo</div><div class="ttdoc">Define o tipo da ação (ex: true para cura, false para dano).</div><div class="ttdef"><b>Definição</b> Acao.hpp:19</div></div>
+<div class="ttc" id="aclassEfeito_html"><div class="ttname"><a href="classEfeito.html">Efeito</a></div><div class="ttdef"><b>Definição</b> Efeito.hpp:6</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
+<area shape="rect" id="Node000000" href="$classAcao.html" title="Classe base para representar qualquer ação do jogo (como Habilidades ou Itens)." alt="" coords="5,31,60,56"/>
+<area shape="rect" id="Node000001" href="$classHabilidade.html" title="Representa uma habilidade no jogo." alt="" coords="108,5,200,31"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="73,32,107,25,108,30,74,37"/>
+<area shape="rect" id="Node000002" href="$classItem.html" title="Representa um item no jogo." alt="" coords="128,55,180,80"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="74,49,128,60,127,65,73,54"/>
+</map>

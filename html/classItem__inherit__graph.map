@@ -1,0 +1,5 @@
+<map id="Item" name="Item">
+<area shape="rect" id="Node000001" title="Representa um item no jogo." alt="" coords="45,279,125,364"/>
+<area shape="rect" id="Node000002" href="$classAcao.html" title="Classe base para representar qualquer ação do jogo (como Habilidades ou Itens)." alt="" coords="5,5,165,231"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,244,88,278,83,278,83,244"/>
+</map>
