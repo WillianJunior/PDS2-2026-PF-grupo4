@@ -1,0 +1,197 @@
+\doxysection{Referência da Classe Entidade}
+\hypertarget{classEntidade}{}\label{classEntidade}\index{Entidade@{Entidade}}
+
+
+Classe abstrata para representar as entidades.  
+
+
+
+
+{\ttfamily \#include $<$Entidade.\+hpp$>$}
+
+
+
+Diagrama de hierarquia da classe Entidade\+:
+% FIG 0
+
+
+Diagrama de colaboração para Entidade\+:
+% FIG 1
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEntidade_a3e50f865ffcca548bdc7d97058c173d7}{Entidade}} (int vida, std\+::string nome, \mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}} inventario\+Habilidade)
+\begin{DoxyCompactList}\small\item\em Construtor padrão de entidade Aloca vida, nome e habilidades de entidade. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classEntidade_a441fee3d5486dd7b7e81cbd66c1c5f89}{escolher\+Habilidade}} (int posicao\+Habilidade)=0
+\begin{DoxyCompactList}\small\item\em Função virtual de escolher habilidade. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classEntidade_a93bfebaf5a40c8ab214fd0068ca6149a}{alterar\+Vida}} (int valor)=0
+\begin{DoxyCompactList}\small\item\em Função virtual de alterar a vida. \end{DoxyCompactList}\item 
+virtual bool \mbox{\hyperlink{classEntidade_ade89008844bd05a9becdbaf0c9c24506}{is\+Morto}} ()=0
+\begin{DoxyCompactList}\small\item\em Função virtual de verificar se está vivo. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classEntidade_aeb86ab836a83a514cfb42b04158051b3}{\texorpdfstring{$\sim$}{\string~}\+Entidade}} ()
+\begin{DoxyCompactList}\small\item\em Função virtual destrutora da \doxylink{classEntidade}{Entidade}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classEntidade_a7f35754ba0fbda708e230c9919f782ab}{\+\_\+vida}}
+\begin{DoxyCompactList}\small\item\em Atributo medidor de saúde da entidade, chegar a 0 gera morte. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classEntidade_a2004c517d43cf6825a442d4f47e01dd1}{\+\_\+nome}}
+\begin{DoxyCompactList}\small\item\em Nome da entidade. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}} \mbox{\hyperlink{classEntidade_ae164d58441370401d579536664263330}{\+\_\+inventario\+Habilidade}}
+\begin{DoxyCompactList}\small\item\em Lista de habilidades que a entidade possui. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe abstrata para representar as entidades. 
+
+
+\begin{DoxyItemize}
+\item Na hierarqueia é a mãe de \doxylink{classPersonagem}{Personagem} e \doxylink{classInimigo}{Inimigo}.
+\item Criará métodos virtuais que serão sobrescritos pelas classes mais complexas. 
+\end{DoxyItemize}
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{classEntidade_a3e50f865ffcca548bdc7d97058c173d7}\label{classEntidade_a3e50f865ffcca548bdc7d97058c173d7} 
+\index{Entidade@{Entidade}!Entidade@{Entidade}}
+\index{Entidade@{Entidade}!Entidade@{Entidade}}
+\doxysubsubsection{\texorpdfstring{Entidade()}{Entidade()}}
+{\footnotesize\ttfamily Entidade\+::\+Entidade (\begin{DoxyParamCaption}\item[{int}]{vida,  }\item[{std\+::string}]{nome,  }\item[{\mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}}}]{inventario\+Habilidade }\end{DoxyParamCaption})}
+
+
+
+Construtor padrão de entidade Aloca vida, nome e habilidades de entidade. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em vida} & Quantidade de vida que a entidade possui \\
+\hline
+{\em nome} & Nome da entidade \\
+\hline
+{\em habilidades} & Inventário de habilidades da entidade \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classEntidade_aeb86ab836a83a514cfb42b04158051b3}\label{classEntidade_aeb86ab836a83a514cfb42b04158051b3} 
+\index{Entidade@{Entidade}!````~Entidade@{\texorpdfstring{$\sim$}{\string~}Entidade}}
+\index{````~Entidade@{\texorpdfstring{$\sim$}{\string~}Entidade}!Entidade@{Entidade}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Entidade()}{\string~Entidade()}}
+{\footnotesize\ttfamily virtual Entidade\+::\texorpdfstring{$\sim$}{\string~}\+Entidade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Função virtual destrutora da \doxylink{classEntidade}{Entidade}. 
+
+
+\begin{DoxyItemize}
+\item Destrói a entidade que foi criada anteriormente
+\item É virtual para evitar vazamento de memória para que a entidade concreta consiga deletar tudo 
+\end{DoxyItemize}
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classEntidade_a93bfebaf5a40c8ab214fd0068ca6149a}\label{classEntidade_a93bfebaf5a40c8ab214fd0068ca6149a} 
+\index{Entidade@{Entidade}!alterarVida@{alterarVida}}
+\index{alterarVida@{alterarVida}!Entidade@{Entidade}}
+\doxysubsubsection{\texorpdfstring{alterarVida()}{alterarVida()}}
+{\footnotesize\ttfamily virtual void Entidade\+::alterar\+Vida (\begin{DoxyParamCaption}\item[{int}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Função virtual de alterar a vida. 
+
+
+\begin{DoxyItemize}
+\item Responsável por alterar a vida da própria entidade
+\item Altera o valor de \+\_\+vida 
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & Em quanto a vida vai mudar \mbox{[}negativo ou positivo\mbox{]} \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Implementado por \mbox{\hyperlink{classInimigo_a89ebd352bccd15499fbda8200bdc3730}{Inimigo}} e \mbox{\hyperlink{classPersonagem_a30d115691def369c93d14834a7176590}{Personagem}}.
+
+\Hypertarget{classEntidade_a441fee3d5486dd7b7e81cbd66c1c5f89}\label{classEntidade_a441fee3d5486dd7b7e81cbd66c1c5f89} 
+\index{Entidade@{Entidade}!escolherHabilidade@{escolherHabilidade}}
+\index{escolherHabilidade@{escolherHabilidade}!Entidade@{Entidade}}
+\doxysubsubsection{\texorpdfstring{escolherHabilidade()}{escolherHabilidade()}}
+{\footnotesize\ttfamily virtual int Entidade\+::escolher\+Habilidade (\begin{DoxyParamCaption}\item[{int}]{posicao\+Habilidade }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Função virtual de escolher habilidade. 
+
+
+\begin{DoxyItemize}
+\item Será sobrescrita pelas classes concretas
+\item Responsável por verificar a posição da habilidade no vetor \+\_\+habilidades em inventario\+Habilidade
+\item Executa a ação dessa habilidade para checar se é cura, dano ou mudança de estado 
+\begin{DoxyParams}{Parâmetros}
+{\em posicao\+Habilidade} & índice (posição) da \doxylink{classHabilidade}{Habilidade} no vetor \+\_\+habilidades em inventaro\+Habilidade \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+inteiro que diz qual o dano, cura ou mudança de estado. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implementado por \mbox{\hyperlink{classInimigo_a35ad976aa7fa2191cdf162f25d2d0b57}{Inimigo}} e \mbox{\hyperlink{classPersonagem_aac8772a849812a27ea1b22e7af8acfe3}{Personagem}}.
+
+\Hypertarget{classEntidade_ade89008844bd05a9becdbaf0c9c24506}\label{classEntidade_ade89008844bd05a9becdbaf0c9c24506} 
+\index{Entidade@{Entidade}!isMorto@{isMorto}}
+\index{isMorto@{isMorto}!Entidade@{Entidade}}
+\doxysubsubsection{\texorpdfstring{isMorto()}{isMorto()}}
+{\footnotesize\ttfamily virtual bool Entidade\+::is\+Morto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Função virtual de verificar se está vivo. 
+
+
+\begin{DoxyItemize}
+\item Responsável por verificar se a vida do personagem esta maior ou igual que 0 \begin{DoxyReturn}{Retorna}
+false or true 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+Implementado por \mbox{\hyperlink{classInimigo_ad4ba5228c63de5ba1418f3257acf7361}{Inimigo}} e \mbox{\hyperlink{classPersonagem_afb52502006acf871aa5ebdcbca06a86c}{Personagem}}.
+
+
+
+\doxysubsection{Atributos}
+\Hypertarget{classEntidade_ae164d58441370401d579536664263330}\label{classEntidade_ae164d58441370401d579536664263330} 
+\index{Entidade@{Entidade}!\_inventarioHabilidade@{\_inventarioHabilidade}}
+\index{\_inventarioHabilidade@{\_inventarioHabilidade}!Entidade@{Entidade}}
+\doxysubsubsection{\texorpdfstring{\_inventarioHabilidade}{\_inventarioHabilidade}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}} Entidade\+::\+\_\+inventario\+Habilidade\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Lista de habilidades que a entidade possui. 
+
+\Hypertarget{classEntidade_a2004c517d43cf6825a442d4f47e01dd1}\label{classEntidade_a2004c517d43cf6825a442d4f47e01dd1} 
+\index{Entidade@{Entidade}!\_nome@{\_nome}}
+\index{\_nome@{\_nome}!Entidade@{Entidade}}
+\doxysubsubsection{\texorpdfstring{\_nome}{\_nome}}
+{\footnotesize\ttfamily std\+::string Entidade\+::\+\_\+nome\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Nome da entidade. 
+
+\Hypertarget{classEntidade_a7f35754ba0fbda708e230c9919f782ab}\label{classEntidade_a7f35754ba0fbda708e230c9919f782ab} 
+\index{Entidade@{Entidade}!\_vida@{\_vida}}
+\index{\_vida@{\_vida}!Entidade@{Entidade}}
+\doxysubsubsection{\texorpdfstring{\_vida}{\_vida}}
+{\footnotesize\ttfamily int Entidade\+::\+\_\+vida\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Atributo medidor de saúde da entidade, chegar a 0 gera morte. 
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Entidade_8hpp}{Entidade.\+hpp}}\end{DoxyCompactItemize}

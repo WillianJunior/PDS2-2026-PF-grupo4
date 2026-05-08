@@ -4,12 +4,13 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Habilidade.hpp"
 
 /**
- * @brief Classe abstrata de inventário.
+ * @brief Classe abstrata de inventário usando Templates.
+ * @tparam T O tipo de objeto que o inventário irá guardar (Habilidade ou Item).
  * * Define a interface base para qualquer tipo de inventário (Itens ou Habilidades).
  */
+template <typename T>
 class Inventario {
     public:
     /**
@@ -18,21 +19,21 @@ class Inventario {
         virtual void mostrarInventario() = 0;
 
     /**
-     * @brief Adiciona uma nova habilidade ao inventário.
-     * @param habilidade A habilidade que será adicionada ao vetor.
+     * @brief Adiciona um novo elemento ao inventário.
+     * @param elemento O elemento que será adicionado ao vetor.
      */
-        virtual void novaAcao(Habilidade habilidade) = 0;
+        virtual void novaAcao(T elemento) = 0;
 
     /**
-     * @brief Troca uma habilidade existente por uma nova.
-     * @param posicao O índice da habilidade que será removida.
-     * @param novaHabilidade A nova habilidade que ocupará o lugar.
+     * @brief Troca um elemento existente por um novo.
+     * @param posicao O índice do elemento que será removido.
+     * @param novoElemento O novo elemento que ocupará o lugar.
      */
-        virtual void trocarAcao(int posicao, Habilidade novaHabilidade) = 0;
+        virtual void trocarAcao(int posicao, T novoElemento) = 0;
 
     /**
-     * @brief Descarta uma habilidade do inventário.
-     * @param posicao O índice da habilidade no vetor que será removida.
+     * @brief Descarta um elemento do inventário.
+     * @param posicao O índice do elemento no vetor que será removido.
      */
         virtual void descartarAcao(int posicao) = 0;
 

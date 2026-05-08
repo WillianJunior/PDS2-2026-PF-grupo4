@@ -1,0 +1,14 @@
+\doxysection{Referência do Arquivo Acao.\+hpp}
+\hypertarget{Acao_8hpp}{}\label{Acao_8hpp}\index{Acao.hpp@{Acao.hpp}}
+{\ttfamily \#include "{}Efeito.\+hpp"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Gráfico de dependência de inclusões para Acao.\+hpp\+:
+% FIG 0
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+% FIG 1
+\doxysubsubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classAcao}{Acao}}
+\begin{DoxyCompactList}\small\item\em Classe base para representar qualquer ação do jogo (como Habilidades ou Itens). \end{DoxyCompactList}\end{DoxyCompactItemize}

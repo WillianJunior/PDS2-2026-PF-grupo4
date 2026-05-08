@@ -1,0 +1,124 @@
+\doxysection{Referência da Classe Inventario\+Habilidade}
+\hypertarget{classInventarioHabilidade}{}\label{classInventarioHabilidade}\index{InventarioHabilidade@{InventarioHabilidade}}
+
+
+Classe que gerencia o inventário de habilidades de uma entidade.  
+
+
+
+
+{\ttfamily \#include $<$Inventario\+Habilidade.\+hpp$>$}
+
+
+
+Diagrama de hierarquia da classe Inventario\+Habilidade\+:
+% FIG 0
+
+
+Diagrama de colaboração para Inventario\+Habilidade\+:
+% FIG 1
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classInventarioHabilidade_a523468bb8dbf6b1e0226923fcf0e99ab}{mostrar\+Inventario}} () override
+\begin{DoxyCompactList}\small\item\em Exibe todas as habilidades presentes na lista da entidade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInventarioHabilidade_ae42114e4cf02b62cbdc6686d53f8dc64}{nova\+Acao}} (\mbox{\hyperlink{classHabilidade}{Habilidade}} habilidade) override
+\begin{DoxyCompactList}\small\item\em Adiciona uma nova habilidade ao final do vetor lista\+Habilidades. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInventarioHabilidade_a236561cbb35f1e4502d14dcaddb82e3c}{trocar\+Acao}} (int posicao, \mbox{\hyperlink{classHabilidade}{Habilidade}} nova\+Habilidade) override
+\begin{DoxyCompactList}\small\item\em Remove uma habilidade de uma posição específica e insere uma nova. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInventarioHabilidade_aad30f5cfc87152b4ecb8a8a355984756}{descartar\+Acao}} (int posicao) override
+\begin{DoxyCompactList}\small\item\em Remove permanentemente uma habilidade do vetor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classInventario}{Inventario$<$ Habilidade $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classInventario_af34d648c461868428815f2585718fd53}{\texorpdfstring{$\sim$}{\string~}\+Inventario}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor virtual para garantir a limpeza correta das classes filhas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que gerencia o inventário de habilidades de uma entidade. 
+
+
+\begin{DoxyItemize}
+\item Implementa os métodos da classe abstrata \doxylink{classInventario}{Inventario} focando em objetos \doxylink{classHabilidade}{Habilidade}. 
+\end{DoxyItemize}
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classInventarioHabilidade_aad30f5cfc87152b4ecb8a8a355984756}\label{classInventarioHabilidade_aad30f5cfc87152b4ecb8a8a355984756} 
+\index{InventarioHabilidade@{InventarioHabilidade}!descartarAcao@{descartarAcao}}
+\index{descartarAcao@{descartarAcao}!InventarioHabilidade@{InventarioHabilidade}}
+\doxysubsubsection{\texorpdfstring{descartarAcao()}{descartarAcao()}}
+{\footnotesize\ttfamily void Inventario\+Habilidade\+::descartar\+Acao (\begin{DoxyParamCaption}\item[{int}]{posicao }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Remove permanentemente uma habilidade do vetor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em posicao} & Índice da habilidade que será deletada. \\
+\hline
+\end{DoxyParams}
+
+
+Implementa \mbox{\hyperlink{classInventario_ae333c77a15db3cbd7f46bfd9df8f5b3d}{Inventario$<$ Habilidade $>$}}.
+
+\Hypertarget{classInventarioHabilidade_a523468bb8dbf6b1e0226923fcf0e99ab}\label{classInventarioHabilidade_a523468bb8dbf6b1e0226923fcf0e99ab} 
+\index{InventarioHabilidade@{InventarioHabilidade}!mostrarInventario@{mostrarInventario}}
+\index{mostrarInventario@{mostrarInventario}!InventarioHabilidade@{InventarioHabilidade}}
+\doxysubsubsection{\texorpdfstring{mostrarInventario()}{mostrarInventario()}}
+{\footnotesize\ttfamily void Inventario\+Habilidade\+::mostrar\+Inventario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Exibe todas as habilidades presentes na lista da entidade. 
+
+
+
+Implementa \mbox{\hyperlink{classInventario_a7e8cb8ba725d02311601667737e2ca6c}{Inventario$<$ Habilidade $>$}}.
+
+\Hypertarget{classInventarioHabilidade_ae42114e4cf02b62cbdc6686d53f8dc64}\label{classInventarioHabilidade_ae42114e4cf02b62cbdc6686d53f8dc64} 
+\index{InventarioHabilidade@{InventarioHabilidade}!novaAcao@{novaAcao}}
+\index{novaAcao@{novaAcao}!InventarioHabilidade@{InventarioHabilidade}}
+\doxysubsubsection{\texorpdfstring{novaAcao()}{novaAcao()}}
+{\footnotesize\ttfamily void Inventario\+Habilidade\+::nova\+Acao (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHabilidade}{Habilidade}}}]{habilidade }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Adiciona uma nova habilidade ao final do vetor lista\+Habilidades. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em habilidade} & Objeto da habilidade a ser inserido. \\
+\hline
+\end{DoxyParams}
+
+
+Implementa \mbox{\hyperlink{classInventario_a8bd558d0ac7eb6e77922fbf5c0a31db7}{Inventario$<$ Habilidade $>$}}.
+
+\Hypertarget{classInventarioHabilidade_a236561cbb35f1e4502d14dcaddb82e3c}\label{classInventarioHabilidade_a236561cbb35f1e4502d14dcaddb82e3c} 
+\index{InventarioHabilidade@{InventarioHabilidade}!trocarAcao@{trocarAcao}}
+\index{trocarAcao@{trocarAcao}!InventarioHabilidade@{InventarioHabilidade}}
+\doxysubsubsection{\texorpdfstring{trocarAcao()}{trocarAcao()}}
+{\footnotesize\ttfamily void Inventario\+Habilidade\+::trocar\+Acao (\begin{DoxyParamCaption}\item[{int}]{posicao,  }\item[{\mbox{\hyperlink{classHabilidade}{Habilidade}}}]{nova\+Habilidade }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Remove uma habilidade de uma posição específica e insere uma nova. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em posicao} & Índice do vetor onde a troca ocorrerá. \\
+\hline
+{\em nova\+Habilidade} & Objeto da nova habilidade a ser inserida. \\
+\hline
+\end{DoxyParams}
+
+
+Implementa \mbox{\hyperlink{classInventario_acaa5f3b9586dc0d4a25f317bc1d22a1b}{Inventario$<$ Habilidade $>$}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{InventarioHabilidade_8hpp}{Inventario\+Habilidade.\+hpp}}\end{DoxyCompactItemize}

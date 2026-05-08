@@ -15,14 +15,13 @@
 
 class Entidade{
     protected:
-    /**
-     * @brief Atributos de vida, nome e habilidades
-     * * Vida atributo medidor de saúde da entidade, chegar a 0 gera morte
-     * * Nome nome da entidade
-     * * Habilidades lista de habilidades que a entidade possui
-     */
+    /** @brief Atributo medidor de saúde da entidade, chegar a 0 gera morte */
         int _vida;
+
+    /** @brief Nome da entidade */
         std::string _nome;
+        
+    /** @brief Lista de habilidades que a entidade possui */
         InventarioHabilidade _inventarioHabilidade;
     public: 
     /**

@@ -1,0 +1,36 @@
+\doxysection{Entidade.\+hpp}
+\hypertarget{Entidade_8hpp_source}{}\label{Entidade_8hpp_source}\mbox{\hyperlink{Entidade_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ENTIDADE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ENTIDADE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{InventarioHabilidade_8hpp}{InventarioHabilidade.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//classe\ responsavel\ por\ preparar\ o\ terreno\ para\ as\ outras\ entidades:}}
+\DoxyCodeLine{00009\ \textcolor{comment}{//personagem\ e\ ininimgo}}
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEntidade}{Entidade}}\{}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classEntidade_a7f35754ba0fbda708e230c9919f782ab}{\_vida}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classEntidade_a2004c517d43cf6825a442d4f47e01dd1}{\_nome}};}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classInventarioHabilidade}{InventarioHabilidade}}\ \mbox{\hyperlink{classEntidade_ae164d58441370401d579536664263330}{\_inventarioHabilidade}};}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEntidade_a3e50f865ffcca548bdc7d97058c173d7}{Entidade}}(\textcolor{keywordtype}{int}\ vida,\ std::string\ nome,\ \mbox{\hyperlink{classInventarioHabilidade}{InventarioHabilidade}}\ inventarioHabilidade);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classEntidade_a441fee3d5486dd7b7e81cbd66c1c5f89}{escolherHabilidade}}(\textcolor{keywordtype}{int}\ posicaoHabilidade)\ =\ 0;}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEntidade_a93bfebaf5a40c8ab214fd0068ca6149a}{alterarVida}}(\textcolor{keywordtype}{int}\ valor)\ =\ 0;}
+\DoxyCodeLine{00054\ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classEntidade_ade89008844bd05a9becdbaf0c9c24506}{isMorto}}()\ =\ 0;}
+\DoxyCodeLine{00061\ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classEntidade_aeb86ab836a83a514cfb42b04158051b3}{\string~Entidade}}();}
+\DoxyCodeLine{00068\ \};}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif\ }}
+\DoxyCodeLine{00072\ }
+
+\end{DoxyCode}

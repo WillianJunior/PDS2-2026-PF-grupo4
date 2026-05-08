@@ -1,0 +1,27 @@
+\doxysection{Inventario\+Item.\+hpp}
+\hypertarget{InventarioItem_8hpp_source}{}\label{InventarioItem_8hpp_source}\mbox{\hyperlink{InventarioItem_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ INVENTARIOITEM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ INVENTARIOITEM\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Inventario_8hpp}{Inventario.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Item_8hpp}{Item.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classInventarioItem}{InventarioItem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classInventario}{Inventario}}<Item>\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ std::vector<Item>\ \_itens;}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInventarioItem_a955b5f99efab8b998bbf0f0538cfdaad}{mostrarInventario}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInventarioItem_a38f1ccb980fff37db8e8ac53186a32af}{novaAcao}}(\mbox{\hyperlink{classItem}{Item}}\ item)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInventarioItem_a055c8007b2282b2f91999ae4e91e5db9}{trocarAcao}}(\textcolor{keywordtype}{int}\ posicao,\ \mbox{\hyperlink{classItem}{Item}}\ novoItem)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classInventarioItem_ae85f76d581a96ac4e5623434bd360997}{descartarAcao}}(\textcolor{keywordtype}{int}\ posicao)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00041\ \};}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

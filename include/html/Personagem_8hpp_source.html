@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WE CANT CODE THIS GAME: Código-Fonte de Personagem.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WE CANT CODE THIS GAME
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Personagem.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Personagem_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef PERSONAGEM_H</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define PERSONAGEM_H</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &quot;<a class="code" href="Entidade_8hpp.html">Entidade.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;<a class="code" href="InventarioItem_8hpp.html">InventarioItem.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classPersonagem.html">   14</a></span><span class="keyword">class </span><a class="code hl_class" href="classPersonagem.html">Personagem</a> : <span class="keyword">public</span> <a class="code hl_class" href="classEntidade.html">Entidade</a>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        <a class="code hl_class" href="classInventarioItem.html">InventarioItem</a> _inventario;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="classPersonagem.html#a3c8985aea0d1b57844103e050ee3a9b4">   28</a></span>        <a class="code hl_function" href="classPersonagem.html#a3c8985aea0d1b57844103e050ee3a9b4">Personagem</a>(<span class="keywordtype">int</span> vida, <a class="code hl_class" href="classInventarioHabilidade.html">InventarioHabilidade</a> inventarioHabilidade, std::string nome, <a class="code hl_class" href="classInventarioItem.html">InventarioItem</a> inventarioItem);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="classPersonagem.html#aac8772a849812a27ea1b22e7af8acfe3">   36</a></span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classPersonagem.html#aac8772a849812a27ea1b22e7af8acfe3">escolherHabilidade</a>(<span class="keywordtype">int</span> posicaoHabilidade) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="classPersonagem.html#aa61937a1c1f58b0569f8a77c5c6026d6">   44</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classPersonagem.html#aa61937a1c1f58b0569f8a77c5c6026d6">escolherItem</a>(<span class="keywordtype">int</span> posicaoItem);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="classPersonagem.html#a30d115691def369c93d14834a7176590">   52</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classPersonagem.html#a30d115691def369c93d14834a7176590">alterarVida</a>(<span class="keywordtype">int</span> valor) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="classPersonagem.html#afb52502006acf871aa5ebdcbca06a86c">   59</a></span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classPersonagem.html#afb52502006acf871aa5ebdcbca06a86c">isMorto</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classPersonagem.html#a173c15f20799967d9b2acc5e6197b2b0">   65</a></span>        <a class="code hl_function" href="classPersonagem.html#a173c15f20799967d9b2acc5e6197b2b0">~Personagem</a>(); </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>};</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aEntidade_8hpp_html"><div class="ttname"><a href="Entidade_8hpp.html">Entidade.hpp</a></div></div>
+<div class="ttc" id="aInventarioItem_8hpp_html"><div class="ttname"><a href="InventarioItem_8hpp.html">InventarioItem.hpp</a></div></div>
+<div class="ttc" id="aclassEntidade_html"><div class="ttname"><a href="classEntidade.html">Entidade</a></div><div class="ttdoc">Classe abstrata para representar as entidades.</div><div class="ttdef"><b>Definição</b> Entidade.hpp:16</div></div>
+<div class="ttc" id="aclassInventarioHabilidade_html"><div class="ttname"><a href="classInventarioHabilidade.html">InventarioHabilidade</a></div><div class="ttdoc">Classe que gerencia o inventário de habilidades de uma entidade.</div><div class="ttdef"><b>Definição</b> InventarioHabilidade.hpp:12</div></div>
+<div class="ttc" id="aclassInventarioItem_html"><div class="ttname"><a href="classInventarioItem.html">InventarioItem</a></div><div class="ttdoc">Classe que gerencia o inventário de itens de uma entidade.</div><div class="ttdef"><b>Definição</b> InventarioItem.hpp:12</div></div>
+<div class="ttc" id="aclassPersonagem_html"><div class="ttname"><a href="classPersonagem.html">Personagem</a></div><div class="ttdoc">Representa o personagem no jogo, herda da classe entidade.</div><div class="ttdef"><b>Definição</b> Personagem.hpp:14</div></div>
+<div class="ttc" id="aclassPersonagem_html_a173c15f20799967d9b2acc5e6197b2b0"><div class="ttname"><a href="classPersonagem.html#a173c15f20799967d9b2acc5e6197b2b0">Personagem::~Personagem</a></div><div class="ttdeci">~Personagem()</div><div class="ttdoc">Destrutor da classe Personagem.</div></div>
+<div class="ttc" id="aclassPersonagem_html_a30d115691def369c93d14834a7176590"><div class="ttname"><a href="classPersonagem.html#a30d115691def369c93d14834a7176590">Personagem::alterarVida</a></div><div class="ttdeci">void alterarVida(int valor) override</div><div class="ttdoc">Alterar a vida atual do personagem para mais ou para menos.</div></div>
+<div class="ttc" id="aclassPersonagem_html_a3c8985aea0d1b57844103e050ee3a9b4"><div class="ttname"><a href="classPersonagem.html#a3c8985aea0d1b57844103e050ee3a9b4">Personagem::Personagem</a></div><div class="ttdeci">Personagem(int vida, InventarioHabilidade inventarioHabilidade, std::string nome, InventarioItem inventarioItem)</div><div class="ttdoc">Construtor padrão do personagem Aloca a vida do personagem, seu inventário de habilidades,...</div></div>
+<div class="ttc" id="aclassPersonagem_html_aa61937a1c1f58b0569f8a77c5c6026d6"><div class="ttname"><a href="classPersonagem.html#aa61937a1c1f58b0569f8a77c5c6026d6">Personagem::escolherItem</a></div><div class="ttdeci">void escolherItem(int posicaoItem)</div><div class="ttdoc">Escolher um Item a partir do inventarioItem e utilizá-lo.</div></div>
+<div class="ttc" id="aclassPersonagem_html_aac8772a849812a27ea1b22e7af8acfe3"><div class="ttname"><a href="classPersonagem.html#aac8772a849812a27ea1b22e7af8acfe3">Personagem::escolherHabilidade</a></div><div class="ttdeci">int escolherHabilidade(int posicaoHabilidade) override</div><div class="ttdoc">Selecionar uma habilidade, visualizar sua ação e executar.</div></div>
+<div class="ttc" id="aclassPersonagem_html_afb52502006acf871aa5ebdcbca06a86c"><div class="ttname"><a href="classPersonagem.html#afb52502006acf871aa5ebdcbca06a86c">Personagem::isMorto</a></div><div class="ttdeci">bool isMorto() override</div><div class="ttdoc">Detecta se o personagem está morto ou vivo.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

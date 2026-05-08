@@ -1,0 +1,138 @@
+\doxysection{Referência do Template da Classe Inventario\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\hypertarget{classInventario}{}\label{classInventario}\index{Inventario$<$ T $>$@{Inventario$<$ T $>$}}
+
+
+Classe abstrata de inventário usando Templates.  
+
+
+
+
+{\ttfamily \#include $<$Inventario.\+hpp$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \mbox{\hyperlink{classInventario_a7e8cb8ba725d02311601667737e2ca6c}{mostrar\+Inventario}} ()=0
+\begin{DoxyCompactList}\small\item\em Mostra o inventário com sua composição atual. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classInventario_a8bd558d0ac7eb6e77922fbf5c0a31db7}{nova\+Acao}} (T elemento)=0
+\begin{DoxyCompactList}\small\item\em Adiciona um novo elemento ao inventário. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classInventario_acaa5f3b9586dc0d4a25f317bc1d22a1b}{trocar\+Acao}} (int posicao, T novo\+Elemento)=0
+\begin{DoxyCompactList}\small\item\em Troca um elemento existente por um novo. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classInventario_ae333c77a15db3cbd7f46bfd9df8f5b3d}{descartar\+Acao}} (int posicao)=0
+\begin{DoxyCompactList}\small\item\em Descarta um elemento do inventário. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classInventario_af34d648c461868428815f2585718fd53}{\texorpdfstring{$\sim$}{\string~}\+Inventario}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor virtual para garantir a limpeza correta das classes filhas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+\subsubsection*{template$<$typename T$>$\newline
+class Inventario$<$ T $>$}
+Classe abstrata de inventário usando Templates. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do template}
+{\em T} & O tipo de objeto que o inventário irá guardar (\doxylink{classHabilidade}{Habilidade} ou \doxylink{classItem}{Item}).
+\begin{DoxyItemize}
+\item Define a interface base para qualquer tipo de inventário (Itens ou Habilidades). 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{classInventario_af34d648c461868428815f2585718fd53}\label{classInventario_af34d648c461868428815f2585718fd53} 
+\index{Inventario$<$ T $>$@{Inventario$<$ T $>$}!````~Inventario@{\texorpdfstring{$\sim$}{\string~}Inventario}}
+\index{````~Inventario@{\texorpdfstring{$\sim$}{\string~}Inventario}!Inventario$<$ T $>$@{Inventario$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Inventario()}{\string~Inventario()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{classInventario}{Inventario}}$<$ T $>$\+::\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classInventario}{Inventario}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+Destrutor virtual para garantir a limpeza correta das classes filhas. 
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classInventario_ae333c77a15db3cbd7f46bfd9df8f5b3d}\label{classInventario_ae333c77a15db3cbd7f46bfd9df8f5b3d} 
+\index{Inventario$<$ T $>$@{Inventario$<$ T $>$}!descartarAcao@{descartarAcao}}
+\index{descartarAcao@{descartarAcao}!Inventario$<$ T $>$@{Inventario$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{descartarAcao()}{descartarAcao()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{classInventario}{Inventario}}$<$ T $>$\+::descartar\+Acao (\begin{DoxyParamCaption}\item[{int}]{posicao }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Descarta um elemento do inventário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em posicao} & O índice do elemento no vetor que será removido. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por \mbox{\hyperlink{classInventarioHabilidade_aad30f5cfc87152b4ecb8a8a355984756}{Inventario\+Habilidade}} e \mbox{\hyperlink{classInventarioItem_ae85f76d581a96ac4e5623434bd360997}{Inventario\+Item}}.
+
+\Hypertarget{classInventario_a7e8cb8ba725d02311601667737e2ca6c}\label{classInventario_a7e8cb8ba725d02311601667737e2ca6c} 
+\index{Inventario$<$ T $>$@{Inventario$<$ T $>$}!mostrarInventario@{mostrarInventario}}
+\index{mostrarInventario@{mostrarInventario}!Inventario$<$ T $>$@{Inventario$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{mostrarInventario()}{mostrarInventario()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{classInventario}{Inventario}}$<$ T $>$\+::mostrar\+Inventario (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Mostra o inventário com sua composição atual. 
+
+
+
+Implementado por \mbox{\hyperlink{classInventarioHabilidade_a523468bb8dbf6b1e0226923fcf0e99ab}{Inventario\+Habilidade}} e \mbox{\hyperlink{classInventarioItem_a955b5f99efab8b998bbf0f0538cfdaad}{Inventario\+Item}}.
+
+\Hypertarget{classInventario_a8bd558d0ac7eb6e77922fbf5c0a31db7}\label{classInventario_a8bd558d0ac7eb6e77922fbf5c0a31db7} 
+\index{Inventario$<$ T $>$@{Inventario$<$ T $>$}!novaAcao@{novaAcao}}
+\index{novaAcao@{novaAcao}!Inventario$<$ T $>$@{Inventario$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{novaAcao()}{novaAcao()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{classInventario}{Inventario}}$<$ T $>$\+::nova\+Acao (\begin{DoxyParamCaption}\item[{T}]{elemento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Adiciona um novo elemento ao inventário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em elemento} & O elemento que será adicionado ao vetor. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por \mbox{\hyperlink{classInventarioHabilidade_ae42114e4cf02b62cbdc6686d53f8dc64}{Inventario\+Habilidade}} e \mbox{\hyperlink{classInventarioItem_a38f1ccb980fff37db8e8ac53186a32af}{Inventario\+Item}}.
+
+\Hypertarget{classInventario_acaa5f3b9586dc0d4a25f317bc1d22a1b}\label{classInventario_acaa5f3b9586dc0d4a25f317bc1d22a1b} 
+\index{Inventario$<$ T $>$@{Inventario$<$ T $>$}!trocarAcao@{trocarAcao}}
+\index{trocarAcao@{trocarAcao}!Inventario$<$ T $>$@{Inventario$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{trocarAcao()}{trocarAcao()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{classInventario}{Inventario}}$<$ T $>$\+::trocar\+Acao (\begin{DoxyParamCaption}\item[{int}]{posicao,  }\item[{T}]{novo\+Elemento }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Troca um elemento existente por um novo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em posicao} & O índice do elemento que será removido. \\
+\hline
+{\em novo\+Elemento} & O novo elemento que ocupará o lugar. \\
+\hline
+\end{DoxyParams}
+
+
+Implementado por \mbox{\hyperlink{classInventarioHabilidade_a236561cbb35f1e4502d14dcaddb82e3c}{Inventario\+Habilidade}} e \mbox{\hyperlink{classInventarioItem_a055c8007b2282b2f91999ae4e91e5db9}{Inventario\+Item}}.
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Inventario_8hpp}{Inventario.\+hpp}}\end{DoxyCompactItemize}

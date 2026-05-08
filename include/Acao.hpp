@@ -5,21 +5,65 @@
 #include <iostream>
 #include <string>
 
+/**
+ * @brief Classe base para representar qualquer ação do jogo (como Habilidades ou Itens).
+ * * Define os atributos e métodos comuns que todas as ações podem realizar, 
+ * como causar dano, curar ou aplicar efeitos de status.
+ */
 class Acao {
     protected:
+    /** @brief Nome da ação. */
         std::string _nome;
+        
+    /** @brief Define o tipo da ação (ex: true para cura, false para dano). */
         bool _tipo;
+        
+    /** @brief Valor numérico base da ação (quantidade de dano ou cura). */
         int _valor;
+        
+    /** @brief O efeito de status que a ação pode aplicar. */
         Efeito _efeito;
+        
+    /** @brief Define o alvo da ação (ex: true para si mesmo, false para o oponente). */
         bool _alvo;
 
     public:
+    /**
+     * @brief Construtor padrão da classe Acao.
+     * * Inicializa os atributos básicos que toda ação deve ter.
+     * @param nome O nome da ação.
+     * @param tipo O tipo da ação (se é de dano ou de cura).
+     * @param valor O valor numérico gerado pela ação.
+     * @param efeito O efeito de status atrelado a esta ação.
+     * @param alvo Quem será afetado pela ação.
+     */
         Acao(std::string nome, bool tipo, int valor, Efeito efeito, bool alvo);
         
+    /**
+     * @brief Calcula ou aplica a alteração de vida baseada na ação.
+     * @param alvo O alvo que receberá a alteração de vida.
+     * @param valor A quantidade de vida a ser alterada.
+     * @return Retorna um valor inteiro representando o resultado final da alteração.
+     */
         virtual int alterarVida(bool alvo, int valor);
+
+    /**
+     * @brief Aplica o efeito de status no alvo determinado.
+     * @param alvo O alvo que sofrerá o efeito.
+     * @param efeito O efeito a ser aplicado.
+     * @return Retorna um valor inteiro representando o sucesso ou a magnitude da aplicação.
+     */
         virtual int aplicarEfeito(bool alvo, Efeito efeito);
+
+    /**
+     * @brief Exibe os detalhes da ação (informações da habilidade ou do item).
+     */
         virtual void mostrarHabilidade();
         
+    /**
+     * @brief Destrutor virtual da classe Acao.
+     * * Essencial para permitir que as classes filhas (Habilidade, Item) liberem sua memória corretamente.
+     */
         virtual ~Acao();
 };
 

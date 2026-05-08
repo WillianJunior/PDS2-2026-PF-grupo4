@@ -9,7 +9,7 @@
  * @brief Classe que gerencia o inventário de habilidades de uma entidade.
  * * Implementa os métodos da classe abstrata Inventario focando em objetos Habilidade.
  */
-class InventarioHabilidade : public Inventario {
+class InventarioHabilidade : public Inventario<Habilidade> {
     private:
     /** @brief Vetor que armazena os objetos de habilidade. */
         std::vector<Habilidade> listaHabilidades;

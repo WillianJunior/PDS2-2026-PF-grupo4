@@ -3,12 +3,13 @@
 
 #include "Inventario.hpp"
 #include "Item.hpp"
+#include <vector>
 
 /**
  * @brief Classe que gerencia o inventário de itens de uma entidade.
  * * Implementa os métodos da classe mãe Inventario focando em objetos do tipo Item.
  */
-class InventarioItem : public Inventario {
+class InventarioItem : public Inventario<Item> {
     private:
     /** @brief Vetor que armazena os itens guardados no inventário. */
         std::vector<Item> _itens;
