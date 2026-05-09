@@ -2,6 +2,11 @@
 \hypertarget{classEfeito}{}\label{classEfeito}\index{Efeito@{Efeito}}
 
 
+Representa um efeito de status contínuo no jogo.  
+
+
+
+
 {\ttfamily \#include $<$Efeito.\+hpp$>$}
 
 
@@ -18,16 +23,24 @@ Diagrama de colaboração para Efeito\+:
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classEfeito_a1f7ceced0871b644b475cf3acbaed2de}{Efeito}} (std\+::string nome, int valor, int duracao)
-\item 
+\begin{DoxyCompactList}\small\item\em Construtor padrão de \doxylink{classEfeito}{Efeito}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEfeito_a72a1818ee33711979cb197bfd596f1c8}{aplicar\+Efeito}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Aplica o valor do efeito na entidade. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEfeito_a19b45c454250f88acb863293b41cfb25}{atualizar\+Duracao}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Atualiza o tempo de vida restante do efeito. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classEfeito_a7f89d95be04cde8840a2e1fea2f12850}{is\+Encerrado}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Detecta se o efeito chegou ao fim. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEfeito_aa906467d4bc07bfc97a5e8ecd9996888}{\texorpdfstring{$\sim$}{\string~}\+Efeito}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Destrutor do objeto \doxylink{classEfeito}{Efeito}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Descrição detalhada}
+Representa um efeito de status contínuo no jogo. 
+
+
+\begin{DoxyItemize}
+\item Responsável por gerenciar condições temporárias (como envenenamento, queimadura ou regeneração) que afetam uma entidade ao longo dos turnos. 
+\end{DoxyItemize}
 
 \doxysubsection{Construtores e Destrutores}
 \Hypertarget{classEfeito_a1f7ceced0871b644b475cf3acbaed2de}\label{classEfeito_a1f7ceced0871b644b475cf3acbaed2de} 
@@ -36,13 +49,36 @@ bool \mbox{\hyperlink{classEfeito_a7f89d95be04cde8840a2e1fea2f12850}{is\+Encerra
 \doxysubsubsection{\texorpdfstring{Efeito()}{Efeito()}}
 {\footnotesize\ttfamily Efeito\+::\+Efeito (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{int}]{valor,  }\item[{int}]{duracao }\end{DoxyParamCaption})}
 
-\Hypertarget{classEfeito_aa906467d4bc07bfc97a5e8ecd9996888}\label{classEfeito_aa906467d4bc07bfc97a5e8ecd9996888} 
+
+
+Construtor padrão de \doxylink{classEfeito}{Efeito}. 
+
+
+\begin{DoxyItemize}
+\item Inicializa o efeito definindo seu nome, valor de impacto e sua duração. 
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & O nome do efeito \\
+\hline
+{\em valor} & A quantidade de dano ou cura aplicada a cada turno \\
+\hline
+{\em duracao} & Quantos turnos o efeito vai durar \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{classEfeito_aa906467d4bc07bfc97a5e8ecd9996888}\label{classEfeito_aa906467d4bc07bfc97a5e8ecd9996888} 
 \index{Efeito@{Efeito}!````~Efeito@{\texorpdfstring{$\sim$}{\string~}Efeito}}
 \index{````~Efeito@{\texorpdfstring{$\sim$}{\string~}Efeito}!Efeito@{Efeito}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Efeito()}{\string~Efeito()}}
 {\footnotesize\ttfamily Efeito\+::\texorpdfstring{$\sim$}{\string~}\+Efeito (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
+
+Destrutor do objeto \doxylink{classEfeito}{Efeito}. 
+
+
+\begin{DoxyItemize}
+\item Garante a limpeza adequada da memória quando o efeito for destruído. 
+\end{DoxyItemize}
 
 \doxysubsection{Documentação das funções}
 \Hypertarget{classEfeito_a72a1818ee33711979cb197bfd596f1c8}\label{classEfeito_a72a1818ee33711979cb197bfd596f1c8} 
@@ -51,19 +87,43 @@ bool \mbox{\hyperlink{classEfeito_a7f89d95be04cde8840a2e1fea2f12850}{is\+Encerra
 \doxysubsubsection{\texorpdfstring{aplicarEfeito()}{aplicarEfeito()}}
 {\footnotesize\ttfamily void Efeito\+::aplicar\+Efeito (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\Hypertarget{classEfeito_a19b45c454250f88acb863293b41cfb25}\label{classEfeito_a19b45c454250f88acb863293b41cfb25} 
+
+
+Aplica o valor do efeito na entidade. 
+
+
+\begin{DoxyItemize}
+\item Responsável por executar a alteração de vida baseada no valor numérico durante o turno atual. 
+\end{DoxyItemize}\Hypertarget{classEfeito_a19b45c454250f88acb863293b41cfb25}\label{classEfeito_a19b45c454250f88acb863293b41cfb25} 
 \index{Efeito@{Efeito}!atualizarDuracao@{atualizarDuracao}}
 \index{atualizarDuracao@{atualizarDuracao}!Efeito@{Efeito}}
 \doxysubsubsection{\texorpdfstring{atualizarDuracao()}{atualizarDuracao()}}
 {\footnotesize\ttfamily void Efeito\+::atualizar\+Duracao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\Hypertarget{classEfeito_a7f89d95be04cde8840a2e1fea2f12850}\label{classEfeito_a7f89d95be04cde8840a2e1fea2f12850} 
+
+
+Atualiza o tempo de vida restante do efeito. 
+
+
+\begin{DoxyItemize}
+\item Diminui a duração do efeito toda vez que a rodada é concluída. 
+\end{DoxyItemize}\Hypertarget{classEfeito_a7f89d95be04cde8840a2e1fea2f12850}\label{classEfeito_a7f89d95be04cde8840a2e1fea2f12850} 
 \index{Efeito@{Efeito}!isEncerrado@{isEncerrado}}
 \index{isEncerrado@{isEncerrado}!Efeito@{Efeito}}
 \doxysubsubsection{\texorpdfstring{isEncerrado()}{isEncerrado()}}
 {\footnotesize\ttfamily bool Efeito\+::is\+Encerrado (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
+
+Detecta se o efeito chegou ao fim. 
+
+
+\begin{DoxyItemize}
+\item Checa a duração atual e essa deve chegar a 0 para encerrar o efeito. \begin{DoxyReturn}{Retorna}
+Retorna true se estiver encerrado (duração \texorpdfstring{$<$}{<}= 0), e false caso contrário. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
 
 A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
 \item 

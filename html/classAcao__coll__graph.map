@@ -1,5 +1,5 @@
 <map id="Acao" name="Acao">
 <area shape="rect" id="Node000001" title="Classe base para representar qualquer ação do jogo (como Habilidades ou Itens)." alt="" coords="5,213,165,419"/>
-<area shape="rect" id="Node000002" href="$classEfeito.html" title=" " alt="" coords="11,5,160,151"/>
+<area shape="rect" id="Node000002" href="$classEfeito.html" title="Representa um efeito de status contínuo no jogo." alt="" coords="11,5,160,151"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,151,88,197,83,197,83,151"/>
 </map>

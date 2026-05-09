@@ -1,12 +1,13 @@
 <map id="include/Habilidade.hpp" name="include/Habilidade.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="45,5,216,31"/>
-<area shape="rect" id="Node000002" href="$Acao_8hpp.html" title=" " alt="" coords="89,79,172,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="133,31,133,65,128,65,128,31"/>
-<area shape="rect" id="Node000003" href="$Efeito_8hpp.html" title=" " alt="" coords="5,152,93,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="119,106,75,145,71,141,116,102"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="49,225,129,251"/>
-<area shape="poly" id="edge4_Node000002_Node000004" title=" " alt="" coords="130,105,99,213,94,211,125,104"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="168,152,227,177"/>
-<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="144,103,179,140,175,144,140,106"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="58,176,78,212,74,215,54,179"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="24,5,195,31"/>
+<area shape="rect" id="Node000002" href="$Acao_8hpp.html" title=" " alt="" coords="68,79,151,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,31,112,65,107,65,107,31"/>
+<area shape="rect" id="Node000003" href="$Efeito_8hpp.html" title=" " alt="" coords="65,152,153,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="112,104,112,138,107,138,107,104"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,225,85,251"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="95,106,74,127,56,153,48,183,46,212,41,211,43,182,51,151,70,123,92,102"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="144,225,203,251"/>
+<area shape="poly" id="edge6_Node000002_Node000005" title=" " alt="" coords="127,102,149,123,168,151,176,182,178,211,172,212,171,183,163,153,145,127,123,106"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="101,179,67,217,63,213,97,176"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="122,176,156,213,152,217,118,179"/>
 </map>

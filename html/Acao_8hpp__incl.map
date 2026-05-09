@@ -1,10 +1,11 @@
 <map id="include/Acao.hpp" name="include/Acao.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="64,5,197,31"/>
-<area shape="rect" id="Node000002" href="$Efeito_8hpp.html" title=" " alt="" coords="5,79,93,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="119,33,75,72,71,68,116,29"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="49,152,129,177"/>
-<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="130,32,99,139,94,138,125,30"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="168,79,227,104"/>
-<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="144,29,179,67,175,70,140,33"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="58,103,78,139,74,141,54,106"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="43,5,176,31"/>
+<area shape="rect" id="Node000002" href="$Efeito_8hpp.html" title=" " alt="" coords="65,79,153,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,31,112,65,107,65,107,31"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,152,85,177"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="95,33,74,53,56,80,48,109,46,138,41,138,43,109,51,78,70,50,92,29"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="144,152,203,177"/>
+<area shape="poly" id="edge5_Node000001_Node000004" title=" " alt="" coords="127,29,149,50,168,78,176,109,178,138,172,138,171,109,163,80,145,53,123,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="101,106,67,144,63,140,97,103"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="122,103,156,140,152,144,118,106"/>
 </map>
