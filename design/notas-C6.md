@@ -1,0 +1,5 @@
+ - Bem legal, com muitos detalhes. Gostei dos diagramas de classe.
+ - Evitem adicionar detalhes óbvios: em Acao::~Acao(): "Essencial para permitir que as classes filhas (Habilidade, Item) liberem sua memória corretamente.", correto, destrutores fazem isso mesmo, não somente para essa hierarquia. Esse tipo de texto só deixa a sua documentação mais chata de ler sem adicionar muita coisa...
+ - Um ótimo exemplo de documentação em Acao: "tipo	O tipo da ação (se é de dano ou de cura)." e "efeito	O efeito de status atrelado a esta ação.". Essas palavras "tipo" e "efeito" são muito carregadas, então essa descrição de vocês é excelente para deixar claro sem precisar de uma variável "tipo_de_acao_dano_ou_cura" ou "efeito_status_da_acao".
+ - Gostei de como está saindo a parte de interface (mostrarX).
+ - Achei curioso o enredo do README. Quero ver como vai ficar ao final :)
