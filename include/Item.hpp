@@ -14,10 +14,11 @@ class Item : public Acao {
      * * Inicializa o item definindo seu nome, tipo de alvo, valor e efeito.
      * @param nome O nome do item.
      * @param alvo Define quem será o alvo do item (ex: true para o próprio personagem, false para o inimigo).
+     * @param tipo Define se é um item que altera vida ou aplica efeito (ex: true aplica efeito, false não aplica efeito).
      * @param valor O valor numérico do efeito do item (ex: quantidade de cura ou de dano).
      * @param efeito O efeito de status que o item aplica ao ser usado.
      */
-        Item(std::string nome, bool alvo, int valor, Efeito efeito);
+        Item(std::string nome, bool alvo, bool tipo, int valor, Efeito efeito);
 
     /**
      * @brief Destrutor do objeto Item.

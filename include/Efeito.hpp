@@ -49,6 +49,34 @@ class Efeito{
         bool isEncerrado();
 
     /**
+     * @brief Retorna o nome
+     * * Getter para retornar o nome
+     * @return Retorna uma sequência de caracteres que corresponde ao nome do efeito
+     */
+        std::string getNome();
+
+    /**
+     * @brief Retorna o valor
+     * * Getter para retornar o valor
+     * @return Retorna um inteiro que corresponde ao valor do efeito
+     */
+        int getValor();
+
+    /**
+     * @brief Retorna a duracao
+     * * Getter para retornar a duracao
+     * @return Retorna um inteiro que corresponde ao valor do efeito
+     */
+        int getDuracao();
+
+    /**
+     * @brief Compara dois efeitos
+     * * Compara todos os parâmetros de dois efeitos para ver se sao iguais
+     * @return Retorna true se sao iguais e false se sao diferentes
+     */
+        bool operator==(const Efeito& outro) const;
+
+    /**
      * @brief Destrutor do objeto Efeito
      * * Garante a limpeza adequada da memória quando o efeito for destruído.
      */
