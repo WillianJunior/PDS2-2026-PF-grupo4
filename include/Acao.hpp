@@ -65,6 +65,11 @@ class Acao {
      * * Essencial para permitir que as classes filhas (Habilidade, Item) liberem sua memória corretamente.
      */
         virtual ~Acao();
+        std::string getNome();
+        bool getTipo();
+        int getValor();
+        bool getAlvo();
+        Efeito getEfeito();
 };
 
 #endif
