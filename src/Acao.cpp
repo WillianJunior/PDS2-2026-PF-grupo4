@@ -16,5 +16,25 @@ int Acao::aplicarEfeito(bool alvo, Efeito efeito){
 void Acao::mostrarHabilidade(){
 }
 
+std::string Acao::getNome(){
+    return this->_nome;
+}
+
+bool Acao::getTipo(){
+    return this->_tipo;
+}
+
+int Acao::getValor(){
+    return this->_valor;
+}
+
+bool Acao::getAlvo(){
+    return this->_alvo;
+}
+
+Efeito Acao::getEfeito(){
+    return this->_efeito;
+}
+
 Acao::~Acao(){
 }
