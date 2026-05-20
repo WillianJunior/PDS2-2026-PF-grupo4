@@ -1,4 +1,4 @@
 #include "doctest.h"
 #include "Entidade.hpp"
 
-// Os TEST_CASEs serão escritos aqui
+//já possui cobertura total ao fazer os testes das classes filhas

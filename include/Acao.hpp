@@ -94,6 +94,7 @@ class Acao {
      * @brief Destrutor virtual da classe Acao.
      * * Essencial para permitir que as classes filhas (Habilidade, Item) liberem sua memória corretamente.
      */
+        virtual ~Acao();
 };
 
 #endif

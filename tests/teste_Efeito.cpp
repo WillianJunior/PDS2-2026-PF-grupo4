@@ -1,7 +1,7 @@
 #include "doctest.h"
 #include "Efeito.hpp"
 
-TEST_CASE("Teste 01: Cria um efeito") {
+TEST_CASE("Teste 01: Cria um efeito"){
     std::string nomeTeste = "Veneno";
     int valorTeste = 10;
     int duracaoTeste = 5;
@@ -13,7 +13,7 @@ TEST_CASE("Teste 01: Cria um efeito") {
     CHECK(efeito.getDuracao() == 5);
 }
 
-TEST_CASE("Teste 02: Verifica alteracao da duracao") {
+TEST_CASE("Teste 02: Verifica alteracao da duracao"){
     Efeito efeito("Veneno", 10, 5);
     efeito.atualizarDuracao();
 
@@ -21,14 +21,14 @@ TEST_CASE("Teste 02: Verifica alteracao da duracao") {
     CHECK(efeito.isEncerrado() == false);
 }
 
-TEST_CASE("Teste 03: Verifica se foi encerrado") {
+TEST_CASE("Teste 03: Verifica se foi encerrado"){
     Efeito efeito("Veneno", 10, 1);
     efeito.atualizarDuracao();
 
     CHECK(efeito.isEncerrado() == true);
 }
 
-TEST_CASE("Teste 04: Cobertura da funcao aplicarEfeito") {
+TEST_CASE("Teste 04: Cobertura da funcao aplicarEfeito"){
     Efeito efeito("Veneno", 10, 1);
     efeito.aplicarEfeito(); 
     //Nao possui CHECK, apenas para cobertura do código

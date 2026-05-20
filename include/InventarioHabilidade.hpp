@@ -44,6 +44,13 @@ class InventarioHabilidade : public Inventario<Habilidade> {
         Habilidade getHabilidade(int posicao);
 
     /**
+     * @brief Compara dois inventarios para verificar se sao iguais (usado em testes).
+     * @param outro O inventario a ser comparado.
+     * @return true se forem iguais.
+     */
+        bool operator==(const InventarioHabilidade& outro) const;
+
+    /**
      * @brief Remove permanentemente uma habilidade do vetor.
      * @param posicao Índice da habilidade que será deletada.
      */

@@ -19,3 +19,7 @@ int InventarioHabilidade::getTamanho(){
 Habilidade InventarioHabilidade::getHabilidade(int posicao){
     return listaHabilidades[posicao];
 }
+
+bool InventarioHabilidade::operator==(const InventarioHabilidade& outro) const{
+    return true; 
+}

@@ -22,13 +22,15 @@ TEST_CASE("TESTE DE CONSTRUCAO DE ITEM + GETTER (FARINHA DE MANDIOCA)"){
 TEST_CASE("TESTE DE ITEM FUNCAO alterarVida"){
     Item itemTeste("nomeTeste", true, 10, Efeito("Envenenado", 10, 2), true);
     int teste = itemTeste.alterarVida(itemTeste.getAlvo(), itemTeste.getValor());
-    CHECK(teste == 0);
+    //forçando o erro do teste, já q não possui implementação ainda
+    CHECK(teste == 10);
 }
 
 TEST_CASE("TESTE DE ITEM FUNCAO aplicarEfeito"){
     Item itemTeste("nomeTeste", true, 10, Efeito("Envenenado", 10, 2), true);
     int teste = itemTeste.aplicarEfeito(itemTeste.getAlvo(), itemTeste.getEfeito());
-    CHECK(teste == 0);
+    //forçando o erro do teste, já q não possui implementação ainda
+    CHECK(teste == 10);
 }
 
 TEST_CASE("TESTE DE ITEM FUNCAO mostrarHabilidade"){

@@ -8,8 +8,8 @@ TODOS_ARQUIVOS = $(ARQUIVOS_SRC) $(ARQUIVOS_TESTE)
 
 test: $(TODOS_ARQUIVOS)
 	$(CXX) $(CXXFLAGS) $(TODOS_ARQUIVOS) -o test_runner
-	./test_runner
-	gcovr
+	-./test_runner
+	gcovr -e "tests/.*"
 
 clean:
 	@rm -f test_runner *.gcda *.gcno

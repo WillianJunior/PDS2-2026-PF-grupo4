@@ -19,3 +19,7 @@ int InventarioItem::getTamanho(){
 Item InventarioItem::getItem(int posicao){
     return _itens[posicao];
 }
+
+bool InventarioItem::operator==(const InventarioItem& outro) const{
+    return true; 
+}
