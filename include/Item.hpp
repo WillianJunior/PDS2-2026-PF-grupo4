@@ -18,7 +18,7 @@ class Item : public Acao {
      * @param valor O valor numérico do efeito do item (ex: quantidade de cura ou de dano).
      * @param efeito O efeito de status que o item aplica ao ser usado.
      */
-        Item(std::string nome, bool alvo, bool tipo, int valor, Efeito efeito);
+        Item(std::string nome, bool tipo, int valor, Efeito efeito, bool alvo);
 
     /**
      * @brief Destrutor do objeto Item.
