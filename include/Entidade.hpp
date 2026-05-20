@@ -58,6 +58,21 @@ class Entidade{
      * @return false or true
     */
         virtual bool isMorto() = 0;
+
+    /**
+     * @brief Retorna a vida atual da entidade.
+     */
+        int getVida();
+
+    /**
+     * @brief Retorna o nome da entidade.
+     */
+        std::string getNome();
+
+    /**
+     * @brief Retorna o inventário de habilidades.
+     */
+        InventarioHabilidade getInventarioHabilidade();
     
     /**
      * @brief Função virtual destrutora da Entidade

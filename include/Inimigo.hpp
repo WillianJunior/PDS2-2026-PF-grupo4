@@ -49,6 +49,11 @@ class Inimigo : public Entidade{
         bool isMorto() override;
     
     /**
+     * @brief Retorna o tipo do inimigo (menor ou Boss).
+     */
+        bool getTipo();
+
+    /**
      * @brief Destrutor de inimigo
      * * Sobrescreve o método de destruir Entidade, destruindo toda a data de Inimigo
      * * Evitar vazamento de memória

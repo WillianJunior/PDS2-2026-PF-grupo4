@@ -41,6 +41,11 @@ class SalaBase {
         virtual void mostrarSala() = 0;
 
         /**
+         * @brief Retorna o nome da sala.
+         */
+        std::string getNome();
+
+        /**
          * @brief Destrutor virtual.
          * Garante que os recursos das classes derivadas sejam liberados corretamente.
          */

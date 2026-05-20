@@ -11,3 +11,11 @@ void InventarioHabilidade::trocarAcao(int posicao, Habilidade novaHabilidade){
 
 void InventarioHabilidade::descartarAcao(int posicao){
 }
+
+int InventarioHabilidade::getTamanho(){
+    return listaHabilidades.size();
+}
+
+Habilidade InventarioHabilidade::getHabilidade(int posicao){
+    return listaHabilidades[posicao];
+}

@@ -19,5 +19,9 @@ bool Personagem::isMorto(){
     return false;
 }
 
+InventarioItem Personagem::getInventarioItem(){
+    return this->_inventario;
+}
+
 Personagem::~Personagem(){
 }

@@ -57,6 +57,11 @@ class Personagem : public Entidade{
      * * Checa a vida e essa deve estar maior que 0 para estar em 0 (false).
      */
         bool isMorto() override;
+    
+    /**
+     * @brief Retorna o inventário de itens do personagem.
+     */
+        InventarioItem getInventarioItem();
 
     /**
      * @brief Destrutor da classe Personagem.

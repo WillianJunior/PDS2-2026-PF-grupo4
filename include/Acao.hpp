@@ -59,17 +59,41 @@ class Acao {
      * @brief Exibe os detalhes da ação (informações da habilidade ou do item).
      */
         virtual void mostrarHabilidade();
+
+    /**
+     * @brief Retorna o nome da ação.
+     * @return Uma string contendo o nome da habilidade ou item.
+     */
+        std::string getNome();
+
+    /**
+     * @brief Retorna o tipo da ação.
+     * @return true se for de um tipo específico (ex: cura), false para outro (ex: dano).
+     */
+        bool getTipo();
+
+    /**
+     * @brief Retorna o valor numérico da ação.
+     * @return Inteiro representando a magnitude (quantidade de dano, cura, etc).
+     */
+        int getValor();
+
+    /**
+     * @brief Retorna o alvo da ação.
+     * @return true se o alvo for o próprio lançador, false se for o oponente.
+     */
+        bool getAlvo();
+
+    /**
+     * @brief Retorna o efeito atrelado à ação.
+     * @return Objeto da classe Efeito associado a esta ação.
+     */
+        Efeito getEfeito();
         
     /**
      * @brief Destrutor virtual da classe Acao.
      * * Essencial para permitir que as classes filhas (Habilidade, Item) liberem sua memória corretamente.
      */
-        virtual ~Acao();
-        std::string getNome();
-        bool getTipo();
-        int getValor();
-        bool getAlvo();
-        Efeito getEfeito();
 };
 
 #endif

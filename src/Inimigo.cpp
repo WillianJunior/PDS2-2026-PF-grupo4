@@ -17,5 +17,9 @@ bool Inimigo::isMorto(){
     return false;
 }
 
-Inimigo::~Inimigo() {
+bool Inimigo::getTipo(){
+    return this->tipo;
+}
+
+Inimigo::~Inimigo(){
 }

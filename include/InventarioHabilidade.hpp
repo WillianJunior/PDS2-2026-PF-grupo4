@@ -32,6 +32,16 @@ class InventarioHabilidade : public Inventario<Habilidade> {
      * @param novaHabilidade Objeto da nova habilidade a ser inserida.
      */
         void trocarAcao(int posicao, Habilidade novaHabilidade) override;
+    
+    /**
+     * @brief Retorna a quantidade de habilidades no inventário.
+     */
+        int getTamanho();
+
+    /**
+     * @brief Retorna uma habilidade específica pela posição.
+     */
+        Habilidade getHabilidade(int posicao);
 
     /**
      * @brief Remove permanentemente uma habilidade do vetor.

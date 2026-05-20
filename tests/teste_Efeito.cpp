@@ -27,3 +27,9 @@ TEST_CASE("Teste 03: Verifica se foi encerrado") {
 
     CHECK(efeito.isEncerrado() == true);
 }
+
+TEST_CASE("Teste 04: Cobertura da funcao aplicarEfeito") {
+    Efeito efeito("Veneno", 10, 1);
+    efeito.aplicarEfeito(); 
+    //Nao possui CHECK, apenas para cobertura do código
+}

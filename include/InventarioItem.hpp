@@ -34,6 +34,16 @@ class InventarioItem : public Inventario<Item> {
         void trocarAcao(int posicao, Item novoItem) override;
 
     /**
+     * @brief Retorna a quantidade de itens no inventário.
+     */
+        int getTamanho();
+
+    /**
+     * @brief Retorna um item específico pela posição.
+     */
+        Item getItem(int posicao);
+
+    /**
      * @brief Remove permanentemente um item do inventário.
      * @param posicao O índice do item no vetor que será descartado.
      */
