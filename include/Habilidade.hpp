@@ -19,6 +19,13 @@ class Habilidade : public Acao {
      * @param efeito Qual efeito ela causa no personagem ou em si
      */
         Habilidade(std::string nome, bool tipo, int valor, bool alvo, Efeito efeito);
+    
+    /**
+     * @brief Compara duas habilidades
+     * * Compara todos os parâmetros de duas habilidades para ver se sao iguais
+     * @return Retorna true se sao iguais e false se sao diferentes
+     */
+        bool operator==(const Habilidade& outro) const;
 
     /** 
      * @brief Destrutor do objeto habilidade
