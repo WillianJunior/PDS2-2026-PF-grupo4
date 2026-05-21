@@ -10,6 +10,10 @@
  * * Herda da classe SalaBase e adiciona lógicas específicas para apresentar opções ao jogador e executar consequências.
  */
 class SalaEscolha : public SalaBase{
+    private:
+    /** @brief Armazena o nome específico desta sala. */
+        std::string _nome;
+    
     public:
     /**
      * @brief Construtor da SalaEscolha.
@@ -17,6 +21,11 @@ class SalaEscolha : public SalaBase{
      * @param nome O nome ou identificador da sala.
      */
         SalaEscolha(std::string nome);
+    /**
+     * @brief Retorna o nome da sala.
+     * @return std::string contendo o nome da sala.
+     */
+        std::string getNome() const;
 
     /**
      * @brief Encerra as atividades da sala atual.

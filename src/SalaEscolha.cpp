@@ -1,7 +1,11 @@
 #include "SalaEscolha.hpp"
 
 SalaEscolha::SalaEscolha(std::string nome)
-    : SalaBase(nome) {}
+    : SalaBase(nome), _nome(nome) {}
+
+std::string SalaEscolha::getNome() const {
+    return this->_nome;
+}
 
 void SalaEscolha::encerrarSala(){
 }
