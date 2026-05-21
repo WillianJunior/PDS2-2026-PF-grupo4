@@ -51,6 +51,13 @@ class InventarioItem : public Inventario<Item> {
         bool operator==(const InventarioItem& outro) const;
 
     /**
+     * @brief Compara dois inventarios para verificar se nao sao iguais (usado em testes).
+     * @param outro O inventario a ser comparado.
+     * @return true se nao forem iguais.
+     */
+        bool operator!=(const InventarioItem& outro) const;
+
+    /**
      * @brief Remove permanentemente um item do inventário.
      * @param posicao O índice do item no vetor que será descartado.
      */

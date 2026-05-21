@@ -21,6 +21,13 @@ class Item : public Acao {
         Item(std::string nome, bool tipo, int valor, Efeito efeito, bool alvo);
 
     /**
+     * @brief Compara dois itens
+     * * Compara todos os parâmetros de dois itens para ver se sao iguais
+     * @return Retorna true se sao iguais e false se sao diferentes
+     */
+        bool operator==(const Item& outro) const;
+
+    /**
      * @brief Destrutor do objeto Item.
      * * Garante a limpeza adequada da memória quando o item for destruído.
      */

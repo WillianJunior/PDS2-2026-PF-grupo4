@@ -1,11 +1,10 @@
 #include "InventarioHabilidade.hpp"
 
 void InventarioHabilidade::mostrarInventario(){
-    for (auto i = 0; i < listaHabilidades.size(); i++)
+    for (long unsigned int i = 0; i < listaHabilidades.size(); i++)
     {
         std::cout << std::to_string(i+1) << ". "<< listaHabilidades[i].getNome() << std::endl;
     }
-    
 }
 
 void InventarioHabilidade::novaAcao(Habilidade habilidade){
