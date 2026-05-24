@@ -1,3 +1,3 @@
- - usou cmake e resolveu dependências, legal :)
- - make test só apareceu edu_social_tests, cuidado para a próxima entrega
-
+ - boa quantidade de testes
+ - ótima cobertura
+ - o makefile parece estar recompilando o executável de teste toda vez. ele deveria compilar apenas 1 vez e recompilar apenas quando houvesse alterações
