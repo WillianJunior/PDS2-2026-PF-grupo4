@@ -1,15 +1,34 @@
 CXX = g++
-CXXFLAGS = -std=c++17 -Wall -Iinclude --coverage
+CXXFLAGS = -std=c++11 -Wall -Iinclude
 
-ARQUIVOS_SRC = $(wildcard src/*.cpp)
-ARQUIVOS_TESTE = $(wildcard tests/*.cpp)
+COVERAGE_FLAGS = --coverage
 
-TODOS_ARQUIVOS = $(ARQUIVOS_SRC) $(ARQUIVOS_TESTE)
+SRC_DIR = src
+TEST_DIR = tests
 
-test: $(TODOS_ARQUIVOS)
-	$(CXX) $(CXXFLAGS) $(TODOS_ARQUIVOS) -o test_runner
+ARQUIVOS_SRC = $(wildcard $(SRC_DIR)/*.cpp)
+ARQUIVOS_TESTE = $(wildcard $(TEST_DIR)/*.cpp)
+
+
+#remove o main.cpp do jogo para evitar conflito com o main_tests.cpp
+SRC_SEM_MAIN = $(filter-out $(SRC_DIR)/main.cpp, $(ARQUIVOS_SRC))
+
+#compilar apenas com make
+all: game
+
+game: $(ARQUIVOS_SRC)
+	$(CXX) $(CXXFLAGS) $(ARQUIVOS_SRC) -o rpg_game
+
+run: game
+	./rpg_game
+
+test: $(SRC_SEM_MAIN) $(ARQUIVOS_TESTE)
+	$(CXX) $(CXXFLAGS) $(COVERAGE_FLAGS) $(SRC_SEM_MAIN) $(ARQUIVOS_TESTE) -o test_runner
 	-./test_runner
-	gcovr -e "tests/.*"
+	gcovr -e "$(TEST_DIR)/.*"
 
+#a regra foi alterada para find que garante que os arquivos na raiz do projeto não vao ser apagados
 clean:
-	@rm -f test_runner *.gcda *.gcno
+	@rm -f test_runner rpg_game 
+	@find . -type f -name '*.gcda' -delete
+	@find . -type f -name '*.gcno' -delete
