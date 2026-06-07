@@ -2,8 +2,10 @@
 #define SALACOMBATE_H
 
 #include "SalaBase.hpp"
+#include "Inimigo.hpp"
 #include <iostream>
 #include <string>
+#include <memory>
 
 /**
  * @brief Classe que representa uma sala focada em conflitos e batalhas.
@@ -11,6 +13,9 @@
  * como gerenciamento de turnos e inimigos.
  */
 class SalaCombate : public SalaBase {
+    private:
+        std::string _historia;
+        std::unique_ptr<Inimigo> _inimigo;
     public:
         /**
          * @brief Construtor da classe SalaCombate.
@@ -28,7 +33,7 @@ class SalaCombate : public SalaBase {
          * @brief Faz a transição para a próxima sala após o término do combate.
          * Sobrescreve o método da classe mãe.
          */
-        void proximaSala() override;
+        int executarSala() override;
 
         /**
          * @brief Exibe a interface da sala de combate (status, opções de batalha, etc.).
