@@ -1,20 +1,23 @@
 #include "Inimigo.hpp"
 
 Inimigo::Inimigo(int vida, InventarioHabilidade habilidade, std::string nome, bool tipo)
-    : Entidade(vida, nome, habilidade), tipo(tipo){}
+    : Entidade(vida, nome, habilidade), tipo(tipo), _vidaMaxima(vida) {}
 
 
 int Inimigo::escolherHabilidade(int posicaoHabilidade){
-    //retorna 0 apenas para dar como falha nos testes
-    return 0;
+    Habilidade habilidade = this->_inventarioHabilidade.getHabilidade(posicaoHabilidade);
+    habilidade.mostrarHabilidade();
+    return habilidade.getValor();
 }
 
 void Inimigo::alterarVida(int valor){
+    this->_vida += valor;
+    if(this->_vida > this->_vidaMaxima)
+        this->_vida = this->_vidaMaxima;
 }
 
 bool Inimigo::isMorto(){
-    //retorna false apenas para dar como falha nos testes
-    return false;
+    return this->_vida <= 0;
 }
 
 bool Inimigo::getTipo(){

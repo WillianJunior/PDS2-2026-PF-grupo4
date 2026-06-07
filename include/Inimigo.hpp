@@ -13,6 +13,9 @@ class Inimigo : public Entidade{
     private:
     /** @brief Se o inimigo é um inimigo menor ou um Boss */
         bool tipo;
+    /** @brief Valor maximo que o inimigo pode ter de vida */
+        int _vidaMaxima;
+
     public:
     /**
      * @brief Construtor do Inimigo
