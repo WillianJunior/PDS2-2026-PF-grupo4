@@ -21,9 +21,9 @@ void Engine::iniciar() {
     }
 
     // 2. Loop Principal (Máquina de Estados)
-    int idProximaSala = 1; // ID do primeiro nó da jornada
+    int idProximaSala = 1; // ID do primeiro nó
 
-    while (idProximaSala != 0 && !_personagem->isMorto()) {
+ /*   while (idProximaSala != 0 && !_personagem->isMorto()) {
         
         std::unique_ptr<SalaBase> salaAtual = fabricarProximaSala(idProximaSala);
         
@@ -42,34 +42,33 @@ void Engine::iniciar() {
         salaAtual->encerrarSala();
         
         // O escopo do while garante que salaAtual seja destruída 
-        // antes de alocar a próxima sala, mantendo o consumo de memória baixo e estável.
     }
 
     // 3. Finalização e Encerramento da História
     if (_personagem->isMorto()) {
-        std::cout << "\n[BUILD FAILED] O prazo final expirou. Reprovado em Programação e Desenvolvimento de Software II." << std::endl;
+        std::cout << "\nHistoria Final" << std::endl;
     } else {
-        std::cout << "\n[BUILD SUCCESS] Repositório atualizado. Projeto entregue com sucesso! O sistema foi aprovado." << std::endl;
+        std::cout << "\nEncerramento" << std::endl;
     }
-}
+}*/
 
-std::unique_ptr<SalaBase> Engine::fabricarProximaSala(int idSala) {
+/*std::unique_ptr<SalaBase> Engine::fabricarProximaSala(int idSala) {
     // O isolamento das dependências concretas ocorre aqui.
     // Qualquer nova sala criada no futuro exigirá alteração apenas neste escopo fechado.
     switch (idSala) {
         case 1:
-            // Combate inicial contra um bug básico
+            // Combate inicial
             return std::unique_ptr<SalaBase>(new SalaCombate("Sala do Segmentation Fault"));
         case 2:
-            // Evento interativo
+            // Sala Escolha
             return std::unique_ptr<SalaBase>(new SalaEscolha("Reunião de Alinhamento (Refeitório)"));
         case 3:
-            // Combate mais avançado
+            // Sala 3
             return std::unique_ptr<SalaBase>(new SalaCombate("Sala do Memory Leak"));
         case 4:
             // Boss final
             return std::unique_ptr<SalaBase>(new SalaCombate("Defesa do Projeto - Avaliador Implacável"));
         default:
-            return nullptr; // 0 ou IDs desconhecidos encerram o loop
+            return nullptr; // 0 encerra o loop
     }
-}
+}*/
