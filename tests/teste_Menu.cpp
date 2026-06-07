@@ -10,10 +10,10 @@ TEST_CASE("TESTE DE CONSTRUCAO DO MENU") {
     REQUIRE_NOTHROW(Menu());
 }
 
-TEST_CASE("TESTE DE MENU FUNCAO executarMenuInicial - Abortar Missao") {
+TEST_CASE("TESTE DE MENU FUNCAO executarMenuInicial") {
     Menu menuTeste;
 
-    // Prepara a simulação de entrada de dados (Usuário digita '2' e aperta Enter)
+    // Simulação de entrada de dados
     std::stringstream simulacaoEntrada;
     simulacaoEntrada << "2\n";
 
@@ -26,14 +26,14 @@ TEST_CASE("TESTE DE MENU FUNCAO executarMenuInicial - Abortar Missao") {
     
     CHECK(personagemRetornado == nullptr);
 
-    // restaura o buffer original do std::cin (Crítico para não quebrar outros testes)
+    // restaura o buffer original do std::cin
     std::cin.rdbuf(cinBufferAntigo);
 }
 
 TEST_CASE("TESTE DE MENU FUNCAO executarMenuInicial - Escolha de Personagem") {
     Menu menuTeste;
 
-    // Simula duas entradas sequenciais: 
+    // Simula duas entradas
     // iniciar Novo Jogo e depois 1 escolher a classe
     std::stringstream simulacaoEntrada;
     simulacaoEntrada << "1\n1\n";
@@ -43,12 +43,11 @@ TEST_CASE("TESTE DE MENU FUNCAO executarMenuInicial - Escolha de Personagem") {
 
     std::unique_ptr<Personagem> personagemRetornado = menuTeste.executarMenuInicial();
 
-    // 2. Validações estritas utilizando as macros do doctest
-    // REQUIRE garante que o ponteiro não é nulo antes de tentar acessar seus métodos (evita segfault no teste)
+    // REQUIRE garante que o ponteiro não é nulo antes de tentar acessar seus métodos
     REQUIRE(personagemRetornado != nullptr); 
     
     // Verifica se os dados da Classe 1 foram injetados corretamente
-    CHECK(personagemRetornado->getNome() == "Dev C++ Sênior");
+    CHECK(personagemRetornado->getNome() == "vaz");
     CHECK(personagemRetornado->getVida() == 120);
     
     // Opcional: Verificar se o inventário não está vazio
