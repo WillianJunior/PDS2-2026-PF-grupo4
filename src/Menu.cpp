@@ -1,13 +1,13 @@
 #include "Menu.hpp"
+#include "InventarioHabilidade.hpp"
+#include "InventarioItem.hpp"
 
 Menu::Menu(){
 }
-
-void Menu::iniciarJogo(){
-}
-
-void Menu::escolherPersonagemInicial(){
-}
-
 Menu::~Menu(){
 }
+
+std::unique_ptr<Personagem> Menu::executarMenuInicial() {
+}
+
+std::unique_ptr<Personagem> Menu::escolherPersonagemInicial() {}
