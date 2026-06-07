@@ -15,6 +15,8 @@ class Personagem : public Entidade{
     private:
     /** @brief Guarda os itens que o personagem possui */
         InventarioItem _inventario;
+    /** @brief Valor maximo que o personagem pode ter de vida */
+        int _vidaMaxima;
 
     public:
     /**
@@ -41,7 +43,7 @@ class Personagem : public Entidade{
      * * @param posicaoItem índice (posição) do item dentro do vetor Items em inventarioItem.
      * @return Retorna um valor inteiro (dano causado, dano curado ou mudança de estado)
      */
-        void escolherItem(int posicaoItem);
+        int escolherItem(int posicaoItem);
 
     /**
      * @brief Alterar a vida atual do personagem para mais ou para menos

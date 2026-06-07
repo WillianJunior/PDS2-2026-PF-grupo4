@@ -1,22 +1,29 @@
 #include "Personagem.hpp"
 
 Personagem::Personagem(int vida, InventarioHabilidade inventarioHabilidade, std::string nome, InventarioItem inventarioItem)
-    : Entidade(vida, nome, inventarioHabilidade), _inventario(inventarioItem){}
+    : Entidade(vida, nome, inventarioHabilidade), _inventario(inventarioItem), _vidaMaxima(vida) {}
 
 int Personagem::escolherHabilidade(int posicaoHabilidade){
-    //retorna 0 apenas para dar como falha nos testes
-    return 0;
+    Habilidade habilidade = this->_inventarioHabilidade.getHabilidade(posicaoHabilidade);
+    habilidade.mostrarHabilidade();
+    return habilidade.getValor();
 }
 
-void Personagem::escolherItem(int posicaoItem){
+int Personagem::escolherItem(int posicaoItem){
+    Item item = this->_inventario.getItem(posicaoItem);
+    int valorItem = item.getValor();
+    this->_inventario.descartarAcao(posicaoItem);
+    return valorItem;
 }
 
 void Personagem::alterarVida(int valor){
+    this->_vida += valor;
+    if(this->_vida > this->_vidaMaxima)
+        this->_vida = this->_vidaMaxima;
 }
 
 bool Personagem::isMorto(){
-    //retorna false apenas para dar como falha nos testes
-    return false;
+    return this->_vida <= 0;
 }
 
 InventarioItem Personagem::getInventarioItem(){
