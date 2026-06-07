@@ -29,10 +29,9 @@ class SalaBase {
         virtual void encerrarSala() = 0;
 
         /**
-         * @brief Realiza a transição ou o carregamento da próxima sala.
-         * Método virtual puro que deve ser implementado pelas classes filhas.
-         */
-        virtual void proximaSala() = 0;
+         * @brief Executa o loop da sala
+         * @return Numero que representa a ID da proxima sala a ser carregada**/
+        virtual int executarSala() = 0;
 
         /**
          * @brief Exibe as informações, o menu ou o conteúdo da sala na tela.

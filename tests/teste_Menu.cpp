@@ -1,20 +1,59 @@
 #include "doctest.h"
 #include "Menu.hpp"
+#include "Personagem.hpp"
+#include <sstream>
+#include <iostream>
+#include <memory>
 
-// Os TEST_CASEs serão escritos aqui
 TEST_CASE("TESTE DE CONSTRUCAO DO MENU") {
-    Menu menuTeste;
-    CHECK(true); 
+    // Garante que o construtor padrão não lança exceções inesperadas
+    REQUIRE_NOTHROW(Menu());
 }
 
-TEST_CASE("TESTE DE MENU FUNCAO iniciarJogo") {
+TEST_CASE("TESTE DE MENU FUNCAO executarMenuInicial - Abortar Missao") {
     Menu menuTeste;
-    menuTeste.iniciarJogo();
-    // NÃO POSSUI TESTE, FUNÇÃO VOID QUE IMPRIME E EXECUTA AÇÕES SEM RETORNO
+
+    // Prepara a simulação de entrada de dados (Usuário digita '2' e aperta Enter)
+    std::stringstream simulacaoEntrada;
+    simulacaoEntrada << "2\n";
+
+    // salva o buffer original do std::cin e redireciona pra simulação
+    std::streambuf* cinBufferAntigo = std::cin.rdbuf();
+    std::cin.rdbuf(simulacaoEntrada.rdbuf());
+
+    // executa a funçãobb deve retornar nullptr
+    std::unique_ptr<Personagem> personagemRetornado = menuTeste.executarMenuInicial();
+    
+    CHECK(personagemRetornado == nullptr);
+
+    // restaura o buffer original do std::cin (Crítico para não quebrar outros testes)
+    std::cin.rdbuf(cinBufferAntigo);
 }
 
-TEST_CASE("TESTE DE MENU FUNCAO escolherPersonagemInicial") {
+TEST_CASE("TESTE DE MENU FUNCAO executarMenuInicial - Escolha de Personagem") {
     Menu menuTeste;
-    menuTeste.escolherPersonagemInicial();
-    // NÃO POSSUI TESTE, FUNÇÃO VOID QUE IMPRIME E EXECUTA AÇÕES SEM RETORNO
+
+    // Simula duas entradas sequenciais: 
+    // iniciar Novo Jogo e depois 1 escolher a classe
+    std::stringstream simulacaoEntrada;
+    simulacaoEntrada << "1\n1\n";
+
+    std::streambuf* cinBufferAntigo = std::cin.rdbuf();
+    std::cin.rdbuf(simulacaoEntrada.rdbuf());
+
+    std::unique_ptr<Personagem> personagemRetornado = menuTeste.executarMenuInicial();
+
+    // 2. Validações estritas utilizando as macros do doctest
+    // REQUIRE garante que o ponteiro não é nulo antes de tentar acessar seus métodos (evita segfault no teste)
+    REQUIRE(personagemRetornado != nullptr); 
+    
+    // Verifica se os dados da Classe 1 foram injetados corretamente
+    CHECK(personagemRetornado->getNome() == "Dev C++ Sênior");
+    CHECK(personagemRetornado->getVida() == 120);
+    
+    // Opcional: Verificar se o inventário não está vazio
+    CHECK(personagemRetornado->getInventarioItem().getTamanho() > 0);
+
+    // 3. Restauração do std::cin
+    std::cin.rdbuf(cinBufferAntigo);
 }
