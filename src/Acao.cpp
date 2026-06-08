@@ -1,19 +1,21 @@
 #include "Acao.hpp"
+#include <fstream>
+#include <sstream>
 
 Acao::Acao(std::string nome, bool tipo, int valor, Efeito efeito, bool alvo)
     : _nome(nome), _tipo(tipo), _valor(valor), _efeito(efeito), _alvo(alvo){}
 
-int Acao::alterarVida(bool alvo, int valor){
-    //retorna 0 apenas para dar como falha nos testes
-    return 0;
+int Acao::calcularImpacto(){
+    if(this->_tipo == false){
+        //causa dano
+        return -this->_valor;
+    }else{
+        //cura
+        return this->_valor;
+    }
 }
 
-int Acao::aplicarEfeito(bool alvo, Efeito efeito){
-    //retorna 0 apenas para dar como falha nos testes
-    return 0;
-}
-
-void Acao::mostrarHabilidade(){
+void Acao::mostrarDescricao(){
 }
 
 std::string Acao::getNome(){
@@ -36,5 +38,4 @@ Efeito Acao::getEfeito(){
     return this->_efeito;
 }
 
-Acao::~Acao(){
-}
+Acao::~Acao(){}

@@ -30,10 +30,10 @@ class Efeito{
         Efeito(std::string nome, int valor, int duracao);
 
     /**
-     * @brief Aplica o valor do efeito na entidade
-     * * Responsável por executar a alteração de vida baseada no valor numérico durante o turno atual.
+     * @brief Exibe o feedback visual de que o efeito está agindo na entidade.
+     * * Imprime no terminal o impacto do efeito caso a duração ainda seja válida.
      */
-        void aplicarEfeito();
+        void mostrarEfeito();
 
     /**
      * @brief Atualiza o tempo de vida restante do efeito

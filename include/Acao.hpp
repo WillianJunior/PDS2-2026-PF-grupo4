@@ -40,12 +40,10 @@ class Acao {
         Acao(std::string nome, bool tipo, int valor, Efeito efeito, bool alvo);
         
     /**
-     * @brief Calcula ou aplica a alteração de vida baseada na ação.
-     * @param alvo O alvo que receberá a alteração de vida.
-     * @param valor A quantidade de vida a ser alterada.
+     * @brief Calcula a alteração de vida baseada na ação.
      * @return Retorna um valor inteiro representando o resultado final da alteração.
      */
-        virtual int alterarVida(bool alvo, int valor);
+        virtual int calcularImpacto();
 
     /**
      * @brief Aplica o efeito de status no alvo determinado.
@@ -58,7 +56,7 @@ class Acao {
     /**
      * @brief Exibe os detalhes da ação (informações da habilidade ou do item).
      */
-        virtual void mostrarHabilidade();
+        virtual void mostrarDescricao();
 
     /**
      * @brief Retorna o nome da ação.

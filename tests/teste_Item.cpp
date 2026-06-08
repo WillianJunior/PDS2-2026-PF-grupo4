@@ -4,7 +4,7 @@
 #include <string>
 // nome alvo valor efeito
 
-TEST_CASE("TESTE DE CONSTRUCAO DE ITEM + GETTER (FARINHA DE MANDIOCA)"){
+TEST_CASE("Teste 01: Testando construcao de item e getters"){
     std::string nomeTeste = "Farinha de mandioca";
     bool alvoTeste = true;
     bool tipoTeste = true;
@@ -19,24 +19,17 @@ TEST_CASE("TESTE DE CONSTRUCAO DE ITEM + GETTER (FARINHA DE MANDIOCA)"){
     CHECK(itemTeste.getTipo() == tipoTeste);
 }
 
-TEST_CASE("TESTE DE ITEM FUNCAO alterarVida"){
-    Item itemTeste("nomeTeste", true, 10, Efeito("Envenenado", 10, 2), true);
-    int teste = itemTeste.alterarVida(itemTeste.getAlvo(), itemTeste.getValor());
-    //forçando o erro do teste, já q não possui implementação ainda
-    CHECK(teste == 10);
+TEST_CASE("Teste 02: Testando a funcao calcularImpacto em Item"){
+    Item itemTeste("Pocao", true, 10, Efeito("Regeneracao", 10, 2), true);
+    int teste_impacto = itemTeste.calcularImpacto();
+    
+    //Como o _tipo do item eh true, ou seja cura (podemos mudar isso dps), a logica tem que retornar positivo
+    CHECK(teste_impacto == 10);
 }
 
-TEST_CASE("TESTE DE ITEM FUNCAO aplicarEfeito"){
-    Item itemTeste("nomeTeste", true, 10, Efeito("Envenenado", 10, 2), true);
-    int teste = itemTeste.aplicarEfeito(itemTeste.getAlvo(), itemTeste.getEfeito());
-    //forçando o erro do teste, já q não possui implementação ainda
-    CHECK(teste == 10);
+TEST_CASE("Teste 03: Testando a funcao mostrarDescricao em Item"){
+    Item itemTeste("Pocao", true, 10, Efeito("Regeneracao", 10, 2), true);
+    
+    itemTeste.mostrarDescricao();
+    // NAO POSSUI TESTE, FUNCAO VOID QUE IMPRIME E EXECUTA ACOES SEM RETORNO.
 }
-
-TEST_CASE("TESTE DE ITEM FUNCAO mostrarHabilidade"){
-    Item itemTeste("nomeTeste", true, 10, Efeito("Envenenado", 10, 2), true);
-    itemTeste.mostrarHabilidade();
-    // NÃO POSSUI TESTE, FUNÇÃO VOID QUE IMPRIME E EXECUTA AÇÕES SEM RETORNO.
-}
-
-
