@@ -34,6 +34,6 @@ test: $(SRC_SEM_MAIN) $(ARQUIVOS_TESTE) | $(BUILD_DIR)
 
 #a regra foi alterada para find que garante que os arquivos na raiz do projeto não vao ser apagados
 clean:
-	@rm -f $(BUILD_DIR)
+	@rm -f $(BUILD_DIR)/*
 	@find . -type f -name '*.gcda' -delete
 	@find . -type f -name '*.gcno' -delete
