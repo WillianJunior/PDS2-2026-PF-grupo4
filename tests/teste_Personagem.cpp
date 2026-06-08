@@ -11,29 +11,48 @@ TEST_CASE("Teste 1: inicialização da classe Personagem"){
 }
 
 TEST_CASE("Teste 2: escolha de Habilidade dentro do inventario"){
-    Personagem isaque(20, InventarioHabilidade(), "Vaz", InventarioItem());
-    isaque.escolherHabilidade(2);
-    //forçando o erro do teste, já q não possui implementação ainda
-    CHECK(isaque.escolherHabilidade(2) == 30);
+    InventarioHabilidade inventarioHabilidade;
+    Efeito efeitoTeste("EfeitoTeste", 10, 10);
+    Habilidade habilidadeTeste1("HabilidadeTeste1", 1, 10, 1, efeitoTeste);
+    Habilidade habilidadeTeste2("HabilidadeTeste2", 1, 20, 1, efeitoTeste);
+    inventarioHabilidade.novaAcao(habilidadeTeste1);
+    inventarioHabilidade.novaAcao(habilidadeTeste2);
+    Personagem isaque(20, inventarioHabilidade, "Vaz", InventarioItem());
+
+    CHECK(isaque.escolherHabilidade(1) == 20);
 }
 
 TEST_CASE("Teste 3: escolha de Item dentro do inventario"){
-    Personagem nicole(20, InventarioHabilidade(), "Vaz", InventarioItem());
-    nicole.escolherItem(2);
+    InventarioItem inventarioItem;
+    Efeito efeitoTeste("EfeitoTeste", 10, 10);
+    Item itemTeste1("ItemTeste1", 1, 10, efeitoTeste, 1);
+    Item itemTeste2("ItemTeste2", 1, 20, efeitoTeste, 1);
+    inventarioItem.novaAcao(itemTeste1);
+    inventarioItem.novaAcao(itemTeste2);
+    Personagem nicole(20, InventarioHabilidade(), "Vaz", inventarioItem);
 
-    //Nao possui CHECK, apenas para cobertura do código
+    CHECK(nicole.escolherItem(1) == 20);
 }
 
 TEST_CASE("Teste 4: alterar a vida"){
     Personagem maycon(20, InventarioHabilidade(), "Vaz", InventarioItem());
-    maycon.alterarVida(-20);
+    maycon.alterarVida(-10);
+    maycon.alterarVida(5);
 
-    //Nao possui CHECK, apenas para cobertura do código
+    CHECK(maycon.getVida() == 15);
 }
 
-TEST_CASE("Teste 5: conferir se está morto"){
+TEST_CASE("Teste 5: testar limite de vida maxima"){
+    Personagem personagemTeste(20, InventarioHabilidade(), "Vaz", InventarioItem());
+    personagemTeste.alterarVida(-10);
+    personagemTeste.alterarVida(20);
+
+    CHECK(personagemTeste.getVida() == 20);
+}
+
+TEST_CASE("Teste 6: conferir se está morto"){
     Personagem marcos(20, InventarioHabilidade(), "Vaz", InventarioItem());
-    marcos.isMorto();
-    //forçando o erro do teste, já q não possui implementação ainda
+    marcos.alterarVida(-20);
+
     CHECK(marcos.isMorto() == true);
 }
