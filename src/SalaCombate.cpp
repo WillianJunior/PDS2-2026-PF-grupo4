@@ -46,7 +46,9 @@ int SalaCombate::executarSala(Personagem* personagem){
                 std::cin >> numeroHabilidade;
 
                 try {
-                    int dano = personagem->escolherHabilidade(numeroHabilidade);
+                    //int dano = personagem->escolherHabilidade(numeroHabilidade);
+                    Habilidade habEscolhida = personagem->escolherHabilidade(numeroHabilidade);
+                    int dano = habEscolhida.getValor();
                     if (dano > 0) {
                         _inimigo->alterarVida(-dano);
                         std::cout << "> " << _inimigo->getNome() << " sofreu " << dano << " de dano!" << std::endl;
@@ -78,7 +80,9 @@ int SalaCombate::executarSala(Personagem* personagem){
             std::cout << "\n=== VEZ DO INIMIGO ===" << std::endl;
             
             //IA interna no inimigo para escolher habilidade
-            int danoInimigo = _inimigo->escolherHabilidade(0); 
+            //int danoInimigo = _inimigo->escolherHabilidade(0); 
+            Habilidade habInimigo = _inimigo->escolherHabilidade(0);
+            int danoInimigo = habInimigo.getValor();
             personagem->alterarVida(-danoInimigo);
             
             std::cout << "> " << _inimigo->getNome() << " atacou e causou " << danoInimigo << " de dano!" << std::endl;
