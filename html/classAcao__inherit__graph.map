@@ -1,7 +1,7 @@
 <map id="Acao" name="Acao">
-<area shape="rect" id="Node000001" title="Classe base para representar qualquer ação do jogo (como Habilidades ou Itens)." alt="" coords="47,5,207,231"/>
-<area shape="rect" id="Node000002" href="$classHabilidade.html" title="Representa uma habilidade no jogo." alt="" coords="5,279,125,364"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="91,245,81,279,75,278,86,243"/>
-<area shape="rect" id="Node000003" href="$classItem.html" title="Representa um item no jogo." alt="" coords="149,279,229,364"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="168,243,179,278,174,279,163,245"/>
+<area shape="rect" id="Node000001" title="Classe base para representar qualquer ação do jogo (como Habilidades ou Itens)." alt="" coords="59,5,213,311"/>
+<area shape="rect" id="Node000002" href="$classHabilidade.html" title="Representa uma habilidade no jogo." alt="" coords="5,359,125,464"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,325,82,359,77,358,87,323"/>
+<area shape="rect" id="Node000003" href="$classItem.html" title="Representa um item no jogo." alt="" coords="150,359,266,464"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,323,196,358,191,359,181,325"/>
 </map>

@@ -1,11 +1,44 @@
 <map id="include/Habilidade.hpp" name="include/Habilidade.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="90,5,261,31"/>
-<area shape="rect" id="Node000002" href="$InventarioHabilidade_8hpp.html" title=" " alt="" coords="57,79,294,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,44,178,79,173,79,173,44"/>
-<area shape="rect" id="Node000003" href="$Entidade_8hpp.html" title=" " alt="" coords="96,152,255,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="178,118,178,152,173,152,173,118"/>
-<area shape="rect" id="Node000004" href="$Inimigo_8hpp.html" title=" " alt="" coords="5,225,156,251"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="151,188,98,227,95,223,148,183"/>
-<area shape="rect" id="Node000005" href="$Personagem_8hpp.html" title=" " alt="" coords="180,225,363,251"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="203,183,257,223,254,227,200,188"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="566,5,737,31"/>
+<area shape="rect" id="Node000002" href="$InventarioHabilidade_8hpp.html" title=" " alt="" coords="426,79,663,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="624,40,564,81,561,76,622,36"/>
+<area shape="rect" id="Node000019" href="$Habilidade_8cpp.html" title=" " alt="" coords="687,79,829,104"/>
+<area shape="poly" id="edge23_Node000001_Node000019" title=" " alt="" coords="681,36,742,76,739,81,678,40"/>
+<area shape="rect" id="Node000003" href="$Entidade_8hpp.html" title=" " alt="" coords="465,152,624,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="547,118,547,152,542,152,542,118"/>
+<area shape="rect" id="Node000013" href="$Menu_8cpp.html" title=" " alt="" coords="5,372,113,397"/>
+<area shape="poly" id="edge22_Node000002_Node000013" title=" " alt="" coords="413,107,312,127,258,143,204,163,152,188,104,219,61,256,24,300,19,318,25,337,36,355,49,370,45,373,32,358,20,339,14,318,20,297,57,253,101,215,150,184,202,158,256,138,310,122,412,101"/>
+<area shape="rect" id="Node000018" href="$InventarioHabilidade_8cpp.html" title=" " alt="" coords="649,152,857,177"/>
+<area shape="poly" id="edge21_Node000002_Node000018" title=" " alt="" coords="592,106,720,149,718,154,590,111"/>
+<area shape="rect" id="Node000004" href="$Inimigo_8hpp.html" title=" " alt="" coords="765,225,916,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="606,178,793,223,792,228,605,183"/>
+<area shape="rect" id="Node000009" href="$Personagem_8hpp.html" title=" " alt="" coords="364,225,547,251"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="521,188,472,227,468,223,518,184"/>
+<area shape="rect" id="Node000017" href="$Entidade_8cpp.html" title=" " alt="" coords="571,225,700,251"/>
+<area shape="poly" id="edge20_Node000003_Node000017" title=" " alt="" coords="572,184,622,223,619,227,569,188"/>
+<area shape="rect" id="Node000005" href="$SalaCombate_8hpp.html" title=" " alt="" coords="747,299,935,324"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="843,264,843,299,838,299,838,264"/>
+<area shape="rect" id="Node000008" href="$Inimigo_8cpp.html" title=" " alt="" coords="959,299,1080,324"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="883,253,991,296,989,301,881,258"/>
+<area shape="rect" id="Node000006" href="$Engine_8cpp.html" title=" " alt="" coords="284,372,400,397"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="742,328,413,375,401,377,400,371,412,369,741,323"/>
+<area shape="rect" id="Node000007" href="$SalaCombate_8cpp.html" title=" " alt="" coords="761,372,920,397"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="843,338,843,372,838,372,838,338"/>
+<area shape="poly" id="edge15_Node000009_Node000005" title=" " alt="" coords="531,251,779,296,778,301,530,256"/>
+<area shape="rect" id="Node000010" href="$Engine_8hpp.html" title=" " alt="" coords="196,299,341,324"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="414,258,300,301,298,296,412,253"/>
+<area shape="rect" id="Node000012" href="$Menu_8hpp.html" title=" " alt="" coords="35,299,172,324"/>
+<area shape="poly" id="edge12_Node000009_Node000012" title=" " alt="" coords="386,256,161,301,160,296,385,251"/>
+<area shape="rect" id="Node000014" href="$SalaEscolha_8hpp.html" title=" " alt="" coords="366,299,545,324"/>
+<area shape="poly" id="edge16_Node000009_Node000014" title=" " alt="" coords="458,264,458,299,453,299,453,264"/>
+<area shape="rect" id="Node000016" href="$Personagem_8cpp.html" title=" " alt="" coords="569,299,723,324"/>
+<area shape="poly" id="edge19_Node000009_Node000016" title=" " alt="" coords="500,253,616,296,614,301,498,258"/>
+<area shape="poly" id="edge10_Node000010_Node000006" title=" " alt="" coords="292,332,332,370,328,374,289,336"/>
+<area shape="rect" id="Node000011" href="$main_8cpp.html" title=" " alt="" coords="155,372,260,397"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="252,336,219,374,215,370,248,333"/>
+<area shape="poly" id="edge13_Node000012_Node000006" title=" " alt="" coords="156,325,304,369,303,374,154,330"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="91,337,69,373,64,370,87,334"/>
+<area shape="poly" id="edge17_Node000014_Node000006" title=" " alt="" coords="427,334,362,374,359,370,424,329"/>
+<area shape="rect" id="Node000015" href="$SalaEscolha_8cpp.html" title=" " alt="" coords="424,372,575,397"/>
+<area shape="poly" id="edge18_Node000014_Node000015" title=" " alt="" coords="472,334,494,370,490,373,468,337"/>
 </map>

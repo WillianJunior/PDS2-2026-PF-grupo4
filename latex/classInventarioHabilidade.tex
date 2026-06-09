@@ -36,6 +36,14 @@ void \mbox{\hyperlink{classInventarioHabilidade_ae42114e4cf02b62cbdc6686d53f8dc6
 \begin{DoxyCompactList}\small\item\em Adiciona uma nova habilidade ao final do vetor lista\+Habilidades. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classInventarioHabilidade_a236561cbb35f1e4502d14dcaddb82e3c}{trocar\+Acao}} (int posicao, \mbox{\hyperlink{classHabilidade}{Habilidade}} nova\+Habilidade) override
 \begin{DoxyCompactList}\small\item\em Remove uma habilidade de uma posição específica e insere uma nova. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classInventarioHabilidade_acaf84ee0bd4910b0d7c1af78aa38141f}{get\+Tamanho}} ()
+\begin{DoxyCompactList}\small\item\em Retorna a quantidade de habilidades no inventário. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classHabilidade}{Habilidade}} \mbox{\hyperlink{classInventarioHabilidade_a0a8996b9cb37abe2fcc186773e5507e8}{get\+Habilidade}} (int posicao)
+\begin{DoxyCompactList}\small\item\em Retorna uma habilidade específica pela posição. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classInventarioHabilidade_ac14b9594db264f62e6ec94b8e083378e}{operator==}} (const \mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}} \&outro) const
+\begin{DoxyCompactList}\small\item\em Compara dois inventarios para verificar se sao iguais (usado em testes). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classInventarioHabilidade_a11586d38fe0c87598ae6e8acf17550b7}{operator!=}} (const \mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}} \&outro) const
+\begin{DoxyCompactList}\small\item\em Compara dois inventarios para verificar se nao sao iguais (usado em testes). \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classInventarioHabilidade_aad30f5cfc87152b4ecb8a8a355984756}{descartar\+Acao}} (int posicao) override
 \begin{DoxyCompactList}\small\item\em Remove permanentemente uma habilidade do vetor. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classInventario}{Inventario$<$ Habilidade $>$}}}
@@ -73,6 +81,26 @@ Remove permanentemente uma habilidade do vetor.
 
 Implementa \mbox{\hyperlink{classInventario_ae333c77a15db3cbd7f46bfd9df8f5b3d}{Inventario$<$ Habilidade $>$}}.
 
+\Hypertarget{classInventarioHabilidade_a0a8996b9cb37abe2fcc186773e5507e8}\label{classInventarioHabilidade_a0a8996b9cb37abe2fcc186773e5507e8} 
+\index{InventarioHabilidade@{InventarioHabilidade}!getHabilidade@{getHabilidade}}
+\index{getHabilidade@{getHabilidade}!InventarioHabilidade@{InventarioHabilidade}}
+\doxysubsubsection{\texorpdfstring{getHabilidade()}{getHabilidade()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHabilidade}{Habilidade}} Inventario\+Habilidade\+::get\+Habilidade (\begin{DoxyParamCaption}\item[{int}]{posicao }\end{DoxyParamCaption})}
+
+
+
+Retorna uma habilidade específica pela posição. 
+
+\Hypertarget{classInventarioHabilidade_acaf84ee0bd4910b0d7c1af78aa38141f}\label{classInventarioHabilidade_acaf84ee0bd4910b0d7c1af78aa38141f} 
+\index{InventarioHabilidade@{InventarioHabilidade}!getTamanho@{getTamanho}}
+\index{getTamanho@{getTamanho}!InventarioHabilidade@{InventarioHabilidade}}
+\doxysubsubsection{\texorpdfstring{getTamanho()}{getTamanho()}}
+{\footnotesize\ttfamily int Inventario\+Habilidade\+::get\+Tamanho (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna a quantidade de habilidades no inventário. 
+
 \Hypertarget{classInventarioHabilidade_a523468bb8dbf6b1e0226923fcf0e99ab}\label{classInventarioHabilidade_a523468bb8dbf6b1e0226923fcf0e99ab} 
 \index{InventarioHabilidade@{InventarioHabilidade}!mostrarInventario@{mostrarInventario}}
 \index{mostrarInventario@{mostrarInventario}!InventarioHabilidade@{InventarioHabilidade}}
@@ -106,6 +134,42 @@ Adiciona uma nova habilidade ao final do vetor lista\+Habilidades.
 
 Implementa \mbox{\hyperlink{classInventario_a8bd558d0ac7eb6e77922fbf5c0a31db7}{Inventario$<$ Habilidade $>$}}.
 
+\Hypertarget{classInventarioHabilidade_a11586d38fe0c87598ae6e8acf17550b7}\label{classInventarioHabilidade_a11586d38fe0c87598ae6e8acf17550b7} 
+\index{InventarioHabilidade@{InventarioHabilidade}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!InventarioHabilidade@{InventarioHabilidade}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool Inventario\+Habilidade\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}} \&}]{outro }\end{DoxyParamCaption}) const}
+
+
+
+Compara dois inventarios para verificar se nao sao iguais (usado em testes). 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em outro} & O inventario a ser comparado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se nao forem iguais. 
+\end{DoxyReturn}
+\Hypertarget{classInventarioHabilidade_ac14b9594db264f62e6ec94b8e083378e}\label{classInventarioHabilidade_ac14b9594db264f62e6ec94b8e083378e} 
+\index{InventarioHabilidade@{InventarioHabilidade}!operator==@{operator==}}
+\index{operator==@{operator==}!InventarioHabilidade@{InventarioHabilidade}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Inventario\+Habilidade\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}} \&}]{outro }\end{DoxyParamCaption}) const}
+
+
+
+Compara dois inventarios para verificar se sao iguais (usado em testes). 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em outro} & O inventario a ser comparado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se forem iguais. 
+\end{DoxyReturn}
 \Hypertarget{classInventarioHabilidade_a236561cbb35f1e4502d14dcaddb82e3c}\label{classInventarioHabilidade_a236561cbb35f1e4502d14dcaddb82e3c} 
 \index{InventarioHabilidade@{InventarioHabilidade}!trocarAcao@{trocarAcao}}
 \index{trocarAcao@{trocarAcao}!InventarioHabilidade@{InventarioHabilidade}}
@@ -129,6 +193,7 @@ Implementa \mbox{\hyperlink{classInventario_acaa5f3b9586dc0d4a25f317bc1d22a1b}{I
 
 
 
-A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{InventarioHabilidade_8hpp}{Inventario\+Habilidade.\+hpp}}\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{InventarioHabilidade_8hpp}{Inventario\+Habilidade.\+hpp}}\item 
+src/\mbox{\hyperlink{InventarioHabilidade_8cpp}{Inventario\+Habilidade.\+cpp}}\end{DoxyCompactItemize}

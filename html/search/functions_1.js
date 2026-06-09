@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['controledeturnos_0',['controleDeTurnos',['../classSalaCombate.html#a843dd26e876be547ffe344c30d728c06',1,'SalaCombate']]]
+  ['calcularimpacto_0',['calcularImpacto',['../classAcao.html#ace32485f5cca5329ebb5e6fab9760ceb',1,'Acao']]]
 ];

@@ -30,22 +30,26 @@ Diagrama de colaboração para Sala\+Escolha\+:\nopagebreak
 \doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classSalaEscolha_a0006e9e06096a794261d6386a5de8d69}{Sala\+Escolha}} (std\+::string nome)
+\mbox{\hyperlink{classSalaEscolha_abc910dbacaf179cd3d694e459c07f53a}{Sala\+Escolha}} (std\+::string nome, std\+::string historia)
 \begin{DoxyCompactList}\small\item\em Construtor da \doxylink{classSalaEscolha}{Sala\+Escolha}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSalaEscolha_a271e7269eeb090dcdf63f0c4988deab0}{encerrar\+Sala}} () override
 \begin{DoxyCompactList}\small\item\em Encerra as atividades da sala atual. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classSalaEscolha_a19e068ae95ec4682fbd5c9fe56c71a35}{proxima\+Sala}} () override
+int \mbox{\hyperlink{classSalaEscolha_ae733458ab6ba45b7d198ec09063250b3}{executar\+Sala}} (\mbox{\hyperlink{classPersonagem}{Personagem}} \texorpdfstring{$\ast$}{*}personagem) override
 \begin{DoxyCompactList}\small\item\em Prepara ou avança o jogo para a próxima sala. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSalaEscolha_ad99bb15b16532d1148c920c9d1b0d7ba}{mostrar\+Sala}} () override
 \begin{DoxyCompactList}\small\item\em Exibe as informações e o ambiente da sala para o jogador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSalaEscolha_a89c73771446f7c2b62b88049cf82f2b4}{mostrar\+Opcoes}} ()
 \begin{DoxyCompactList}\small\item\em Exibe as opções de decisão disponíveis para o jogador nesta sala. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classSalaEscolha_ab2370e677d45512f21ece6cd69ac8cb8}{executar\+Evento}} ()
-\begin{DoxyCompactList}\small\item\em Processa a decisão do jogador e executa o evento correspondente. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classSalaEscolha_a4993fece9ec8207ef29f0fba082d7742}{executar\+Evento}} (\mbox{\hyperlink{classPersonagem}{Personagem}} \texorpdfstring{$\ast$}{*}personagem)
+\begin{DoxyCompactList}\small\item\em Processa a decisão do jogador e executa o evento correspondente. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSalaEscolha_ae8b2db3644dae7204d6e9f320a9a3fea}{adicionar\+Opcao}} (std\+::string descricao, std\+::function$<$ void(\mbox{\hyperlink{classPersonagem}{Personagem}} \texorpdfstring{$\ast$}{*})$>$ consequencia)
+\begin{DoxyCompactList}\small\item\em Adiciona uma opcao para a sala de escolhas. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classSalaBase}{Sala\+Base}}}
 \begin{DoxyCompactItemize}
 \item 
-virtual \mbox{\hyperlink{classSalaBase_a31e1cc9705d99a6dcba12f6cc52e3fc0}{\texorpdfstring{$\sim$}{\string~}\+Sala\+Base}} ()
+std\+::string \mbox{\hyperlink{classSalaBase_aa70b904d98578ea6b8b42e607eeef7ca}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o nome da sala. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classSalaBase_a26b843086d5f0b0ebbcd1bf5331f90f6}{\texorpdfstring{$\sim$}{\string~}\+Sala\+Base}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor virtual. Garante que os recursos das classes derivadas sejam liberados corretamente. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Outros membros herdados}
 \doxysubsection*{Membros protegidos herdados de \mbox{\hyperlink{classSalaBase}{Sala\+Base}}}
@@ -69,11 +73,11 @@ Representa uma sala focada em escolhas e eventos interativos.
 \end{DoxyItemize}
 
 \doxysubsection{Construtores e Destrutores}
-\Hypertarget{classSalaEscolha_a0006e9e06096a794261d6386a5de8d69}\label{classSalaEscolha_a0006e9e06096a794261d6386a5de8d69} 
+\Hypertarget{classSalaEscolha_abc910dbacaf179cd3d694e459c07f53a}\label{classSalaEscolha_abc910dbacaf179cd3d694e459c07f53a} 
 \index{SalaEscolha@{SalaEscolha}!SalaEscolha@{SalaEscolha}}
 \index{SalaEscolha@{SalaEscolha}!SalaEscolha@{SalaEscolha}}
 \doxysubsubsection{\texorpdfstring{SalaEscolha()}{SalaEscolha()}}
-{\footnotesize\ttfamily Sala\+Escolha\+::\+Sala\+Escolha (\begin{DoxyParamCaption}\item[{std\+::string}]{nome }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Sala\+Escolha\+::\+Sala\+Escolha (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{std\+::string}]{historia }\end{DoxyParamCaption})}
 
 
 
@@ -90,7 +94,27 @@ Construtor da \doxylink{classSalaEscolha}{Sala\+Escolha}.
 \end{DoxyItemize}
 
 \doxysubsection{Documentação das funções}
-\Hypertarget{classSalaEscolha_a271e7269eeb090dcdf63f0c4988deab0}\label{classSalaEscolha_a271e7269eeb090dcdf63f0c4988deab0} 
+\Hypertarget{classSalaEscolha_ae8b2db3644dae7204d6e9f320a9a3fea}\label{classSalaEscolha_ae8b2db3644dae7204d6e9f320a9a3fea} 
+\index{SalaEscolha@{SalaEscolha}!adicionarOpcao@{adicionarOpcao}}
+\index{adicionarOpcao@{adicionarOpcao}!SalaEscolha@{SalaEscolha}}
+\doxysubsubsection{\texorpdfstring{adicionarOpcao()}{adicionarOpcao()}}
+{\footnotesize\ttfamily void Sala\+Escolha\+::adicionar\+Opcao (\begin{DoxyParamCaption}\item[{std\+::string}]{descricao,  }\item[{std\+::function$<$ void(\mbox{\hyperlink{classPersonagem}{Personagem}} \texorpdfstring{$\ast$}{*})$>$}]{consequencia }\end{DoxyParamCaption})}
+
+
+
+Adiciona uma opcao para a sala de escolhas. 
+
+
+\begin{DoxyItemize}
+\item Uma opção é alocada no vetor de \+\_\+opcoes da sala 
+\begin{DoxyParams}{Parâmetros}
+{\em descricao} & Descreve o que é o item ou habilidade "{}\+Trevo de 5 folhas"{}. \\
+\hline
+{\em consequencia} & Guarda qual a consequência da ação no personagem. "{}\+Adicionar item"{}. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{classSalaEscolha_a271e7269eeb090dcdf63f0c4988deab0}\label{classSalaEscolha_a271e7269eeb090dcdf63f0c4988deab0} 
 \index{SalaEscolha@{SalaEscolha}!encerrarSala@{encerrarSala}}
 \index{encerrarSala@{encerrarSala}!SalaEscolha@{SalaEscolha}}
 \doxysubsubsection{\texorpdfstring{encerrarSala()}{encerrarSala()}}
@@ -107,11 +131,11 @@ Encerra as atividades da sala atual.
 
 Implementa \mbox{\hyperlink{classSalaBase_a2bbb6cb055fc485d399ecf7a9a1d44fa}{Sala\+Base}}.
 
-\Hypertarget{classSalaEscolha_ab2370e677d45512f21ece6cd69ac8cb8}\label{classSalaEscolha_ab2370e677d45512f21ece6cd69ac8cb8} 
+\Hypertarget{classSalaEscolha_a4993fece9ec8207ef29f0fba082d7742}\label{classSalaEscolha_a4993fece9ec8207ef29f0fba082d7742} 
 \index{SalaEscolha@{SalaEscolha}!executarEvento@{executarEvento}}
 \index{executarEvento@{executarEvento}!SalaEscolha@{SalaEscolha}}
 \doxysubsubsection{\texorpdfstring{executarEvento()}{executarEvento()}}
-{\footnotesize\ttfamily void Sala\+Escolha\+::executar\+Evento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Sala\+Escolha\+::executar\+Evento (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPersonagem}{Personagem}} \texorpdfstring{$\ast$}{*}}]{personagem }\end{DoxyParamCaption})}
 
 
 
@@ -120,7 +144,34 @@ Processa a decisão do jogador e executa o evento correspondente.
 
 \begin{DoxyItemize}
 \item Aplica as consequências da escolha (ex\+: receber um item, perder vida, etc). 
-\end{DoxyItemize}\Hypertarget{classSalaEscolha_a89c73771446f7c2b62b88049cf82f2b4}\label{classSalaEscolha_a89c73771446f7c2b62b88049cf82f2b4} 
+\begin{DoxyParams}{Parâmetros}
+{\em personagem} & \doxylink{classPersonagem}{Personagem} que as consequências da escolha serão acionadas. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{classSalaEscolha_ae733458ab6ba45b7d198ec09063250b3}\label{classSalaEscolha_ae733458ab6ba45b7d198ec09063250b3} 
+\index{SalaEscolha@{SalaEscolha}!executarSala@{executarSala}}
+\index{executarSala@{executarSala}!SalaEscolha@{SalaEscolha}}
+\doxysubsubsection{\texorpdfstring{executarSala()}{executarSala()}}
+{\footnotesize\ttfamily int Sala\+Escolha\+::executar\+Sala (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPersonagem}{Personagem}} \texorpdfstring{$\ast$}{*}}]{personagem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Prepara ou avança o jogo para a próxima sala. 
+
+
+\begin{DoxyItemize}
+\item Sobrescreve o método da classe mãe (\doxylink{classSalaBase}{Sala\+Base}) para gerenciar o fluxo de transição após o evento terminar. 
+\begin{DoxyParams}{Parâmetros}
+{\em personagem} & O personagem no qual a sala irá executar ações sob. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
+
+Implementa \mbox{\hyperlink{classSalaBase_af8610b3e1cffc4fd2c85366ebc64bac0}{Sala\+Base}}.
+
+\Hypertarget{classSalaEscolha_a89c73771446f7c2b62b88049cf82f2b4}\label{classSalaEscolha_a89c73771446f7c2b62b88049cf82f2b4} 
 \index{SalaEscolha@{SalaEscolha}!mostrarOpcoes@{mostrarOpcoes}}
 \index{mostrarOpcoes@{mostrarOpcoes}!SalaEscolha@{SalaEscolha}}
 \doxysubsubsection{\texorpdfstring{mostrarOpcoes()}{mostrarOpcoes()}}
@@ -147,25 +198,9 @@ Exibe as informações e o ambiente da sala para o jogador.
 
 Implementa \mbox{\hyperlink{classSalaBase_a266d17999fecc33d2afeb1c9fd9083a3}{Sala\+Base}}.
 
-\Hypertarget{classSalaEscolha_a19e068ae95ec4682fbd5c9fe56c71a35}\label{classSalaEscolha_a19e068ae95ec4682fbd5c9fe56c71a35} 
-\index{SalaEscolha@{SalaEscolha}!proximaSala@{proximaSala}}
-\index{proximaSala@{proximaSala}!SalaEscolha@{SalaEscolha}}
-\doxysubsubsection{\texorpdfstring{proximaSala()}{proximaSala()}}
-{\footnotesize\ttfamily void Sala\+Escolha\+::proxima\+Sala (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
-
-Prepara ou avança o jogo para a próxima sala. 
-
-
-\begin{DoxyItemize}
-\item Sobrescreve o método da classe mãe (\doxylink{classSalaBase}{Sala\+Base}) para gerenciar o fluxo de transição após o evento terminar. 
-\end{DoxyItemize}
-
-Implementa \mbox{\hyperlink{classSalaBase_a46df83da1001792024a2d67296e647d3}{Sala\+Base}}.
-
-
-
-A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{SalaEscolha_8hpp}{Sala\+Escolha.\+hpp}}\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{SalaEscolha_8hpp}{Sala\+Escolha.\+hpp}}\item 
+src/\mbox{\hyperlink{SalaEscolha_8cpp}{Sala\+Escolha.\+cpp}}\end{DoxyCompactItemize}

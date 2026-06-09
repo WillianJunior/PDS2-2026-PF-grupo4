@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WE CANT CODE THIS GAME: Referência do Arquivo src/SalaCombate.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WE CANT CODE THIS GAME
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Referência do Arquivo SalaCombate.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="SalaCombate_8hpp_source.html">SalaCombate.hpp</a>&quot;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para SalaCombate.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="SalaCombate_8cpp__incl.png" border="0" usemap="#asrc_2SalaCombate_8cpp" alt=""/></div>
+<map name="asrc_2SalaCombate_8cpp" id="asrc_2SalaCombate_8cpp">
+<area shape="rect" title=" " alt="" coords="957,5,1115,31"/>
+<area shape="rect" href="SalaCombate_8hpp.html" title=" " alt="" coords="542,79,679,104"/>
+<area shape="poly" title=" " alt="" coords="968,33,693,79,692,74,967,28"/>
+<area shape="rect" title=" " alt="" coords="760,592,840,617"/>
+<area shape="poly" title=" " alt="" coords="1034,32,1016,88,1009,125,1005,163,1005,460,1001,486,990,510,973,530,952,548,903,575,854,593,852,588,901,570,949,543,969,526,985,507,996,485,1000,459,1000,163,1003,124,1011,86,1029,30"/>
+<area shape="rect" title=" " alt="" coords="1040,79,1099,104"/>
+<area shape="poly" title=" " alt="" coords="1044,30,1061,65,1056,67,1039,32"/>
+<area shape="rect" title=" " alt="" coords="1123,79,1210,104"/>
+<area shape="poly" title=" " alt="" coords="1058,28,1135,70,1132,74,1056,33"/>
+<area shape="rect" href="SalaBase_8hpp.html" title=" " alt="" coords="145,519,255,544"/>
+<area shape="poly" title=" " alt="" coords="542,104,436,122,315,149,257,165,207,184,167,204,141,227,123,261,116,299,118,338,126,378,140,416,156,451,187,506,182,509,151,454,135,418,121,379,112,339,110,298,118,259,137,224,164,200,204,179,256,160,313,143,435,117,542,99"/>
+<area shape="poly" title=" " alt="" coords="680,90,765,97,810,106,854,120,894,138,925,163,947,196,953,215,955,237,955,460,952,482,943,503,915,539,879,568,842,588,840,584,876,563,911,535,939,501,946,481,949,459,949,237,947,216,942,198,922,167,891,143,852,125,809,111,764,103,680,95"/>
+<area shape="rect" title=" " alt="" coords="171,592,229,617"/>
+<area shape="poly" title=" " alt="" coords="542,97,391,107,303,116,215,130,134,148,68,172,43,186,24,201,12,218,8,237,8,459,12,485,23,508,40,528,61,545,111,572,158,590,157,595,108,577,58,550,36,532,19,511,7,487,3,460,3,236,7,216,20,198,40,181,66,167,132,143,214,124,302,111,391,101,542,92"/>
+<area shape="rect" href="Inimigo_8hpp.html" title=" " alt="" coords="449,152,548,177"/>
+<area shape="poly" title=" " alt="" coords="594,106,530,147,527,142,591,102"/>
+<area shape="rect" href="Personagem_8hpp.html" title=" " alt="" coords="673,152,804,177"/>
+<area shape="poly" title=" " alt="" coords="633,102,707,143,704,147,630,106"/>
+<area shape="rect" title=" " alt="" coords="572,152,649,177"/>
+<area shape="poly" title=" " alt="" coords="613,104,613,138,608,138,608,104"/>
+<area shape="poly" title=" " alt="" coords="256,537,747,594,746,600,255,542"/>
+<area shape="poly" title=" " alt="" coords="203,544,203,578,197,578,197,544"/>
+<area shape="poly" title=" " alt="" coords="549,175,606,191,673,216,742,251,774,273,804,297,826,316,841,334,850,355,853,383,853,459,850,494,840,527,816,581,811,579,835,525,844,493,848,459,848,383,845,357,836,337,822,320,801,301,771,277,739,256,671,221,604,196,547,180"/>
+<area shape="poly" title=" " alt="" coords="449,170,370,175,278,185,194,202,162,214,140,227,105,264,79,301,60,338,49,376,47,415,53,456,67,498,90,543,104,559,120,572,158,590,156,595,118,577,100,563,86,545,62,500,47,457,41,415,44,375,55,336,74,298,101,260,137,223,160,209,193,197,277,180,369,170,449,165"/>
+<area shape="rect" href="Entidade_8hpp.html" title=" " alt="" coords="445,225,552,251"/>
+<area shape="poly" title=" " alt="" coords="501,178,501,212,496,212,496,178"/>
+<area shape="poly" title=" " alt="" coords="553,242,679,261,737,276,760,286,776,297,793,316,801,336,803,383,803,459,803,578,797,578,797,459,797,383,796,337,789,319,773,301,758,291,736,281,678,266,552,247"/>
+<area shape="rect" href="InventarioHabilidade_8hpp.html" title=" " alt="" coords="405,299,592,324"/>
+<area shape="poly" title=" " alt="" coords="501,251,501,285,496,285,496,251"/>
+<area shape="rect" title=" " alt="" coords="543,445,606,471"/>
+<area shape="poly" title=" " alt="" coords="463,253,434,266,408,282,393,301,392,311,396,323,413,342,433,350,456,357,483,370,523,402,556,434,553,438,520,406,480,374,455,361,431,355,410,346,391,325,386,312,388,299,404,278,431,261,461,248"/>
+<area shape="rect" href="Efeito_8hpp.html" title=" " alt="" coords="331,519,419,544"/>
+<area shape="poly" title=" " alt="" coords="446,251,393,266,334,290,279,325,255,348,236,373,228,394,230,413,239,433,254,451,296,485,339,510,336,515,293,489,251,455,235,436,225,415,223,393,231,371,251,344,275,321,332,285,391,261,444,246"/>
+<area shape="rect" href="Inventario_8hpp.html" title=" " alt="" coords="646,372,762,397"/>
+<area shape="poly" title=" " alt="" coords="533,321,659,365,657,370,531,327"/>
+<area shape="poly" title=" " alt="" coords="507,323,565,432,560,435,503,326"/>
+<area shape="rect" href="Habilidade_8hpp.html" title=" " alt="" coords="245,372,365,397"/>
+<area shape="poly" title=" " alt="" coords="469,327,350,370,349,365,467,322"/>
+<area shape="poly" title=" " alt="" coords="712,397,792,578,787,580,707,399"/>
+<area shape="poly" title=" " alt="" coords="697,399,665,435,620,473,572,501,521,525,416,562,319,586,244,600,243,595,318,581,414,557,519,520,569,496,617,468,662,431,693,396"/>
+<area shape="poly" title=" " alt="" coords="684,400,609,441,607,436,682,395"/>
+<area shape="rect" href="Acao_8hpp.html" title=" " alt="" coords="333,445,416,471"/>
+<area shape="poly" title=" " alt="" coords="319,396,356,434,352,437,315,400"/>
+<area shape="poly" title=" " alt="" coords="409,468,754,585,752,590,408,473"/>
+<area shape="poly" title=" " alt="" coords="362,473,226,585,223,581,359,469"/>
+<area shape="poly" title=" " alt="" coords="377,471,377,505,372,505,372,471"/>
+<area shape="poly" title=" " alt="" coords="419,537,747,592,746,597,419,543"/>
+<area shape="poly" title=" " alt="" coords="348,546,242,589,240,584,346,542"/>
+<area shape="poly" title=" " alt="" coords="772,175,812,194,855,223,874,241,890,261,900,284,904,310,904,459,902,485,896,505,871,546,852,568,831,586,827,582,848,564,867,542,892,503,897,484,899,459,899,310,895,286,885,264,870,245,852,227,810,199,769,180"/>
+<area shape="poly" title=" " alt="" coords="674,180,542,203,434,228,348,255,313,272,272,301,235,347,190,419,134,520,132,532,134,543,150,565,170,582,166,586,146,568,130,545,126,532,130,518,185,416,230,344,269,297,310,267,346,250,433,223,541,198,673,174"/>
+<area shape="poly" title=" " alt="" coords="701,180,552,224,550,219,699,175"/>
+<area shape="rect" href="InventarioItem_8hpp.html" title=" " alt="" coords="616,299,763,324"/>
+<area shape="poly" title=" " alt="" coords="737,179,700,287,695,285,732,177"/>
+<area shape="poly" title=" " alt="" coords="694,324,701,358,696,359,689,325"/>
+<area shape="poly" title=" " alt="" coords="680,326,637,374,592,435,588,432,633,370,676,322"/>
+<area shape="rect" href="Item_8hpp.html" title=" " alt="" coords="389,372,469,397"/>
+<area shape="poly" title=" " alt="" coords="648,327,484,371,482,366,647,321"/>
+<area shape="poly" title=" " alt="" coords="422,399,394,436,390,433,418,396"/>
+</map>
+</div>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

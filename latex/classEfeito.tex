@@ -11,8 +11,7 @@ Representa um efeito de status contínuo no jogo.
 
 
 
-Diagrama de colaboração para Efeito\+:
-\nopagebreak
+Diagrama de colaboração para Efeito\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,12 +23,20 @@ Diagrama de colaboração para Efeito\+:
 \item 
 \mbox{\hyperlink{classEfeito_a1f7ceced0871b644b475cf3acbaed2de}{Efeito}} (std\+::string nome, int valor, int duracao)
 \begin{DoxyCompactList}\small\item\em Construtor padrão de \doxylink{classEfeito}{Efeito}. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classEfeito_a72a1818ee33711979cb197bfd596f1c8}{aplicar\+Efeito}} ()
-\begin{DoxyCompactList}\small\item\em Aplica o valor do efeito na entidade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEfeito_a6c4c5e293fd22742a2018551a789816d}{mostrar\+Efeito}} ()
+\begin{DoxyCompactList}\small\item\em Exibe o feedback visual de que o efeito está agindo na entidade. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEfeito_a19b45c454250f88acb863293b41cfb25}{atualizar\+Duracao}} ()
 \begin{DoxyCompactList}\small\item\em Atualiza o tempo de vida restante do efeito. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classEfeito_a7f89d95be04cde8840a2e1fea2f12850}{is\+Encerrado}} ()
 \begin{DoxyCompactList}\small\item\em Detecta se o efeito chegou ao fim. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classEfeito_a32dfa0e683ee66be8e36b58b2a3447d7}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o nome. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEfeito_a3b2023d1f6985a000b68011c35058fd5}{get\+Valor}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o valor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEfeito_a3e0833ec0b1bdc54e0bae59d30803c6a}{get\+Duracao}} ()
+\begin{DoxyCompactList}\small\item\em Retorna a duracao. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classEfeito_addb0d4e2e31e6f71ace27579ac149847}{operator==}} (const \mbox{\hyperlink{classEfeito}{Efeito}} \&outro) const
+\begin{DoxyCompactList}\small\item\em Compara dois efeitos. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEfeito_aa906467d4bc07bfc97a5e8ecd9996888}{\texorpdfstring{$\sim$}{\string~}\+Efeito}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor do objeto \doxylink{classEfeito}{Efeito}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -81,20 +88,7 @@ Destrutor do objeto \doxylink{classEfeito}{Efeito}.
 \end{DoxyItemize}
 
 \doxysubsection{Documentação das funções}
-\Hypertarget{classEfeito_a72a1818ee33711979cb197bfd596f1c8}\label{classEfeito_a72a1818ee33711979cb197bfd596f1c8} 
-\index{Efeito@{Efeito}!aplicarEfeito@{aplicarEfeito}}
-\index{aplicarEfeito@{aplicarEfeito}!Efeito@{Efeito}}
-\doxysubsubsection{\texorpdfstring{aplicarEfeito()}{aplicarEfeito()}}
-{\footnotesize\ttfamily void Efeito\+::aplicar\+Efeito (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Aplica o valor do efeito na entidade. 
-
-
-\begin{DoxyItemize}
-\item Responsável por executar a alteração de vida baseada no valor numérico durante o turno atual. 
-\end{DoxyItemize}\Hypertarget{classEfeito_a19b45c454250f88acb863293b41cfb25}\label{classEfeito_a19b45c454250f88acb863293b41cfb25} 
+\Hypertarget{classEfeito_a19b45c454250f88acb863293b41cfb25}\label{classEfeito_a19b45c454250f88acb863293b41cfb25} 
 \index{Efeito@{Efeito}!atualizarDuracao@{atualizarDuracao}}
 \index{atualizarDuracao@{atualizarDuracao}!Efeito@{Efeito}}
 \doxysubsubsection{\texorpdfstring{atualizarDuracao()}{atualizarDuracao()}}
@@ -107,6 +101,54 @@ Atualiza o tempo de vida restante do efeito.
 
 \begin{DoxyItemize}
 \item Diminui a duração do efeito toda vez que a rodada é concluída. 
+\end{DoxyItemize}\Hypertarget{classEfeito_a3e0833ec0b1bdc54e0bae59d30803c6a}\label{classEfeito_a3e0833ec0b1bdc54e0bae59d30803c6a} 
+\index{Efeito@{Efeito}!getDuracao@{getDuracao}}
+\index{getDuracao@{getDuracao}!Efeito@{Efeito}}
+\doxysubsubsection{\texorpdfstring{getDuracao()}{getDuracao()}}
+{\footnotesize\ttfamily int Efeito\+::get\+Duracao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna a duracao. 
+
+
+\begin{DoxyItemize}
+\item Getter para retornar a duracao \begin{DoxyReturn}{Retorna}
+Retorna um inteiro que corresponde ao valor do efeito 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\Hypertarget{classEfeito_a32dfa0e683ee66be8e36b58b2a3447d7}\label{classEfeito_a32dfa0e683ee66be8e36b58b2a3447d7} 
+\index{Efeito@{Efeito}!getNome@{getNome}}
+\index{getNome@{getNome}!Efeito@{Efeito}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily std\+::string Efeito\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o nome. 
+
+
+\begin{DoxyItemize}
+\item Getter para retornar o nome \begin{DoxyReturn}{Retorna}
+Retorna uma sequência de caracteres que corresponde ao nome do efeito 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\Hypertarget{classEfeito_a3b2023d1f6985a000b68011c35058fd5}\label{classEfeito_a3b2023d1f6985a000b68011c35058fd5} 
+\index{Efeito@{Efeito}!getValor@{getValor}}
+\index{getValor@{getValor}!Efeito@{Efeito}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily int Efeito\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o valor. 
+
+
+\begin{DoxyItemize}
+\item Getter para retornar o valor \begin{DoxyReturn}{Retorna}
+Retorna um inteiro que corresponde ao valor do efeito 
+\end{DoxyReturn}
+
 \end{DoxyItemize}\Hypertarget{classEfeito_a7f89d95be04cde8840a2e1fea2f12850}\label{classEfeito_a7f89d95be04cde8840a2e1fea2f12850} 
 \index{Efeito@{Efeito}!isEncerrado@{isEncerrado}}
 \index{isEncerrado@{isEncerrado}!Efeito@{Efeito}}
@@ -123,8 +165,38 @@ Detecta se o efeito chegou ao fim.
 Retorna true se estiver encerrado (duração \texorpdfstring{$<$}{<}= 0), e false caso contrário. 
 \end{DoxyReturn}
 
+\end{DoxyItemize}\Hypertarget{classEfeito_a6c4c5e293fd22742a2018551a789816d}\label{classEfeito_a6c4c5e293fd22742a2018551a789816d} 
+\index{Efeito@{Efeito}!mostrarEfeito@{mostrarEfeito}}
+\index{mostrarEfeito@{mostrarEfeito}!Efeito@{Efeito}}
+\doxysubsubsection{\texorpdfstring{mostrarEfeito()}{mostrarEfeito()}}
+{\footnotesize\ttfamily void Efeito\+::mostrar\+Efeito (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Exibe o feedback visual de que o efeito está agindo na entidade. 
+
+
+\begin{DoxyItemize}
+\item Imprime no terminal o impacto do efeito caso a duração ainda seja válida. 
+\end{DoxyItemize}\Hypertarget{classEfeito_addb0d4e2e31e6f71ace27579ac149847}\label{classEfeito_addb0d4e2e31e6f71ace27579ac149847} 
+\index{Efeito@{Efeito}!operator==@{operator==}}
+\index{operator==@{operator==}!Efeito@{Efeito}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Efeito\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classEfeito}{Efeito}} \&}]{outro }\end{DoxyParamCaption}) const}
+
+
+
+Compara dois efeitos. 
+
+
+\begin{DoxyItemize}
+\item Compara todos os parâmetros de dois efeitos para ver se sao iguais \begin{DoxyReturn}{Retorna}
+Retorna true se sao iguais e false se sao diferentes 
+\end{DoxyReturn}
+
 \end{DoxyItemize}
 
-A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{Efeito_8hpp}{Efeito.\+hpp}}\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{Efeito_8hpp}{Efeito.\+hpp}}\item 
+src/\mbox{\hyperlink{Efeito_8cpp}{Efeito.\+cpp}}\end{DoxyCompactItemize}

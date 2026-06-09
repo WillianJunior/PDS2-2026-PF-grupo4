@@ -79,22 +79,79 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="SalaBase_8hpp_source.html">SalaBase.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Inimigo_8hpp_source.html">Inimigo.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="Personagem_8hpp_source.html">Personagem.hpp</a>&quot;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Gráfico de dependência de inclusões para SalaCombate.hpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="SalaCombate_8hpp__incl.png" border="0" usemap="#ainclude_2SalaCombate_8hpp" alt=""/></div>
 <map name="ainclude_2SalaCombate_8hpp" id="ainclude_2SalaCombate_8hpp">
-<area shape="rect" title=" " alt="" coords="5,5,193,31"/>
-<area shape="rect" href="SalaBase_8hpp.html" title=" " alt="" coords="44,79,155,104"/>
-<area shape="poly" title=" " alt="" coords="102,31,102,65,97,65,97,31"/>
-<area shape="rect" title=" " alt="" coords="13,152,93,177"/>
-<area shape="poly" title=" " alt="" coords="80,33,54,53,34,80,30,94,31,110,41,139,36,141,26,111,25,94,29,78,50,49,77,29"/>
-<area shape="rect" title=" " alt="" coords="139,152,198,177"/>
-<area shape="poly" title=" " alt="" coords="122,29,148,49,170,78,177,109,176,138,171,138,172,109,165,80,144,53,119,33"/>
-<area shape="poly" title=" " alt="" coords="94,106,70,142,66,139,89,103"/>
-<area shape="poly" title=" " alt="" coords="113,102,150,140,146,144,109,106"/>
+<area shape="rect" title=" " alt="" coords="535,5,723,31"/>
+<area shape="rect" href="SalaBase_8hpp.html" title=" " alt="" coords="297,445,407,471"/>
+<area shape="poly" title=" " alt="" coords="536,29,405,43,265,69,204,87,154,109,121,135,112,148,109,164,109,239,115,276,130,310,153,340,182,367,213,390,246,409,308,438,305,443,244,414,211,394,178,371,149,344,126,313,110,278,104,240,104,163,107,146,117,131,151,104,202,82,264,64,404,38,535,23"/>
+<area shape="rect" title=" " alt="" coords="664,519,744,544"/>
+<area shape="poly" title=" " alt="" coords="724,20,800,32,839,42,875,56,906,75,932,98,949,128,955,163,955,386,949,418,934,445,911,467,884,485,820,511,758,526,757,520,818,506,881,481,908,463,930,442,944,416,949,386,949,164,944,130,928,102,903,79,872,61,837,47,799,37,723,25"/>
+<area shape="rect" title=" " alt="" coords="179,519,237,544"/>
+<area shape="poly" title=" " alt="" coords="535,24,379,34,291,44,205,57,128,76,65,99,41,113,23,128,12,145,8,164,8,386,12,413,24,436,42,456,65,474,116,501,166,518,165,523,114,506,62,478,38,460,20,439,7,414,3,386,3,163,7,143,19,125,38,109,62,94,126,71,204,52,291,39,379,29,535,19"/>
+<area shape="rect" href="Inimigo_8hpp.html" title=" " alt="" coords="649,79,748,104"/>
+<area shape="poly" title=" " alt="" coords="643,29,680,67,676,71,639,33"/>
+<area shape="rect" href="Personagem_8hpp.html" title=" " alt="" coords="495,79,625,104"/>
+<area shape="poly" title=" " alt="" coords="620,33,583,71,579,67,616,29"/>
+<area shape="rect" title=" " alt="" coords="989,79,1067,104"/>
+<area shape="poly" title=" " alt="" coords="698,28,971,76,976,77,975,82,970,81,697,33"/>
+<area shape="poly" title=" " alt="" coords="408,468,651,517,650,522,407,473"/>
+<area shape="poly" title=" " alt="" coords="330,473,245,515,243,510,328,468"/>
+<area shape="poly" title=" " alt="" coords="749,96,812,113,843,129,871,150,889,170,899,189,903,210,904,237,904,386,903,413,899,434,889,453,871,473,846,493,816,508,758,525,756,520,814,503,843,488,868,469,884,450,894,432,898,412,899,386,899,237,898,211,894,191,884,173,868,154,841,133,810,118,748,101"/>
+<area shape="poly" title=" " alt="" coords="650,105,550,126,428,156,313,191,267,209,235,228,215,243,203,258,185,299,179,327,176,356,180,413,190,465,202,505,196,506,185,466,174,414,171,356,174,326,180,298,198,255,212,239,232,223,265,205,311,186,426,151,549,121,648,100"/>
+<area shape="rect" href="Entidade_8hpp.html" title=" " alt="" coords="645,152,752,177"/>
+<area shape="poly" title=" " alt="" coords="701,104,701,138,696,138,696,104"/>
+<area shape="poly" title=" " alt="" coords="716,175,742,197,770,228,793,267,800,288,803,310,803,386,795,424,777,459,754,488,731,512,727,508,750,485,773,456,790,422,797,386,797,310,795,289,788,269,766,232,738,201,713,180"/>
+<area shape="rect" href="InventarioHabilidade_8hpp.html" title=" " alt="" coords="427,225,613,251"/>
+<area shape="poly" title=" " alt="" coords="671,180,563,223,561,218,669,175"/>
+<area shape="rect" title=" " alt="" coords="646,372,709,397"/>
+<area shape="poly" title=" " alt="" coords="700,178,682,358,677,357,695,177"/>
+<area shape="rect" href="Efeito_8hpp.html" title=" " alt="" coords="483,445,571,471"/>
+<area shape="poly" title=" " alt="" coords="707,176,725,217,742,275,746,307,746,339,739,370,723,399,695,426,659,444,621,454,585,459,584,454,620,449,657,439,692,422,719,396,734,369,740,339,741,307,736,276,720,218,702,179"/>
+<area shape="rect" href="Inventario_8hpp.html" title=" " alt="" coords="299,299,415,324"/>
+<area shape="poly" title=" " alt="" coords="495,253,398,295,395,291,493,248"/>
+<area shape="poly" title=" " alt="" coords="545,248,581,269,618,297,645,328,666,359,662,362,641,331,614,301,578,273,543,253"/>
+<area shape="rect" href="Habilidade_8hpp.html" title=" " alt="" coords="440,299,560,324"/>
+<area shape="poly" title=" " alt="" coords="519,252,509,286,504,285,514,250"/>
+<area shape="poly" title=" " alt="" coords="392,322,444,342,500,370,554,404,605,442,683,507,680,511,602,446,551,409,497,374,442,347,390,327"/>
+<area shape="poly" title=" " alt="" coords="349,326,305,377,253,447,221,508,216,505,248,444,301,373,345,322"/>
+<area shape="poly" title=" " alt="" coords="410,321,627,369,633,371,632,376,626,375,409,327"/>
+<area shape="rect" href="Acao_8hpp.html" title=" " alt="" coords="404,372,487,397"/>
+<area shape="poly" title=" " alt="" coords="493,326,465,363,460,360,489,323"/>
+<area shape="poly" title=" " alt="" coords="448,397,453,433,461,452,473,469,513,497,560,515,607,524,650,528,650,533,606,530,558,520,510,502,469,473,456,455,448,434,443,398"/>
+<area shape="poly" title=" " alt="" coords="405,398,347,417,287,448,252,477,226,509,222,506,249,474,284,443,344,412,403,393"/>
+<area shape="poly" title=" " alt="" coords="460,395,505,434,501,438,457,399"/>
+<area shape="poly" title=" " alt="" coords="556,468,664,511,662,516,554,473"/>
+<area shape="poly" title=" " alt="" coords="483,472,251,523,250,518,482,467"/>
+<area shape="poly" title=" " alt="" coords="626,101,695,119,731,133,765,150,826,182,846,203,851,218,853,237,853,386,850,409,842,429,815,465,779,494,744,515,741,510,776,490,811,462,838,427,845,407,848,386,848,237,846,219,841,206,823,186,763,154,729,138,694,124,625,106"/>
+<area shape="poly" title=" " alt="" coords="495,100,369,114,225,140,160,159,107,181,86,193,71,207,62,221,59,237,59,386,62,407,69,427,97,462,132,490,168,510,166,515,129,494,93,466,65,430,56,409,53,386,53,236,57,219,67,204,83,189,104,176,158,154,224,135,368,109,494,95"/>
+<area shape="poly" title=" " alt="" coords="583,102,665,143,663,148,581,106"/>
+<area shape="rect" href="InventarioItem_8hpp.html" title=" " alt="" coords="245,225,392,251"/>
+<area shape="poly" title=" " alt="" coords="542,106,351,221,348,216,539,102"/>
+<area shape="poly" title=" " alt="" coords="327,250,347,285,342,288,323,252"/>
+<area shape="poly" title=" " alt="" coords="393,245,481,263,528,278,573,296,621,327,658,360,655,364,617,331,571,301,526,283,480,268,392,250"/>
+<area shape="rect" href="Item_8hpp.html" title=" " alt="" coords="195,299,275,324"/>
+<area shape="poly" title=" " alt="" coords="307,253,261,292,257,287,303,249"/>
+<area shape="poly" title=" " alt="" coords="269,321,399,365,398,370,268,327"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo:</div>
+<div class="dyncontent">
+<div class="center"><img src="SalaCombate_8hpp__dep__incl.png" border="0" usemap="#ainclude_2SalaCombate_8hppdep" alt=""/></div>
+<map name="ainclude_2SalaCombate_8hppdep" id="ainclude_2SalaCombate_8hppdep">
+<area shape="rect" title=" " alt="" coords="49,5,237,31"/>
+<area shape="rect" href="Engine_8cpp.html" title=" " alt="" coords="5,79,121,104"/>
+<area shape="poly" title=" " alt="" coords="122,42,78,80,75,76,119,38"/>
+<area shape="rect" href="SalaCombate_8cpp.html" title=" " alt="" coords="145,79,304,104"/>
+<area shape="poly" title=" " alt="" coords="168,38,213,76,210,80,165,42"/>
 </map>
 </div>
 </div>

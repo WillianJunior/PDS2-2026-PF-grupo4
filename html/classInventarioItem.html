@@ -85,9 +85,9 @@ Diagrama de hierarquia da classe InventarioItem:</div>
 <div class="dyncontent">
 <div class="center"><img src="classInventarioItem__inherit__graph.png" border="0" usemap="#aInventarioItem_inherit__map" alt="Inheritance graph"/></div>
 <map name="aInventarioItem_inherit__map" id="aInventarioItem_inherit__map">
-<area shape="rect" title="Classe que gerencia o inventário de itens de uma entidade." alt="" coords="5,199,161,324"/>
+<area shape="rect" title="Classe que gerencia o inventário de itens de uma entidade." alt="" coords="5,199,161,404"/>
 <area shape="rect" href="classInventario.html" title=" " alt="" coords="5,5,161,151"/>
-<area shape="poly" title=" " alt="" coords="86,164,86,198,81,198,81,164"/>
+<area shape="poly" title=" " alt="" coords="86,164,86,199,81,199,81,164"/>
 </map>
 </div>
 <div class="dynheader">
@@ -95,9 +95,9 @@ Diagrama de colaboração para InventarioItem:</div>
 <div class="dyncontent">
 <div class="center"><img src="classInventarioItem__coll__graph.png" border="0" usemap="#aInventarioItem_coll__map" alt="Collaboration graph"/></div>
 <map name="aInventarioItem_coll__map" id="aInventarioItem_coll__map">
-<area shape="rect" title="Classe que gerencia o inventário de itens de uma entidade." alt="" coords="5,199,161,324"/>
+<area shape="rect" title="Classe que gerencia o inventário de itens de uma entidade." alt="" coords="5,199,161,404"/>
 <area shape="rect" href="classInventario.html" title=" " alt="" coords="5,5,161,151"/>
-<area shape="poly" title=" " alt="" coords="86,164,86,198,81,198,81,164"/>
+<area shape="poly" title=" " alt="" coords="86,164,86,199,81,199,81,164"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -112,6 +112,18 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:a055c8007b2282b2f91999ae4e91e5db9" id="r_a055c8007b2282b2f91999ae4e91e5db9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInventarioItem.html#a055c8007b2282b2f91999ae4e91e5db9">trocarAcao</a> (int posicao, <a class="el" href="classItem.html">Item</a> novoItem) override</td></tr>
 <tr class="memdesc:a055c8007b2282b2f91999ae4e91e5db9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Substitui um item existente por um novo em uma posição específica.  <br /></td></tr>
 <tr class="separator:a055c8007b2282b2f91999ae4e91e5db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97b1d530c27a67b0f10cf2dc197e7fc5" id="r_a97b1d530c27a67b0f10cf2dc197e7fc5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInventarioItem.html#a97b1d530c27a67b0f10cf2dc197e7fc5">getTamanho</a> ()</td></tr>
+<tr class="memdesc:a97b1d530c27a67b0f10cf2dc197e7fc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a quantidade de itens no inventário.  <br /></td></tr>
+<tr class="separator:a97b1d530c27a67b0f10cf2dc197e7fc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2aae346df9f404421d76c0e18599bed2" id="r_a2aae346df9f404421d76c0e18599bed2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classItem.html">Item</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInventarioItem.html#a2aae346df9f404421d76c0e18599bed2">getItem</a> (int posicao)</td></tr>
+<tr class="memdesc:a2aae346df9f404421d76c0e18599bed2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna um item específico pela posição.  <br /></td></tr>
+<tr class="separator:a2aae346df9f404421d76c0e18599bed2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeaf5d2b463938cdce39ab8f298388a11" id="r_aeaf5d2b463938cdce39ab8f298388a11"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInventarioItem.html#aeaf5d2b463938cdce39ab8f298388a11">operator==</a> (const <a class="el" href="classInventarioItem.html">InventarioItem</a> &amp;outro) const</td></tr>
+<tr class="memdesc:aeaf5d2b463938cdce39ab8f298388a11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compara dois inventarios para verificar se sao iguais (usado em testes).  <br /></td></tr>
+<tr class="separator:aeaf5d2b463938cdce39ab8f298388a11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a106591c1bcddef65c91d930cc9097c74" id="r_a106591c1bcddef65c91d930cc9097c74"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInventarioItem.html#a106591c1bcddef65c91d930cc9097c74">operator!=</a> (const <a class="el" href="classInventarioItem.html">InventarioItem</a> &amp;outro) const</td></tr>
+<tr class="memdesc:a106591c1bcddef65c91d930cc9097c74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compara dois inventarios para verificar se nao sao iguais (usado em testes).  <br /></td></tr>
+<tr class="separator:a106591c1bcddef65c91d930cc9097c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae85f76d581a96ac4e5623434bd360997" id="r_ae85f76d581a96ac4e5623434bd360997"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInventarioItem.html#ae85f76d581a96ac4e5623434bd360997">descartarAcao</a> (int posicao) override</td></tr>
 <tr class="memdesc:ae85f76d581a96ac4e5623434bd360997"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove permanentemente um item do inventário.  <br /></td></tr>
 <tr class="separator:ae85f76d581a96ac4e5623434bd360997"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,6 +171,45 @@ Membros Públicos</h2></td></tr>
 </dl>
 
 <p>Implementa <a class="el" href="classInventario.html#ae333c77a15db3cbd7f46bfd9df8f5b3d">Inventario&lt; Item &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a2aae346df9f404421d76c0e18599bed2" name="a2aae346df9f404421d76c0e18599bed2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2aae346df9f404421d76c0e18599bed2">&#9670;&#160;</a></span>getItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classItem.html">Item</a> InventarioItem::getItem </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>posicao</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna um item específico pela posição. </p>
+
+</div>
+</div>
+<a id="a97b1d530c27a67b0f10cf2dc197e7fc5" name="a97b1d530c27a67b0f10cf2dc197e7fc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97b1d530c27a67b0f10cf2dc197e7fc5">&#9670;&#160;</a></span>getTamanho()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int InventarioItem::getTamanho </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna a quantidade de itens no inventário. </p>
 
 </div>
 </div>
@@ -227,6 +278,60 @@ Membros Públicos</h2></td></tr>
 
 </div>
 </div>
+<a id="a106591c1bcddef65c91d930cc9097c74" name="a106591c1bcddef65c91d930cc9097c74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a106591c1bcddef65c91d930cc9097c74">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InventarioItem::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classInventarioItem.html">InventarioItem</a> &amp;&#160;</td>
+          <td class="paramname"><em>outro</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compara dois inventarios para verificar se nao sao iguais (usado em testes). </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outro</td><td>O inventario a ser comparado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true se nao forem iguais. </dd></dl>
+
+</div>
+</div>
+<a id="aeaf5d2b463938cdce39ab8f298388a11" name="aeaf5d2b463938cdce39ab8f298388a11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaf5d2b463938cdce39ab8f298388a11">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InventarioItem::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classInventarioItem.html">InventarioItem</a> &amp;&#160;</td>
+          <td class="paramname"><em>outro</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compara dois inventarios para verificar se sao iguais (usado em testes). </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outro</td><td>O inventario a ser comparado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true se forem iguais. </dd></dl>
+
+</div>
+</div>
 <a id="a055c8007b2282b2f91999ae4e91e5db9" name="a055c8007b2282b2f91999ae4e91e5db9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a055c8007b2282b2f91999ae4e91e5db9">&#9670;&#160;</a></span>trocarAcao()</h2>
 
@@ -274,8 +379,9 @@ Membros Públicos</h2></td></tr>
 
 </div>
 </div>
-<hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
+<hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
 <li>include/<a class="el" href="InventarioItem_8hpp_source.html">InventarioItem.hpp</a></li>
+<li>src/<a class="el" href="InventarioItem_8cpp.html">InventarioItem.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

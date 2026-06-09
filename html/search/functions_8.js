@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['personagem_0',['Personagem',['../classPersonagem.html#a3c8985aea0d1b57844103e050ee3a9b4',1,'Personagem']]],
-  ['proximasala_1',['proximasala',['../classSalaBase.html#a46df83da1001792024a2d67296e647d3',1,'SalaBase::proximaSala()'],['../classSalaCombate.html#a8140a27b1472a210be3dff5b2996dbdf',1,'SalaCombate::proximaSala()'],['../classSalaEscolha.html#a19e068ae95ec4682fbd5c9fe56c71a35',1,'SalaEscolha::proximaSala()']]]
+  ['novaacao_0',['novaacao',['../classInventario.html#a8bd558d0ac7eb6e77922fbf5c0a31db7',1,'Inventario::novaAcao()'],['../classInventarioHabilidade.html#ae42114e4cf02b62cbdc6686d53f8dc64',1,'InventarioHabilidade::novaAcao()'],['../classInventarioItem.html#a38f1ccb980fff37db8e8ac53186a32af',1,'InventarioItem::novaAcao()']]]
 ];

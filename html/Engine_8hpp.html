@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WE CANT CODE THIS GAME: Referência do Arquivo include/Engine.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WE CANT CODE THIS GAME
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Componentes</a>  </div>
+  <div class="headertitle"><div class="title">Referência do Arquivo Engine.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="Personagem_8hpp_source.html">Personagem.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="SalaBase_8hpp_source.html">SalaBase.hpp</a>&quot;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para Engine.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="Engine_8hpp__incl.png" border="0" usemap="#ainclude_2Engine_8hpp" alt=""/></div>
+<map name="ainclude_2Engine_8hpp" id="ainclude_2Engine_8hpp">
+<area shape="rect" title=" " alt="" coords="199,5,345,31"/>
+<area shape="rect" href="Personagem_8hpp.html" title=" " alt="" coords="207,79,337,104"/>
+<area shape="poly" title=" " alt="" coords="275,31,275,65,269,65,269,31"/>
+<area shape="rect" href="SalaBase_8hpp.html" title=" " alt="" coords="22,445,133,471"/>
+<area shape="poly" title=" " alt="" coords="253,33,224,53,197,80,167,125,143,173,124,223,109,273,90,365,82,432,76,431,85,364,104,272,119,221,138,171,163,122,193,77,221,49,250,28"/>
+<area shape="rect" title=" " alt="" coords="361,79,439,104"/>
+<area shape="poly" title=" " alt="" coords="294,28,368,69,366,74,291,33"/>
+<area shape="rect" href="Entidade_8hpp.html" title=" " alt="" coords="409,152,516,177"/>
+<area shape="poly" title=" " alt="" coords="304,102,419,144,418,149,302,107"/>
+<area shape="rect" title=" " alt="" coords="369,519,449,544"/>
+<area shape="poly" title=" " alt="" coords="335,101,427,121,529,149,563,158,598,162,663,167,690,173,711,185,726,206,731,236,731,386,729,407,723,426,701,458,670,483,631,501,588,515,544,524,464,532,463,526,543,518,586,509,629,496,667,478,697,454,718,424,723,406,725,386,725,237,721,208,708,189,688,178,662,172,598,167,562,163,527,155,426,127,334,107"/>
+<area shape="rect" title=" " alt="" coords="141,519,200,544"/>
+<area shape="poly" title=" " alt="" coords="260,106,207,154,134,232,96,280,62,332,33,388,12,446,8,459,12,469,35,493,65,509,97,519,128,525,127,530,96,524,63,514,32,497,7,472,3,459,7,445,28,386,57,329,92,277,130,228,203,150,256,102"/>
+<area shape="rect" href="InventarioItem_8hpp.html" title=" " alt="" coords="199,225,345,251"/>
+<area shape="poly" title=" " alt="" coords="275,104,275,212,269,212,269,104"/>
+<area shape="rect" href="InventarioHabilidade_8hpp.html" title=" " alt="" coords="369,225,556,251"/>
+<area shape="poly" title=" " alt="" coords="465,178,465,212,460,212,460,178"/>
+<area shape="poly" title=" " alt="" coords="517,175,569,192,622,219,645,236,663,257,676,282,680,310,680,386,674,420,657,449,632,472,601,490,566,504,530,515,463,528,462,522,529,510,564,499,598,485,628,467,653,445,669,418,675,386,675,310,670,284,659,260,641,240,619,223,567,197,515,180"/>
+<area shape="rect" title=" " alt="" coords="519,372,582,397"/>
+<area shape="poly" title=" " alt="" coords="504,175,540,194,557,207,570,224,582,259,582,296,574,331,564,360,559,359,569,330,576,296,577,260,566,227,553,211,538,198,502,180"/>
+<area shape="rect" href="Efeito_8hpp.html" title=" " alt="" coords="208,445,296,471"/>
+<area shape="poly" title=" " alt="" coords="409,168,333,174,290,182,246,193,204,210,167,233,136,263,113,300,108,321,112,342,121,362,136,380,175,412,216,437,214,441,172,417,132,384,117,364,106,343,103,321,108,298,131,259,164,229,202,205,244,188,289,176,332,169,409,163"/>
+<area shape="rect" href="Inventario_8hpp.html" title=" " alt="" coords="371,299,487,324"/>
+<area shape="poly" title=" " alt="" coords="460,252,443,287,438,285,455,250"/>
+<area shape="poly" title=" " alt="" coords="490,249,520,268,535,282,546,297,556,328,557,358,551,358,551,329,542,300,531,285,517,272,487,253"/>
+<area shape="rect" href="Habilidade_8hpp.html" title=" " alt="" coords="227,299,347,324"/>
+<area shape="poly" title=" " alt="" coords="435,253,329,296,327,291,433,248"/>
+<area shape="poly" title=" " alt="" coords="431,325,414,505,409,504,426,324"/>
+<area shape="poly" title=" " alt="" coords="425,326,383,393,349,435,310,473,262,501,214,520,212,515,260,497,306,469,345,432,378,390,421,323"/>
+<area shape="poly" title=" " alt="" coords="450,322,521,363,518,367,447,326"/>
+<area shape="rect" href="Acao_8hpp.html" title=" " alt="" coords="211,372,293,397"/>
+<area shape="poly" title=" " alt="" coords="283,326,266,361,261,358,279,323"/>
+<area shape="poly" title=" " alt="" coords="267,396,388,507,385,511,263,400"/>
+<area shape="poly" title=" " alt="" coords="239,400,218,420,198,447,185,476,178,505,172,504,180,475,194,444,214,417,236,396"/>
+<area shape="poly" title=" " alt="" coords="255,398,255,432,249,432,249,398"/>
+<area shape="poly" title=" " alt="" coords="278,468,372,511,370,515,276,473"/>
+<area shape="poly" title=" " alt="" coords="241,473,196,512,192,508,237,469"/>
+<area shape="poly" title=" " alt="" coords="298,248,392,291,390,295,296,253"/>
+<area shape="poly" title=" " alt="" coords="338,248,431,269,472,282,500,297,527,326,544,358,539,360,523,329,497,301,470,287,429,274,336,253"/>
+<area shape="rect" href="Item_8hpp.html" title=" " alt="" coords="123,299,203,324"/>
+<area shape="poly" title=" " alt="" coords="256,253,193,293,191,289,253,248"/>
+<area shape="poly" title=" " alt="" coords="179,322,228,361,225,365,175,326"/>
+<area shape="poly" title=" " alt="" coords="131,468,356,516,355,521,130,473"/>
+<area shape="poly" title=" " alt="" coords="94,469,146,508,143,512,91,473"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo:</div>
+<div class="dyncontent">
+<div class="center"><img src="Engine_8hpp__dep__incl.png" border="0" usemap="#ainclude_2Engine_8hppdep" alt=""/></div>
+<map name="ainclude_2Engine_8hppdep" id="ainclude_2Engine_8hppdep">
+<area shape="rect" title=" " alt="" coords="57,5,203,31"/>
+<area shape="rect" href="Engine_8cpp.html" title=" " alt="" coords="5,79,121,104"/>
+<area shape="poly" title=" " alt="" coords="111,43,76,80,72,77,108,39"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="145,79,251,104"/>
+<area shape="poly" title=" " alt="" coords="152,39,189,77,185,80,149,42"/>
+</map>
+</div>
+</div>
+<p><a href="Engine_8hpp_source.html">Ir para o código-fonte desse arquivo.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Componentes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html">Engine</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe gerenciadora do loop principal do jogo - maquina de estados Cria o ciclo de vida do jogo, desde a configuração inicial do personagem as instâncias das salas.  <a href="classEngine.html#details">Mais...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

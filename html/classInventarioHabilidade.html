@@ -85,9 +85,9 @@ Diagrama de hierarquia da classe InventarioHabilidade:</div>
 <div class="dyncontent">
 <div class="center"><img src="classInventarioHabilidade__inherit__graph.png" border="0" usemap="#aInventarioHabilidade_inherit__map" alt="Inheritance graph"/></div>
 <map name="aInventarioHabilidade_inherit__map" id="aInventarioHabilidade_inherit__map">
-<area shape="rect" title="Classe que gerencia o inventário de habilidades de uma entidade." alt="" coords="17,199,173,324"/>
+<area shape="rect" title="Classe que gerencia o inventário de habilidades de uma entidade." alt="" coords="17,199,173,404"/>
 <area shape="rect" href="classInventario.html" title=" " alt="" coords="5,5,185,151"/>
-<area shape="poly" title=" " alt="" coords="98,164,98,198,93,198,93,164"/>
+<area shape="poly" title=" " alt="" coords="98,164,98,199,93,199,93,164"/>
 </map>
 </div>
 <div class="dynheader">
@@ -95,9 +95,9 @@ Diagrama de colaboração para InventarioHabilidade:</div>
 <div class="dyncontent">
 <div class="center"><img src="classInventarioHabilidade__coll__graph.png" border="0" usemap="#aInventarioHabilidade_coll__map" alt="Collaboration graph"/></div>
 <map name="aInventarioHabilidade_coll__map" id="aInventarioHabilidade_coll__map">
-<area shape="rect" title="Classe que gerencia o inventário de habilidades de uma entidade." alt="" coords="17,199,173,324"/>
+<area shape="rect" title="Classe que gerencia o inventário de habilidades de uma entidade." alt="" coords="17,199,173,404"/>
 <area shape="rect" href="classInventario.html" title=" " alt="" coords="5,5,185,151"/>
-<area shape="poly" title=" " alt="" coords="98,164,98,198,93,198,93,164"/>
+<area shape="poly" title=" " alt="" coords="98,164,98,199,93,199,93,164"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -112,6 +112,18 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:a236561cbb35f1e4502d14dcaddb82e3c" id="r_a236561cbb35f1e4502d14dcaddb82e3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInventarioHabilidade.html#a236561cbb35f1e4502d14dcaddb82e3c">trocarAcao</a> (int posicao, <a class="el" href="classHabilidade.html">Habilidade</a> novaHabilidade) override</td></tr>
 <tr class="memdesc:a236561cbb35f1e4502d14dcaddb82e3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove uma habilidade de uma posição específica e insere uma nova.  <br /></td></tr>
 <tr class="separator:a236561cbb35f1e4502d14dcaddb82e3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaf84ee0bd4910b0d7c1af78aa38141f" id="r_acaf84ee0bd4910b0d7c1af78aa38141f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInventarioHabilidade.html#acaf84ee0bd4910b0d7c1af78aa38141f">getTamanho</a> ()</td></tr>
+<tr class="memdesc:acaf84ee0bd4910b0d7c1af78aa38141f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a quantidade de habilidades no inventário.  <br /></td></tr>
+<tr class="separator:acaf84ee0bd4910b0d7c1af78aa38141f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a8996b9cb37abe2fcc186773e5507e8" id="r_a0a8996b9cb37abe2fcc186773e5507e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHabilidade.html">Habilidade</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInventarioHabilidade.html#a0a8996b9cb37abe2fcc186773e5507e8">getHabilidade</a> (int posicao)</td></tr>
+<tr class="memdesc:a0a8996b9cb37abe2fcc186773e5507e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma habilidade específica pela posição.  <br /></td></tr>
+<tr class="separator:a0a8996b9cb37abe2fcc186773e5507e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac14b9594db264f62e6ec94b8e083378e" id="r_ac14b9594db264f62e6ec94b8e083378e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInventarioHabilidade.html#ac14b9594db264f62e6ec94b8e083378e">operator==</a> (const <a class="el" href="classInventarioHabilidade.html">InventarioHabilidade</a> &amp;outro) const</td></tr>
+<tr class="memdesc:ac14b9594db264f62e6ec94b8e083378e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compara dois inventarios para verificar se sao iguais (usado em testes).  <br /></td></tr>
+<tr class="separator:ac14b9594db264f62e6ec94b8e083378e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11586d38fe0c87598ae6e8acf17550b7" id="r_a11586d38fe0c87598ae6e8acf17550b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInventarioHabilidade.html#a11586d38fe0c87598ae6e8acf17550b7">operator!=</a> (const <a class="el" href="classInventarioHabilidade.html">InventarioHabilidade</a> &amp;outro) const</td></tr>
+<tr class="memdesc:a11586d38fe0c87598ae6e8acf17550b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compara dois inventarios para verificar se nao sao iguais (usado em testes).  <br /></td></tr>
+<tr class="separator:a11586d38fe0c87598ae6e8acf17550b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad30f5cfc87152b4ecb8a8a355984756" id="r_aad30f5cfc87152b4ecb8a8a355984756"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInventarioHabilidade.html#aad30f5cfc87152b4ecb8a8a355984756">descartarAcao</a> (int posicao) override</td></tr>
 <tr class="memdesc:aad30f5cfc87152b4ecb8a8a355984756"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove permanentemente uma habilidade do vetor.  <br /></td></tr>
 <tr class="separator:aad30f5cfc87152b4ecb8a8a355984756"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,6 +171,45 @@ Membros Públicos</h2></td></tr>
 </dl>
 
 <p>Implementa <a class="el" href="classInventario.html#ae333c77a15db3cbd7f46bfd9df8f5b3d">Inventario&lt; Habilidade &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a0a8996b9cb37abe2fcc186773e5507e8" name="a0a8996b9cb37abe2fcc186773e5507e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a8996b9cb37abe2fcc186773e5507e8">&#9670;&#160;</a></span>getHabilidade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classHabilidade.html">Habilidade</a> InventarioHabilidade::getHabilidade </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>posicao</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna uma habilidade específica pela posição. </p>
+
+</div>
+</div>
+<a id="acaf84ee0bd4910b0d7c1af78aa38141f" name="acaf84ee0bd4910b0d7c1af78aa38141f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaf84ee0bd4910b0d7c1af78aa38141f">&#9670;&#160;</a></span>getTamanho()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int InventarioHabilidade::getTamanho </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna a quantidade de habilidades no inventário. </p>
 
 </div>
 </div>
@@ -227,6 +278,60 @@ Membros Públicos</h2></td></tr>
 
 </div>
 </div>
+<a id="a11586d38fe0c87598ae6e8acf17550b7" name="a11586d38fe0c87598ae6e8acf17550b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11586d38fe0c87598ae6e8acf17550b7">&#9670;&#160;</a></span>operator!=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InventarioHabilidade::operator!= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classInventarioHabilidade.html">InventarioHabilidade</a> &amp;&#160;</td>
+          <td class="paramname"><em>outro</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compara dois inventarios para verificar se nao sao iguais (usado em testes). </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outro</td><td>O inventario a ser comparado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true se nao forem iguais. </dd></dl>
+
+</div>
+</div>
+<a id="ac14b9594db264f62e6ec94b8e083378e" name="ac14b9594db264f62e6ec94b8e083378e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac14b9594db264f62e6ec94b8e083378e">&#9670;&#160;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool InventarioHabilidade::operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classInventarioHabilidade.html">InventarioHabilidade</a> &amp;&#160;</td>
+          <td class="paramname"><em>outro</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Compara dois inventarios para verificar se sao iguais (usado em testes). </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">outro</td><td>O inventario a ser comparado. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true se forem iguais. </dd></dl>
+
+</div>
+</div>
 <a id="a236561cbb35f1e4502d14dcaddb82e3c" name="a236561cbb35f1e4502d14dcaddb82e3c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a236561cbb35f1e4502d14dcaddb82e3c">&#9670;&#160;</a></span>trocarAcao()</h2>
 
@@ -274,8 +379,9 @@ Membros Públicos</h2></td></tr>
 
 </div>
 </div>
-<hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
+<hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
 <li>include/<a class="el" href="InventarioHabilidade_8hpp_source.html">InventarioHabilidade.hpp</a></li>
+<li>src/<a class="el" href="InventarioHabilidade_8cpp.html">InventarioHabilidade.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

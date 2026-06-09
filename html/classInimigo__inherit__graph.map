@@ -1,5 +1,5 @@
 <map id="Inimigo" name="Inimigo">
-<area shape="rect" id="Node000001" title="Entidade que irá contra o personagem principal Classe que herda de entidade, sendo o inimigo do jogo ..." alt="" coords="9,239,173,384"/>
-<area shape="rect" id="Node000002" href="$classEntidade.html" title="Classe abstrata para representar as entidades." alt="" coords="5,5,177,191"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,204,94,238,89,238,89,204"/>
+<area shape="rect" id="Node000001" title="Entidade que irá contra o personagem principal Classe que herda de entidade, sendo o inimigo do jogo ..." alt="" coords="21,359,185,524"/>
+<area shape="rect" id="Node000002" href="$classEntidade.html" title="Classe abstrata para representar as entidades." alt="" coords="5,5,201,311"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,324,106,359,101,359,101,324"/>
 </map>

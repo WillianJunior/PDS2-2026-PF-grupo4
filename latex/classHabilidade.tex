@@ -15,17 +15,16 @@ Diagrama de hierarquia da classe Habilidade\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=200pt]{classHabilidade__inherit__graph}
+\includegraphics[width=195pt]{classHabilidade__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Diagrama de colaboração para Habilidade\+:
-\nopagebreak
+Diagrama de colaboração para Habilidade\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=200pt]{classHabilidade__coll__graph}
+\includegraphics[height=550pt]{classHabilidade__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Membros Públicos}
@@ -33,6 +32,8 @@ Diagrama de colaboração para Habilidade\+:
 \item 
 \mbox{\hyperlink{classHabilidade_a66ae3890cf037ea2374c67ad036a5d99}{Habilidade}} (std\+::string nome, bool tipo, int valor, bool alvo, \mbox{\hyperlink{classEfeito}{Efeito}} efeito)
 \begin{DoxyCompactList}\small\item\em Construtor da habilidade que herda de \doxylink{classAcao}{Acao}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classHabilidade_aa5226c2dc9ac5f6d14b65700cbdb817a}{operator==}} (const \mbox{\hyperlink{classHabilidade}{Habilidade}} \&outro) const
+\begin{DoxyCompactList}\small\item\em Compara duas habilidades. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classHabilidade_a4fd7e13420bc0909e701b1cb3a3983e4}{\texorpdfstring{$\sim$}{\string~}\+Habilidade}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor do objeto habilidade Garante que não vaze memória de habilidades. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classAcao}{Acao}}}
@@ -40,13 +41,21 @@ Diagrama de colaboração para Habilidade\+:
 \item 
 \mbox{\hyperlink{classAcao_a30e70a54ae7f2e02523f0efd3b423271}{Acao}} (std\+::string nome, bool tipo, int valor, \mbox{\hyperlink{classEfeito}{Efeito}} efeito, bool alvo)
 \begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{classAcao}{Acao}. \end{DoxyCompactList}\item 
-virtual int \mbox{\hyperlink{classAcao_aee788d3396efbbfccabe67553d478059}{alterar\+Vida}} (bool alvo, int valor)
-\begin{DoxyCompactList}\small\item\em Calcula ou aplica a alteração de vida baseada na ação. \end{DoxyCompactList}\item 
-virtual int \mbox{\hyperlink{classAcao_abed01ab38253ffd03e62d82014351380}{aplicar\+Efeito}} (bool alvo, \mbox{\hyperlink{classEfeito}{Efeito}} efeito)
-\begin{DoxyCompactList}\small\item\em Aplica o efeito de status no alvo determinado. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classAcao_af3878762e26ff4c2bafa795abbe1f69d}{mostrar\+Habilidade}} ()
+virtual int \mbox{\hyperlink{classAcao_ace32485f5cca5329ebb5e6fab9760ceb}{calcular\+Impacto}} ()
+\begin{DoxyCompactList}\small\item\em Calcula a alteração de vida baseada na ação. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classAcao_af339f68e5999ff075e79eeef17f08a9c}{mostrar\+Descricao}} ()
 \begin{DoxyCompactList}\small\item\em Exibe os detalhes da ação (informações da habilidade ou do item). \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classAcao_a31951a9e89235dc3a4cfaf10ce9f6b48}{\texorpdfstring{$\sim$}{\string~}\+Acao}} ()
+std\+::string \mbox{\hyperlink{classAcao_aa8460ddeec0c7fa20e9e5c39ea64edd5}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o nome da ação. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAcao_a7f846d13ea7a8b3b9182dc3d646366b7}{get\+Tipo}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o tipo da ação. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classAcao_a4eb269228b7bf4d60dd3f5bff9fea566}{get\+Valor}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o valor numérico da ação. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAcao_aaa6cd394a36cfc92a250a5f1e060369a}{get\+Alvo}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o alvo da ação. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEfeito}{Efeito}} \mbox{\hyperlink{classAcao_a5487582097dfd32984f6437b113fab52}{get\+Efeito}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o efeito atrelado à ação. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classAcao_aeb8cbe2880da8eb2d2d2971a46810dac}{\texorpdfstring{$\sim$}{\string~}\+Acao}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor virtual da classe \doxylink{classAcao}{Acao}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Outros membros herdados}
 \doxysubsection*{Atributos Protegidos herdados de \mbox{\hyperlink{classAcao}{Acao}}}
@@ -111,6 +120,26 @@ Destrutor do objeto habilidade Garante que não vaze memória de habilidades.
 
 
 
-A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\doxysubsection{Documentação das funções}
+\Hypertarget{classHabilidade_aa5226c2dc9ac5f6d14b65700cbdb817a}\label{classHabilidade_aa5226c2dc9ac5f6d14b65700cbdb817a} 
+\index{Habilidade@{Habilidade}!operator==@{operator==}}
+\index{operator==@{operator==}!Habilidade@{Habilidade}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Habilidade\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classHabilidade}{Habilidade}} \&}]{outro }\end{DoxyParamCaption}) const}
+
+
+
+Compara duas habilidades. 
+
+
+\begin{DoxyItemize}
+\item Compara todos os parâmetros de duas habilidades para ver se sao iguais \begin{DoxyReturn}{Retorna}
+Retorna true se sao iguais e false se sao diferentes 
+\end{DoxyReturn}
+
+\end{DoxyItemize}
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{Habilidade_8hpp}{Habilidade.\+hpp}}\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{Habilidade_8hpp}{Habilidade.\+hpp}}\item 
+src/\mbox{\hyperlink{Habilidade_8cpp}{Habilidade.\+cpp}}\end{DoxyCompactItemize}

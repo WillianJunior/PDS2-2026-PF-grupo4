@@ -2,9 +2,11 @@ var searchData=
 [
   ['efeito_0',['Efeito',['../classEfeito.html#a1f7ceced0871b644b475cf3acbaed2de',1,'Efeito']]],
   ['encerrarsala_1',['encerrarsala',['../classSalaBase.html#a2bbb6cb055fc485d399ecf7a9a1d44fa',1,'SalaBase::encerrarSala()'],['../classSalaCombate.html#a79f0a1db3e17f3a9633c446f641e327b',1,'SalaCombate::encerrarSala()'],['../classSalaEscolha.html#a271e7269eeb090dcdf63f0c4988deab0',1,'SalaEscolha::encerrarSala()']]],
-  ['entidade_2',['Entidade',['../classEntidade.html#a3e50f865ffcca548bdc7d97058c173d7',1,'Entidade']]],
-  ['escolherhabilidade_3',['escolherhabilidade',['../classEntidade.html#a441fee3d5486dd7b7e81cbd66c1c5f89',1,'Entidade::escolherHabilidade()'],['../classInimigo.html#a35ad976aa7fa2191cdf162f25d2d0b57',1,'Inimigo::escolherHabilidade()'],['../classPersonagem.html#aac8772a849812a27ea1b22e7af8acfe3',1,'Personagem::escolherHabilidade(int posicaoHabilidade) override']]],
-  ['escolheritem_4',['escolherItem',['../classPersonagem.html#aa61937a1c1f58b0569f8a77c5c6026d6',1,'Personagem']]],
-  ['escolherpersonageminicial_5',['escolherPersonagemInicial',['../classMenu.html#a5fb1ae85133f12f56d64b9fc203d10a2',1,'Menu']]],
-  ['executarevento_6',['executarEvento',['../classSalaEscolha.html#ab2370e677d45512f21ece6cd69ac8cb8',1,'SalaEscolha']]]
+  ['engine_2',['Engine',['../classEngine.html#a8c98683b0a3aa28d8ab72a8bcd0d52f2',1,'Engine']]],
+  ['entidade_3',['Entidade',['../classEntidade.html#a3e50f865ffcca548bdc7d97058c173d7',1,'Entidade']]],
+  ['escolherhabilidade_4',['escolherhabilidade',['../classEntidade.html#a67d66a335bc8975a3c1ac530dd7c0e33',1,'Entidade::escolherHabilidade()'],['../classInimigo.html#af7d582fc95c3ca6f7c18e2f5c0e99152',1,'Inimigo::escolherHabilidade()'],['../classPersonagem.html#a82d3d108b4eab95527ae48e2268f6c94',1,'Personagem::escolherHabilidade(int posicaoHabilidade) override']]],
+  ['escolheritem_5',['escolherItem',['../classPersonagem.html#ad1ca55afcab097bc0ea8ce90606d9efc',1,'Personagem']]],
+  ['executarevento_6',['executarEvento',['../classSalaEscolha.html#a4993fece9ec8207ef29f0fba082d7742',1,'SalaEscolha']]],
+  ['executarmenuinicial_7',['executarMenuInicial',['../classMenu.html#ad9834948d0f1c352d745b877c4befacf',1,'Menu']]],
+  ['executarsala_8',['executarsala',['../classSalaBase.html#af8610b3e1cffc4fd2c85366ebc64bac0',1,'SalaBase::executarSala()'],['../classSalaCombate.html#afd8449c1ed680ebcbd8d70beeab860c8',1,'SalaCombate::executarSala()'],['../classSalaEscolha.html#ae733458ab6ba45b7d198ec09063250b3',1,'SalaEscolha::executarSala()']]]
 ];

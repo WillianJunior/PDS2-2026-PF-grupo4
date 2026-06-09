@@ -86,11 +86,11 @@ Diagrama de hierarquia da classe Acao:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAcao__inherit__graph.png" border="0" usemap="#aAcao_inherit__map" alt="Inheritance graph"/></div>
 <map name="aAcao_inherit__map" id="aAcao_inherit__map">
-<area shape="rect" title="Classe base para representar qualquer ação do jogo (como Habilidades ou Itens)." alt="" coords="47,5,207,231"/>
-<area shape="rect" href="classHabilidade.html" title="Representa uma habilidade no jogo." alt="" coords="5,279,125,364"/>
-<area shape="poly" title=" " alt="" coords="91,245,81,279,75,278,86,243"/>
-<area shape="rect" href="classItem.html" title="Representa um item no jogo." alt="" coords="149,279,229,364"/>
-<area shape="poly" title=" " alt="" coords="168,243,179,278,174,279,163,245"/>
+<area shape="rect" title="Classe base para representar qualquer ação do jogo (como Habilidades ou Itens)." alt="" coords="59,5,213,311"/>
+<area shape="rect" href="classHabilidade.html" title="Representa uma habilidade no jogo." alt="" coords="5,359,125,464"/>
+<area shape="poly" title=" " alt="" coords="92,325,82,359,77,358,87,323"/>
+<area shape="rect" href="classItem.html" title="Representa um item no jogo." alt="" coords="150,359,266,464"/>
+<area shape="poly" title=" " alt="" coords="186,323,196,358,191,359,181,325"/>
 </map>
 </div>
 <div class="dynheader">
@@ -98,9 +98,9 @@ Diagrama de colaboração para Acao:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAcao__coll__graph.png" border="0" usemap="#aAcao_coll__map" alt="Collaboration graph"/></div>
 <map name="aAcao_coll__map" id="aAcao_coll__map">
-<area shape="rect" title="Classe base para representar qualquer ação do jogo (como Habilidades ou Itens)." alt="" coords="5,213,165,419"/>
-<area shape="rect" href="classEfeito.html" title="Representa um efeito de status contínuo no jogo." alt="" coords="11,5,160,151"/>
-<area shape="poly" title=" " alt="" coords="88,151,88,197,83,197,83,151"/>
+<area shape="rect" title="Classe base para representar qualquer ação do jogo (como Habilidades ou Itens)." alt="" coords="5,293,159,579"/>
+<area shape="rect" href="classEfeito.html" title="Representa um efeito de status contínuo no jogo." alt="" coords="7,5,157,231"/>
+<area shape="poly" title=" " alt="" coords="85,231,85,277,79,277,79,231"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -109,18 +109,30 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:a30e70a54ae7f2e02523f0efd3b423271" id="r_a30e70a54ae7f2e02523f0efd3b423271"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#a30e70a54ae7f2e02523f0efd3b423271">Acao</a> (std::string nome, bool tipo, int valor, <a class="el" href="classEfeito.html">Efeito</a> efeito, bool alvo)</td></tr>
 <tr class="memdesc:a30e70a54ae7f2e02523f0efd3b423271"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão da classe <a class="el" href="classAcao.html" title="Classe base para representar qualquer ação do jogo (como Habilidades ou Itens).">Acao</a>.  <br /></td></tr>
 <tr class="separator:a30e70a54ae7f2e02523f0efd3b423271"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aee788d3396efbbfccabe67553d478059" id="r_aee788d3396efbbfccabe67553d478059"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#aee788d3396efbbfccabe67553d478059">alterarVida</a> (bool alvo, int valor)</td></tr>
-<tr class="memdesc:aee788d3396efbbfccabe67553d478059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula ou aplica a alteração de vida baseada na ação.  <br /></td></tr>
-<tr class="separator:aee788d3396efbbfccabe67553d478059"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abed01ab38253ffd03e62d82014351380" id="r_abed01ab38253ffd03e62d82014351380"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#abed01ab38253ffd03e62d82014351380">aplicarEfeito</a> (bool alvo, <a class="el" href="classEfeito.html">Efeito</a> efeito)</td></tr>
-<tr class="memdesc:abed01ab38253ffd03e62d82014351380"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aplica o efeito de status no alvo determinado.  <br /></td></tr>
-<tr class="separator:abed01ab38253ffd03e62d82014351380"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af3878762e26ff4c2bafa795abbe1f69d" id="r_af3878762e26ff4c2bafa795abbe1f69d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#af3878762e26ff4c2bafa795abbe1f69d">mostrarHabilidade</a> ()</td></tr>
-<tr class="memdesc:af3878762e26ff4c2bafa795abbe1f69d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe os detalhes da ação (informações da habilidade ou do item).  <br /></td></tr>
-<tr class="separator:af3878762e26ff4c2bafa795abbe1f69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a31951a9e89235dc3a4cfaf10ce9f6b48" id="r_a31951a9e89235dc3a4cfaf10ce9f6b48"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#a31951a9e89235dc3a4cfaf10ce9f6b48">~Acao</a> ()</td></tr>
-<tr class="memdesc:a31951a9e89235dc3a4cfaf10ce9f6b48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor virtual da classe <a class="el" href="classAcao.html" title="Classe base para representar qualquer ação do jogo (como Habilidades ou Itens).">Acao</a>.  <br /></td></tr>
-<tr class="separator:a31951a9e89235dc3a4cfaf10ce9f6b48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace32485f5cca5329ebb5e6fab9760ceb" id="r_ace32485f5cca5329ebb5e6fab9760ceb"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#ace32485f5cca5329ebb5e6fab9760ceb">calcularImpacto</a> ()</td></tr>
+<tr class="memdesc:ace32485f5cca5329ebb5e6fab9760ceb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula a alteração de vida baseada na ação.  <br /></td></tr>
+<tr class="separator:ace32485f5cca5329ebb5e6fab9760ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af339f68e5999ff075e79eeef17f08a9c" id="r_af339f68e5999ff075e79eeef17f08a9c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#af339f68e5999ff075e79eeef17f08a9c">mostrarDescricao</a> ()</td></tr>
+<tr class="memdesc:af339f68e5999ff075e79eeef17f08a9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe os detalhes da ação (informações da habilidade ou do item).  <br /></td></tr>
+<tr class="separator:af339f68e5999ff075e79eeef17f08a9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa8460ddeec0c7fa20e9e5c39ea64edd5" id="r_aa8460ddeec0c7fa20e9e5c39ea64edd5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#aa8460ddeec0c7fa20e9e5c39ea64edd5">getNome</a> ()</td></tr>
+<tr class="memdesc:aa8460ddeec0c7fa20e9e5c39ea64edd5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o nome da ação.  <br /></td></tr>
+<tr class="separator:aa8460ddeec0c7fa20e9e5c39ea64edd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f846d13ea7a8b3b9182dc3d646366b7" id="r_a7f846d13ea7a8b3b9182dc3d646366b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#a7f846d13ea7a8b3b9182dc3d646366b7">getTipo</a> ()</td></tr>
+<tr class="memdesc:a7f846d13ea7a8b3b9182dc3d646366b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o tipo da ação.  <br /></td></tr>
+<tr class="separator:a7f846d13ea7a8b3b9182dc3d646366b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4eb269228b7bf4d60dd3f5bff9fea566" id="r_a4eb269228b7bf4d60dd3f5bff9fea566"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#a4eb269228b7bf4d60dd3f5bff9fea566">getValor</a> ()</td></tr>
+<tr class="memdesc:a4eb269228b7bf4d60dd3f5bff9fea566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o valor numérico da ação.  <br /></td></tr>
+<tr class="separator:a4eb269228b7bf4d60dd3f5bff9fea566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa6cd394a36cfc92a250a5f1e060369a" id="r_aaa6cd394a36cfc92a250a5f1e060369a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#aaa6cd394a36cfc92a250a5f1e060369a">getAlvo</a> ()</td></tr>
+<tr class="memdesc:aaa6cd394a36cfc92a250a5f1e060369a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o alvo da ação.  <br /></td></tr>
+<tr class="separator:aaa6cd394a36cfc92a250a5f1e060369a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5487582097dfd32984f6437b113fab52" id="r_a5487582097dfd32984f6437b113fab52"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classEfeito.html">Efeito</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#a5487582097dfd32984f6437b113fab52">getEfeito</a> ()</td></tr>
+<tr class="memdesc:a5487582097dfd32984f6437b113fab52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o efeito atrelado à ação.  <br /></td></tr>
+<tr class="separator:a5487582097dfd32984f6437b113fab52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb8cbe2880da8eb2d2d2971a46810dac" id="r_aeb8cbe2880da8eb2d2d2971a46810dac"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#aeb8cbe2880da8eb2d2d2971a46810dac">~Acao</a> ()</td></tr>
+<tr class="memdesc:aeb8cbe2880da8eb2d2d2971a46810dac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor virtual da classe <a class="el" href="classAcao.html" title="Classe base para representar qualquer ação do jogo (como Habilidades ou Itens).">Acao</a>.  <br /></td></tr>
+<tr class="separator:aeb8cbe2880da8eb2d2d2971a46810dac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Atributos Protegidos</h2></td></tr>
@@ -207,8 +219,8 @@ Atributos Protegidos</h2></td></tr>
 
 </div>
 </div>
-<a id="a31951a9e89235dc3a4cfaf10ce9f6b48" name="a31951a9e89235dc3a4cfaf10ce9f6b48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a31951a9e89235dc3a4cfaf10ce9f6b48">&#9670;&#160;</a></span>~Acao()</h2>
+<a id="aeb8cbe2880da8eb2d2d2971a46810dac" name="aeb8cbe2880da8eb2d2d2971a46810dac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb8cbe2880da8eb2d2d2971a46810dac">&#9670;&#160;</a></span>~Acao()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -217,7 +229,7 @@ Atributos Protegidos</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual Acao::~Acao </td>
+          <td class="memname">Acao::~Acao </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -238,8 +250,8 @@ Atributos Protegidos</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentação das funções</h2>
-<a id="aee788d3396efbbfccabe67553d478059" name="aee788d3396efbbfccabe67553d478059"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aee788d3396efbbfccabe67553d478059">&#9670;&#160;</a></span>alterarVida()</h2>
+<a id="ace32485f5cca5329ebb5e6fab9760ceb" name="ace32485f5cca5329ebb5e6fab9760ceb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace32485f5cca5329ebb5e6fab9760ceb">&#9670;&#160;</a></span>calcularImpacto()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -248,21 +260,10 @@ Atributos Protegidos</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int Acao::alterarVida </td>
+          <td class="memname">int Acao::calcularImpacto </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>alvo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>valor</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -272,66 +273,113 @@ Atributos Protegidos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Calcula ou aplica a alteração de vida baseada na ação. </p>
-<dl class="params"><dt>Parâmetros</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">alvo</td><td>O alvo que receberá a alteração de vida. </td></tr>
-    <tr><td class="paramname">valor</td><td>A quantidade de vida a ser alterada. </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Calcula a alteração de vida baseada na ação. </p>
 <dl class="section return"><dt>Retorna</dt><dd>Retorna um valor inteiro representando o resultado final da alteração. </dd></dl>
 
 </div>
 </div>
-<a id="abed01ab38253ffd03e62d82014351380" name="abed01ab38253ffd03e62d82014351380"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abed01ab38253ffd03e62d82014351380">&#9670;&#160;</a></span>aplicarEfeito()</h2>
+<a id="aaa6cd394a36cfc92a250a5f1e060369a" name="aaa6cd394a36cfc92a250a5f1e060369a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa6cd394a36cfc92a250a5f1e060369a">&#9670;&#160;</a></span>getAlvo()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int Acao::aplicarEfeito </td>
+          <td class="memname">bool Acao::getAlvo </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>alvo</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype"><a class="el" href="classEfeito.html">Efeito</a>&#160;</td>
-          <td class="paramname"><em>efeito</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Aplica o efeito de status no alvo determinado. </p>
-<dl class="params"><dt>Parâmetros</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">alvo</td><td>O alvo que sofrerá o efeito. </td></tr>
-    <tr><td class="paramname">efeito</td><td>O efeito a ser aplicado. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Retorna</dt><dd>Retorna um valor inteiro representando o sucesso ou a magnitude da aplicação. </dd></dl>
+<p>Retorna o alvo da ação. </p>
+<dl class="section return"><dt>Retorna</dt><dd>true se o alvo for o próprio lançador, false se for o oponente. </dd></dl>
 
 </div>
 </div>
-<a id="af3878762e26ff4c2bafa795abbe1f69d" name="af3878762e26ff4c2bafa795abbe1f69d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3878762e26ff4c2bafa795abbe1f69d">&#9670;&#160;</a></span>mostrarHabilidade()</h2>
+<a id="a5487582097dfd32984f6437b113fab52" name="a5487582097dfd32984f6437b113fab52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5487582097dfd32984f6437b113fab52">&#9670;&#160;</a></span>getEfeito()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classEfeito.html">Efeito</a> Acao::getEfeito </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o efeito atrelado à ação. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Objeto da classe <a class="el" href="classEfeito.html" title="Representa um efeito de status contínuo no jogo.">Efeito</a> associado a esta ação. </dd></dl>
+
+</div>
+</div>
+<a id="aa8460ddeec0c7fa20e9e5c39ea64edd5" name="aa8460ddeec0c7fa20e9e5c39ea64edd5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8460ddeec0c7fa20e9e5c39ea64edd5">&#9670;&#160;</a></span>getNome()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Acao::getNome </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o nome da ação. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Uma string contendo o nome da habilidade ou item. </dd></dl>
+
+</div>
+</div>
+<a id="a7f846d13ea7a8b3b9182dc3d646366b7" name="a7f846d13ea7a8b3b9182dc3d646366b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f846d13ea7a8b3b9182dc3d646366b7">&#9670;&#160;</a></span>getTipo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Acao::getTipo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o tipo da ação. </p>
+<dl class="section return"><dt>Retorna</dt><dd>true se for de um tipo específico (ex: cura), false para outro (ex: dano). </dd></dl>
+
+</div>
+</div>
+<a id="a4eb269228b7bf4d60dd3f5bff9fea566" name="a4eb269228b7bf4d60dd3f5bff9fea566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4eb269228b7bf4d60dd3f5bff9fea566">&#9670;&#160;</a></span>getValor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Acao::getValor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o valor numérico da ação. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Inteiro representando a magnitude (quantidade de dano, cura, etc). </dd></dl>
+
+</div>
+</div>
+<a id="af339f68e5999ff075e79eeef17f08a9c" name="af339f68e5999ff075e79eeef17f08a9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af339f68e5999ff075e79eeef17f08a9c">&#9670;&#160;</a></span>mostrarDescricao()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -340,7 +388,7 @@ Atributos Protegidos</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void Acao::mostrarHabilidade </td>
+          <td class="memname">void Acao::mostrarDescricao </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -478,8 +526,9 @@ Atributos Protegidos</h2></td></tr>
 
 </div>
 </div>
-<hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
+<hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
 <li>include/<a class="el" href="Acao_8hpp_source.html">Acao.hpp</a></li>
+<li>src/<a class="el" href="Acao_8cpp.html">Acao.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

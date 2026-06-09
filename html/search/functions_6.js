@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['menu_0',['Menu',['../classMenu.html#ad466dd83355124a6ed958430450bfe94',1,'Menu']]],
-  ['mostrarhabilidade_1',['mostrarHabilidade',['../classAcao.html#af3878762e26ff4c2bafa795abbe1f69d',1,'Acao']]],
-  ['mostrarinventario_2',['mostrarinventario',['../classInventario.html#a7e8cb8ba725d02311601667737e2ca6c',1,'Inventario::mostrarInventario()'],['../classInventarioHabilidade.html#a523468bb8dbf6b1e0226923fcf0e99ab',1,'InventarioHabilidade::mostrarInventario()'],['../classInventarioItem.html#a955b5f99efab8b998bbf0f0538cfdaad',1,'InventarioItem::mostrarInventario()']]],
-  ['mostraropcoes_3',['mostrarOpcoes',['../classSalaEscolha.html#a89c73771446f7c2b62b88049cf82f2b4',1,'SalaEscolha']]],
-  ['mostrarsala_4',['mostrarsala',['../classSalaBase.html#a266d17999fecc33d2afeb1c9fd9083a3',1,'SalaBase::mostrarSala()'],['../classSalaCombate.html#a5dd4fce1fa15c75b49abfe84d84da8c5',1,'SalaCombate::mostrarSala()'],['../classSalaEscolha.html#ad99bb15b16532d1148c920c9d1b0d7ba',1,'SalaEscolha::mostrarSala()']]]
+  ['iniciar_0',['iniciar',['../classEngine.html#a07490236fee13f031838eadb72f91536',1,'Engine']]],
+  ['inimigo_1',['Inimigo',['../classInimigo.html#ab52af90a0becc344e3a816575af95a8f',1,'Inimigo']]],
+  ['isencerrado_2',['isEncerrado',['../classEfeito.html#a7f89d95be04cde8840a2e1fea2f12850',1,'Efeito']]],
+  ['ismorto_3',['ismorto',['../classEntidade.html#ade89008844bd05a9becdbaf0c9c24506',1,'Entidade::isMorto()'],['../classInimigo.html#ad4ba5228c63de5ba1418f3257acf7361',1,'Inimigo::isMorto()'],['../classPersonagem.html#afb52502006acf871aa5ebdcbca06a86c',1,'Personagem::isMorto()']]],
+  ['item_4',['Item',['../classItem.html#a4bdb5d81023e9d46b7e4f99b5ad63948',1,'Item']]]
 ];

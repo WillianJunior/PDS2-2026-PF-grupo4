@@ -15,17 +15,16 @@ Diagrama de hierarquia da classe Acao\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=248pt]{classAcao__inherit__graph}
+\includegraphics[width=276pt]{classAcao__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Diagrama de colaboração para Acao\+:
-\nopagebreak
+Diagrama de colaboração para Acao\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=200pt]{classAcao__coll__graph}
+\includegraphics[width=195pt]{classAcao__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Membros Públicos}
@@ -33,13 +32,21 @@ Diagrama de colaboração para Acao\+:
 \item 
 \mbox{\hyperlink{classAcao_a30e70a54ae7f2e02523f0efd3b423271}{Acao}} (std\+::string nome, bool tipo, int valor, \mbox{\hyperlink{classEfeito}{Efeito}} efeito, bool alvo)
 \begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{classAcao}{Acao}. \end{DoxyCompactList}\item 
-virtual int \mbox{\hyperlink{classAcao_aee788d3396efbbfccabe67553d478059}{alterar\+Vida}} (bool alvo, int valor)
-\begin{DoxyCompactList}\small\item\em Calcula ou aplica a alteração de vida baseada na ação. \end{DoxyCompactList}\item 
-virtual int \mbox{\hyperlink{classAcao_abed01ab38253ffd03e62d82014351380}{aplicar\+Efeito}} (bool alvo, \mbox{\hyperlink{classEfeito}{Efeito}} efeito)
-\begin{DoxyCompactList}\small\item\em Aplica o efeito de status no alvo determinado. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classAcao_af3878762e26ff4c2bafa795abbe1f69d}{mostrar\+Habilidade}} ()
+virtual int \mbox{\hyperlink{classAcao_ace32485f5cca5329ebb5e6fab9760ceb}{calcular\+Impacto}} ()
+\begin{DoxyCompactList}\small\item\em Calcula a alteração de vida baseada na ação. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classAcao_af339f68e5999ff075e79eeef17f08a9c}{mostrar\+Descricao}} ()
 \begin{DoxyCompactList}\small\item\em Exibe os detalhes da ação (informações da habilidade ou do item). \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classAcao_a31951a9e89235dc3a4cfaf10ce9f6b48}{\texorpdfstring{$\sim$}{\string~}\+Acao}} ()
+std\+::string \mbox{\hyperlink{classAcao_aa8460ddeec0c7fa20e9e5c39ea64edd5}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o nome da ação. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAcao_a7f846d13ea7a8b3b9182dc3d646366b7}{get\+Tipo}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o tipo da ação. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classAcao_a4eb269228b7bf4d60dd3f5bff9fea566}{get\+Valor}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o valor numérico da ação. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAcao_aaa6cd394a36cfc92a250a5f1e060369a}{get\+Alvo}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o alvo da ação. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEfeito}{Efeito}} \mbox{\hyperlink{classAcao_a5487582097dfd32984f6437b113fab52}{get\+Efeito}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o efeito atrelado à ação. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classAcao_aeb8cbe2880da8eb2d2d2971a46810dac}{\texorpdfstring{$\sim$}{\string~}\+Acao}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor virtual da classe \doxylink{classAcao}{Acao}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Atributos Protegidos}
 \begin{DoxyCompactItemize}
@@ -91,11 +98,11 @@ Construtor padrão da classe \doxylink{classAcao}{Acao}.
 \hline
 \end{DoxyParams}
 
-\end{DoxyItemize}\Hypertarget{classAcao_a31951a9e89235dc3a4cfaf10ce9f6b48}\label{classAcao_a31951a9e89235dc3a4cfaf10ce9f6b48} 
+\end{DoxyItemize}\Hypertarget{classAcao_aeb8cbe2880da8eb2d2d2971a46810dac}\label{classAcao_aeb8cbe2880da8eb2d2d2971a46810dac} 
 \index{Acao@{Acao}!````~Acao@{\texorpdfstring{$\sim$}{\string~}Acao}}
 \index{````~Acao@{\texorpdfstring{$\sim$}{\string~}Acao}!Acao@{Acao}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Acao()}{\string~Acao()}}
-{\footnotesize\ttfamily virtual Acao\+::\texorpdfstring{$\sim$}{\string~}\+Acao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily Acao\+::\texorpdfstring{$\sim$}{\string~}\+Acao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -107,51 +114,89 @@ Destrutor virtual da classe \doxylink{classAcao}{Acao}.
 \end{DoxyItemize}
 
 \doxysubsection{Documentação das funções}
-\Hypertarget{classAcao_aee788d3396efbbfccabe67553d478059}\label{classAcao_aee788d3396efbbfccabe67553d478059} 
-\index{Acao@{Acao}!alterarVida@{alterarVida}}
-\index{alterarVida@{alterarVida}!Acao@{Acao}}
-\doxysubsubsection{\texorpdfstring{alterarVida()}{alterarVida()}}
-{\footnotesize\ttfamily virtual int Acao\+::alterar\+Vida (\begin{DoxyParamCaption}\item[{bool}]{alvo,  }\item[{int}]{valor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\Hypertarget{classAcao_ace32485f5cca5329ebb5e6fab9760ceb}\label{classAcao_ace32485f5cca5329ebb5e6fab9760ceb} 
+\index{Acao@{Acao}!calcularImpacto@{calcularImpacto}}
+\index{calcularImpacto@{calcularImpacto}!Acao@{Acao}}
+\doxysubsubsection{\texorpdfstring{calcularImpacto()}{calcularImpacto()}}
+{\footnotesize\ttfamily int Acao\+::calcular\+Impacto (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
-Calcula ou aplica a alteração de vida baseada na ação. 
+Calcula a alteração de vida baseada na ação. 
 
-
-\begin{DoxyParams}{Parâmetros}
-{\em alvo} & O alvo que receberá a alteração de vida. \\
-\hline
-{\em valor} & A quantidade de vida a ser alterada. \\
-\hline
-\end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
 Retorna um valor inteiro representando o resultado final da alteração. 
 \end{DoxyReturn}
-\Hypertarget{classAcao_abed01ab38253ffd03e62d82014351380}\label{classAcao_abed01ab38253ffd03e62d82014351380} 
-\index{Acao@{Acao}!aplicarEfeito@{aplicarEfeito}}
-\index{aplicarEfeito@{aplicarEfeito}!Acao@{Acao}}
-\doxysubsubsection{\texorpdfstring{aplicarEfeito()}{aplicarEfeito()}}
-{\footnotesize\ttfamily virtual int Acao\+::aplicar\+Efeito (\begin{DoxyParamCaption}\item[{bool}]{alvo,  }\item[{\mbox{\hyperlink{classEfeito}{Efeito}}}]{efeito }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\Hypertarget{classAcao_aaa6cd394a36cfc92a250a5f1e060369a}\label{classAcao_aaa6cd394a36cfc92a250a5f1e060369a} 
+\index{Acao@{Acao}!getAlvo@{getAlvo}}
+\index{getAlvo@{getAlvo}!Acao@{Acao}}
+\doxysubsubsection{\texorpdfstring{getAlvo()}{getAlvo()}}
+{\footnotesize\ttfamily bool Acao\+::get\+Alvo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Aplica o efeito de status no alvo determinado. 
+Retorna o alvo da ação. 
 
-
-\begin{DoxyParams}{Parâmetros}
-{\em alvo} & O alvo que sofrerá o efeito. \\
-\hline
-{\em efeito} & O efeito a ser aplicado. \\
-\hline
-\end{DoxyParams}
 \begin{DoxyReturn}{Retorna}
-Retorna um valor inteiro representando o sucesso ou a magnitude da aplicação. 
+true se o alvo for o próprio lançador, false se for o oponente. 
 \end{DoxyReturn}
-\Hypertarget{classAcao_af3878762e26ff4c2bafa795abbe1f69d}\label{classAcao_af3878762e26ff4c2bafa795abbe1f69d} 
-\index{Acao@{Acao}!mostrarHabilidade@{mostrarHabilidade}}
-\index{mostrarHabilidade@{mostrarHabilidade}!Acao@{Acao}}
-\doxysubsubsection{\texorpdfstring{mostrarHabilidade()}{mostrarHabilidade()}}
-{\footnotesize\ttfamily virtual void Acao\+::mostrar\+Habilidade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+\Hypertarget{classAcao_a5487582097dfd32984f6437b113fab52}\label{classAcao_a5487582097dfd32984f6437b113fab52} 
+\index{Acao@{Acao}!getEfeito@{getEfeito}}
+\index{getEfeito@{getEfeito}!Acao@{Acao}}
+\doxysubsubsection{\texorpdfstring{getEfeito()}{getEfeito()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEfeito}{Efeito}} Acao\+::get\+Efeito (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o efeito atrelado à ação. 
+
+\begin{DoxyReturn}{Retorna}
+Objeto da classe \doxylink{classEfeito}{Efeito} associado a esta ação. 
+\end{DoxyReturn}
+\Hypertarget{classAcao_aa8460ddeec0c7fa20e9e5c39ea64edd5}\label{classAcao_aa8460ddeec0c7fa20e9e5c39ea64edd5} 
+\index{Acao@{Acao}!getNome@{getNome}}
+\index{getNome@{getNome}!Acao@{Acao}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily std\+::string Acao\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o nome da ação. 
+
+\begin{DoxyReturn}{Retorna}
+Uma string contendo o nome da habilidade ou item. 
+\end{DoxyReturn}
+\Hypertarget{classAcao_a7f846d13ea7a8b3b9182dc3d646366b7}\label{classAcao_a7f846d13ea7a8b3b9182dc3d646366b7} 
+\index{Acao@{Acao}!getTipo@{getTipo}}
+\index{getTipo@{getTipo}!Acao@{Acao}}
+\doxysubsubsection{\texorpdfstring{getTipo()}{getTipo()}}
+{\footnotesize\ttfamily bool Acao\+::get\+Tipo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o tipo da ação. 
+
+\begin{DoxyReturn}{Retorna}
+true se for de um tipo específico (ex\+: cura), false para outro (ex\+: dano). 
+\end{DoxyReturn}
+\Hypertarget{classAcao_a4eb269228b7bf4d60dd3f5bff9fea566}\label{classAcao_a4eb269228b7bf4d60dd3f5bff9fea566} 
+\index{Acao@{Acao}!getValor@{getValor}}
+\index{getValor@{getValor}!Acao@{Acao}}
+\doxysubsubsection{\texorpdfstring{getValor()}{getValor()}}
+{\footnotesize\ttfamily int Acao\+::get\+Valor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o valor numérico da ação. 
+
+\begin{DoxyReturn}{Retorna}
+Inteiro representando a magnitude (quantidade de dano, cura, etc). 
+\end{DoxyReturn}
+\Hypertarget{classAcao_af339f68e5999ff075e79eeef17f08a9c}\label{classAcao_af339f68e5999ff075e79eeef17f08a9c} 
+\index{Acao@{Acao}!mostrarDescricao@{mostrarDescricao}}
+\index{mostrarDescricao@{mostrarDescricao}!Acao@{Acao}}
+\doxysubsubsection{\texorpdfstring{mostrarDescricao()}{mostrarDescricao()}}
+{\footnotesize\ttfamily void Acao\+::mostrar\+Descricao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -212,6 +257,7 @@ Valor numérico base da ação (quantidade de dano ou cura).
 
 
 
-A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{Acao_8hpp}{Acao.\+hpp}}\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{Acao_8hpp}{Acao.\+hpp}}\item 
+src/\mbox{\hyperlink{Acao_8cpp}{Acao.\+cpp}}\end{DoxyCompactItemize}

@@ -85,7 +85,7 @@ Diagrama de colaboração para Menu:</div>
 <div class="dyncontent">
 <div class="center"><img src="classMenu__coll__graph.png" border="0" usemap="#aMenu_coll__map" alt="Collaboration graph"/></div>
 <map name="aMenu_coll__map" id="aMenu_coll__map">
-<area shape="rect" title="Classe responsável por gerenciar o menu principal do jogo." alt="" coords="5,5,219,131"/>
+<area shape="rect" title="Classe responsável por gerenciar o menu principal do jogo." alt="" coords="5,5,175,111"/>
 </map>
 </div>
 <table class="memberdecls">
@@ -94,12 +94,9 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:ad466dd83355124a6ed958430450bfe94" id="r_ad466dd83355124a6ed958430450bfe94"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.html#ad466dd83355124a6ed958430450bfe94">Menu</a> ()</td></tr>
 <tr class="memdesc:ad466dd83355124a6ed958430450bfe94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão da classe <a class="el" href="classMenu.html" title="Classe responsável por gerenciar o menu principal do jogo.">Menu</a>.  <br /></td></tr>
 <tr class="separator:ad466dd83355124a6ed958430450bfe94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c069086470032c52727299ff48d003c" id="r_a9c069086470032c52727299ff48d003c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.html#a9c069086470032c52727299ff48d003c">iniciarJogo</a> ()</td></tr>
-<tr class="memdesc:a9c069086470032c52727299ff48d003c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia a partida.  <br /></td></tr>
-<tr class="separator:a9c069086470032c52727299ff48d003c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5fb1ae85133f12f56d64b9fc203d10a2" id="r_a5fb1ae85133f12f56d64b9fc203d10a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.html#a5fb1ae85133f12f56d64b9fc203d10a2">escolherPersonagemInicial</a> ()</td></tr>
-<tr class="memdesc:a5fb1ae85133f12f56d64b9fc203d10a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permite a seleção do personagem.  <br /></td></tr>
-<tr class="separator:a5fb1ae85133f12f56d64b9fc203d10a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9834948d0f1c352d745b877c4befacf" id="r_ad9834948d0f1c352d745b877c4befacf"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classPersonagem.html">Personagem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.html#ad9834948d0f1c352d745b877c4befacf">executarMenuInicial</a> ()</td></tr>
+<tr class="memdesc:ad9834948d0f1c352d745b877c4befacf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executa a interface do menu principal.  <br /></td></tr>
+<tr class="separator:ad9834948d0f1c352d745b877c4befacf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a831387f51358cfb88cd018e1777bc980" id="r_a831387f51358cfb88cd018e1777bc980"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenu.html#a831387f51358cfb88cd018e1777bc980">~Menu</a> ()</td></tr>
 <tr class="memdesc:a831387f51358cfb88cd018e1777bc980"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da classe <a class="el" href="classMenu.html" title="Classe responsável por gerenciar o menu principal do jogo.">Menu</a>.  <br /></td></tr>
 <tr class="separator:a831387f51358cfb88cd018e1777bc980"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,9 +123,6 @@ Membros Públicos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Construtor padrão da classe <a class="el" href="classMenu.html" title="Classe responsável por gerenciar o menu principal do jogo.">Menu</a>. </p>
-<ul>
-<li>Prepara a interface e os recursos iniciais necessários para exibir o menu na tela. </li>
-</ul>
 
 </div>
 </div>
@@ -148,21 +142,18 @@ Membros Públicos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Destrutor da classe <a class="el" href="classMenu.html" title="Classe responsável por gerenciar o menu principal do jogo.">Menu</a>. </p>
-<ul>
-<li>Libera da memória os recursos que foram alocados pela interface do menu. </li>
-</ul>
 
 </div>
 </div>
 <h2 class="groupheader">Documentação das funções</h2>
-<a id="a5fb1ae85133f12f56d64b9fc203d10a2" name="a5fb1ae85133f12f56d64b9fc203d10a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5fb1ae85133f12f56d64b9fc203d10a2">&#9670;&#160;</a></span>escolherPersonagemInicial()</h2>
+<a id="ad9834948d0f1c352d745b877c4befacf" name="ad9834948d0f1c352d745b877c4befacf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9834948d0f1c352d745b877c4befacf">&#9670;&#160;</a></span>executarMenuInicial()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Menu::escolherPersonagemInicial </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="classPersonagem.html">Personagem</a> &gt; Menu::executarMenuInicial </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -170,37 +161,14 @@ Membros Públicos</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Permite a seleção do personagem. </p>
-<ul>
-<li>Exibe as opções disponíveis e registra qual personagem o jogador escolheu para iniciar a aventura. </li>
-</ul>
+<p>Executa a interface do menu principal. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Ponteiro inteligente para o <a class="el" href="classPersonagem.html" title="Representa o personagem no jogo, herda da classe entidade.">Personagem</a> criado, ou nullptr se o utilizador optar por sair. </dd></dl>
 
 </div>
 </div>
-<a id="a9c069086470032c52727299ff48d003c" name="a9c069086470032c52727299ff48d003c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9c069086470032c52727299ff48d003c">&#9670;&#160;</a></span>iniciarJogo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Menu::iniciarJogo </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Inicia a partida. </p>
-<ul>
-<li>Faz a transição da tela de menu para o loop principal do jogo (gameplay). </li>
-</ul>
-
-</div>
-</div>
-<hr/>A documentação para essa classe foi gerada a partir do seguinte arquivo:<ul>
+<hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
 <li>include/<a class="el" href="Menu_8hpp_source.html">Menu.hpp</a></li>
+<li>src/<a class="el" href="Menu_8cpp.html">Menu.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

@@ -1,26 +1,27 @@
 <map id="include/Entidade.hpp" name="include/Entidade.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,164,31"/>
-<area shape="rect" id="Node000002" href="$InventarioHabilidade_8hpp.html" title=" " alt="" coords="130,79,317,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="108,28,190,70,187,75,106,33"/>
-<area shape="rect" id="Node000004" title=" " alt="" coords="199,372,279,397"/>
-<area shape="poly" id="edge14_Node000001_Node000004" title=" " alt="" coords="80,32,53,87,41,125,37,163,37,239,41,265,51,287,68,307,89,324,138,351,187,368,186,373,136,356,86,329,64,311,47,290,36,266,31,240,31,163,36,123,48,86,75,30"/>
-<area shape="rect" id="Node000006" title=" " alt="" coords="104,225,167,251"/>
-<area shape="poly" id="edge15_Node000001_Node000006" title=" " alt="" coords="90,30,132,211,127,212,85,32"/>
-<area shape="rect" id="Node000003" href="$Inventario_8hpp.html" title=" " alt="" coords="173,152,289,177"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="227,104,231,138,226,139,222,105"/>
-<area shape="poly" id="edge13_Node000002_Node000006" title=" " alt="" coords="209,106,186,127,164,153,151,183,142,213,137,211,146,181,160,151,182,123,206,102"/>
-<area shape="rect" id="Node000007" href="$Habilidade_8hpp.html" title=" " alt="" coords="314,152,434,177"/>
-<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="249,102,338,144,336,148,246,106"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="234,178,241,358,236,358,229,178"/>
-<area shape="rect" id="Node000005" title=" " alt="" coords="398,372,457,397"/>
-<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="284,175,358,196,390,209,411,224,429,256,437,292,438,328,435,359,430,358,433,328,432,293,424,258,407,227,387,214,356,201,282,180"/>
-<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="217,180,164,219,161,215,214,175"/>
-<area shape="rect" id="Node000008" href="$Acao_8hpp.html" title=" " alt="" coords="314,225,397,251"/>
-<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="373,178,364,213,359,212,368,177"/>
-<area shape="poly" id="edge11_Node000008_Node000004" title=" " alt="" coords="342,253,317,274,292,300,270,331,253,361,249,358,266,328,288,297,314,270,338,249"/>
-<area shape="poly" id="edge12_Node000008_Node000005" title=" " alt="" coords="368,249,387,270,404,297,417,328,425,358,420,359,412,330,400,300,382,274,364,252"/>
-<area shape="rect" id="Node000009" href="$Efeito_8hpp.html" title=" " alt="" coords="302,299,390,324"/>
-<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="356,251,352,286,347,285,351,251"/>
-<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="330,326,270,367,267,362,327,322"/>
-<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="361,322,406,361,402,365,357,326"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="228,5,387,31"/>
+<area shape="rect" id="Node000002" href="$InventarioHabilidade_8hpp.html" title=" " alt="" coords="94,79,281,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="289,33,220,74,218,69,287,28"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="342,372,422,397"/>
+<area shape="poly" id="edge15_Node000001_Node000004" title=" " alt="" coords="341,28,383,47,427,76,446,94,462,114,473,138,477,163,477,240,470,277,452,312,430,341,408,365,404,361,426,338,448,309,465,275,471,239,471,164,468,139,458,117,443,97,424,80,380,52,339,33"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="5,225,68,251"/>
+<area shape="poly" id="edge16_Node000001_Node000006" title=" " alt="" coords="228,27,192,34,154,44,117,60,84,81,60,109,46,145,40,181,38,212,33,212,35,180,41,143,55,107,80,77,114,55,152,39,191,28,227,22"/>
+<area shape="rect" id="Node000009" href="$Efeito_8hpp.html" title=" " alt="" coords="298,299,386,324"/>
+<area shape="poly" id="edge14_Node000001_Node000009" title=" " alt="" coords="315,30,333,82,350,152,353,224,348,285,343,285,348,224,345,152,328,83,310,32"/>
+<area shape="rect" id="Node000003" href="$Inventario_8hpp.html" title=" " alt="" coords="75,152,191,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="180,106,152,143,148,140,176,103"/>
+<area shape="poly" id="edge13_Node000002_Node000006" title=" " alt="" coords="143,107,101,125,81,138,64,154,49,182,41,212,36,211,44,180,60,150,78,134,98,120,141,102"/>
+<area shape="rect" id="Node000007" href="$Habilidade_8hpp.html" title=" " alt="" coords="215,152,335,177"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="203,102,252,141,249,145,200,106"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="192,175,256,193,322,223,369,253,386,271,400,298,404,314,404,330,396,360,391,359,399,330,399,314,396,300,382,274,366,257,319,228,254,198,190,180"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="181,372,239,397"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="139,177,204,358,199,360,134,179"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="119,180,65,219,62,215,116,175"/>
+<area shape="rect" id="Node000008" href="$Acao_8hpp.html" title=" " alt="" coords="226,225,309,251"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="277,178,273,212,267,212,271,177"/>
+<area shape="poly" id="edge11_Node000008_Node000004" title=" " alt="" coords="270,251,273,285,279,305,288,322,312,346,340,364,338,368,309,350,284,326,274,307,268,286,264,251"/>
+<area shape="poly" id="edge12_Node000008_Node000005" title=" " alt="" coords="265,252,244,300,221,360,216,358,240,298,260,250"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="281,249,322,287,318,291,277,253"/>
+<area shape="poly" id="edge9_Node000009_Node000004" title=" " alt="" coords="351,323,371,359,366,361,346,326"/>
+<area shape="poly" id="edge10_Node000009_Node000005" title=" " alt="" coords="322,326,245,368,242,363,320,322"/>
 </map>

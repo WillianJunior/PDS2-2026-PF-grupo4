@@ -10,24 +10,27 @@
 \DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
 \DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
 \DoxyCodeLine{00008\ }
-\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPersonagem}{Personagem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEntidade}{Entidade}}\{}
-\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classInventarioItem}{InventarioItem}}\ \_inventario;}
-\DoxyCodeLine{00018\ }
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPersonagem_a3c8985aea0d1b57844103e050ee3a9b4}{Personagem}}(\textcolor{keywordtype}{int}\ vida,\ \mbox{\hyperlink{classInventarioHabilidade}{InventarioHabilidade}}\ inventarioHabilidade,\ std::string\ nome,\ \mbox{\hyperlink{classInventarioItem}{InventarioItem}}\ inventarioItem);}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPersonagem_aac8772a849812a27ea1b22e7af8acfe3}{escolherHabilidade}}(\textcolor{keywordtype}{int}\ posicaoHabilidade)\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPersonagem_aa61937a1c1f58b0569f8a77c5c6026d6}{escolherItem}}(\textcolor{keywordtype}{int}\ posicaoItem);}
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPersonagem}{Personagem}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEntidade}{Entidade}}\{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classInventarioItem}{InventarioItem}}\ \_inventario;}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_vidaMaxima;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPersonagem}{Personagem}}(\textcolor{keywordtype}{int}\ vida,\ \mbox{\hyperlink{classInventarioHabilidade}{InventarioHabilidade}}\ inventarioHabilidade,\ std::string\ nome,\ \mbox{\hyperlink{classInventarioItem}{InventarioItem}}\ inventarioItem);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classHabilidade}{Habilidade}}\ \mbox{\hyperlink{classPersonagem_a82d3d108b4eab95527ae48e2268f6c94}{escolherHabilidade}}(\textcolor{keywordtype}{int}\ posicaoHabilidade)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classItem}{Item}}\ \mbox{\hyperlink{classPersonagem_ad1ca55afcab097bc0ea8ce90606d9efc}{escolherItem}}(\textcolor{keywordtype}{int}\ posicaoItem);}
 \DoxyCodeLine{00045\ }
 \DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPersonagem_a30d115691def369c93d14834a7176590}{alterarVida}}(\textcolor{keywordtype}{int}\ valor)\ \textcolor{keyword}{override};}
 \DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ }
 \DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPersonagem_afb52502006acf871aa5ebdcbca06a86c}{isMorto}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00060\ }
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPersonagem_a173c15f20799967d9b2acc5e6197b2b0}{\string~Personagem}}();\ }
-\DoxyCodeLine{00066\ \};}
-\DoxyCodeLine{00067\ }
-\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00060\ \ \ \ \ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classInventarioItem}{InventarioItem}}\ \mbox{\hyperlink{classPersonagem_a5a3f9204f0c5d0645ab0e7d7e38ff86c}{getInventarioItem}}();}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPersonagem_a173c15f20799967d9b2acc5e6197b2b0}{\string~Personagem}}();\ }
+\DoxyCodeLine{00071\ \};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

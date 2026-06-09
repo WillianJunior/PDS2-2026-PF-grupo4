@@ -6,32 +6,42 @@
 \DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ENTIDADE\_H}}
 \DoxyCodeLine{00003\ }
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{InventarioHabilidade_8hpp}{InventarioHabilidade.hpp}}"{}}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{comment}{//classe\ responsavel\ por\ preparar\ o\ terreno\ para\ as\ outras\ entidades:}}
-\DoxyCodeLine{00009\ \textcolor{comment}{//personagem\ e\ ininimgo}}
-\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEntidade}{Entidade}}\{}
-\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{protected}:}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classEntidade_a7f35754ba0fbda708e230c9919f782ab}{\_vida}};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classEntidade_a2004c517d43cf6825a442d4f47e01dd1}{\_nome}};}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ }
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classInventarioHabilidade}{InventarioHabilidade}}\ \mbox{\hyperlink{classEntidade_ae164d58441370401d579536664263330}{\_inventarioHabilidade}};}
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keyword}{public}:\ }
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEntidade_a3e50f865ffcca548bdc7d97058c173d7}{Entidade}}(\textcolor{keywordtype}{int}\ vida,\ std::string\ nome,\ \mbox{\hyperlink{classInventarioHabilidade}{InventarioHabilidade}}\ inventarioHabilidade);}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classEntidade_a441fee3d5486dd7b7e81cbd66c1c5f89}{escolherHabilidade}}(\textcolor{keywordtype}{int}\ posicaoHabilidade)\ =\ 0;}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEntidade_a93bfebaf5a40c8ab214fd0068ca6149a}{alterarVida}}(\textcolor{keywordtype}{int}\ valor)\ =\ 0;}
-\DoxyCodeLine{00054\ \ \ \ \ }
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classEntidade_ade89008844bd05a9becdbaf0c9c24506}{isMorto}}()\ =\ 0;}
-\DoxyCodeLine{00061\ \ \ \ \ }
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classEntidade_aeb86ab836a83a514cfb42b04158051b3}{\string~Entidade}}();}
-\DoxyCodeLine{00068\ \};}
-\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Efeito_8hpp}{Efeito.hpp}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEntidade}{Entidade}}\{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classEntidade_a7f35754ba0fbda708e230c9919f782ab}{\_vida}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classEntidade_a2004c517d43cf6825a442d4f47e01dd1}{\_nome}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classInventarioHabilidade}{InventarioHabilidade}}\ \mbox{\hyperlink{classEntidade_ae164d58441370401d579536664263330}{\_inventarioHabilidade}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::vector<Efeito>\ \mbox{\hyperlink{classEntidade_aab0d8944e45718657680b5f1d627aa71}{\_efeitosAtivos}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{public}:\ }
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classEntidade}{Entidade}}(\textcolor{keywordtype}{int}\ vida,\ std::string\ nome,\ \mbox{\hyperlink{classInventarioHabilidade}{InventarioHabilidade}}\ inventarioHabilidade);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classHabilidade}{Habilidade}}\ \mbox{\hyperlink{classEntidade_a67d66a335bc8975a3c1ac530dd7c0e33}{escolherHabilidade}}(\textcolor{keywordtype}{int}\ posicaoHabilidade)\ =\ 0;}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEntidade_a93bfebaf5a40c8ab214fd0068ca6149a}{alterarVida}}(\textcolor{keywordtype}{int}\ valor)\ =\ 0;}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classEntidade_ade89008844bd05a9becdbaf0c9c24506}{isMorto}}()\ =\ 0;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEntidade_aca0dccceffe0b3e458cd8d5e4ebc60fb}{receberEfeito}}(\mbox{\hyperlink{classEfeito}{Efeito}}\ novoEfeito);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classEntidade_adfaf551744091e864c5b1acc96ff9c51}{processarEfeitosAtivos}}();}
 \DoxyCodeLine{00070\ }
-\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#endif\ }}
-\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classEntidade_a273d26d69ff950d53fa9eaaff38bc163}{getVida}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ std::string\ \mbox{\hyperlink{classEntidade_a838b5a83d932111378efcb9e062a56a3}{getNome}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classInventarioHabilidade}{InventarioHabilidade}}\ \mbox{\hyperlink{classEntidade_a52bd2e7409925a37d3c05ea3b57f9188}{getInventarioHabilidade}}();}
+\DoxyCodeLine{00085\ \ \ \ \ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classEntidade_a7b3a23b8307be2dcc4cfbe77e69baa50}{\string~Entidade}}();}
+\DoxyCodeLine{00092\ \};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

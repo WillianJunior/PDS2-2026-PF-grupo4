@@ -1,0 +1,74 @@
+\doxysection{Referência da Classe Engine}
+\hypertarget{classEngine}{}\label{classEngine}\index{Engine@{Engine}}
+
+
+Classe gerenciadora do loop principal do jogo -\/ maquina de estados Cria o ciclo de vida do jogo, desde a configuração inicial do personagem as instâncias das salas.  
+
+
+
+
+{\ttfamily \#include $<$Engine.\+hpp$>$}
+
+
+
+Diagrama de colaboração para Engine\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=150pt]{classEngine__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEngine_a8c98683b0a3aa28d8ab72a8bcd0d52f2}{Engine}} ()
+\begin{DoxyCompactList}\small\item\em Construtor da \doxylink{classEngine}{Engine}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEngine_a07490236fee13f031838eadb72f91536}{iniciar}} ()
+\begin{DoxyCompactList}\small\item\em Inicia o motor do jogo. Delega a interface inicial ao \doxylink{classMenu}{Menu}, configura a entidade principal e entra no loop contínuo de transição de salas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEngine_a756500478f6f6debf63da450107b7250}{\texorpdfstring{$\sim$}{\string~}\+Engine}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor da \doxylink{classEngine}{Engine}. Declarado como default para delegar a limpeza ao std\+::unique\+\_\+ptr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe gerenciadora do loop principal do jogo -\/ maquina de estados Cria o ciclo de vida do jogo, desde a configuração inicial do personagem as instâncias das salas. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{classEngine_a8c98683b0a3aa28d8ab72a8bcd0d52f2}\label{classEngine_a8c98683b0a3aa28d8ab72a8bcd0d52f2} 
+\index{Engine@{Engine}!Engine@{Engine}}
+\index{Engine@{Engine}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{Engine()}{Engine()}}
+{\footnotesize\ttfamily Engine\+::\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da \doxylink{classEngine}{Engine}. 
+
+\Hypertarget{classEngine_a756500478f6f6debf63da450107b7250}\label{classEngine_a756500478f6f6debf63da450107b7250} 
+\index{Engine@{Engine}!````~Engine@{\texorpdfstring{$\sim$}{\string~}Engine}}
+\index{````~Engine@{\texorpdfstring{$\sim$}{\string~}Engine}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Engine()}{\string~Engine()}}
+{\footnotesize\ttfamily Engine\+::\texorpdfstring{$\sim$}{\string~}\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destrutor da \doxylink{classEngine}{Engine}. Declarado como default para delegar a limpeza ao std\+::unique\+\_\+ptr. 
+
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classEngine_a07490236fee13f031838eadb72f91536}\label{classEngine_a07490236fee13f031838eadb72f91536} 
+\index{Engine@{Engine}!iniciar@{iniciar}}
+\index{iniciar@{iniciar}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{iniciar()}{iniciar()}}
+{\footnotesize\ttfamily void Engine\+::iniciar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicia o motor do jogo. Delega a interface inicial ao \doxylink{classMenu}{Menu}, configura a entidade principal e entra no loop contínuo de transição de salas. 
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{Engine_8hpp}{Engine.\+hpp}}\item 
+src/\mbox{\hyperlink{Engine_8cpp}{Engine.\+cpp}}\end{DoxyCompactItemize}

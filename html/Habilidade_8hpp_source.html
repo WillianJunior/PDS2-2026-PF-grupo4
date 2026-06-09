@@ -89,20 +89,22 @@ $(document).ready(function() { init_codefold(0); });
 <div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classHabilidade.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="classHabilidade.html">Habilidade</a> : <span class="keyword">public</span> <a class="code hl_class" href="classAcao.html">Acao</a> {</div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classHabilidade.html#a66ae3890cf037ea2374c67ad036a5d99">   21</a></span>        <a class="code hl_function" href="classHabilidade.html#a66ae3890cf037ea2374c67ad036a5d99">Habilidade</a>(std::string nome, <span class="keywordtype">bool</span> tipo, <span class="keywordtype">int</span> valor, <span class="keywordtype">bool</span> alvo, <a class="code hl_class" href="classEfeito.html">Efeito</a> efeito);</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="classHabilidade.html#a4fd7e13420bc0909e701b1cb3a3983e4">   27</a></span>        <a class="code hl_function" href="classHabilidade.html#a4fd7e13420bc0909e701b1cb3a3983e4">~Habilidade</a>();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>};</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        <a class="code hl_class" href="classHabilidade.html">Habilidade</a>(std::string nome, <span class="keywordtype">bool</span> tipo, <span class="keywordtype">int</span> valor, <span class="keywordtype">bool</span> alvo, <a class="code hl_class" href="classEfeito.html">Efeito</a> efeito);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordtype">bool</span> <a class="code hl_function" href="classHabilidade.html#aa5226c2dc9ac5f6d14b65700cbdb817a">operator==</a>(<span class="keyword">const</span> <a class="code hl_class" href="classHabilidade.html">Habilidade</a>&amp; outro) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        <a class="code hl_function" href="classHabilidade.html#a4fd7e13420bc0909e701b1cb3a3983e4">~Habilidade</a>();</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>};</div>
 </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aAcao_8hpp_html"><div class="ttname"><a href="Acao_8hpp.html">Acao.hpp</a></div></div>
 <div class="ttc" id="aclassAcao_html"><div class="ttname"><a href="classAcao.html">Acao</a></div><div class="ttdoc">Classe base para representar qualquer ação do jogo (como Habilidades ou Itens).</div><div class="ttdef"><b>Definição</b> Acao.hpp:13</div></div>
 <div class="ttc" id="aclassEfeito_html"><div class="ttname"><a href="classEfeito.html">Efeito</a></div><div class="ttdoc">Representa um efeito de status contínuo no jogo.</div><div class="ttdef"><b>Definição</b> Efeito.hpp:11</div></div>
 <div class="ttc" id="aclassHabilidade_html"><div class="ttname"><a href="classHabilidade.html">Habilidade</a></div><div class="ttdoc">Representa uma habilidade no jogo.</div><div class="ttdef"><b>Definição</b> Habilidade.hpp:10</div></div>
-<div class="ttc" id="aclassHabilidade_html_a4fd7e13420bc0909e701b1cb3a3983e4"><div class="ttname"><a href="classHabilidade.html#a4fd7e13420bc0909e701b1cb3a3983e4">Habilidade::~Habilidade</a></div><div class="ttdeci">~Habilidade()</div><div class="ttdoc">Destrutor do objeto habilidade Garante que não vaze memória de habilidades.</div></div>
-<div class="ttc" id="aclassHabilidade_html_a66ae3890cf037ea2374c67ad036a5d99"><div class="ttname"><a href="classHabilidade.html#a66ae3890cf037ea2374c67ad036a5d99">Habilidade::Habilidade</a></div><div class="ttdeci">Habilidade(std::string nome, bool tipo, int valor, bool alvo, Efeito efeito)</div><div class="ttdoc">Construtor da habilidade que herda de Acao.</div></div>
+<div class="ttc" id="aclassHabilidade_html_a4fd7e13420bc0909e701b1cb3a3983e4"><div class="ttname"><a href="classHabilidade.html#a4fd7e13420bc0909e701b1cb3a3983e4">Habilidade::~Habilidade</a></div><div class="ttdeci">~Habilidade()</div><div class="ttdoc">Destrutor do objeto habilidade Garante que não vaze memória de habilidades.</div><div class="ttdef"><b>Definição</b> Habilidade.cpp:15</div></div>
+<div class="ttc" id="aclassHabilidade_html_aa5226c2dc9ac5f6d14b65700cbdb817a"><div class="ttname"><a href="classHabilidade.html#aa5226c2dc9ac5f6d14b65700cbdb817a">Habilidade::operator==</a></div><div class="ttdeci">bool operator==(const Habilidade &amp;outro) const</div><div class="ttdoc">Compara duas habilidades.</div><div class="ttdef"><b>Definição</b> Habilidade.cpp:6</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

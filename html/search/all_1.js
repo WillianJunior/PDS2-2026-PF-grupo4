@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['acao_0',['acao',['../classAcao.html',1,'Acao'],['../classAcao.html#a30e70a54ae7f2e02523f0efd3b423271',1,'Acao::Acao()']]],
-  ['acao_2ehpp_1',['Acao.hpp',['../Acao_8hpp.html',1,'']]],
-  ['alocarinimigo_2',['alocarInimigo',['../classSalaCombate.html#a1e6bbed2a18d7bd3366a5a610d814409',1,'SalaCombate']]],
-  ['alterarvida_3',['alterarvida',['../classAcao.html#aee788d3396efbbfccabe67553d478059',1,'Acao::alterarVida()'],['../classEntidade.html#a93bfebaf5a40c8ab214fd0068ca6149a',1,'Entidade::alterarVida()'],['../classInimigo.html#a89ebd352bccd15499fbda8200bdc3730',1,'Inimigo::alterarVida()'],['../classPersonagem.html#a30d115691def369c93d14834a7176590',1,'Personagem::alterarVida()']]],
-  ['aplicarefeito_4',['aplicarefeito',['../classAcao.html#abed01ab38253ffd03e62d82014351380',1,'Acao::aplicarEfeito()'],['../classEfeito.html#a72a1818ee33711979cb197bfd596f1c8',1,'Efeito::aplicarEfeito()']]],
-  ['atualizarduracao_5',['atualizarDuracao',['../classEfeito.html#a19b45c454250f88acb863293b41cfb25',1,'Efeito']]]
+  ['_5falvo_0',['_alvo',['../classAcao.html#a8f6321d5b689a8c9cabad81bcb7f9e3b',1,'Acao']]],
+  ['_5fefeito_1',['_efeito',['../classAcao.html#a573b75f29106a5b2668739037a1084d1',1,'Acao']]],
+  ['_5fefeitosativos_2',['_efeitosAtivos',['../classEntidade.html#aab0d8944e45718657680b5f1d627aa71',1,'Entidade']]],
+  ['_5finventariohabilidade_3',['_inventarioHabilidade',['../classEntidade.html#ae164d58441370401d579536664263330',1,'Entidade']]],
+  ['_5fnome_4',['_nome',['../classAcao.html#aa3edff2abd27b8805294781da8c345e5',1,'Acao::_nome'],['../classEntidade.html#a2004c517d43cf6825a442d4f47e01dd1',1,'Entidade::_nome'],['../classSalaBase.html#a05b5a645149ef1fd82fd132fae5b90c8',1,'SalaBase::_nome']]],
+  ['_5ftipo_5',['_tipo',['../classAcao.html#af673981041cfec0071e4bf3b4ad7c790',1,'Acao']]],
+  ['_5fvalor_6',['_valor',['../classAcao.html#a0111acdd90205925932781bfddaf8bf0',1,'Acao']]],
+  ['_5fvida_7',['_vida',['../classEntidade.html#a7f35754ba0fbda708e230c9919f782ab',1,'Entidade']]]
 ];

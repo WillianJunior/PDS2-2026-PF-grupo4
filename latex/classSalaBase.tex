@@ -15,7 +15,7 @@ Diagrama de hierarquia da classe Sala\+Base\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=318pt]{classSalaBase__inherit__graph}
+\includegraphics[width=300pt]{classSalaBase__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -24,7 +24,7 @@ Diagrama de colaboração para Sala\+Base\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=171pt]{classSalaBase__coll__graph}
+\includegraphics[width=172pt]{classSalaBase__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Membros Públicos}
@@ -32,11 +32,13 @@ Diagrama de colaboração para Sala\+Base\+:\nopagebreak
 \item 
 virtual void \mbox{\hyperlink{classSalaBase_a2bbb6cb055fc485d399ecf7a9a1d44fa}{encerrar\+Sala}} ()=0
 \begin{DoxyCompactList}\small\item\em Encerra a execução ou o contexto da sala atual. Método virtual puro que deve ser implementado pelas classes filhas. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classSalaBase_a46df83da1001792024a2d67296e647d3}{proxima\+Sala}} ()=0
-\begin{DoxyCompactList}\small\item\em Realiza a transição ou o carregamento da próxima sala. Método virtual puro que deve ser implementado pelas classes filhas. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classSalaBase_af8610b3e1cffc4fd2c85366ebc64bac0}{executar\+Sala}} (\mbox{\hyperlink{classPersonagem}{Personagem}} \texorpdfstring{$\ast$}{*}personagem)=0
+\begin{DoxyCompactList}\small\item\em Executa o loop da sala. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classSalaBase_a266d17999fecc33d2afeb1c9fd9083a3}{mostrar\+Sala}} ()=0
 \begin{DoxyCompactList}\small\item\em Exibe as informações, o menu ou o conteúdo da sala na tela. Método virtual puro que deve ser implementado pelas classes filhas. \end{DoxyCompactList}\item 
-virtual \mbox{\hyperlink{classSalaBase_a31e1cc9705d99a6dcba12f6cc52e3fc0}{\texorpdfstring{$\sim$}{\string~}\+Sala\+Base}} ()
+std\+::string \mbox{\hyperlink{classSalaBase_aa70b904d98578ea6b8b42e607eeef7ca}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o nome da sala. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classSalaBase_a26b843086d5f0b0ebbcd1bf5331f90f6}{\texorpdfstring{$\sim$}{\string~}\+Sala\+Base}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor virtual. Garante que os recursos das classes derivadas sejam liberados corretamente. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Membros protegidos}
 \begin{DoxyCompactItemize}
@@ -74,11 +76,11 @@ Construtor da classe \doxylink{classSalaBase}{Sala\+Base}.
 {\em nome} & O nome que será atribuído à sala. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{classSalaBase_a31e1cc9705d99a6dcba12f6cc52e3fc0}\label{classSalaBase_a31e1cc9705d99a6dcba12f6cc52e3fc0} 
+\Hypertarget{classSalaBase_a26b843086d5f0b0ebbcd1bf5331f90f6}\label{classSalaBase_a26b843086d5f0b0ebbcd1bf5331f90f6} 
 \index{SalaBase@{SalaBase}!````~SalaBase@{\texorpdfstring{$\sim$}{\string~}SalaBase}}
 \index{````~SalaBase@{\texorpdfstring{$\sim$}{\string~}SalaBase}!SalaBase@{SalaBase}}
 \doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}SalaBase()}{\string~SalaBase()}}
-{\footnotesize\ttfamily virtual Sala\+Base\+::\texorpdfstring{$\sim$}{\string~}\+Sala\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily Sala\+Base\+::\texorpdfstring{$\sim$}{\string~}\+Sala\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 
 
@@ -101,6 +103,33 @@ Encerra a execução ou o contexto da sala atual. Método virtual puro que deve 
 
 Implementado por \mbox{\hyperlink{classSalaCombate_a79f0a1db3e17f3a9633c446f641e327b}{Sala\+Combate}} e \mbox{\hyperlink{classSalaEscolha_a271e7269eeb090dcdf63f0c4988deab0}{Sala\+Escolha}}.
 
+\Hypertarget{classSalaBase_af8610b3e1cffc4fd2c85366ebc64bac0}\label{classSalaBase_af8610b3e1cffc4fd2c85366ebc64bac0} 
+\index{SalaBase@{SalaBase}!executarSala@{executarSala}}
+\index{executarSala@{executarSala}!SalaBase@{SalaBase}}
+\doxysubsubsection{\texorpdfstring{executarSala()}{executarSala()}}
+{\footnotesize\ttfamily virtual int Sala\+Base\+::executar\+Sala (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPersonagem}{Personagem}} \texorpdfstring{$\ast$}{*}}]{personagem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Executa o loop da sala. 
+
+\begin{DoxyReturn}{Retorna}
+Numero que representa a ID da proxima sala a ser carregada 
+\end{DoxyReturn}
+
+
+Implementado por \mbox{\hyperlink{classSalaCombate_afd8449c1ed680ebcbd8d70beeab860c8}{Sala\+Combate}} e \mbox{\hyperlink{classSalaEscolha_ae733458ab6ba45b7d198ec09063250b3}{Sala\+Escolha}}.
+
+\Hypertarget{classSalaBase_aa70b904d98578ea6b8b42e607eeef7ca}\label{classSalaBase_aa70b904d98578ea6b8b42e607eeef7ca} 
+\index{SalaBase@{SalaBase}!getNome@{getNome}}
+\index{getNome@{getNome}!SalaBase@{SalaBase}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily std\+::string Sala\+Base\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o nome da sala. 
+
 \Hypertarget{classSalaBase_a266d17999fecc33d2afeb1c9fd9083a3}\label{classSalaBase_a266d17999fecc33d2afeb1c9fd9083a3} 
 \index{SalaBase@{SalaBase}!mostrarSala@{mostrarSala}}
 \index{mostrarSala@{mostrarSala}!SalaBase@{SalaBase}}
@@ -114,20 +143,6 @@ Exibe as informações, o menu ou o conteúdo da sala na tela. Método virtual p
 
 
 Implementado por \mbox{\hyperlink{classSalaCombate_a5dd4fce1fa15c75b49abfe84d84da8c5}{Sala\+Combate}} e \mbox{\hyperlink{classSalaEscolha_ad99bb15b16532d1148c920c9d1b0d7ba}{Sala\+Escolha}}.
-
-\Hypertarget{classSalaBase_a46df83da1001792024a2d67296e647d3}\label{classSalaBase_a46df83da1001792024a2d67296e647d3} 
-\index{SalaBase@{SalaBase}!proximaSala@{proximaSala}}
-\index{proximaSala@{proximaSala}!SalaBase@{SalaBase}}
-\doxysubsubsection{\texorpdfstring{proximaSala()}{proximaSala()}}
-{\footnotesize\ttfamily virtual void Sala\+Base\+::proxima\+Sala (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
-
-
-
-Realiza a transição ou o carregamento da próxima sala. Método virtual puro que deve ser implementado pelas classes filhas. 
-
-
-
-Implementado por \mbox{\hyperlink{classSalaCombate_a8140a27b1472a210be3dff5b2996dbdf}{Sala\+Combate}} e \mbox{\hyperlink{classSalaEscolha_a19e068ae95ec4682fbd5c9fe56c71a35}{Sala\+Escolha}}.
 
 
 
@@ -147,6 +162,7 @@ Nome ou identificador da sala.
 \item 
 \end{DoxyItemize}
 
-A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 
-include/\mbox{\hyperlink{SalaBase_8hpp}{Sala\+Base.\+hpp}}\end{DoxyCompactItemize}
+include/\mbox{\hyperlink{SalaBase_8hpp}{Sala\+Base.\+hpp}}\item 
+src/\mbox{\hyperlink{SalaBase_8cpp}{Sala\+Base.\+cpp}}\end{DoxyCompactItemize}

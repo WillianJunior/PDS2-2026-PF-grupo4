@@ -1,7 +1,35 @@
 <map id="include/Entidade.hpp" name="include/Entidade.hpp">
-<area shape="rect" id="Node000001" title=" " alt="" coords="96,5,255,31"/>
-<area shape="rect" id="Node000002" href="$Inimigo_8hpp.html" title=" " alt="" coords="5,79,156,104"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,41,98,81,95,76,148,37"/>
-<area shape="rect" id="Node000003" href="$Personagem_8hpp.html" title=" " alt="" coords="180,79,363,104"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="203,37,257,76,254,81,200,41"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="731,5,890,31"/>
+<area shape="rect" id="Node000002" href="$Inimigo_8hpp.html" title=" " alt="" coords="735,79,886,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="813,44,813,79,808,79,808,44"/>
+<area shape="rect" id="Node000007" href="$Personagem_8hpp.html" title=" " alt="" coords="449,79,631,104"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="755,37,585,81,583,76,753,32"/>
+<area shape="rect" id="Node000015" href="$Entidade_8cpp.html" title=" " alt="" coords="910,79,1039,104"/>
+<area shape="poly" id="edge18_Node000001_Node000015" title=" " alt="" coords="851,34,949,76,947,81,849,39"/>
+<area shape="rect" id="Node000003" href="$SalaCombate_8hpp.html" title=" " alt="" coords="717,152,905,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="813,118,813,152,808,152,808,118"/>
+<area shape="rect" id="Node000006" href="$Inimigo_8cpp.html" title=" " alt="" coords="929,152,1050,177"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="853,106,961,149,959,154,851,111"/>
+<area shape="rect" id="Node000004" href="$Engine_8cpp.html" title=" " alt="" coords="445,225,561,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="748,183,553,228,552,223,747,178"/>
+<area shape="rect" id="Node000005" href="$SalaCombate_8cpp.html" title=" " alt="" coords="731,225,890,251"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="813,191,813,225,808,225,808,191"/>
+<area shape="poly" id="edge13_Node000007_Node000003" title=" " alt="" coords="597,105,768,149,766,154,596,110"/>
+<area shape="rect" id="Node000008" href="$Engine_8hpp.html" title=" " alt="" coords="386,152,531,177"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="518,115,474,154,470,150,515,111"/>
+<area shape="rect" id="Node000010" href="$Menu_8hpp.html" title=" " alt="" coords="555,152,693,177"/>
+<area shape="poly" id="edge10_Node000007_Node000010" title=" " alt="" coords="566,111,612,150,609,154,562,115"/>
+<area shape="rect" id="Node000012" href="$SalaEscolha_8hpp.html" title=" " alt="" coords="5,152,184,177"/>
+<area shape="poly" id="edge14_Node000007_Node000012" title=" " alt="" coords="455,109,167,155,166,149,454,104"/>
+<area shape="rect" id="Node000014" href="$Personagem_8cpp.html" title=" " alt="" coords="209,152,362,177"/>
+<area shape="poly" id="edge17_Node000007_Node000014" title=" " alt="" coords="486,110,327,154,326,149,485,105"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="475,188,498,224,493,227,471,191"/>
+<area shape="rect" id="Node000009" href="$main_8cpp.html" title=" " alt="" coords="315,225,421,251"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="435,188,384,227,381,223,432,184"/>
+<area shape="poly" id="edge11_Node000010_Node000004" title=" " alt="" coords="594,187,524,227,521,223,591,182"/>
+<area shape="rect" id="Node000011" href="$Menu_8cpp.html" title=" " alt="" coords="585,225,693,251"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="632,190,639,225,634,226,627,191"/>
+<area shape="poly" id="edge15_Node000012_Node000004" title=" " alt="" coords="174,177,445,224,444,229,173,182"/>
+<area shape="rect" id="Node000013" href="$SalaEscolha_8cpp.html" title=" " alt="" coords="19,225,170,251"/>
+<area shape="poly" id="edge16_Node000012_Node000013" title=" " alt="" coords="97,191,97,225,92,225,92,191"/>
 </map>
