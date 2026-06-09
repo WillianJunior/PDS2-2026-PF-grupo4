@@ -3,6 +3,21 @@
 Entidade::Entidade(int vida, std::string nome, InventarioHabilidade inventarioHabilidade)
     : _vida(vida), _nome(nome), _inventarioHabilidade(inventarioHabilidade){}
 
+void Entidade::receberEfeito(Efeito novoEfeito){
+    this->_efeitosAtivos.push_back(novoEfeito);
+}
+
+void Entidade::processarEfeitosAtivos(){
+    for(int i = _efeitosAtivos.size() - 1; i >= 0; i--){
+        this->alterarVida(_efeitosAtivos[i].getValor()); 
+        _efeitosAtivos[i].mostrarEfeito(); 
+        _efeitosAtivos[i].atualizarDuracao();
+        if(_efeitosAtivos[i].isEncerrado()){
+            _efeitosAtivos.erase(_efeitosAtivos.begin() + i);
+        }
+    }
+}
+
 int Entidade::getVida(){
     return this->_vida;
 }

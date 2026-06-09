@@ -1,19 +1,19 @@
 #include "Inimigo.hpp"
 
 Inimigo::Inimigo(int vida, InventarioHabilidade habilidade, std::string nome, bool tipo)
-    : Entidade(vida, nome, habilidade), tipo(tipo), _vidaMaxima(vida) {}
+    : Entidade(vida, nome, habilidade), tipo(tipo), _vidaMaxima(vida){}
 
-
-int Inimigo::escolherHabilidade(int posicaoHabilidade){
+Habilidade Inimigo::escolherHabilidade(int posicaoHabilidade){
     Habilidade habilidade = this->_inventarioHabilidade.getHabilidade(posicaoHabilidade);
-    habilidade.mostrarHabilidade();
-    return habilidade.getValor();
+    habilidade.mostrarDescricao();
+    return habilidade;
 }
 
 void Inimigo::alterarVida(int valor){
     this->_vida += valor;
-    if(this->_vida > this->_vidaMaxima)
+    if(this->_vida > this->_vidaMaxima){
         this->_vida = this->_vidaMaxima;
+    }
 }
 
 bool Inimigo::isMorto(){
@@ -24,5 +24,4 @@ bool Inimigo::getTipo(){
     return this->tipo;
 }
 
-Inimigo::~Inimigo(){
-}
+Inimigo::~Inimigo(){}

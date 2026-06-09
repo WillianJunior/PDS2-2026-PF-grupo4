@@ -1,25 +1,26 @@
 #include "Personagem.hpp"
 
 Personagem::Personagem(int vida, InventarioHabilidade inventarioHabilidade, std::string nome, InventarioItem inventarioItem)
-    : Entidade(vida, nome, inventarioHabilidade), _inventario(inventarioItem), _vidaMaxima(vida) {}
+    : Entidade(vida, nome, inventarioHabilidade), _inventario(inventarioItem), _vidaMaxima(vida){}
 
-int Personagem::escolherHabilidade(int posicaoHabilidade){
+Habilidade Personagem::escolherHabilidade(int posicaoHabilidade){
     Habilidade habilidade = this->_inventarioHabilidade.getHabilidade(posicaoHabilidade);
-    habilidade.mostrarHabilidade();
-    return habilidade.getValor();
+    habilidade.mostrarDescricao();
+    return habilidade;
 }
 
-int Personagem::escolherItem(int posicaoItem){
+Item Personagem::escolherItem(int posicaoItem){
     Item item = this->_inventario.getItem(posicaoItem);
-    int valorItem = item.getValor();
+    item.mostrarDescricao();
     this->_inventario.descartarAcao(posicaoItem);
-    return valorItem;
+    return item;
 }
 
 void Personagem::alterarVida(int valor){
     this->_vida += valor;
-    if(this->_vida > this->_vidaMaxima)
+    if(this->_vida > this->_vidaMaxima){
         this->_vida = this->_vidaMaxima;
+    }
 }
 
 bool Personagem::isMorto(){
@@ -30,5 +31,4 @@ InventarioItem Personagem::getInventarioItem(){
     return this->_inventario;
 }
 
-Personagem::~Personagem(){
-}
+Personagem::~Personagem(){}
