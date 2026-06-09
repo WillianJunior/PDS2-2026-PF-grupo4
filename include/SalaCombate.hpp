@@ -3,6 +3,7 @@
 
 #include "SalaBase.hpp"
 #include "Inimigo.hpp"
+#include "Personagem.hpp"
 #include <iostream>
 #include <string>
 #include <memory>
@@ -21,7 +22,7 @@ class SalaCombate : public SalaBase {
          * @brief Construtor da classe SalaCombate.
          * @param nome O nome ou identificador da sala de combate.
          */
-        SalaCombate(std::string nome);
+        SalaCombate(std::string nome, std::string historia);
 
         /**
          * @brief Finaliza os eventos da sala de combate.
@@ -33,7 +34,7 @@ class SalaCombate : public SalaBase {
          * @brief Faz a transição para a próxima sala após o término do combate.
          * Sobrescreve o método da classe mãe.
          */
-        int executarSala() override;
+        int executarSala(Personagem*);
 
         /**
          * @brief Exibe a interface da sala de combate (status, opções de batalha, etc.).
@@ -41,10 +42,6 @@ class SalaCombate : public SalaBase {
          */
         void mostrarSala() override;
 
-        /**
-         * @brief Gerencia a ordem de ações e a alternância entre o turno do jogador e do inimigo.
-         */
-        void controleDeTurnos();
 
         /**
          * @brief Instancia ou prepara o(s) inimigo(s) que o jogador enfrentará nesta sala.

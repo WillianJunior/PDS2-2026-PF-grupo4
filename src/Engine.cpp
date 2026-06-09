@@ -14,14 +14,13 @@ void Engine::iniciar() {
     
     _personagem = menuPrincipal.executarMenuInicial();
 
-    // Verificação de segurança caso o jogador tenha fechado o jogo no menu
     if (!_personagem) {
         std::cout << "Inicialização abortada. Encerrando o sistema." << std::endl;
         return;
     }
 
     // 2. Loop Principal (Máquina de Estados)
-    int idProximaSala = 1; // ID do primeiro nó
+    int idProximaSala = 1;
 
  /*   while (idProximaSala != 0 && !_personagem->isMorto()) {
         

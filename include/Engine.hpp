@@ -8,7 +8,7 @@
 /**
  * @brief Classe gerenciadora do loop principal do jogo - maquina de estados
  * Cria o ciclo de vida do jogo, desde a configuração inicial do 
- * personagem até o roteamento entre as instâncias das salas.
+ * personagem as instâncias das salas.
  */
 class Engine {
     private:
