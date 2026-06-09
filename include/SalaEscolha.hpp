@@ -5,6 +5,12 @@
 #include <iostream>
 #include <string>
 #include "Personagem.hpp"
+#include <functional>
+
+struct OpcaoEscolha {
+    std::string descricao;
+    std::function<void(Personagem*)> consequencia;
+};
 
 /**
  * @brief Representa uma sala focada em escolhas e eventos interativos.
@@ -15,6 +21,7 @@ class SalaEscolha : public SalaBase{
     /** @brief Armazena o nome específico desta sala. */
         std::string _nome;
         std::string _historia;
+        std::vector<OpcaoEscolha> _opcoes;
     
     public:
     /**
@@ -39,7 +46,7 @@ class SalaEscolha : public SalaBase{
      * @brief Prepara ou avança o jogo para a próxima sala.
      * * Sobrescreve o método da classe mãe (SalaBase) para gerenciar o fluxo de transição após o evento terminar.
      */
-        int executarSala(Personagem* Personagem)override;
+        int executarSala(Personagem* personagem)override;
 
     /**
      * @brief Exibe as informações e o ambiente da sala para o jogador.
@@ -56,7 +63,9 @@ class SalaEscolha : public SalaBase{
      * @brief Processa a decisão do jogador e executa o evento correspondente.
      * * Aplica as consequências da escolha (ex: receber um item, perder vida, etc).
      */
-        void executarEvento();
+        void executarEvento(Personagem* personagem);
+
+        void adicionarOpcao(std::string descricao, std::function<void(Personagem*)> consequencia);
 };
 
 #endif

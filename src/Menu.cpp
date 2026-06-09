@@ -51,6 +51,18 @@ std::unique_ptr<Personagem> Menu::escolherPersonagemInicial() {
         Item xequemate("Xeque-Mate", true, 40, semEfeito, true);
         itensIniciais.novaAcao(xequemate);
     }
+    if (classeEscolhida == 2) {
+        nomePersonagem = "Isaque";
+        vidaInicial = 120;
+        
+        Efeito semEfeito("Nenhum", 0, 0);
+        Habilidade ataqueBasico("Aviao de Papel", false, 25, false, semEfeito);
+        habilidadesIniciais.novaAcao(ataqueBasico);
+        
+        Habilidade chamarEx("Chamar a Ex", false, 35, false, semEfeito);
+        habilidadesIniciais.novaAcao(chamarEx);
+    }
+    
     // +++++IMPLEMENTAR CONDIÇÕES PARA AS OUTRAS CLASSES
 
     return std::unique_ptr<Personagem>(new Personagem(vidaInicial, habilidadesIniciais, nomePersonagem, itensIniciais));

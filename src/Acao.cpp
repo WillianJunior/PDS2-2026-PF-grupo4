@@ -18,6 +18,10 @@ int Acao::calcularImpacto(){
 void Acao::mostrarDescricao(){
 }
 
+int aplicarEfeito(bool alvo, Efeito efeito){
+    return 0;
+}
+
 std::string Acao::getNome(){
     return this->_nome;
 }

@@ -47,7 +47,7 @@ TEST_CASE("TESTE DE MENU FUNCAO executarMenuInicial - Escolha de Personagem") {
     REQUIRE(personagemRetornado != nullptr); 
     
     // Verifica se os dados da Classe 1 foram injetados corretamente
-    CHECK(personagemRetornado->getNome() == "vaz");
+    CHECK(personagemRetornado->getNome() == "Maycon");
     CHECK(personagemRetornado->getVida() == 120);
     
     // Opcional: Verificar se o inventário não está vazio

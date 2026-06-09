@@ -46,14 +46,6 @@ class Acao {
         virtual int calcularImpacto();
 
     /**
-     * @brief Aplica o efeito de status no alvo determinado.
-     * @param alvo O alvo que sofrerá o efeito.
-     * @param efeito O efeito a ser aplicado.
-     * @return Retorna um valor inteiro representando o sucesso ou a magnitude da aplicação.
-     */
-        virtual int aplicarEfeito(bool alvo, Efeito efeito);
-
-    /**
      * @brief Exibe os detalhes da ação (informações da habilidade ou do item).
      */
         virtual void mostrarDescricao();
