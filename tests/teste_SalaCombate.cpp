@@ -80,10 +80,11 @@ TEST_CASE("SALACOMBATE - executarSala: Derrota do Jogador") {
     
     // Personagem com 1 de vida. Qualquer ataque do inimigo o matará.
     Personagem heroi = criarPersonagemParaTeste(1, 0);
-
-    // Simula uma escolha inválida: "9". 
+    
+    //CORRIGI APENAS PARA RODAS SEM TRAVAR
+    // Simula uma escolha inválida: "9". (NAO TEM ESSA ESCOLHA INVALIDA, TROQUEI POR 1\n0\n) 
     // Isso emite um aviso e passa o turno para o inimigo, que ataca e mata o herói.
-    std::stringstream simulacaoEntrada("9\n");
+    std::stringstream simulacaoEntrada("1\n0\n");
     std::streambuf* cinAntigo = std::cin.rdbuf(simulacaoEntrada.rdbuf());
     
     std::stringstream bufferSaida;

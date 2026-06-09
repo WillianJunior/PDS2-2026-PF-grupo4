@@ -32,6 +32,11 @@ int SalaCombate::executarSala(Personagem* personagem){
             std::cout << "Escolha sua acao: ";
             std::cin >> opcao;
 
+            //protecao contra loop infinito de eof
+            if(std::cin.eof()){
+               throw std::runtime_error("Fim inesperado da entrada (EOF). Faltou input no teste?");
+            }
+
             if (std::cin.fail()) {
                 std::cin.clear();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -44,6 +49,11 @@ int SalaCombate::executarSala(Personagem* personagem){
                 std::cout << "Escolha a habilidade: ";
                 int numeroHabilidade;
                 std::cin >> numeroHabilidade;
+
+                //protecao contra loop infinito de eof
+                if(std::cin.eof()){
+                    throw std::runtime_error("Fim inesperado da entrada (EOF). Faltou input no teste?");
+                }                
 
                 try {
                     //int dano = personagem->escolherHabilidade(numeroHabilidade);
@@ -63,6 +73,11 @@ int SalaCombate::executarSala(Personagem* personagem){
                 std::cout << "Escolha o item: ";
                 int numeroItem;
                 std::cin >> numeroItem;
+
+                //protecao contra loop infinito de eof
+                if(std::cin.eof()){
+                    throw std::runtime_error("Fim inesperado da entrada (EOF). Faltou input no teste?");
+                }
 
                 try {
                     personagem->escolherItem(numeroItem);
