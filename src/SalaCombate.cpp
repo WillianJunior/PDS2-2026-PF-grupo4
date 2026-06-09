@@ -25,12 +25,22 @@ int SalaCombate::executarSala(Personagem* personagem){
         
         if (turnoDoJogador) {
             std::cout << "\n=== SUA VEZ ===" << std::endl;
+
+            //aplica todos os efeitos no personagem
+            personagem->processarEfeitosAtivos(); 
+            if(personagem->isMorto()) break;
+
             std::cout << "Seu HP: " << personagem->getVida() << " | HP do " << _inimigo->getNome() << ": " << _inimigo->getVida() << std::endl;
             
             std::cout << "1 - Usar Habilidade" << std::endl;
             std::cout << "2 - Usar Item" << std::endl;
             std::cout << "Escolha sua acao: ";
             std::cin >> opcao;
+
+            //protecao contra loop infinito de eof
+            if(std::cin.eof()){
+               throw std::runtime_error("Fim inesperado da entrada (EOF). Faltou input no teste?");
+            }
 
             if (std::cin.fail()) {
                 std::cin.clear();
@@ -45,12 +55,19 @@ int SalaCombate::executarSala(Personagem* personagem){
                 int numeroHabilidade;
                 std::cin >> numeroHabilidade;
 
+                //protecao contra loop infinito de eof
+                if(std::cin.eof()){
+                    throw std::runtime_error("Fim inesperado da entrada (EOF). Faltou input no teste?");
+                }                
+
                 try {
                     //int dano = personagem->escolherHabilidade(numeroHabilidade);
                     Habilidade habEscolhida = personagem->escolherHabilidade(numeroHabilidade);
                     int dano = habEscolhida.getValor();
                     if (dano > 0) {
                         _inimigo->alterarVida(-dano);
+                        //aplica efeito no inimigo caso habilidade tenha algum
+                        _inimigo->receberEfeito(habEscolhida.getEfeito());
                         std::cout << "> " << _inimigo->getNome() << " sofreu " << dano << " de dano!" << std::endl;
                     }
                 } catch (const std::exception& e) {
@@ -63,6 +80,11 @@ int SalaCombate::executarSala(Personagem* personagem){
                 std::cout << "Escolha o item: ";
                 int numeroItem;
                 std::cin >> numeroItem;
+
+                //protecao contra loop infinito de eof
+                if(std::cin.eof()){
+                    throw std::runtime_error("Fim inesperado da entrada (EOF). Faltou input no teste?");
+                }
 
                 try {
                     personagem->escolherItem(numeroItem);
@@ -79,12 +101,18 @@ int SalaCombate::executarSala(Personagem* personagem){
         } else {
             std::cout << "\n=== VEZ DO INIMIGO ===" << std::endl;
             
+            //aplica todos os efeitos no inimigo
+            _inimigo->processarEfeitosAtivos();
+            if(_inimigo->isMorto()) break;
+
             //IA interna no inimigo para escolher habilidade
             //int danoInimigo = _inimigo->escolherHabilidade(0); 
             Habilidade habInimigo = _inimigo->escolherHabilidade(0);
             int danoInimigo = habInimigo.getValor();
             personagem->alterarVida(-danoInimigo);
-            
+            //aplica efeito no personagem caso a habilidade tenha algum para aplicar
+            personagem->receberEfeito(habInimigo.getEfeito());
+
             std::cout << "> " << _inimigo->getNome() << " atacou e causou " << danoInimigo << " de dano!" << std::endl;
         }
         turnoDoJogador = !turnoDoJogador;

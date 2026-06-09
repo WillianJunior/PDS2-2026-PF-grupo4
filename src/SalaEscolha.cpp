@@ -44,6 +44,10 @@ void SalaEscolha::executarEvento(Personagem* personagem) {
 
     while (!escolhaValida) {
         std::cin >> escolha;
+        //protecao contra loop infinito de eof
+        if(std::cin.eof()){
+            throw std::runtime_error("Fim inesperado da entrada (EOF). Faltou input no teste?");
+        }
         if (std::cin.fail()) {
             std::cin.clear();
             std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
