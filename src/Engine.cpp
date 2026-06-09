@@ -50,24 +50,16 @@ void Engine::iniciar() {
 }
 
 std::unique_ptr<SalaBase> Engine::fabricarProximaSala(int idSala) {
-    // Qualquer nova sala criada no futuro exigirá alteração apenas aqui
+    // AS salas são inseridas aqui
     switch (idSala) {
         case 1:
-            return std::unique_ptr<SalaBase>(new SalaCombate(
-                "COMBATE 1"
-            ));
+            return std::unique_ptr<SalaBase>(new SalaCombate("COMBATE 1", "Historia 1"));
         case 2:
-            return std::unique_ptr<SalaBase>(new SalaEscolha(
-                "SALA ESCOLHA 2" 
-            ));
+            return std::unique_ptr<SalaBase>(new SalaEscolha("SALA ESCOLHA 2", "Historia 2"));
         case 3:
-            return std::unique_ptr<SalaBase>(new SalaCombate(
-                "COMBATE 3" 
-            ));
+            return std::unique_ptr<SalaBase>(new SalaCombate("COMBATE 3", "Historia 3"));
         case 4:
-            return std::unique_ptr<SalaBase>(new SalaCombate(
-                "COMBATE FINAL"
-            ));
+            return std::unique_ptr<SalaBase>(new SalaCombate("COMBATE FINAL", "Historia 4"));
         default:
             return nullptr; // 0 encerra o loop
     }
