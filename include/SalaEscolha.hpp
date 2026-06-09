@@ -6,6 +6,7 @@
 #include <string>
 #include "Personagem.hpp"
 #include <functional>
+#include <vector>
 
 struct OpcaoEscolha {
     std::string descricao;
@@ -19,7 +20,6 @@ struct OpcaoEscolha {
 class SalaEscolha : public SalaBase{
     private:
     /** @brief Armazena o nome específico desta sala. */
-        std::string _nome;
         std::string _historia;
         std::vector<OpcaoEscolha> _opcoes;
     
@@ -30,11 +30,6 @@ class SalaEscolha : public SalaBase{
      * @param nome O nome ou identificador da sala.
      */
         SalaEscolha(std::string nome, std::string historia);
-    /**
-     * @brief Retorna o nome da sala.
-     * @return std::string contendo o nome da sala.
-     */
-        std::string getNome() const;
 
     /**
      * @brief Encerra as atividades da sala atual.
@@ -45,6 +40,7 @@ class SalaEscolha : public SalaBase{
     /**
      * @brief Prepara ou avança o jogo para a próxima sala.
      * * Sobrescreve o método da classe mãe (SalaBase) para gerenciar o fluxo de transição após o evento terminar.
+     * @param personagem O personagem no qual a sala irá executar ações sob.
      */
         int executarSala(Personagem* personagem)override;
 
@@ -62,9 +58,15 @@ class SalaEscolha : public SalaBase{
     /**
      * @brief Processa a decisão do jogador e executa o evento correspondente.
      * * Aplica as consequências da escolha (ex: receber um item, perder vida, etc).
+     * @param personagem Personagem que as consequências da escolha serão acionadas.
      */
         void executarEvento(Personagem* personagem);
-
+    /**
+     * @brief Adiciona uma opcao para a sala de escolhas
+     * * Uma opção é alocada no vetor de _opcoes da sala
+     * @param descricao Descreve o que é o item ou habilidade "Trevo de 5 folhas".
+     * @param consequencia Guarda qual a consequência da ação no personagem. "Adicionar item".
+     */
         void adicionarOpcao(std::string descricao, std::function<void(Personagem*)> consequencia);
 };
 

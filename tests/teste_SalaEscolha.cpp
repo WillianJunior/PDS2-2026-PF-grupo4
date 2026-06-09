@@ -9,7 +9,7 @@ Personagem criarPersonagemParaEscolha() {
     return Personagem(100, invHab, "Estudante Tester", invItem);
 }
 
-TEST_CASE("SALAESCOLHA - Inicializacao e Getters") {
+TEST_CASE("Teste 01: SALAESCOLHA - Inicializacao e Getters") {
     SalaEscolha sala("TROCA DE ITENS", "ESCOLHA ENTRE TIPOS DE CAFÉ");
     
     CHECK(sala.getNome() == "TROCA DE ITENS");
@@ -36,7 +36,7 @@ TEST_CASE("SALAESCOLHA - executarSala com input simulado") {
     CHECK(consequencia == true); // checa se eventos estão sendo confirmados no personagem
 }
 
-TEST_CASE("SALAESCOLHA - USUARIO BURRO DIGITOU ERRADO") {
+TEST_CASE("Teste 02: SALAESCOLHA - USUARIO BURRO DIGITOU ERRADO") {
     SalaEscolha sala("Teste Falha", "Texto");
     Personagem personagem = criarPersonagemParaEscolha();
     sala.adicionarOpcao("Unica Opcao", [](Personagem* p) {});

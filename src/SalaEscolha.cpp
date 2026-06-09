@@ -4,9 +4,6 @@
 SalaEscolha::SalaEscolha(std::string nome, std::string historia) 
     : SalaBase(nome), _historia(historia) {}
 
-std::string SalaEscolha::getNome() const {
-    return this->_nome;
-}
 // adiciona uma opcao no vetores de opcoes que aquela salaescolha possui
 void SalaEscolha::adicionarOpcao(std::string descricao, std::function<void(Personagem*)> consequencia){
     _opcoes.push_back({descricao, consequencia});

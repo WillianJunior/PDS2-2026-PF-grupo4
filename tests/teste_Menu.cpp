@@ -14,20 +14,21 @@ TEST_CASE("TESTE DE MENU FUNCAO executarMenuInicial") {
     Menu menuTeste;
 
     // Simulação de entrada de dados
-    std::stringstream simulacaoEntrada;
-    simulacaoEntrada << "2\n";
+    std::stringstream simulacaoEntrada("2\n\n"); 
+    std::streambuf* cinBufferAntigo = std::cin.rdbuf(simulacaoEntrada.rdbuf());
 
     // salva o buffer original do std::cin e redireciona pra simulação
-    std::streambuf* cinBufferAntigo = std::cin.rdbuf();
-    std::cin.rdbuf(simulacaoEntrada.rdbuf());
+    std::stringstream bufferSaida;
+    std::streambuf* coutAntigo = std::cout.rdbuf(bufferSaida.rdbuf()); 
 
     // executa a funçãobb deve retornar nullptr
     std::unique_ptr<Personagem> personagemRetornado = menuTeste.executarMenuInicial();
     
     CHECK(personagemRetornado == nullptr);
 
-    // restaura o buffer original do std::cin
+    // restaura o buffer original do std::cin // PLUS: do cout também
     std::cin.rdbuf(cinBufferAntigo);
+    std::cout.rdbuf(coutAntigo);
 }
 
 TEST_CASE("TESTE DE MENU FUNCAO executarMenuInicial - Escolha de Personagem") {
@@ -35,14 +36,16 @@ TEST_CASE("TESTE DE MENU FUNCAO executarMenuInicial - Escolha de Personagem") {
 
     // Simula duas entradas
     // iniciar Novo Jogo e depois 1 escolher a classe
-    std::stringstream simulacaoEntrada;
-    simulacaoEntrada << "1\n1\n";
+    std::stringstream simulacaoEntrada("1\n1\n\n\n"); 
+    std::streambuf* cinBufferAntigo = std::cin.rdbuf(simulacaoEntrada.rdbuf());
 
-    std::streambuf* cinBufferAntigo = std::cin.rdbuf();
-    std::cin.rdbuf(simulacaoEntrada.rdbuf());
+    std::stringstream bufferSaida; // as coisas que iam aparecer na tela param de aparecer pra permitir o teste fluir
+    std::streambuf* coutAntigo = std::cout.rdbuf(bufferSaida.rdbuf());
 
     std::unique_ptr<Personagem> personagemRetornado = menuTeste.executarMenuInicial();
 
+    std::cin.rdbuf(cinBufferAntigo);
+    std::cout.rdbuf(coutAntigo);
     // REQUIRE garante que o ponteiro não é nulo antes de tentar acessar seus métodos
     REQUIRE(personagemRetornado != nullptr); 
     

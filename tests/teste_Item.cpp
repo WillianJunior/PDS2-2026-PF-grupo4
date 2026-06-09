@@ -2,6 +2,7 @@
 #include "Item.hpp"
 #include "Efeito.hpp"
 #include <string>
+#include <sstream>
 // nome alvo valor efeito
 
 TEST_CASE("Teste 01: Testando construcao de item e getters"){
@@ -31,5 +32,13 @@ TEST_CASE("Teste 03: Testando a funcao mostrarDescricao em Item"){
     Item itemTeste("Pocao", true, 10, Efeito("Regeneracao", 10, 2), true);
     
     itemTeste.mostrarDescricao();
-    // NAO POSSUI TESTE, FUNCAO VOID QUE IMPRIME E EXECUTA ACOES SEM RETORNO.
+    std::stringstream bufferSaida;
+    std::streambuf* coutAntigo = std::cout.rdbuf(bufferSaida.rdbuf());
+    std::istringstream inputSimulado("\n");
+    std::streambuf* cinAntigo = std::cin.rdbuf(inputSimulado.rdbuf());
+
+    itemTeste.mostrarDescricao(); 
+
+    std::cin.rdbuf(cinAntigo);
+    std::cout.rdbuf(coutAntigo);
 }

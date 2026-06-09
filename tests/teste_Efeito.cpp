@@ -1,5 +1,6 @@
 #include "doctest.h"
 #include "Efeito.hpp"
+#include <sstream>
 
 TEST_CASE("Teste 01: Cria um efeito"){
     std::string nomeTeste = "Veneno";
@@ -30,6 +31,15 @@ TEST_CASE("Teste 03: Verifica se foi encerrado"){
 
 TEST_CASE("Teste 04: Cobertura da funcao mostrarEfeito"){
     Efeito efeito("Veneno", 10, 1);
-    efeito.mostrarEfeito(); 
+    std::stringstream bufferSaida;
+    std::streambuf* coutAntigo = std::cout.rdbuf(bufferSaida.rdbuf());
+    std::istringstream inputSimulado("\n");
+    std::streambuf* cinAntigo = std::cin.rdbuf(inputSimulado.rdbuf());
+
+    efeito.mostrarEfeito();
+
+    std::cin.rdbuf(cinAntigo);
+    std::cout.rdbuf(coutAntigo);
+
     //Nao possui CHECK, apenas para cobertura do código
 }
