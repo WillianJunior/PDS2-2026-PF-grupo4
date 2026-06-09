@@ -1,7 +1,7 @@
 #include "doctest.h"
 #include "Personagem.hpp"
 
-TEST_CASE("Teste 1: inicialização da classe Personagem"){
+TEST_CASE("Teste 01: Inicialização da classe Personagem"){
     Personagem vaz(10, InventarioHabilidade(), "Vaz", InventarioItem());
 
     CHECK(vaz.getVida() == 10);
@@ -10,7 +10,7 @@ TEST_CASE("Teste 1: inicialização da classe Personagem"){
     CHECK(vaz.getInventarioItem() == InventarioItem());
 }
 
-TEST_CASE("Teste 2: escolha de Habilidade dentro do inventario"){
+TEST_CASE("Teste 02: Escolha de Habilidade dentro do inventario"){
     InventarioHabilidade inventarioHabilidade;
     Efeito efeitoTeste("EfeitoTeste", 10, 10);
     Habilidade habilidadeTeste1("HabilidadeTeste1", 1, 10, 1, efeitoTeste);
@@ -19,10 +19,10 @@ TEST_CASE("Teste 2: escolha de Habilidade dentro do inventario"){
     inventarioHabilidade.novaAcao(habilidadeTeste2);
     Personagem isaque(20, inventarioHabilidade, "Vaz", InventarioItem());
 
-    CHECK(isaque.escolherHabilidade(1) == 20);
+    CHECK(isaque.escolherHabilidade(1).getValor() == 20);
 }
 
-TEST_CASE("Teste 3: escolha de Item dentro do inventario"){
+TEST_CASE("Teste 03: Escolha de Item dentro do inventario"){
     InventarioItem inventarioItem;
     Efeito efeitoTeste("EfeitoTeste", 10, 10);
     Item itemTeste1("ItemTeste1", 1, 10, efeitoTeste, 1);
@@ -31,10 +31,10 @@ TEST_CASE("Teste 3: escolha de Item dentro do inventario"){
     inventarioItem.novaAcao(itemTeste2);
     Personagem nicole(20, InventarioHabilidade(), "Vaz", inventarioItem);
 
-    CHECK(nicole.escolherItem(1) == 20);
+    CHECK(nicole.escolherItem(1).getValor() == 20);
 }
 
-TEST_CASE("Teste 4: alterar a vida"){
+TEST_CASE("Teste 04: Alterar a vida"){
     Personagem maycon(20, InventarioHabilidade(), "Vaz", InventarioItem());
     maycon.alterarVida(-10);
     maycon.alterarVida(5);
@@ -42,7 +42,7 @@ TEST_CASE("Teste 4: alterar a vida"){
     CHECK(maycon.getVida() == 15);
 }
 
-TEST_CASE("Teste 5: testar limite de vida maxima"){
+TEST_CASE("Teste 05: Testar limite de vida maxima"){
     Personagem personagemTeste(20, InventarioHabilidade(), "Vaz", InventarioItem());
     personagemTeste.alterarVida(-10);
     personagemTeste.alterarVida(20);
@@ -50,7 +50,7 @@ TEST_CASE("Teste 5: testar limite de vida maxima"){
     CHECK(personagemTeste.getVida() == 20);
 }
 
-TEST_CASE("Teste 6: conferir se está morto"){
+TEST_CASE("Teste 06: Conferir se está morto"){
     Personagem marcos(20, InventarioHabilidade(), "Vaz", InventarioItem());
     marcos.alterarVida(-20);
 
