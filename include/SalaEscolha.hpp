@@ -4,6 +4,7 @@
 #include "SalaBase.hpp"
 #include <iostream>
 #include <string>
+#include "Personagem.hpp"
 
 /**
  * @brief Representa uma sala focada em escolhas e eventos interativos.
@@ -13,6 +14,7 @@ class SalaEscolha : public SalaBase{
     private:
     /** @brief Armazena o nome específico desta sala. */
         std::string _nome;
+        std::string _historia;
     
     public:
     /**
@@ -20,7 +22,7 @@ class SalaEscolha : public SalaBase{
      * * Inicializa a sala configurando o seu nome ou título.
      * @param nome O nome ou identificador da sala.
      */
-        SalaEscolha(std::string nome);
+        SalaEscolha(std::string nome, std::string historia);
     /**
      * @brief Retorna o nome da sala.
      * @return std::string contendo o nome da sala.
@@ -37,7 +39,7 @@ class SalaEscolha : public SalaBase{
      * @brief Prepara ou avança o jogo para a próxima sala.
      * * Sobrescreve o método da classe mãe (SalaBase) para gerenciar o fluxo de transição após o evento terminar.
      */
-        int executarSala();
+        int executarSala(Personagem* Personagem)override;
 
     /**
      * @brief Exibe as informações e o ambiente da sala para o jogador.
