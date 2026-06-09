@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 
+class Personagem;
 /**
  * @brief Classe base abstrata que representa uma sala genérica.
  * * Define a interface padrão e os atributos básicos que todas as 
@@ -31,7 +32,7 @@ class SalaBase {
         /**
          * @brief Executa o loop da sala
          * @return Numero que representa a ID da proxima sala a ser carregada**/
-        virtual int executarSala() = 0;
+        virtual int executarSala(Personagem* personagem) = 0;
 
         /**
          * @brief Exibe as informações, o menu ou o conteúdo da sala na tela.

@@ -37,7 +37,7 @@ class SalaEscolha : public SalaBase{
      * @brief Prepara ou avança o jogo para a próxima sala.
      * * Sobrescreve o método da classe mãe (SalaBase) para gerenciar o fluxo de transição após o evento terminar.
      */
-        void proximaSala() override;
+        int executarSala();
 
     /**
      * @brief Exibe as informações e o ambiente da sala para o jogador.
