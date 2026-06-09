@@ -11,7 +11,6 @@ Engine::Engine() : _personagem(nullptr) {
 
 void Engine::iniciar() {
     Menu menuPrincipal;
-    
     _personagem = menuPrincipal.executarMenuInicial();
 
     if (!_personagem) {
@@ -19,16 +18,15 @@ void Engine::iniciar() {
         return;
     }
 
-    // 2. Loop Principal (Máquina de Estados)
+    // loop principal - maquina de estados
     int idProximaSala = 1;
 
- /*   while (idProximaSala != 0 && !_personagem->isMorto()) {
+   while (idProximaSala != 0 && !_personagem->isMorto()) {
         
         std::unique_ptr<SalaBase> salaAtual = fabricarProximaSala(idProximaSala);
         
-        // Tratamento de falha de roteamento
         if (!salaAtual) {
-            std::cerr << "[ERRO DE ROTEAMENTO] Ponteiro nulo retornado para a sala ID: " << idProximaSala << std::endl;
+            std::cerr << "ERRO DE ROTEAMENTO - Ponteiro nulo retornado para a sala ID: " << idProximaSala << std::endl;
             break; 
         }
 
@@ -43,31 +41,34 @@ void Engine::iniciar() {
         // O escopo do while garante que salaAtual seja destruída 
     }
 
-    // 3. Finalização e Encerramento da História
+    // Finalização e encerramento da gistória
     if (_personagem->isMorto()) {
         std::cout << "\nHistoria Final" << std::endl;
     } else {
         std::cout << "\nEncerramento" << std::endl;
     }
-}*/
+}
 
-/*std::unique_ptr<SalaBase> Engine::fabricarProximaSala(int idSala) {
-    // O isolamento das dependências concretas ocorre aqui.
-    // Qualquer nova sala criada no futuro exigirá alteração apenas neste escopo fechado.
+std::unique_ptr<SalaBase> Engine::fabricarProximaSala(int idSala) {
+    // Qualquer nova sala criada no futuro exigirá alteração apenas aqui
     switch (idSala) {
         case 1:
-            // Combate inicial
-            return std::unique_ptr<SalaBase>(new SalaCombate("Sala do Segmentation Fault"));
+            return std::unique_ptr<SalaBase>(new SalaCombate(
+                "COMBATE 1"
+            ));
         case 2:
-            // Sala Escolha
-            return std::unique_ptr<SalaBase>(new SalaEscolha("Reunião de Alinhamento (Refeitório)"));
+            return std::unique_ptr<SalaBase>(new SalaEscolha(
+                "SALA ESCOLHA 2" 
+            ));
         case 3:
-            // Sala 3
-            return std::unique_ptr<SalaBase>(new SalaCombate("Sala do Memory Leak"));
+            return std::unique_ptr<SalaBase>(new SalaCombate(
+                "COMBATE 3" 
+            ));
         case 4:
-            // Boss final
-            return std::unique_ptr<SalaBase>(new SalaCombate("Defesa do Projeto - Avaliador Implacável"));
+            return std::unique_ptr<SalaBase>(new SalaCombate(
+                "COMBATE FINAL"
+            ));
         default:
             return nullptr; // 0 encerra o loop
     }
-}*/
+}

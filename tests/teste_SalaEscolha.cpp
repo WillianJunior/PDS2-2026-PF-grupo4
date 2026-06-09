@@ -3,34 +3,31 @@
 #include <sstream>
 #include <iostream>
 
-TEST_CASE("Teste 01: Cria uma SalaEscolha e verifica inicializacao"){
-    std::string nomeSala = "Sala de Compra de Itens";
-    SalaEscolha sala(nomeSala);
-
-    CHECK(sala.getNome() == nomeSala); 
+Personagem criarPersonagemParaEscolha() {
+    InventarioHabilidade invHab;
+    InventarioItem invItem;
+    return Personagem(100, invHab, "Estudante Tester", invItem);
 }
 
-TEST_CASE("Teste 02: Cobertura dos metodos de fluxo e transicao"){
-    SalaEscolha sala("Sala de Compra de Itens");
-    sala.executarEvento();
-    sala.encerrarSala();
-    sala.proximaSala();
+TEST_CASE("SALAESCOLHA - Inicializacao e Getters") {
+    SalaEscolha sala("TROCA DE ITENS", "ESCOLHA ENTRE TIPOS DE CAFÉ");
     
-    // Nao possui CHECK metodos são void
+    CHECK(sala.getNome() == "TROCA DE ITENS");
 }
 
-TEST_CASE("Teste 03: Cobertura dos metodos de exibicao"){
-    SalaEscolha sala("Sala de Compra de Itens");
+TEST_CASE("SALAESCOLHA - executarSala") {
+    SalaEscolha sala("Sala de Escolha", "Evento aleatório.");
+    Personagem heroi = criarPersonagemParaEscolha();
 
-    std::streambuf* coutOriginal = std::cout.rdbuf();
-    std::ostringstream bufferInterno;
-    std::cout.rdbuf(bufferInterno.rdbuf());
+    // Redirecionamento para ocultar o cout do terminal durante os testes
+    std::stringstream bufferSaida;
+    std::streambuf* coutAntigo = std::cout.rdbuf(bufferSaida.rdbuf());
 
-    sala.mostrarSala();
-    sala.mostrarOpcoes();
+    // TESTE da execução passando o ponteiro do personagem sem chamar proximaSala
+    int resultado = sala.executarSala(&heroi);
 
-    std::cout.rdbuf(coutOriginal);
+    std::cout.rdbuf(coutAntigo);
 
-    // como a implementação está vazia, o buffer capturado é uma string vazia
-    CHECK(bufferInterno.str() == "");
+    // verifica se a sala retornou um ID de rota válido (maior que 0)
+    CHECK(resultado > 0); 
 }
