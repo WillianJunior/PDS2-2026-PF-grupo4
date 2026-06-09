@@ -28,12 +28,12 @@ class Inimigo : public Entidade{
         Inimigo(int vida, InventarioHabilidade habilidade, std::string nome, bool tipo);
 
     /**
-     * @brief Selecionar uma habilidade, visualizar sua ação e executar
+     * @brief Selecionar uma habilidade a ser executada no turno.
      * * Sobrescreve o método da classe mãe Entidade
      * * @param posicaoHabilidade índice (posição) da habilidade dentro do vetor _habilidades em inventarioHabilidade
-     * @return Retorna um valor inteiro (dano causado, dano curado ou mudança de estado)
+     * @return Retorna a copia do objeto Habilidade.
      */
-        int escolherHabilidade(int posicaoHabilidade) override;
+        Habilidade escolherHabilidade(int posicaoHabilidade) override;
 
     /**
      * @brief Alterar a vida atual do inimigo para mais ou para menos

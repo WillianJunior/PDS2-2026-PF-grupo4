@@ -2,17 +2,14 @@
 #define ENTIDADE_H
 
 #include "InventarioHabilidade.hpp"
+#include "Efeito.hpp"
 #include <iostream>
 #include <vector>
 
-//classe responsavel por preparar o terreno para as outras entidades:
-//personagem e ininimgo
-/** 
- * @brief Classe abstrata para representar as entidades
- * * Na hierarqueia é a mãe de Personagem e Inimigo.
+/** * @brief Classe abstrata para representar as entidades
+ * * Na hierarquia é a mãe de Personagem e Inimigo.
  * * Criará métodos virtuais que serão sobrescritos pelas classes mais complexas.
 */
-
 class Entidade{
     protected:
     /** @brief Atributo medidor de saúde da entidade, chegar a 0 gera morte */
@@ -23,6 +20,10 @@ class Entidade{
         
     /** @brief Lista de habilidades que a entidade possui */
         InventarioHabilidade _inventarioHabilidade;
+
+    /** @brief Lista de efeitos temporarios que estao agindo na entidade */
+        std::vector<Efeito> _efeitosAtivos;
+
     public: 
     /**
      * @brief Construtor padrão de entidade 
@@ -36,13 +37,11 @@ class Entidade{
     /**
      * @brief Função virtual de escolher habilidade
      * * Será sobrescrita pelas classes concretas 
-     * * Responsável por verificar a posição da habilidade no vetor _habilidades em inventarioHabilidade
-     * * Executa a ação dessa habilidade para checar se é cura, dano ou mudança de estado
+     * * Responsável por verificar a posição da habilidade no vetor e retorna-la
      * @param posicaoHabilidade índice (posição) da Habilidade no vetor _habilidades em inventaroHabilidade
-     * @return inteiro que diz qual o dano, cura ou mudança de estado.
+     * @return Retorna a copia do objeto Habilidade.
      */
-
-        virtual int escolherHabilidade(int posicaoHabilidade) = 0;
+        virtual Habilidade escolherHabilidade(int posicaoHabilidade) = 0;
 
     /**
      * @brief Função virtual de alterar a vida
@@ -52,12 +51,22 @@ class Entidade{
      */
         virtual void alterarVida(int valor) = 0;
     
-    /** 
-     * @brief Função virtual de verificar se está vivo
+    /** * @brief Função virtual de verificar se está vivo
      * * Responsável por verificar se a vida do personagem esta maior ou igual que 0
      * @return false or true
     */
         virtual bool isMorto() = 0;
+
+    /**
+     * @brief Adiciona um novo efeito na lista de efeitos ativos
+     * @param novoEfeito O Efeito que vai afetar a entidade
+     */
+        void receberEfeito(Efeito novoEfeito);
+
+    /**
+     * @brief Itera sobre os efeitos ativos aplicando eles e diminuindo a duracao deles
+     */
+        void processarEfeitosAtivos();
 
     /**
      * @brief Retorna a vida atual da entidade.
@@ -82,6 +91,4 @@ class Entidade{
         virtual ~Entidade();
 };
 
-
-#endif 
-
+#endif

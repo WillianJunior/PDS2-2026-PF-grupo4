@@ -10,7 +10,6 @@
  * @brief Representa o personagem no jogo, herda da classe entidade
  * * Responsável por gerenciar as ações do personagem, como inventário, items, habilidades, vida.
  */
-
 class Personagem : public Entidade{
     private:
     /** @brief Guarda os itens que o personagem possui */
@@ -30,20 +29,19 @@ class Personagem : public Entidade{
         Personagem(int vida, InventarioHabilidade inventarioHabilidade, std::string nome, InventarioItem inventarioItem);
 
     /**
-     * @brief Selecionar uma habilidade, visualizar sua ação e executar
+     * @brief Retorna uma habilidade do inventarioHabilidade baseada na posicao.
      * * Sobrescreve o método da classe mãe Entidade
-     * * @param posicaoHabilidade índice (posição) da habilidade dentro do vetor _habilidades em inventarioHabilidade
-     * @return Retorna um valor inteiro (dano causado, dano curado ou mudança de estado)
+     * @param posicaoHabilidade índice (posição) da habilidade dentro do vetor.
+     * @return Retorna a copia do objeto Habilidade.
      */
-        int escolherHabilidade(int posicaoHabilidade) override;
+        Habilidade escolherHabilidade(int posicaoHabilidade) override;
 
     /**
-     * @brief Escolher um Item a partir do inventarioItem e utilizá-lo.
-     * * Recebe qual a posição do item no vetor Items contido em inventarioItem para selecionar.
-     * * @param posicaoItem índice (posição) do item dentro do vetor Items em inventarioItem.
-     * @return Retorna um valor inteiro (dano causado, dano curado ou mudança de estado)
+     * @brief Retorna um Item a partir do inventarioItem e consome.
+     * @param posicaoItem índice (posição) do item dentro do vetor.
+     * @return Retorna a copia do objeto Item.
      */
-        int escolherItem(int posicaoItem);
+        Item escolherItem(int posicaoItem);
 
     /**
      * @brief Alterar a vida atual do personagem para mais ou para menos
