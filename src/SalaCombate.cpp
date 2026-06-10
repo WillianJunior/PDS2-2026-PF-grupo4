@@ -62,7 +62,7 @@ int SalaCombate::executarSala(Personagem* personagem){
 
                 try {
                     //int dano = personagem->escolherHabilidade(numeroHabilidade);
-                    Habilidade habEscolhida = personagem->escolherHabilidade(numeroHabilidade);
+                    Habilidade habEscolhida = personagem->escolherHabilidade(numeroHabilidade-1);
                     int dano = habEscolhida.getValor();
                     if (dano > 0) {
                         _inimigo->alterarVida(-dano);
@@ -87,7 +87,7 @@ int SalaCombate::executarSala(Personagem* personagem){
                 }
 
                 try {
-                    personagem->escolherItem(numeroItem);
+                    personagem->escolherItem(numeroItem-1);
                 } catch (const std::exception& e) {
                     std::cout << "FALHA " << e.what() << std::endl;
                     continue;
