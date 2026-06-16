@@ -63,12 +63,17 @@ int SalaCombate::executarSala(Personagem* personagem){
                 try {
                     //int dano = personagem->escolherHabilidade(numeroHabilidade);
                     Habilidade habEscolhida = personagem->escolherHabilidade(numeroHabilidade);
-                    int dano = habEscolhida.getValor();
-                    if (dano > 0) {
-                        _inimigo->alterarVida(-dano);
+                    int impacto = habEscolhida.calcularImpacto();
+                    if (!habEscolhida.getAlvo()) { 
+                        _inimigo->alterarVida(impacto);
                         //aplica efeito no inimigo caso habilidade tenha algum
                         _inimigo->receberEfeito(habEscolhida.getEfeito());
-                        std::cout << "> " << _inimigo->getNome() << " sofreu " << dano << " de dano!" << std::endl;
+                        std::cout << "> " << _inimigo->getNome() << " sofreu " << impacto << " de dano!" << std::endl;
+                    }
+                    else{
+                        personagem->alterarVida(impacto);
+                        personagem->receberEfeito(habEscolhida.getEfeito());
+                        std::cout << "> " << personagem->getNome() << " recuperou " << impacto << " de vida!" << std::endl;
                     }
                 } catch (const std::exception& e) {
                     std::cout << "FALHA" << e.what() << std::endl;
@@ -87,7 +92,18 @@ int SalaCombate::executarSala(Personagem* personagem){
                 }
 
                 try {
-                    personagem->escolherItem(numeroItem);
+                    Item itEscolhido = personagem->escolherItem(numeroItem);
+                    int impacto = itEscolhido.calcularImpacto();
+                    if(!itEscolhido.getAlvo()){
+                        _inimigo->alterarVida(impacto);
+                        _inimigo->receberEfeito(itEscolhido.getEfeito());
+                        std::cout << "> " << _inimigo->getNome() << " sofreu " << impacto << " de dano!" << std::endl;
+                    }
+                    else{
+                        personagem->alterarVida(impacto);
+                        personagem->receberEfeito(itEscolhido.getEfeito());
+                        std::cout << "> " << personagem->getNome() << " recuperou " << impacto << " de vida!" << std::endl;
+                    }
                 } catch (const std::exception& e) {
                     std::cout << "FALHA " << e.what() << std::endl;
                     continue;
@@ -123,7 +139,7 @@ int SalaCombate::executarSala(Personagem* personagem){
         return 0; //encerra na engine
     } else {
         std::cout << "\n[VITORIA] O " << _inimigo->getNome() << " foi derrotado!" << std::endl;
-        return 2; //ID da proxima sala
+        return 1; 
     }
 }
 
