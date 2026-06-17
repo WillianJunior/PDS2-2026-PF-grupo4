@@ -20,7 +20,7 @@ class Engine {
         std::vector<std::unique_ptr<SalaBase>> _salasDoJogo;
 
         /** @brief Irá gerar aleatoriamente a sequencias das salas da run */
-        void prepararSalas();
+        void prepararSalas(std::string nome);
 
         /** * @brief 
          * @param idSala Identificador numérico da sala a ser carregada.

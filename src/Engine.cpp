@@ -3,6 +3,7 @@
 #include "SalaCombate.hpp"
 #include "SalaEscolha.hpp"
 #include "Utils.hpp"
+#include "FabricaSE.hpp"
 #include <iostream>
 #include <vector>
 #include <random>
@@ -16,7 +17,7 @@ Engine::Engine() : _personagem(nullptr) {
 }
 
 //cria a sequencia aleatoria de salas que tera na run atual, podendo ir de 6 combates e 1 escolha, até 4 combates e 3 escolhas, finalizando em um boss
-void Engine::prepararSalas(){
+void Engine::prepararSalas(std::string nome){
     int qtdCombate = 0;
     int qtdEscolha = 0;
 
@@ -24,7 +25,17 @@ void Engine::prepararSalas(){
         std::string titulo = "Andar " + std::to_string(i + 1);
         int sala = rand() % 2;
         if(sala == 1 && qtdEscolha < 3){
-            _salasDoJogo.push_back(std::unique_ptr<SalaBase>(new SalaEscolha(titulo, "Sala escolha" + std::to_string(i + 1))));
+            std::unique_ptr<SalaBase> salaEscolhida(new SalaEscolha(FabricaSE::criarSalas(nome)));
+            for (int i = 0; i < _salasDoJogo.size(); i++)
+            {
+                if(_salasDoJogo[i]->getNome() == salaEscolhida->getNome())
+                {
+                    std::unique_ptr<SalaBase> salaEscolhida(new SalaEscolha(FabricaSE::criarSalas(nome)));
+                    i = 0;
+                }
+            }
+            
+            _salasDoJogo.push_back(salaEscolhida);
             qtdEscolha++;
         }
         else{
@@ -44,7 +55,7 @@ void Engine::iniciar(){
     }
 
     //geraçao das salas
-    this->prepararSalas();
+    this->prepararSalas(_personagem->getNome());
 
     // loop principal - maquina de estados
     int contadorSalas = 0;
