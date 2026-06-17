@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include "Utils.hpp"
 
 /**
  * @brief Classe abstrata de inventário usando Templates.

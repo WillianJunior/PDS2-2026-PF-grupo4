@@ -1,5 +1,7 @@
 #include "SalaEscolha.hpp"
 #include <limits>
+#include <random>
+#include "Utils.hpp"
 
 SalaEscolha::SalaEscolha(std::string nome, std::string historia) 
     : SalaBase(nome), _historia(historia) {}
@@ -11,10 +13,10 @@ void SalaEscolha::adicionarOpcao(std::string descricao, std::function<void(Perso
 
 // imprime na tela a sala
 void SalaEscolha::mostrarSala(){
-    std::cout << "\n========================================" << std::endl;
-    std::cout << "          " << this->_nome << std::endl;
-    std::cout << "========================================" << std::endl;
-    std::cout << _historia << std::endl;
+    Utils::coutDigitado() << "\n========================================\n";
+    Utils::coutDigitado() << "          " << this->_nome << "\n";
+    Utils::coutDigitado() << "========================================\n";
+    Utils::coutDigitado() << _historia << "\n";
 }
 
 // comeca a executar as açoes da sala
@@ -24,16 +26,19 @@ int SalaEscolha::executarSala(Personagem* personagem){
     mostrarOpcoes();
     // age sob o personagem executando a consequencia
     executarEvento(personagem);
-    return 3; //proxima sala exemplo 3 sala de combate
+    if(!personagem->isMorto()) { 
+    return 1; 
+    } else {
+    return 0; }
 }
 
 void SalaEscolha::mostrarOpcoes(){
-    std::cout << "\nO que voce deseja escolher?" << std::endl;
+    Utils::coutDigitado() << "\nO que voce deseja escolher?\n";
     // imprime as opcoes da sala
     for (size_t i = 0; i < _opcoes.size(); ++i) {
-        std::cout << "[" << i + 1 << "] " << _opcoes[i].descricao << std::endl;
+        Utils::coutDigitado() << "[" << i + 1 << "] " << _opcoes[i].descricao << "\n";
     }
-    std::cout << "Sua escolha: ";
+    Utils::coutDigitado() << "Sua escolha: ";
 }
 void SalaEscolha::executarEvento(Personagem* personagem) {
     int escolha;
@@ -56,7 +61,18 @@ void SalaEscolha::executarEvento(Personagem* personagem) {
             continue; 
             }
         if (escolha > 0 && escolha <= _opcoes.size()) {
-            std::cout << "\nVoce fez sua escolha!" << std::endl;
+            int numeroSorteado = rand() % 3 + 1;
+            switch (numeroSorteado){
+            case 1:
+                Utils::coutTempo("Otima escolha...\n", 50);
+                break;
+            case 2:
+                Utils::coutTempo("Isso definitivamente vai ajudar.\n", 50);
+                break;
+            case 3:
+                Utils::coutTempo("Ada Lovelace amaria isso.\n", 50);
+                break;
+            }
             _opcoes[escolha - 1].consequencia(personagem); 
             escolhaValida = true;
         } else {
@@ -66,4 +82,22 @@ void SalaEscolha::executarEvento(Personagem* personagem) {
     }
 
 void SalaEscolha::encerrarSala(){
+    int numeroSorteado = rand() % 5 + 1;
+    switch (numeroSorteado){
+    case 1:
+        Utils::coutTempo("O codigo precisa ser feito. A porta a frente se abre.\n", 50);
+        break;
+    case 2:
+        Utils::coutTempo("A esperança de codar renasce. Um novo desafio surge a frente.\n", 50);
+        break;
+    case 3:
+        Utils::coutTempo("Alan Turing nao pararia aqui. Uma porta se abre.\n", 50);
+        break;
+    case 4:
+        Utils::coutTempo("O que o William pensaria de mim se eu desistisse? Mais uma porta se abre.\n", 50);
+        break;
+    case 5:
+        Utils::coutTempo("Nenhuma IA vai me substituir, que venha a proxima porta.\n", 50);
+        break;
+    }
 }

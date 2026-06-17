@@ -5,6 +5,7 @@
 #include "Efeito.hpp"
 #include <iostream>
 #include <vector>
+#include "Utils.hpp"
 
 /** * @brief Classe abstrata para representar as entidades
  * * Na hierarquia é a mãe de Personagem e Inimigo.

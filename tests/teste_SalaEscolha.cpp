@@ -32,7 +32,7 @@ TEST_CASE("SALAESCOLHA - executarSala com input simulado") {
     std::cin.rdbuf(cinAntigo);
     std::cout.rdbuf(coutAntigo);
 
-    CHECK(resultado == 3); // proxima sala
+    CHECK(resultado == 1); // proxima sala
     CHECK(consequencia == true); // checa se eventos estão sendo confirmados no personagem
 }
 
@@ -49,5 +49,5 @@ TEST_CASE("Teste 02: SALAESCOLHA - USUARIO BURRO DIGITOU ERRADO") {
 
     std::cin.rdbuf(cinAntigo);
     std::cout.rdbuf(coutAntigo);
-    CHECK(resultado == 3); 
+    CHECK(resultado == 1); 
 }

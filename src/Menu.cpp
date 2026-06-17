@@ -2,17 +2,19 @@
 #include "InventarioHabilidade.hpp"
 #include "InventarioItem.hpp"
 #include <utility>
+#include "Utils.hpp"
 
 Menu::Menu(){
     //recursos de interface
 }
+
 Menu::~Menu(){
 }
 
 std::unique_ptr<Personagem> Menu::executarMenuInicial() {
     int opcao = 0;
-    std::cout << "=============================================" << std::endl;
-    std::cout << "===================ENREDO====================" << std::endl;
+    Utils::coutDigitado() << "=============================================\n";
+    Utils::coutDigitado() << "===================ENREDO====================\n"; 
     std::cout << "1 - New Game" << std::endl;
     std::cout << "2 - OUT" << std::endl;
     std::cout << "Escolha uma opcao: ";
@@ -30,8 +32,8 @@ std::unique_ptr<Personagem> Menu::executarMenuInicial() {
 
 std::unique_ptr<Personagem> Menu::escolherPersonagemInicial() {
     int classeEscolhida = 0;
-    std::cout << "==============Historia================" << std::endl;
-    std::cout << "==============Personagens=============" << std::endl;
+    Utils::coutDigitado() <<"==============Historia================\n";
+    Utils::coutDigitado() << "==============Personagens=============\n";
     std::cin >> classeEscolhida;
 
     InventarioHabilidade habilidadesIniciais;
