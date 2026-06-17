@@ -15,11 +15,19 @@ class Engine {
         /** @brief Ponteiro que controla o tempo de vida do personagem. */
         std::unique_ptr<Personagem> _personagem;
 
+        /** @brief Vector que irá guardar todas as salas da run */
+        std::vector<std::unique_ptr<SalaBase>> _salasDoJogo;
+
+        /** @brief Irá gerar aleatoriamente a sequencias das salas da run */
+        void prepararSalas();
+
         /** * @brief 
          * @param idSala Identificador numérico da sala a ser carregada.
          * @return Ponteiro para a nova instância genérica de SalaBase.
          */
         std::unique_ptr<SalaBase> fabricarProximaSala(int idSala);
+
+        
 
     public:
         /**
