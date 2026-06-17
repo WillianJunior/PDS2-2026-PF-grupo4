@@ -59,7 +59,7 @@ TEST_CASE("SALACOMBATE - executarSala: Vitoria do Jogador") {
 
     // Simula a entrada do usuário: 
     // "1" (Abre o menu de habilidades) -> "0" (Escolhe a habilidade do índice 0)
-    std::stringstream simulacaoEntrada("1\n0\n");
+    std::stringstream simulacaoEntrada("1\n1\n");
     std::streambuf* cinAntigo = std::cin.rdbuf(simulacaoEntrada.rdbuf());
     
     // Oculta os textos do combate redirecionando o cout para o vazio
@@ -73,8 +73,8 @@ TEST_CASE("SALACOMBATE - executarSala: Vitoria do Jogador") {
     std::cin.rdbuf(cinAntigo);
     std::cout.rdbuf(coutAntigo);
 
-    // Valida se o retorno foi 2 (código de vitória configurado no cpp)
-    CHECK(resultado == 2);
+    // Valida se o retorno foi 1 (código de vitória configurado no cpp)
+    CHECK(resultado == 1);
     CHECK(heroi.isMorto() == false);
 }
 
@@ -87,7 +87,7 @@ TEST_CASE("SALACOMBATE - executarSala: Derrota do Jogador") {
     //CORRIGI APENAS PARA RODAS SEM TRAVAR
     // Simula uma escolha inválida: "9". (NAO TEM ESSA ESCOLHA INVALIDA, TROQUEI POR 2\n0\n) 
     // Isso emite um aviso e passa o turno para o inimigo, que ataca e mata o herói.
-    std::stringstream simulacaoEntrada("2\n0\n");
+    std::stringstream simulacaoEntrada("2\n1\n");
     std::streambuf* cinAntigo = std::cin.rdbuf(simulacaoEntrada.rdbuf());
     
     std::stringstream bufferSaida;

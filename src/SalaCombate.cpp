@@ -66,7 +66,7 @@ int SalaCombate::executarSala(Personagem* personagem){
 
                 try {
                     //int dano = personagem->escolherHabilidade(numeroHabilidade);
-                    Habilidade habEscolhida = personagem->escolherHabilidade(numeroHabilidade);
+                    Habilidade habEscolhida = personagem->escolherHabilidade(numeroHabilidade - 1);
                     int impacto = habEscolhida.calcularImpacto();
                     if (!habEscolhida.getAlvo()) { 
                         _inimigo->alterarVida(impacto);
@@ -96,7 +96,7 @@ int SalaCombate::executarSala(Personagem* personagem){
                 }
 
                 try {
-                    Item itEscolhido = personagem->escolherItem(numeroItem);
+                    Item itEscolhido = personagem->escolherItem(numeroItem - 1);
                     int impacto = itEscolhido.calcularImpacto();
                     if(!itEscolhido.getAlvo()){
                         _inimigo->alterarVida(impacto);

@@ -26,12 +26,12 @@ void Engine::prepararSalas(std::string nome){
         int sala = rand() % 2;
         if(sala == 1 && qtdEscolha < 3){
             std::unique_ptr<SalaBase> salaEscolhida(new SalaEscolha(FabricaSE::criarSalas(nome)));
-            for (size_t i = 0; i < _salasDoJogo.size(); i++)
+            for (size_t j = 0; i < _salasDoJogo.size(); j++)
             {
                 if(_salasDoJogo[i]->getNome() == salaEscolhida->getNome())
                 {
-                    std::unique_ptr<SalaBase> salaEscolhida(new SalaEscolha(FabricaSE::criarSalas(nome)));
-                    i = 0;
+                    salaEscolhida.reset(new SalaEscolha(FabricaSE::criarSalas(nome)));
+                    j = -1;
                 }
             }
             
