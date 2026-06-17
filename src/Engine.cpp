@@ -26,7 +26,7 @@ void Engine::prepararSalas(std::string nome){
         int sala = rand() % 2;
         if(sala == 1 && qtdEscolha < 3){
             std::unique_ptr<SalaBase> salaEscolhida(new SalaEscolha(FabricaSE::criarSalas(nome)));
-            for (int i = 0; i < _salasDoJogo.size(); i++)
+            for (size_t i = 0; i < _salasDoJogo.size(); i++)
             {
                 if(_salasDoJogo[i]->getNome() == salaEscolhida->getNome())
                 {
@@ -35,7 +35,7 @@ void Engine::prepararSalas(std::string nome){
                 }
             }
             
-            _salasDoJogo.push_back(salaEscolhida);
+            _salasDoJogo.push_back(std::move(salaEscolhida));
             qtdEscolha++;
         }
         else{
