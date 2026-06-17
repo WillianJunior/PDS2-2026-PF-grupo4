@@ -2,6 +2,8 @@
 #include <iostream>
 #include <limits>
 #include <stdexcept>
+#include <random>
+#include <algorithm>
 
 SalaCombate::SalaCombate(std::string nome, std::string historia) 
     : SalaBase(nome), _historia(historia) {
@@ -20,6 +22,8 @@ int SalaCombate::executarSala(Personagem* personagem){
     int opcao = 0;
 
     std::cout << "\n| BATALHA INICIADA: " << personagem->getNome() << " VS " << _inimigo->getNome() << "|" << std::endl;
+
+    double vidaBase = _inimigo->getVida();
     
     while (!personagem->isMorto() && !_inimigo->isMorto()) {
         
@@ -121,15 +125,31 @@ int SalaCombate::executarSala(Personagem* personagem){
             _inimigo->processarEfeitosAtivos();
             if(_inimigo->isMorto()) break;
 
-            //IA interna no inimigo para escolher habilidade
-            //int danoInimigo = _inimigo->escolherHabilidade(0); 
-            Habilidade habInimigo = _inimigo->escolherHabilidade(0);
-            int danoInimigo = habInimigo.getValor();
-            personagem->alterarVida(-danoInimigo);
-            //aplica efeito no personagem caso a habilidade tenha algum para aplicar
-            personagem->receberEfeito(habInimigo.getEfeito());
+            while(true){
+                int posicao = rand()%1;
+                Habilidade habInimigo = _inimigo->escolherHabilidade(posicao);
+                if(habInimigo.getAlvo()){
+                    if(_inimigo->getVida() < 0.5 * vidaBase){
+                        int impacto = habInimigo.calcularImpacto();
+                        _inimigo->alterarVida(impacto);
+                        std::cout << "> " << _inimigo->getNome() << " recuperou " << impacto << " de vida!" << std::endl;
+                        break;
+                    }
+                    else{
+                        continue;
+                    }
+                    
+                }
+                else{
+                    int impacto = habInimigo.calcularImpacto();
+                    personagem->alterarVida(impacto);
+                    personagem->receberEfeito(habInimigo.getEfeito());
+                    std::cout << "> " << _inimigo->getNome() << " atacou e causou " << impacto << " de dano!" << std::endl;
+                    break;
+                }
+            }
 
-            std::cout << "> " << _inimigo->getNome() << " atacou e causou " << danoInimigo << " de dano!" << std::endl;
+            
         }
         turnoDoJogador = !turnoDoJogador;
     }
@@ -157,5 +177,5 @@ void SalaCombate::alocarInimigo() {
 }
 
 void SalaCombate::encerrarSala() {
-    std::cout << "A poeira do combate baixa. A porta a frente se abre." << std::endl;
+    Utils::coutDigitado() << "A poeira do combate baixa. A porta a frente se abre.\n";
 }
