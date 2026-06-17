@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include "Utils.hpp"
 
 /**
  * @brief Representa um efeito de status contínuo no jogo.

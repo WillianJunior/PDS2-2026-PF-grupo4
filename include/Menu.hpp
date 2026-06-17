@@ -5,6 +5,7 @@
 #include "Personagem.hpp"
 #include <memory>
 #include <string>
+#include "Utils.hpp"
 
 
 /**
@@ -31,6 +32,7 @@ class Menu {
          * @brief Destrutor da classe Menu.
          */
         ~Menu();
+        
 };
 
 #endif

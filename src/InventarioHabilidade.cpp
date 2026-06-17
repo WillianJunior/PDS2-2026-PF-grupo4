@@ -3,7 +3,7 @@
 void InventarioHabilidade::mostrarInventario(){
     for (long unsigned int i = 0; i < listaHabilidades.size(); i++)
     {
-        std::cout << std::to_string(i+1) << ". "<< listaHabilidades[i].getNome() << std::endl;
+        Utils::coutDigitado(15) << std::to_string(i+1) << ". "<< listaHabilidades[i].getNome() << "\n";
     }
 }
 

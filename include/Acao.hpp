@@ -4,6 +4,7 @@
 #include "Efeito.hpp"
 #include <iostream>
 #include <string>
+#include "Utils.hpp"
 
 /**
  * @brief Classe base para representar qualquer ação do jogo (como Habilidades ou Itens).

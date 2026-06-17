@@ -3,7 +3,7 @@
 void InventarioItem::mostrarInventario(){
     for (long unsigned int i = 0; i < _itens.size(); i++)
     {
-        std::cout << std::to_string(i+1) << ". "<< _itens[i].getNome() << std::endl;
+        Utils::coutDigitado(15) << std::to_string(i+1) << ". "<< _itens[i].getNome() << "\n";
     }
 }
 

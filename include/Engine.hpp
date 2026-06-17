@@ -4,6 +4,7 @@
 #include "Personagem.hpp"
 #include "SalaBase.hpp"
 #include <memory>
+#include "Utils.hpp"
 
 /**
  * @brief Classe gerenciadora do loop principal do jogo - maquina de estados

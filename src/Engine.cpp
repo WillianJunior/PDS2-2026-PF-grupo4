@@ -2,6 +2,7 @@
 #include "Menu.hpp"
 #include "SalaCombate.hpp"
 #include "SalaEscolha.hpp"
+#include "Utils.hpp"
 #include <iostream>
 #include <vector>
 #include <random>
