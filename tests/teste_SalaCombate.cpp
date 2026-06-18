@@ -67,7 +67,7 @@ TEST_CASE("SALACOMBATE - executarSala: Vitoria do Jogador") {
     std::streambuf* coutAntigo = std::cout.rdbuf(bufferSaida.rdbuf());
 
     // Executa a lógica (deve dar One-Hit Kill no inimigo)
-    int resultado = sala.executarSala(&heroi);
+    int resultado = sala.executarSala(heroi);
 
     // Restauração obrigatória dos fluxos
     std::cin.rdbuf(cinAntigo);
@@ -93,7 +93,7 @@ TEST_CASE("SALACOMBATE - executarSala: Derrota do Jogador") {
     std::stringstream bufferSaida;
     std::streambuf* coutAntigo = std::cout.rdbuf(bufferSaida.rdbuf());
 
-    int resultado = sala.executarSala(&heroi);
+    int resultado = sala.executarSala(heroi);
 
     std::cin.rdbuf(cinAntigo);
     std::cout.rdbuf(coutAntigo);

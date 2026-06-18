@@ -28,7 +28,7 @@ TEST_CASE("SALAESCOLHA - executarSala com input simulado") {
     std::streambuf* coutAntigo = std::cout.rdbuf(bufferSaida.rdbuf());
     std::istringstream inputSimulado("1\n");
     std::streambuf* cinAntigo = std::cin.rdbuf(inputSimulado.rdbuf());
-    int resultado = sala.executarSala(&personagem);
+    int resultado = sala.executarSala(personagem);
     std::cin.rdbuf(cinAntigo);
     std::cout.rdbuf(coutAntigo);
 
@@ -45,7 +45,7 @@ TEST_CASE("Teste 02: SALAESCOLHA - USUARIO BURRO DIGITOU ERRADO") {
     std::istringstream inputSimulado("9\n1\n"); // --> testando o usuario digitando errado (nao tem 9 op) e depois certo
     std::streambuf* cinAntigo = std::cin.rdbuf(inputSimulado.rdbuf());
 
-    int resultado = sala.executarSala(&personagem);
+    int resultado = sala.executarSala(personagem);
 
     std::cin.rdbuf(cinAntigo);
     std::cout.rdbuf(coutAntigo);
