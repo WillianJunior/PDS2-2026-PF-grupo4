@@ -73,7 +73,7 @@ void Engine::iniciar(){
         
         // A sala assume o controle até sua lógica interna terminar, 
         // alterando os estados do personagem passado por raw pointer (.get()).
-        if(salaAtual->executarSala(_personagem.get()) == 0){
+        if(salaAtual->executarSala(*_personagem.get()) == 0){
             std::cout << "\nGAME OVER" << std::endl;
             break;
         } else{

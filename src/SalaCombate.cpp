@@ -17,24 +17,24 @@ void SalaCombate::mostrarSala(){
     std::cout << _historia << std::endl;
 }
 
-int SalaCombate::executarSala(Personagem* personagem){
+int SalaCombate::executarSala(Personagem& personagem){
     bool turnoDoJogador = true;
     int opcao = 0;
 
-    std::cout << "\n| BATALHA INICIADA: " << personagem->getNome() << " VS " << _inimigo->getNome() << "|" << std::endl;
+    std::cout << "\n| BATALHA INICIADA: " << personagem.getNome() << " VS " << _inimigo->getNome() << "|" << std::endl;
 
     double vidaBase = _inimigo->getVida();
     
-    while (!personagem->isMorto() && !_inimigo->isMorto()) {
+    while (!personagem.isMorto() && !_inimigo->isMorto()) {
         
         if (turnoDoJogador) {
             std::cout << "\n=== SUA VEZ ===" << std::endl;
 
             //aplica todos os efeitos no personagem
-            personagem->processarEfeitosAtivos(); 
-            if(personagem->isMorto()) break;
+            personagem.processarEfeitosAtivos(); 
+            if(personagem.isMorto()) break;
 
-            std::cout << "Seu HP: " << personagem->getVida() << " | HP do " << _inimigo->getNome() << ": " << _inimigo->getVida() << std::endl;
+            std::cout << "Seu HP: " << personagem.getVida() << " | HP do " << _inimigo->getNome() << ": " << _inimigo->getVida() << std::endl;
             
             std::cout << "1 - Usar Habilidade" << std::endl;
             std::cout << "2 - Usar Item" << std::endl;
@@ -54,7 +54,7 @@ int SalaCombate::executarSala(Personagem* personagem){
             }
 
             if (opcao == 1) {
-                personagem->getInventarioHabilidade().mostrarInventario();
+                personagem.getInventarioHabilidade().mostrarInventario();
                 std::cout << "Escolha a habilidade: ";
                 int numeroHabilidade;
                 std::cin >> numeroHabilidade;
@@ -66,7 +66,7 @@ int SalaCombate::executarSala(Personagem* personagem){
 
                 try {
                     //int dano = personagem->escolherHabilidade(numeroHabilidade);
-                    Habilidade habEscolhida = personagem->escolherHabilidade(numeroHabilidade - 1);
+                    Habilidade habEscolhida = personagem.escolherHabilidade(numeroHabilidade - 1);
                     int impacto = habEscolhida.calcularImpacto();
                     if (!habEscolhida.getAlvo()) { 
                         _inimigo->alterarVida(impacto);
@@ -75,9 +75,9 @@ int SalaCombate::executarSala(Personagem* personagem){
                         std::cout << "> " << _inimigo->getNome() << " sofreu " << impacto << " de dano!" << std::endl;
                     }
                     else{
-                        personagem->alterarVida(impacto);
-                        personagem->receberEfeito(habEscolhida.getEfeito());
-                        std::cout << "> " << personagem->getNome() << " recuperou " << impacto << " de vida!" << std::endl;
+                        personagem.alterarVida(impacto);
+                        personagem.receberEfeito(habEscolhida.getEfeito());
+                        std::cout << "> " << personagem.getNome() << " recuperou " << impacto << " de vida!" << std::endl;
                     }
                 } catch (const std::exception& e) {
                     std::cout << "FALHA" << e.what() << std::endl;
@@ -85,7 +85,7 @@ int SalaCombate::executarSala(Personagem* personagem){
                 }
 
             } else if (opcao == 2) {
-                personagem->getInventarioItem().mostrarInventario();
+                personagem.getInventarioItem().mostrarInventario();
                 std::cout << "Escolha o item: ";
                 int numeroItem;
                 std::cin >> numeroItem;
@@ -96,7 +96,7 @@ int SalaCombate::executarSala(Personagem* personagem){
                 }
 
                 try {
-                    Item itEscolhido = personagem->escolherItem(numeroItem - 1);
+                    Item itEscolhido = personagem.escolherItem(numeroItem - 1);
                     int impacto = itEscolhido.calcularImpacto();
                     if(!itEscolhido.getAlvo()){
                         _inimigo->alterarVida(impacto);
@@ -104,9 +104,9 @@ int SalaCombate::executarSala(Personagem* personagem){
                         std::cout << "> " << _inimigo->getNome() << " sofreu " << impacto << " de dano!" << std::endl;
                     }
                     else{
-                        personagem->alterarVida(impacto);
-                        personagem->receberEfeito(itEscolhido.getEfeito());
-                        std::cout << "> " << personagem->getNome() << " recuperou " << impacto << " de vida!" << std::endl;
+                        personagem.alterarVida(impacto);
+                        personagem.receberEfeito(itEscolhido.getEfeito());
+                        std::cout << "> " << personagem.getNome() << " recuperou " << impacto << " de vida!" << std::endl;
                     }
                 } catch (const std::exception& e) {
                     std::cout << "FALHA " << e.what() << std::endl;
@@ -142,8 +142,8 @@ int SalaCombate::executarSala(Personagem* personagem){
                 }
                 else{
                     int impacto = habInimigo.calcularImpacto();
-                    personagem->alterarVida(impacto);
-                    personagem->receberEfeito(habInimigo.getEfeito());
+                    personagem.alterarVida(impacto);
+                    personagem.receberEfeito(habInimigo.getEfeito());
                     std::cout << "> " << _inimigo->getNome() << " atacou e causou " << impacto << " de dano!" << std::endl;
                     break;
                 }
@@ -154,7 +154,7 @@ int SalaCombate::executarSala(Personagem* personagem){
         turnoDoJogador = !turnoDoJogador;
     }
 
-    if (personagem->isMorto()) {
+    if (personagem.isMorto()) {
         std::cout << "\n[DERROTA] Suas forcas se esgotaram..." << std::endl;
         return 0; //encerra na engine
     } else {

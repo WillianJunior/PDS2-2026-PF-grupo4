@@ -34,7 +34,7 @@ class SalaCombate : public SalaBase {
          * @brief Faz a transição para a próxima sala após o término do combate.
          * Sobrescreve o método da classe mãe.
          */
-        int executarSala(Personagem* Personagem) override;
+        int executarSala(Personagem& Personagem) override;
 
         /**
          * @brief Exibe a interface da sala de combate (status, opções de batalha, etc.).

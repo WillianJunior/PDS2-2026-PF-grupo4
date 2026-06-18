@@ -42,7 +42,7 @@ class SalaEscolha : public SalaBase{
      * * Sobrescreve o método da classe mãe (SalaBase) para gerenciar o fluxo de transição após o evento terminar.
      * @param personagem O personagem no qual a sala irá executar ações sob.
      */
-        int executarSala(Personagem* personagem)override;
+        int executarSala(Personagem& personagem)override;
 
     /**
      * @brief Exibe as informações e o ambiente da sala para o jogador.
@@ -60,7 +60,7 @@ class SalaEscolha : public SalaBase{
      * * Aplica as consequências da escolha (ex: receber um item, perder vida, etc).
      * @param personagem Personagem que as consequências da escolha serão acionadas.
      */
-        void executarEvento(Personagem* personagem);
+        void executarEvento(Personagem& personagem);
     /**
      * @brief Adiciona uma opcao para a sala de escolhas
      * * Uma opção é alocada no vetor de _opcoes da sala
