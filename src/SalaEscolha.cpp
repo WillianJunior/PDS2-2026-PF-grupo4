@@ -20,13 +20,13 @@ void SalaEscolha::mostrarSala(){
 }
 
 // comeca a executar as açoes da sala
-int SalaEscolha::executarSala(Personagem* personagem){
+int SalaEscolha::executarSala(Personagem& personagem){
     std::cout <<"Sala de Escolhas" << std::endl;
     // imprime as opçoes do vetor _opcoes
     mostrarOpcoes();
     // age sob o personagem executando a consequencia
     executarEvento(personagem);
-    if(!personagem->isMorto()) { 
+    if(!personagem.isMorto()) { 
     return 1; 
     } else {
     return 0; }
@@ -40,7 +40,7 @@ void SalaEscolha::mostrarOpcoes(){
     }
     Utils::coutDigitado() << "Sua escolha: ";
 }
-void SalaEscolha::executarEvento(Personagem* personagem) {
+void SalaEscolha::executarEvento(Personagem& personagem) {
     int escolha;
     bool escolhaValida = false;
     // verificacao se a escolha faz sentido 
@@ -73,7 +73,7 @@ void SalaEscolha::executarEvento(Personagem* personagem) {
                 Utils::coutTempo("Ada Lovelace amaria isso.\n", 50);
                 break;
             }
-            _opcoes[escolha - 1].consequencia(personagem); 
+            _opcoes[escolha - 1].consequencia(&personagem); 
             escolhaValida = true;
         } else {
             std::cout << "Opcao invalida, tente outra vez: ";

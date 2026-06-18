@@ -1,4 +1,5 @@
 #include "InventarioItem.hpp"
+#include "Excecoes.hpp"
 
 void InventarioItem::mostrarInventario(){
     for (long unsigned int i = 0; i < _itens.size(); i++)
@@ -24,6 +25,9 @@ int InventarioItem::getTamanho(){
 }
 
 Item InventarioItem::getItem(int posicao){
+    if (posicao < 0 || posicao >= _itens.size()){
+        throw IndiceInvalidoException();
+    }
     return _itens[posicao];
 }
 

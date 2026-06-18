@@ -4,6 +4,7 @@
 #include <stdexcept>
 #include <random>
 #include <algorithm>
+#include "Excecoes.hpp"
 
 SalaCombate::SalaCombate(std::string nome, std::string historia) 
     : SalaBase(nome), _historia(historia) {
@@ -43,7 +44,7 @@ int SalaCombate::executarSala(Personagem& personagem){
 
             //protecao contra loop infinito de eof
             if(std::cin.eof()){
-               throw std::runtime_error("Fim inesperado da entrada (EOF). Faltou input no teste?");
+               throw EntradaInvalidaException();
             }
 
             if (std::cin.fail()) {
@@ -61,7 +62,7 @@ int SalaCombate::executarSala(Personagem& personagem){
 
                 //protecao contra loop infinito de eof
                 if(std::cin.eof()){
-                    throw std::runtime_error("Fim inesperado da entrada (EOF). Faltou input no teste?");
+                    throw EntradaInvalidaException();
                 }                
 
                 try {
@@ -80,7 +81,7 @@ int SalaCombate::executarSala(Personagem& personagem){
                         std::cout << "> " << personagem.getNome() << " recuperou " << impacto << " de vida!" << std::endl;
                     }
                 } catch (const std::exception& e) {
-                    std::cout << "FALHA" << e.what() << std::endl;
+                    std::cout << "\n[ERRO] " << e.what() << "\n" << std::endl;
                     continue; 
                 }
 
@@ -92,7 +93,7 @@ int SalaCombate::executarSala(Personagem& personagem){
 
                 //protecao contra loop infinito de eof
                 if(std::cin.eof()){
-                    throw std::runtime_error("Fim inesperado da entrada (EOF). Faltou input no teste?");
+                    throw EntradaInvalidaException();
                 }
 
                 try {

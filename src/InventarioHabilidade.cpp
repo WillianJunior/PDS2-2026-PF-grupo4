@@ -1,4 +1,5 @@
 #include "InventarioHabilidade.hpp"
+#include "Excecoes.hpp"
 
 void InventarioHabilidade::mostrarInventario(){
     for (long unsigned int i = 0; i < listaHabilidades.size(); i++)
@@ -24,6 +25,9 @@ int InventarioHabilidade::getTamanho(){
 }
 
 Habilidade InventarioHabilidade::getHabilidade(int posicao){
+    if (posicao < 0 || posicao >= listaHabilidades.size()) {
+        throw IndiceInvalidoException();
+    }
     return listaHabilidades[posicao];
 }
 
