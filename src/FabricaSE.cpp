@@ -9,9 +9,25 @@ namespace FabricaSE {
         std::vector<SalaEscolha> salas;
 
         if (nome == "Maycon") {
-            SalaEscolha sala1("Sala do Maycon", "Historia aqui.");
-            // sala1.adicionarOpcao(descricao, consequencia);
-            salas.push_back(sala1);
+            Utils::Animacao animacaoNatora;
+            animacaoNatora.textoInicial.push_back("Ah, Mathias. Sei não...");
+            animacaoNatora.textoInicial.push_back("- Vamo, Maycon! Cê precisa relaxar um pouco, mano.");
+            animacaoNatora.textoInicial.push_back("Mas ainda falta implementar um monte de coisa.");
+            animacaoNatora.textoInicial.push_back("- Uma mente cansada não produz nada!");
+            animacaoNatora.textoInicial.push_back("Ce ta certo, mas sei la...");
+            animacaoNatora.frames.push_back(R"(
+
+     .------.
+    /        \
+   |       ¬  |
+   |          > IR PRO NA TORA?
+   |       __ |
+    \        /
+     '------'
+            )");
+
+            SalaEscolha Natora("Natora", animacaoNatora);
+            salas.push_back(Natora);
             SalaEscolha sala2("Sala do Maycon", "Historia aqui.");
             salas.push_back(sala2);
             SalaEscolha sala3("Sala do Maycon", "Historia aqui.");
