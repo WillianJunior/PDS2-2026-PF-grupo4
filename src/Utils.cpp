@@ -12,7 +12,7 @@ namespace Utils {
         }
     }
     void limparTela(){
-        std::cout << "\033[2J\033[1;1H"; // comando do reddit pra limpar a tela
+        system("clear"); 
     }
 
     void limparTelaAnima(){

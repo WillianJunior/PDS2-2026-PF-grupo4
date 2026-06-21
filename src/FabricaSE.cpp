@@ -25,12 +25,24 @@ namespace FabricaSE {
     \        /
      '------'
             )");
+            animacaoNatora.frames.push_back(R"(
+
+                              .------.
+                             /        \
+                           | O        |
+   NAO IR PRO NATORA?     <         /
+                         | __       |
+                         \        /
+                         '------'
+            )");
             SalaEscolha Natora("Natora", animacaoNatora);
             Natora.adicionarOpcao("Ir para o natora", [](Personagem *p){
                 p->alterarVida(20);
+                Utils::coutDigitado() << "Tuts tuts tuts\n";
             });
-            Natora.adicionarOpcao("Ir para o natora", [](Personagem *p){
+            Natora.adicionarOpcao("Nao ir para o natora", [](Personagem *p){
                 p->alterarVida(20);
+                Utils::coutDigitado() << "Tuts tuts tuts\n";
             });
             salas.push_back(Natora);
             // SalaEscolha sala2("Sala do Maycon", animacao);

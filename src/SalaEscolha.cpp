@@ -40,7 +40,7 @@ void SalaEscolha::mostrarSala() {
         std::cout << _animacao.frames[i] << "\n";
 
         if (i < _animacao.frames.size() - 1) {
-            Utils::esperar(_animacao.tempoFrame);
+            Utils::esperar(200);
         }
     }
     for (size_t i = 0; i < _animacao.textoFinal.size(); ++i) {
@@ -97,7 +97,7 @@ void SalaEscolha::executarEvento(Personagem& personagem) {
                 Utils::coutTempo("Otima escolha...\n", 50);
                 break;
             case 2:
-                Utils::coutTempo("Bons programadores fazem boas escolhas.\n", 50);
+                Utils::coutTempo("Bons programadores fazem boas escolhas.\n", 100);
                 break;
             case 3:
                 Utils::coutTempo("Ada Lovelace faria o mesmo.\n", 50);
@@ -108,6 +108,7 @@ void SalaEscolha::executarEvento(Personagem& personagem) {
         } else {
             std::cout << "Opcao invalida, tente outra vez: ";
         }
+        Utils::esperar(2000);
     }
     }
 
