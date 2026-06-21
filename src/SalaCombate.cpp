@@ -14,7 +14,7 @@ SalaCombate::SalaCombate(std::string nome, std::string historia)
 
 void SalaCombate::mostrarSala(){
     Utils::coutDigitado(50) << _historia << "\n";
-    
+
     std::vector<std::string> animacaoBatalha = {
         R"(
                O
