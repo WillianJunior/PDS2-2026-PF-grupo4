@@ -7,6 +7,7 @@
 #include "Personagem.hpp"
 #include <functional>
 #include <vector>
+#include "Utils.hpp"
 
 struct OpcaoEscolha {
     std::string descricao;
@@ -19,8 +20,8 @@ struct OpcaoEscolha {
  */
 class SalaEscolha : public SalaBase{
     private:
-    /** @brief Armazena o nome específico desta sala. */
-        std::string _historia;
+    /** @brief Armazena a historia com a animacao da sala */
+        Utils::Animacao _animacao;
         std::vector<OpcaoEscolha> _opcoes;
     
     public:
@@ -29,7 +30,7 @@ class SalaEscolha : public SalaBase{
      * * Inicializa a sala configurando o seu nome ou título.
      * @param nome O nome ou identificador da sala.
      */
-        SalaEscolha(std::string nome, std::string historia);
+        SalaEscolha(std::string nome, Utils::Animacao animacao);
 
     /**
      * @brief Encerra as atividades da sala atual.

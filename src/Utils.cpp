@@ -11,4 +11,14 @@ namespace Utils {
             std::this_thread::sleep_for(std::chrono::milliseconds(milisegundos));
         }
     }
+    void limparTela(){
+        std::cout << "\033[2J\033[1;1H"; // comando do reddit pra limpar a tela
+    }
+
+    void limparTelaAnima(){
+        std::cout << "\033[1;1H"; // comando que so volta o cursor pra linha 1 e permite "animar"
+    }
+    void esperar(int milissegundos){
+        std::this_thread::sleep_for(std::chrono::milliseconds(milissegundos));
+    }
 }

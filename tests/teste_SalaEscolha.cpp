@@ -1,6 +1,7 @@
 #include "doctest.h"
 #include "SalaEscolha.hpp"
 #include <sstream>
+#include "Utils.hpp"
 #include <iostream>
 
 Personagem criarPersonagemParaEscolha() {
@@ -10,13 +11,15 @@ Personagem criarPersonagemParaEscolha() {
 }
 
 TEST_CASE("Teste 01: SALAESCOLHA - Inicializacao e Getters") {
-    SalaEscolha sala("TROCA DE ITENS", "ESCOLHA ENTRE TIPOS DE CAFÉ");
+    Utils::Animacao animacaoTeste;
+    SalaEscolha sala("TROCA DE ITENS", animacaoTeste);
     
     CHECK(sala.getNome() == "TROCA DE ITENS");
 }
 
 TEST_CASE("SALAESCOLHA - executarSala com input simulado") {
-    SalaEscolha sala("Sala de Escolha", "Evento aleatorio.");
+    Utils::Animacao animacaoTeste;
+    SalaEscolha sala("Sala de Escolha", animacaoTeste);
     Personagem personagem = criarPersonagemParaEscolha();
     bool consequencia = false; 
     // [&consequencia] é a variável que está sendo capturada para ser alterada dentro da função consequencia, recebendo
@@ -37,7 +40,8 @@ TEST_CASE("SALAESCOLHA - executarSala com input simulado") {
 }
 
 TEST_CASE("Teste 02: SALAESCOLHA - USUARIO BURRO DIGITOU ERRADO") {
-    SalaEscolha sala("Teste Falha", "Texto");
+    Utils::Animacao animacaoTeste;
+    SalaEscolha sala("Teste Falha", animacaoTeste);
     Personagem personagem = criarPersonagemParaEscolha();
     sala.adicionarOpcao("Unica Opcao", [](Personagem* p) {});
     std::stringstream bufferSaida;

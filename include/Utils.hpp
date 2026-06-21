@@ -3,9 +3,20 @@
 
 #include <string>
 #include <sstream>
+#include <vector>
 
 namespace Utils {
     void coutTempo(std::string texto, int milisegundos = 30);
+    void limparTela(); // essa vai ser usada para mudança de sala e vai limpar tudo
+    void limparTelaAnima(); // essa vai fazer o cursor voltar pra linha 1 e vai gerar uma especie de "animação"
+    void esperar(int milissegundos); // pra esperar né caba nao é de ferro
+
+    struct Animacao {
+        std::vector<std::string> textoInicial;
+        std::vector<std::string> frames;
+        std::vector<std::string> textoFinal;
+        int tempoFrame = 200;
+    };
 
     class coutDigitado {
     private:

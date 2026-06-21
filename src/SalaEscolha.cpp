@@ -3,8 +3,8 @@
 #include <random>
 #include "Utils.hpp"
 
-SalaEscolha::SalaEscolha(std::string nome, std::string historia) 
-    : SalaBase(nome), _historia(historia) {}
+SalaEscolha::SalaEscolha(std::string nome, Utils::Animacao animacao) 
+    : SalaBase(nome), _animacao(animacao) {}
 
 // adiciona uma opcao no vetores de opcoes que aquela salaescolha possui
 void SalaEscolha::adicionarOpcao(std::string descricao, std::function<void(Personagem*)> consequencia){
@@ -12,11 +12,41 @@ void SalaEscolha::adicionarOpcao(std::string descricao, std::function<void(Perso
 }
 
 // imprime na tela a sala
-void SalaEscolha::mostrarSala(){
-    Utils::coutDigitado() << "\n========================================\n";
-    Utils::coutDigitado() << "          " << this->_nome << "\n";
-    Utils::coutDigitado() << "========================================\n";
-    Utils::coutDigitado() << _historia << "\n";
+void SalaEscolha::mostrarSala() {
+    Utils::limparTela();
+    std::cout << "\n========================================\n";
+    std::cout << "          " << this->_nome << "\n";
+    std::cout << "========================================\n";
+    // imprime os primeiros textos antes de inicializar a sala e imprimir o frame
+    for (size_t i = 0; i < _animacao.textoInicial.size(); ++i) {
+        Utils::coutDigitado() << _animacao.textoInicial[i] << "\n";
+        Utils::esperar(500); 
+    }
+    // mantem a tela um pouco quietinha para dar tempo do usuario ler
+    if (!_animacao.textoInicial.empty()) {
+        Utils::esperar(500); 
+    }
+    // a reimpressao do texto de textoinicial é so para mantê-lo pro jogador, como limpa a tela
+    // o texto acaba sumindo, mas não é um problema
+    for (size_t i = 0; i < _animacao.frames.size(); ++i) {
+        Utils::limparTela();
+        std::cout << "\n========================================\n";
+        std::cout << "          " << this->_nome << "\n";
+        std::cout << "========================================\n";
+        for (size_t j = 0; j < _animacao.textoInicial.size(); ++j) {
+            std::cout << _animacao.textoInicial[j] << "\n"; 
+        }
+
+        std::cout << _animacao.frames[i] << "\n";
+
+        if (i < _animacao.frames.size() - 1) {
+            Utils::esperar(_animacao.tempoFrame);
+        }
+    }
+    for (size_t i = 0; i < _animacao.textoFinal.size(); ++i) {
+        Utils::coutDigitado() << _animacao.textoFinal[i] << "\n";
+        Utils::esperar(500); 
+    }
 }
 
 // comeca a executar as açoes da sala
@@ -67,10 +97,10 @@ void SalaEscolha::executarEvento(Personagem& personagem) {
                 Utils::coutTempo("Otima escolha...\n", 50);
                 break;
             case 2:
-                Utils::coutTempo("Isso definitivamente vai ajudar.\n", 50);
+                Utils::coutTempo("Bons programadores fazem boas escolhas.\n", 50);
                 break;
             case 3:
-                Utils::coutTempo("Ada Lovelace amaria isso.\n", 50);
+                Utils::coutTempo("Ada Lovelace faria o mesmo.\n", 50);
                 break;
             }
             _opcoes[escolha - 1].consequencia(&personagem); 
@@ -85,19 +115,19 @@ void SalaEscolha::encerrarSala(){
     int numeroSorteado = rand() % 5 + 1;
     switch (numeroSorteado){
     case 1:
-        Utils::coutTempo("O codigo precisa ser feito. A porta a frente se abre.\n", 50);
+        Utils::coutTempo("O codigo precisa ser feito. A vida continua.\n", 50);
         break;
     case 2:
-        Utils::coutTempo("A esperança de codar renasce. Um novo desafio surge a frente.\n", 50);
+        Utils::coutTempo("A esperança de codar renasce. Esse evento já passou.\n", 50);
         break;
     case 3:
-        Utils::coutTempo("Alan Turing nao pararia aqui. Uma porta se abre.\n", 50);
+        Utils::coutTempo("Alan Turing nao pararia aqui. Preciso voltar a codar!\n", 50);
         break;
     case 4:
-        Utils::coutTempo("O que o William pensaria de mim se eu desistisse? Mais uma porta se abre.\n", 50);
+        Utils::coutTempo("O que o William pensaria de mim se eu desistisse? O VSCode me espera!\n", 50);
         break;
     case 5:
-        Utils::coutTempo("Nenhuma IA vai me substituir, que venha a proxima porta.\n", 50);
+        Utils::coutTempo("Nenhuma IA vai me substituir, eu vou terminar esse codigo!\n", 50);
         break;
     }
 }
