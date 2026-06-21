@@ -7,8 +7,8 @@
 #include "Excecoes.hpp"
 #include "Utils.hpp"
 
-SalaCombate::SalaCombate(std::string nome, std::string historia) 
-    : SalaBase(nome), _historia(historia) {
+SalaCombate::SalaCombate(std::string nome, std::string historia, std::unique_ptr<Inimigo> inimigo) 
+    : SalaBase(nome), _historia(historia), _inimigo(std::move(inimigo)) {
     this->alocarInimigo();
 }
 

@@ -4,6 +4,7 @@
 #include "SalaEscolha.hpp"
 #include "Utils.hpp"
 #include "FabricaSE.hpp"
+#include "FabricaSC.hpp"
 #include <iostream>
 #include <vector>
 #include <random>
@@ -39,10 +40,10 @@ void Engine::prepararSalas(std::string nome){
             qtdEscolha++;
         }
         else{
-            _salasDoJogo.push_back(std::unique_ptr<SalaBase>(new SalaCombate(titulo, "Sala de combate " + std::to_string(i + 1))));
+            _salasDoJogo.push_back(FabricaSC::criarSalas(nome, i + 1));
         }
     }
-    _salasDoJogo.push_back(std::unique_ptr<SalaBase>(new SalaCombate("SALA DO CHEFE", "boss final personalizado")));
+    _salasDoJogo.push_back(FabricaSC::criarSalas("qualquer_coisa_invalida", 8));
 }
 
 void Engine::iniciar(){

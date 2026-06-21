@@ -27,12 +27,18 @@ Personagem criarPersonagemParaTeste(int vidaInicial, int poderDeAtaque) {
 // --- CASOS DE TESTE ---
 
 TEST_CASE("SALACOMBATE - Inicializacao e Getters") {
-    SalaCombate sala("Sala do Segmentation Fault", "Um ponteiro nulo bloqueia o caminho.");
+    InventarioHabilidade inventarioHabilidadeTeste;
+    std::unique_ptr<Inimigo> inimigoTeste(new Inimigo(100, inventarioHabilidadeTeste, "Inimigo Teste", false));
+
+    SalaCombate sala("Sala do Segmentation Fault", "Um ponteiro nulo bloqueia o caminho.", std::move(inimigoTeste));
     CHECK(sala.getNome() == "Sala do Segmentation Fault");
 }
 
 TEST_CASE("SALACOMBATE - mostrarSala (Redirecionamento de cout)") {
-    SalaCombate sala("Sala Teste", "Enredo especifico do teste.");
+    InventarioHabilidade inventarioHabilidadeTeste;
+    std::unique_ptr<Inimigo> inimigoTeste(new Inimigo(100, inventarioHabilidadeTeste, "Inimigo Teste", false));
+
+    SalaCombate sala("Sala Teste", "Enredo especifico do teste.", std::move(inimigoTeste));
     
     // 1. Redireciona o fluxo de saída para uma string local
     std::stringstream bufferSaida;
@@ -51,7 +57,10 @@ TEST_CASE("SALACOMBATE - mostrarSala (Redirecionamento de cout)") {
 }
 
 TEST_CASE("SALACOMBATE - executarSala: Vitoria do Jogador") {
-    SalaCombate sala("Sala do Boss", "O chefe apareceu!");
+    InventarioHabilidade inventarioHabilidadeTeste;
+    std::unique_ptr<Inimigo> inimigoTeste(new Inimigo(100, inventarioHabilidadeTeste, "Inimigo Teste", false));
+
+    SalaCombate sala("Sala do Boss", "O chefe apareceu!", std::move(inimigoTeste));
     
     // O inimigo alocado internamente tem 80 de HP. 
     // Criamos um personagem com 100 de ataque para matá-lo em 1 hit.
@@ -79,7 +88,10 @@ TEST_CASE("SALACOMBATE - executarSala: Vitoria do Jogador") {
 }
 
 TEST_CASE("SALACOMBATE - executarSala: Derrota do Jogador") {
-    SalaCombate sala("Sala Implacavel", "O inimigo ataca primeiro!");
+    InventarioHabilidade inventarioHabilidadeTeste;
+    std::unique_ptr<Inimigo> inimigoTeste(new Inimigo(100, inventarioHabilidadeTeste, "Inimigo Teste", false));
+
+    SalaCombate sala("Sala Implacavel", "O inimigo ataca primeiro!", std::move(inimigoTeste));
     
     // Personagem com 1 de vida. Qualquer ataque do inimigo o matará.
     Personagem heroi = criarPersonagemParaTeste(1, 0);
