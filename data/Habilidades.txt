@@ -1,1 +1,14 @@
-Ataque Basico;0;15;0;Nenhum
+Anedota;1;1;15;Nenhum
+Forças aéreas;0;0;40;Nenhum
+Contar uma piada;0;0;20;Veneno
+Arremessar um livro;0;0;20;Nenhum
+Reclamar;1;1;30;Nenhum
+Chute de Ballet;0;0;25;Nenhum
+Passinho de Forro;0;0;20;Nenhum
+Saque de vôlei;0;0;30;Nenhum
+Invocar espíritos;0;0;25;Veneno
+Aviãozinho de papel;0;0;15;Nenhum
+Chamar a ex;0;0;25;Nenhum
+Abrir o reels;1;1;20;Nenhum
+Raio Mayconiano;0;0;40;Queimadura
+Raio Gravitacional;0;0;25;Nenhum

@@ -39,10 +39,10 @@ bool Efeito::operator==(const Efeito& outro) const{
 
 Efeito Efeito::criarEfeito(std::string nomeEfeito){
     if (nomeEfeito == "Veneno") {
-            return Efeito("Veneno", 5, 4);
+            return Efeito("Veneno", -5, 4);
         }
         else if(nomeEfeito == "Queimadura"){
-            return Efeito("Queimadura", 15, 2);
+            return Efeito("Queimadura", -15, 2);
         }
         else if (nomeEfeito == "Regeneracao"){
             return Efeito("Regeneracao", 10, 3);
