@@ -10,7 +10,7 @@
 #include <cstdlib>
 
 namespace FabricaInimigo{
-    std::unique_ptr<Inimigo> criarInimigo(std::string nomePersonagem, int andar){
+    std::unique_ptr<Inimigo> criarInimigo(std::string nomePersonagem){
         //abrir arquivo txt dos inimigos dependendo do personagem
         std::string inimigos = "data/Inimigos_" + nomePersonagem + ".txt";
         std::ifstream arquivo(inimigos);
@@ -24,8 +24,8 @@ namespace FabricaInimigo{
             InventarioHabilidade semInv;
             semInv.novaAcao(semHab);
 
-            bool eh_boss = (andar == 8);
-            return std::unique_ptr<Inimigo>(new Inimigo(80, semInv, "sem arquivo", eh_boss));
+            
+            return std::unique_ptr<Inimigo>(new Inimigo(80, semInv, "sem arquivo"));
 
         }
         //linha
@@ -37,9 +37,9 @@ namespace FabricaInimigo{
 
             //vai pegar a primeira parte ate o primeiro ';' para ver o andar
             std::getline(corte, pedaco, ';');
-            int andar_no_arquivo = std::stoi(pedaco);
+            int ordem = std::stoi(pedaco);
 
-            if(andar_no_arquivo == andar){
+            if(ordem == contador){
                 //dados do inimigo:
                 std::string nomeInimigo;
                 std::getline(corte, nomeInimigo, ';');
@@ -60,10 +60,11 @@ namespace FabricaInimigo{
                     inventarioInimigo.novaAcao(habilidade);
                 }
 
-                bool eh_boss = (andar == 8);
-                arquivo.close();
                 
-                return std::unique_ptr<Inimigo>(new Inimigo(vidaInimigo, inventarioInimigo, nomeInimigo, eh_boss));
+                arquivo.close();
+                contador++; 
+                
+                return std::unique_ptr<Inimigo>(new Inimigo(vidaInimigo, inventarioInimigo, nomeInimigo));
             }
         }
         arquivo.close();
@@ -71,6 +72,6 @@ namespace FabricaInimigo{
         Habilidade semHab("Vazio", false, 0, false, semEfeito);
         InventarioHabilidade semInv;
         semInv.novaAcao(semHab);
-        return std::unique_ptr<Inimigo>(new Inimigo(80, semInv, "Inimigo nao encontrado", false));
+        return std::unique_ptr<Inimigo>(new Inimigo(80, semInv, "Inimigo nao encontrado"));
     }
 }

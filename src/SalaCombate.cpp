@@ -6,10 +6,11 @@
 #include <algorithm>
 #include "Excecoes.hpp"
 #include "Utils.hpp"
+#include "FabricaInimigo.hpp"
 
-SalaCombate::SalaCombate(std::string nome, std::string historia, std::unique_ptr<Inimigo> inimigo) 
-    : SalaBase(nome), _historia(historia), _inimigo(std::move(inimigo)) {
-    this->alocarInimigo();
+SalaCombate::SalaCombate(std::string nome, std::string historia, std::string nomePersonagem) 
+    : SalaBase(nome), _historia(historia), _inimigo(alocarInimigo(nomePersonagem)) {
+        
 }
 
 void SalaCombate::mostrarSala(){
@@ -229,24 +230,19 @@ int SalaCombate::executarSala(Personagem& personagem){
         std::cout << "\n[DERROTA] Suas forcas se esgotaram..." << std::endl;
         return 0; //encerra na engine
     } else {
+        Efeito semEfeito("Nenhum", 0, 0);
+        Item item("Boné pra trás", 1, 10, semEfeito, 1);
+        personagem.getInventarioItem().novaAcao(item);
         Utils::coutDigitado(350) << "...\n[";
         Utils::esperar(350);
         std::cout << "\n[VITORIA] O " << _inimigo->getNome() << " foi derrotado!" << std::endl;
+        std::cout << "Você recebeu o item: " << item.getNome() << std::endl;
         return 1; 
     }
 }
 
-void SalaCombate::alocarInimigo() {
-    InventarioHabilidade habsInimigo;
-    Efeito semEfeito("Nenhum", 0, 0);
-    Habilidade ataqueInimigo("Syntax Error", false, 15, false, semEfeito);
-    habsInimigo.novaAcao(ataqueInimigo);
-    std::string nomeInimigo = "Bug Desconhecido";
-    if (this->_nome.find("Segmentation Fault") != std::string::npos) {
-        nomeInimigo = "SegFault Guardiao";
-    }
-    //assumingo inimigo uniqueptr
-    _inimigo.reset(new Inimigo(80, habsInimigo, nomeInimigo, false));
+std::unique_ptr<Inimigo> SalaCombate::alocarInimigo(std::string nomePersonagem) {
+    return FabricaInimigo::criarInimigo(nomePersonagem);
 }
 
 char SalaCombate::getTipo(){
