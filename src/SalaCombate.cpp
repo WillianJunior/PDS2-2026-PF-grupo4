@@ -8,8 +8,8 @@
 #include "Utils.hpp"
 #include "FabricaInimigo.hpp"
 
-SalaCombate::SalaCombate(std::string nome, std::string historia, std::string nomePersonagem) 
-    : SalaBase(nome), _historia(historia), _inimigo(alocarInimigo(nomePersonagem)) {
+SalaCombate::SalaCombate(std::string nome, std::string historia, std::string nomePersonagem, int andar) 
+    : SalaBase(nome), _historia(historia), _inimigo(alocarInimigo(nomePersonagem, andar)) {
         
 }
 
@@ -241,8 +241,8 @@ int SalaCombate::executarSala(Personagem& personagem){
     }
 }
 
-std::unique_ptr<Inimigo> SalaCombate::alocarInimigo(std::string nomePersonagem) {
-    return FabricaInimigo::criarInimigo(nomePersonagem);
+std::unique_ptr<Inimigo> SalaCombate::alocarInimigo(std::string nomePersonagem, int andar) {
+    return FabricaInimigo::criarInimigo(nomePersonagem, andar);
 }
 
 char SalaCombate::getTipo(){
