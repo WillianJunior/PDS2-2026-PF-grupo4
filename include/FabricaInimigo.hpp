@@ -5,7 +5,8 @@
 #include <memory>
 
 namespace FabricaInimigo{
-    std::unique_ptr<Inimigo> criarInimigo(std::string nomePersonagem, int andar);
+    std::unique_ptr<Inimigo> criarInimigo(std::string nomePersonagem);
+    int contador = 1;
 }
 
 #endif

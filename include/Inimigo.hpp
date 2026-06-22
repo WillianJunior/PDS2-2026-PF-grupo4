@@ -11,8 +11,6 @@
  */
 class Inimigo : public Entidade{
     private:
-    /** @brief Se o inimigo é um inimigo menor ou um Boss */
-        bool tipo;
     /** @brief Valor maximo que o inimigo pode ter de vida */
         int _vidaMaxima;
 
@@ -25,7 +23,7 @@ class Inimigo : public Entidade{
      * @param nome Qual é o nome do inimigo
      * @param tipo Se o inimigo é um boss ou um inimigo menor
      */
-        Inimigo(int vida, InventarioHabilidade habilidade, std::string nome, bool tipo);
+        Inimigo(int vida, InventarioHabilidade habilidade, std::string nome);
 
     /**
      * @brief Selecionar uma habilidade a ser executada no turno.
@@ -50,11 +48,6 @@ class Inimigo : public Entidade{
      * @return Retorna true se estiver morto (vida <= 0), e false caso contrário.
      */
         bool isMorto() override;
-    
-    /**
-     * @brief Retorna o tipo do inimigo (menor ou Boss).
-     */
-        bool getTipo();
 
     /**
      * @brief Destrutor de inimigo
