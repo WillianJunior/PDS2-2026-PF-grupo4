@@ -1,5 +1,5 @@
 #include "FabricaInimigo.hpp"
-#include "FabricaHabilidades.hpp"
+#include "FabricaHabilidade.hpp"
 #include "Inimigo.hpp"
 #include "Habilidade.hpp"
 #include "Efeito.hpp"
@@ -10,22 +10,11 @@
 #include <cstdlib>
 
 namespace FabricaHabilidade{
-    Efeito criarEfeito(std::string nomeEfeito){
-        if (nomeEfeito == "Veneno") {
-            return Efeito("Veneno", 5, 4);
-        }
-        else if(nomeEfeito == "Queimadura"){
-            return Efeito("Queimadura", 15, 2);
-        }
-        else if (nomeEfeito == "Regeneracao"){
-            return Efeito("Regeneracao", 10, 3);
-        }
-        return Efeito("Nenhum", 0, 0);
-    }
 
     Habilidade criarHabilidade(std::string nomeDaHabilidade){
         std::string habilidades = "data/Habilidades.txt";
         std::ifstream arquivo(habilidades);
+        Efeito vazio("vazio", 0, 0);
 
         if(!arquivo.is_open()){
             std::cerr << "Arquivo " << habilidades << " nao encontrado\n";
@@ -47,7 +36,7 @@ namespace FabricaHabilidade{
                 std::getline(corte, alvoHab, ';');
                 bool alvo = std::stoi(alvoHab);
                 std::getline(corte, efeitoHab, ';');
-                Efeito efeito = criarEfeito(efeitoHab);
+                Efeito efeito = vazio.criarEfeito(efeitoHab);
 
                 arquivo.close();
 

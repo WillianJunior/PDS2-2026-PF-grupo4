@@ -37,4 +37,17 @@ bool Efeito::operator==(const Efeito& outro) const{
             this->_duracao == outro._duracao);
 }
 
+Efeito Efeito::criarEfeito(std::string nomeEfeito){
+    if (nomeEfeito == "Veneno") {
+            return Efeito("Veneno", 5, 4);
+        }
+        else if(nomeEfeito == "Queimadura"){
+            return Efeito("Queimadura", 15, 2);
+        }
+        else if (nomeEfeito == "Regeneracao"){
+            return Efeito("Regeneracao", 10, 3);
+        }
+        return Efeito("Nenhum", 0, 0);
+}
+
 Efeito::~Efeito(){}

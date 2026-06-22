@@ -77,6 +77,8 @@ class Efeito{
      */
         bool operator==(const Efeito& outro) const;
 
+        Efeito criarEfeito(std::string nomeEfeito);
+
     /**
      * @brief Destrutor do objeto Efeito
      * * Garante a limpeza adequada da memória quando o efeito for destruído.
