@@ -22,7 +22,7 @@ class SalaCombate : public SalaBase {
          * @brief Construtor da classe SalaCombate.
          * @param nome O nome ou identificador da sala de combate.
          */
-        SalaCombate(std::string nome, std::string historia, std::string nomePersonagem);
+        SalaCombate(std::string nome, std::string historia, std::string nomePersonagem, int andar);
 
         /**
          * @brief Finaliza os eventos da sala de combate.
@@ -51,7 +51,7 @@ class SalaCombate : public SalaBase {
         /**
          * @brief Instancia ou prepara o(s) inimigo(s) que o jogador enfrentará nesta sala.
          */
-        std::unique_ptr<Inimigo> alocarInimigo(std::string nomePersonagem);
+        std::unique_ptr<Inimigo> alocarInimigo(std::string nomePersonagem, int andar);
 };
 
 #endif
