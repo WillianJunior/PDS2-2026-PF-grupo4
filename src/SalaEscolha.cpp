@@ -112,6 +112,10 @@ void SalaEscolha::executarEvento(Personagem& personagem) {
     }
     }
 
+char SalaEscolha::getTipo(){
+    return 'E';
+}
+
 void SalaEscolha::encerrarSala(){
     int numeroSorteado = rand() % 5 + 1;
     switch (numeroSorteado){

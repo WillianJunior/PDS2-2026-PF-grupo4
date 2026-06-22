@@ -249,6 +249,10 @@ void SalaCombate::alocarInimigo() {
     _inimigo.reset(new Inimigo(80, habsInimigo, nomeInimigo, false));
 }
 
+char SalaCombate::getTipo(){
+    return 'C';
+}
+
 void SalaCombate::encerrarSala() {
     Utils::coutDigitado() << "A poeira do combate baixa. Voce precisa voltar a codar.\n";
     Utils::limparTela();

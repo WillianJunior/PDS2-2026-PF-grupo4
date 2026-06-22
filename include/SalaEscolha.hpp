@@ -62,6 +62,12 @@ class SalaEscolha : public SalaBase{
      * @param personagem Personagem que as consequências da escolha serão acionadas.
      */
         void executarEvento(Personagem& personagem);
+
+    /**
+    * @brief Retorna o tipo da sala ("C" para combate, "E" para escolha).
+    */
+        char getTipo() override;
+
     /**
      * @brief Adiciona uma opcao para a sala de escolhas
      * * Uma opção é alocada no vetor de _opcoes da sala

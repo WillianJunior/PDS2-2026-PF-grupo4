@@ -66,13 +66,12 @@ void Engine::iniciar(){
 
     if(_personagem->getNome() == "PersonagemSalvo")
     {
-        _personagem = SaveManager::carregar(contadorSalas);
-        if (!_personagem) {  // ← a verificação pertence AQUI
+        _personagem = SaveManager::carregar(contadorSalas, _salasDoJogo);
+        if (!_personagem) {
             std::cerr << "Erro ao carregar o save. Arquivo corrompido ou inacessível.\n";
             return;
         }
         std::cout << "Jogo carregado! Continuando na sala " << contadorSalas + 1 << "...\n";
-        this->prepararSalas(_personagem->getNome()); // regenera as salas
     } else {
         this->prepararSalas(_personagem->getNome());
     }
@@ -96,7 +95,7 @@ void Engine::iniciar(){
         } else {
             contadorSalas++;
             // salva após cada sala
-            SaveManager::salvar(contadorSalas, *_personagem);
+            SaveManager::salvar(contadorSalas, *_personagem, _salasDoJogo);
         }
         salaAtual->encerrarSala();
         
