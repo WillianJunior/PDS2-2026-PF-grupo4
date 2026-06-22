@@ -45,6 +45,12 @@ class SalaBase {
          * @brief Retorna o nome da sala.
          */
         std::string getNome();
+        
+        /**
+         * @brief Retorna o tipo da sala ("C" para combate, "E" para escolha).
+         * Método virtual puro que deve ser implementado pelas classes filhas.
+         */
+        virtual char getTipo() = 0;
 
         /**
          * @brief Destrutor virtual.

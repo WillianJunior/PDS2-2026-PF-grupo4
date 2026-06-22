@@ -4,6 +4,9 @@
 #include "Habilidade.hpp"
 #include "Item.hpp"
 #include "Efeito.hpp"
+#include "FabricaSC.hpp"
+#include "FabricaSE.hpp"
+#include "SalaEscolha.hpp"
 #include <fstream>
 #include <string>
 #include <memory>
@@ -13,7 +16,7 @@ bool SaveManager::existeSave() {
     return arquivo.good();
 }
 
-void SaveManager::salvar(int contadorSalas, Personagem& personagem) {
+void SaveManager::salvar(int contadorSalas, Personagem& personagem, const std::vector<std::unique_ptr<SalaBase>>& salas) {
     std::ofstream arquivo("save.txt");
     // Sala atual
     arquivo << contadorSalas << "\n";
@@ -47,9 +50,21 @@ void SaveManager::salvar(int contadorSalas, Personagem& personagem) {
         arquivo << item.getEfeito().getValor() << "\n";
         arquivo << item.getEfeito().getDuracao() << "\n";
     }
+
+    // Sequência de salas
+    std::string dadosSalas;
+    int qtdValidas = 0;
+    for (const auto& sala : salas) {
+        if (!sala) continue;
+        qtdValidas++;
+        dadosSalas += sala->getNome() + "\n";
+        dadosSalas += sala->getTipo();
+        dadosSalas += "\n";
+    }
+    arquivo << qtdValidas << "\n" << dadosSalas;
 }
 
-std::unique_ptr<Personagem> SaveManager::carregar(int& contadorSalas) {
+std::unique_ptr<Personagem> SaveManager::carregar(int& contadorSalas, std::vector<std::unique_ptr<SalaBase>>& salas) {
     std::ifstream arquivo("save.txt");
     if (!arquivo.is_open()) return nullptr;
     // Sala atual
@@ -100,5 +115,27 @@ std::unique_ptr<Personagem> SaveManager::carregar(int& contadorSalas) {
     }
     auto personagemCarregado = std::unique_ptr<Personagem>(new Personagem(vidaMaxima, inventarioHabilidade, nome, inventarioItem));
     personagemCarregado->alterarVida(vida - vidaMaxima);
+
+    // Lê sequência de salas salvas e reconstrói o vetor
+    int qtdSalas;
+    arquivo >> qtdSalas;
+    arquivo.ignore();
+    salas.clear();
+
+    for (int i = 0; i < contadorSalas; i++) {
+        salas.push_back(nullptr);
+    }
+
+    for (int i = 0; i < qtdSalas; i++) {
+        std::string nomeSala, tipoSala;
+        std::getline(arquivo, nomeSala);
+        std::getline(arquivo, tipoSala);
+        if (tipoSala == "C") {
+            salas.push_back(FabricaSC::criarSalas(nome, contadorSalas + i + 1));
+        } else {
+            salas.push_back(std::unique_ptr<SalaBase>(new SalaEscolha(FabricaSE::criarSalas(nome))));
+        }
+    }
+
     return personagemCarregado;
 }

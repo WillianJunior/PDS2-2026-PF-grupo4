@@ -42,6 +42,11 @@ class SalaCombate : public SalaBase {
          */
         void mostrarSala() override;
 
+        /**
+         * @brief Retorna o tipo da sala ("C" para combate, "E" para escolha).
+         */
+        char getTipo() override;
+
 
         /**
          * @brief Instancia ou prepara o(s) inimigo(s) que o jogador enfrentará nesta sala.
