@@ -1,5 +1,5 @@
 #include "FabricaInimigo.hpp"
-#include "FabricaHabilidades.hpp"
+#include "FabricaHabilidade.hpp"
 #include "Inimigo.hpp"
 #include "Habilidade.hpp"
 #include "Efeito.hpp"

@@ -14,12 +14,8 @@ namespace Utils {
             }
         }
     }
-    void limparTela(){
-        std::cout << "\033[2J\033[1;1H"; 
-    }
-
-    void limparTelaAnima(){
-        std::cout << "\033[1;1H"; // comando que so volta o cursor pra linha 1 e permite "animar"
+    void limparTela() {
+        system("clear"); 
     }
     void esperar(int milissegundos){
         if(!modoTeste) {
