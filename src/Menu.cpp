@@ -11,30 +11,73 @@ Menu::Menu(){
 Menu::~Menu(){
 }
 
-std::unique_ptr<Personagem> Menu::executarMenuInicial() {
+std::unique_ptr<Personagem> Menu::executarMenuInicial(bool existeSave) {
     int opcao = 0;
-    std::string menu = R"(
-    +-------------------------------------+
-    |                                     |
-    |       WE CANT CODE THIS GAME        |
-    |                                     |
-    +-------------------------------------+
-    |                                     |
-    |         > 1 - New Game              |
-    |         > 2 - Out                   |
-    |                                     |
-    +-------------------------------------+
-)";
-    std::cout << menu;
-    std::cin >> opcao;
-
-    switch (opcao)
+    std::string menu = ".";
+    if(!existeSave)
     {
-    case 1:
-        return this->escolherPersonagemInicial();
-    case 2:
-    default:
-        return nullptr;
+        menu = R"(
+        +-------------------------------------+
+        |                                     |
+        |       WE CANT CODE THIS GAME        |
+        |                                     |
+        +-------------------------------------+
+        |                                     |
+        |         > 1 - New Game              |
+        |         > 2 - Out                   |
+        |                                     |
+        +-------------------------------------+
+    )";
+        std::cout << menu;
+        std::cin >> opcao;
+
+        switch (opcao)
+        {
+        case 1:
+            return this->escolherPersonagemInicial();
+        case 2:
+        default:
+            return nullptr;
+        }
+    }else
+    {
+        menu = R"(
+        +-------------------------------------+
+        |                                     |
+        |       WE CANT CODE THIS GAME        |
+        |                                     |
+        +-------------------------------------+
+        |                                     |
+        |         > 1 - New Game              |
+        |         > 2 - Load Game             |
+        |         > 3 - Out                   |
+        |                                     |
+        +-------------------------------------+
+    )";
+        std::cout << menu;
+        std::cin >> opcao;
+
+        switch (opcao)
+        {
+        case 1:
+            return this->escolherPersonagemInicial();
+        case 2:
+            {
+                std::string nomePersonagem = "PersonagemSalvo";
+                int vidaInicial = 100;
+                Efeito efeito(".", 0, 0);
+                Habilidade habilidade(".", false, 10, false, efeito);
+                InventarioHabilidade habilidadesIniciais;
+                habilidadesIniciais.novaAcao(habilidade);
+                Item item(".", true, 40, efeito, true);
+                InventarioItem itensIniciais;
+                itensIniciais.novaAcao(item);
+                return std::unique_ptr<Personagem>(new Personagem(vidaInicial, habilidadesIniciais, nomePersonagem, itensIniciais));
+            }
+        case 3:
+        default:
+            return nullptr;
+        }
     }
 }
 

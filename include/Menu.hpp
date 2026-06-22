@@ -24,9 +24,10 @@ class Menu {
 
         /**
          * @brief Executa a interface do menu principal
+         * @param existeSave valor booleano que indica se existe um save, permitindo recuperar o progresso de um jogo antigo.
          * @return Ponteiro inteligente para o Personagem criado, ou nullptr se o utilizador optar por sair.
          */
-        std::unique_ptr<Personagem> executarMenuInicial();
+        std::unique_ptr<Personagem> executarMenuInicial(bool existeSave);
 
         /**
          * @brief Destrutor da classe Menu.

@@ -31,6 +31,9 @@ class Engine {
         
 
     public:
+        /** @brief Define se está acontecendo os testes (quando true, desativa comportamentos que atrapaham os testes (ex: saves)). */
+        static bool modoTeste;
+
         /**
          * @brief Construtor da Engine.
          */

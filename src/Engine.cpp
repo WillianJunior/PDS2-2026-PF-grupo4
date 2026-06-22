@@ -5,11 +5,14 @@
 #include "Utils.hpp"
 #include "FabricaSE.hpp"
 #include "FabricaSC.hpp"
+#include "SaveManager.hpp"
 #include <iostream>
 #include <vector>
 #include <random>
 #include <algorithm>
 #include <ctime>
+
+bool Engine::modoTeste = false;
 
 Engine::Engine() : _personagem(nullptr) {
     srand(time(NULL));
@@ -48,40 +51,53 @@ void Engine::prepararSalas(std::string nome){
 
 void Engine::iniciar(){
     Menu menuPrincipal;
-    _personagem = menuPrincipal.executarMenuInicial();
+    int contadorSalas = 0;
+    bool existeSave = false;
+
+    if(!Engine::modoTeste) {
+        existeSave = SaveManager::existeSave();
+    }
+    _personagem = menuPrincipal.executarMenuInicial(existeSave);
 
     if (!_personagem) {
         std::cout << "Inicialização abortada. Encerrando o sistema." << std::endl;
         return;
     }
 
-    //geraçao das salas
-    this->prepararSalas(_personagem->getNome());
+    if(_personagem->getNome() == "PersonagemSalvo")
+    {
+        _personagem = SaveManager::carregar(contadorSalas);
+        if (!_personagem) {  // ← a verificação pertence AQUI
+            std::cerr << "Erro ao carregar o save. Arquivo corrompido ou inacessível.\n";
+            return;
+        }
+        std::cout << "Jogo carregado! Continuando na sala " << contadorSalas + 1 << "...\n";
+        this->prepararSalas(_personagem->getNome()); // regenera as salas
+    } else {
+        this->prepararSalas(_personagem->getNome());
+    }
 
     // loop principal - maquina de estados
-    int contadorSalas = 0;
-    
     while (contadorSalas < 8 && !_personagem->isMorto()) {
-        
         std::unique_ptr<SalaBase> salaAtual = fabricarProximaSala(contadorSalas);
-        
         if (!salaAtual) {
             std::cerr << "ERRO DE ROTEAMENTO - Ponteiro nulo retornado para a sala ID: " << contadorSalas << std::endl;
-            break; 
+            break;
         }
-
         salaAtual->mostrarSala();
         
         // A sala assume o controle até sua lógica interna terminar, 
         // alterando os estados do personagem passado por raw pointer (.get()).
         if(salaAtual->executarSala(*_personagem.get()) == 0){
             std::cout << "\nGAME OVER" << std::endl;
+            // apaga save em game over
+            std::remove("save.txt");
             break;
-        } else{
+        } else {
             contadorSalas++;
+            // salva após cada sala
+            SaveManager::salvar(contadorSalas, *_personagem);
         }
-        
-        
         salaAtual->encerrarSala();
         
         // O escopo do while garante que salaAtual seja destruída 
@@ -90,6 +106,8 @@ void Engine::iniciar(){
     // Finalização e encerramento da gistória
     if (!_personagem->isMorto()) {
         std::cout << "\nHISTORIA FINAL DO JOGO" << std::endl;
+        // apaga save na vitória
+        std::remove("save.txt");
     }
     
 }

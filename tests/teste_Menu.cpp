@@ -22,7 +22,7 @@ TEST_CASE("TESTE DE MENU FUNCAO executarMenuInicial") {
     std::streambuf* coutAntigo = std::cout.rdbuf(bufferSaida.rdbuf()); 
 
     // executa a funçãobb deve retornar nullptr
-    std::unique_ptr<Personagem> personagemRetornado = menuTeste.executarMenuInicial();
+    std::unique_ptr<Personagem> personagemRetornado = menuTeste.executarMenuInicial(false);
     
     CHECK(personagemRetornado == nullptr);
 
@@ -42,7 +42,7 @@ TEST_CASE("TESTE DE MENU FUNCAO executarMenuInicial - Escolha de Personagem") {
     std::stringstream bufferSaida; // as coisas que iam aparecer na tela param de aparecer pra permitir o teste fluir
     std::streambuf* coutAntigo = std::cout.rdbuf(bufferSaida.rdbuf());
 
-    std::unique_ptr<Personagem> personagemRetornado = menuTeste.executarMenuInicial();
+    std::unique_ptr<Personagem> personagemRetornado = menuTeste.executarMenuInicial(false);
 
     std::cin.rdbuf(cinBufferAntigo);
     std::cout.rdbuf(coutAntigo);

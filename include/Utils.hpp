@@ -10,6 +10,8 @@ namespace Utils {
     void limparTela(); // essa vai ser usada para mudança de sala e vai limpar tudo
     void limparTelaAnima(); // essa vai fazer o cursor voltar pra linha 1 e vai gerar uma especie de "animação"
     void esperar(int milissegundos); // pra esperar né caba nao é de ferro
+
+    /** @brief Define se está acontecendo os testes (quando true, desativa comportamentos que atrapaham os testes (ex: tempo de escrita)). */
     extern bool modoTeste;
 
     struct Animacao {

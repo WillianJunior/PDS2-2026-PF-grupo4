@@ -64,6 +64,12 @@ class Personagem : public Entidade{
         InventarioItem getInventarioItem();
 
     /**
+     * @brief Retorna o valor numérico da vida máxima.
+     * @return Inteiro representando a vida máxima que o personagem pode ter.
+     */
+        int getVidaMaxima();
+
+    /**
      * @brief Destrutor da classe Personagem.
      * * Libera os recursos alocados pelo personagem quando ele for destruído.
      */

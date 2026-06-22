@@ -31,4 +31,8 @@ InventarioItem Personagem::getInventarioItem(){
     return this->_inventario;
 }
 
+int Personagem::getVidaMaxima(){
+    return this->_vidaMaxima;
+}
+
 Personagem::~Personagem(){}
