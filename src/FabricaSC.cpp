@@ -12,28 +12,21 @@ namespace FabricaSC {
 
         if (nome == "Maycon") {
             
-            salas.push_back(std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, "Um Inimigo 1 apareceu!", nome)));
+            salas.push_back(std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, "Um Inimigo 1 apareceu!", nome, andar)));
 
             
-            salas.push_back(std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, "Um Inimigo 2 apareceu!", nome)));
+            salas.push_back(std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, "Um Inimigo 2 apareceu!", nome, andar)));
 
             
-            salas.push_back(std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, "Um Inimigo 3 apareceu!", nome)));
+            salas.push_back(std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, "Um Inimigo 3 apareceu!", nome, andar)));
 
             
-            salas.push_back(std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, "Um Inimigo 4 apareceu!", nome)));
+            salas.push_back(std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, "Um Inimigo 4 apareceu!", nome, andar)));
 
             
-            salas.push_back(std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, "Um Inimigo 5 apareceu!", nome)));
+            salas.push_back(std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, "Um Inimigo 5 apareceu!", nome, andar)));
 
             
-            salas.push_back(std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, "Um Inimigo 6 apareceu!", nome)));
-
-            
-            salas.push_back(std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, "Um Inimigo 7 apareceu!", nome)));
-
-            
-            salas.push_back(std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, "Um Inimigo 8 apareceu!", nome)));
 
             int num = rand() % salas.size();
             return std::move(salas[num]);
