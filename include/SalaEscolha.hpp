@@ -30,7 +30,7 @@ class SalaEscolha : public SalaBase{
      * * Inicializa a sala configurando o seu nome ou título.
      * @param nome O nome ou identificador da sala.
      */
-        SalaEscolha(std::string nome, Utils::Animacao animacao, int andar);
+        SalaEscolha(std::string nome, Utils::Animacao animacao);
 
     /**
      * @brief Encerra as atividades da sala atual.
