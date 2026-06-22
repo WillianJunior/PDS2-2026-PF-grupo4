@@ -2,10 +2,23 @@
 #include "Excecoes.hpp"
 
 void InventarioHabilidade::mostrarInventario(){
-    for (long unsigned int i = 0; i < listaHabilidades.size(); i++)
-    {
-        Utils::coutDigitado(15) << std::to_string(i+1) << ". "<< listaHabilidades[i].getNome() << "\n";
+    int larguraInterna = 37;
+
+    std::cout << "    ╔═════════════════════════════════════╗\n";
+    std::cout << "    ║           SUAS HABILIDADES          ║\n";
+    std::cout << "    ╠═════════════════════════════════════╣\n";
+
+    for (long unsigned int i = 0; i < listaHabilidades.size(); i++) {
+        std::string linha = " [ " + std::to_string(i + 1) + " ] - " + listaHabilidades[i].getNome() + " ";
+        int espacosFaltando = larguraInterna - linha.length() - 1;
+        if (espacosFaltando < 0) {
+            linha = linha.substr(0, larguraInterna - 4) + "... ";
+            espacosFaltando = 0;
+        }
+        std::string padding(espacosFaltando, '.');
+        Utils::coutDigitado(0) << "    ║" << linha << padding << " ║\n";
     }
+    std::cout << "    ╚═════════════════════════════════════╝\n";
 }
 
 void InventarioHabilidade::novaAcao(Habilidade habilidade){
