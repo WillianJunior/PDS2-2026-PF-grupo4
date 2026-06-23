@@ -800,7 +800,7 @@ namespace FabricaSE {
            |  / \  |        /   /   /   /
             )";
 
-            for (int i = 0; i < 60; i++) {
+            for (int i = 0; i < 30; i++) {
                 animacaoChuva.frames.push_back(frameChuvaA);
                 animacaoChuva.frames.push_back(frameChuvaB);
             }
