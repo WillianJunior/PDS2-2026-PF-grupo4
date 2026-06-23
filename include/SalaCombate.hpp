@@ -19,6 +19,7 @@ class SalaCombate : public SalaBase {
         std::unique_ptr<Inimigo> _inimigo;
         std::string _textoVitoria;
         std::string _textoDerrota;
+        int _idInimigo;
 
 
     public:
@@ -49,6 +50,11 @@ class SalaCombate : public SalaBase {
          * @brief Retorna o tipo da sala ("C" para combate, "E" para escolha).
          */
         char getTipo() override;
+
+        /**
+         * @brief Retorna o id do inimigo.
+         */
+        int getId() override;
 
 
         /**
