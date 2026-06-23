@@ -18,6 +18,10 @@ void Entidade::processarEfeitosAtivos(){
     }
 }
 
+void Entidade::limparEfeitos(){
+    this->_efeitosAtivos.clear();
+}
+
 int Entidade::getVida(){
     return this->_vida;
 }
