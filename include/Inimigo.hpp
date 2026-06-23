@@ -31,7 +31,7 @@ class Inimigo : public Entidade{
      * * @param posicaoHabilidade índice (posição) da habilidade dentro do vetor _habilidades em inventarioHabilidade
      * @return Retorna a copia do objeto Habilidade.
      */
-        Habilidade escolherHabilidade(int posicaoHabilidade) override;
+        Habilidade& escolherHabilidade(int posicaoHabilidade) override;
 
     /**
      * @brief Alterar a vida atual do inimigo para mais ou para menos

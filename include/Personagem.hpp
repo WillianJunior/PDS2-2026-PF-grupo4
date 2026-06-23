@@ -34,7 +34,7 @@ class Personagem : public Entidade{
      * @param posicaoHabilidade índice (posição) da habilidade dentro do vetor.
      * @return Retorna a copia do objeto Habilidade.
      */
-        Habilidade escolherHabilidade(int posicaoHabilidade) override;
+        Habilidade& escolherHabilidade(int posicaoHabilidade) override;
 
     /**
      * @brief Retorna um Item a partir do inventarioItem e consome.
@@ -61,7 +61,7 @@ class Personagem : public Entidade{
     /**
      * @brief Retorna o inventário de itens do personagem.
      */
-        InventarioItem getInventarioItem();
+        InventarioItem& getInventarioItem();
 
     /**
      * @brief Retorna o valor numérico da vida máxima.

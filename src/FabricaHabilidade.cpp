@@ -18,13 +18,13 @@ namespace FabricaHabilidade{
 
         if(!arquivo.is_open()){
             std::cerr << "Arquivo " << habilidades << " nao encontrado\n";
-            return Habilidade("Habilidade Erro", false, 0, false, Efeito("Nenhum", 0, 0));
+            return Habilidade("Habilidade Erro", false, 0, false, Efeito("Nenhum", 0, 0), 0);
         }
 
         std::string habilidade;
         while(std::getline(arquivo, habilidade)){
             std::stringstream corte(habilidade);
-            std::string nomeHab, tipoHab, valorHab, alvoHab, efeitoHab;
+            std::string nomeHab, tipoHab, valorHab, alvoHab, efeitoHab, cooldownHab;
 
             std::getline(corte, nomeHab, ';');
 
@@ -37,13 +37,15 @@ namespace FabricaHabilidade{
                 bool alvo = std::stoi(alvoHab);
                 std::getline(corte, efeitoHab, ';');
                 Efeito efeito = vazio.criarEfeito(efeitoHab);
+                std::getline(corte, cooldownHab, ';');
+                int cooldown = std::stoi(cooldownHab);
 
                 arquivo.close();
 
-                return Habilidade(nomeHab, tipo, valor, alvo, efeito);
+                return Habilidade(nomeHab, tipo, valor, alvo, efeito, cooldown);
             }
         }
         arquivo.close();
-        return Habilidade("Nao Encontrada", false, 0, false, Efeito("Nenhum", 0, 0));
+        return Habilidade("Nao Encontrada", false, 0, false, Efeito("Nenhum", 0, 0), 0);
     }
 }

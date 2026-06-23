@@ -1,1 +1,4 @@
 Boné pra trás;1;1;10;Nenhum
+Xeque-Mate;1;1;15;Nenhum
+Coca-Cola;1;1;20;Nenhum
+Água Benta;1;1;15;Nenhum

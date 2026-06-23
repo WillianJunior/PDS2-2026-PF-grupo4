@@ -8,8 +8,8 @@
 #include "Utils.hpp"
 #include "FabricaInimigo.hpp"
 
-SalaCombate::SalaCombate(std::string nome, std::string historia, std::string nomePersonagem) 
-    : SalaBase(nome), _historia(historia), _inimigo(alocarInimigo(nomePersonagem)) {
+SalaCombate::SalaCombate(std::string nome, std::string historia, std::string nomePersonagem, int andar) 
+    : SalaBase(nome), _historia(historia), _inimigo(alocarInimigo(nomePersonagem, andar)) {
         
 }
 
@@ -87,7 +87,8 @@ int SalaCombate::executarSala(Personagem& personagem){
         
         if (turnoDoJogador) {
             std::cout << "\n=== SUA VEZ ===" << std::endl;
-
+            //atualiza os cooldowns de todas as habilidades
+            personagem.getInventarioHabilidade().atualizarCooldowns();
             //aplica todos os efeitos no personagem
             personagem.processarEfeitosAtivos(); 
             if(personagem.isMorto()) break;
@@ -125,8 +126,13 @@ int SalaCombate::executarSala(Personagem& personagem){
 
                 try {
                     //int dano = personagem->escolherHabilidade(numeroHabilidade);
-                    Habilidade habEscolhida = personagem.escolherHabilidade(numeroHabilidade - 1);
+                    Habilidade& habEscolhida = personagem.escolherHabilidade(numeroHabilidade - 1);
+                    if(habEscolhida.getCooldownAtual() > 0){
+                        Utils::coutDigitado() << "[!] Habilidade em cooldown! Escolha outra.\n";
+                        continue; 
+                    }
                     int impacto = habEscolhida.calcularImpacto();
+                    habEscolhida.iniciarCooldown();
                     if (!habEscolhida.getAlvo()) { 
                         _inimigo->alterarVida(impacto);
                         //aplica efeito no inimigo caso habilidade tenha algum
@@ -187,17 +193,26 @@ int SalaCombate::executarSala(Personagem& personagem){
 
         } else {
             std::cout << "\n=== VEZ DO INIMIGO ===" << std::endl;
-            
+            //atualiza os cooldowns de todas as habilidades
+            _inimigo->getInventarioHabilidade().atualizarCooldowns();
             //aplica todos os efeitos no inimigo
             _inimigo->processarEfeitosAtivos();
             if(_inimigo->isMorto()) break;
 
             while(true){
-                int posicao = rand()%1;
-                Habilidade habInimigo = _inimigo->escolherHabilidade(posicao);
+                int numHabilidades = _inimigo->getInventarioHabilidade().getTamanho();
+                int posicao = rand() % numHabilidades;
+                
+                Habilidade& habInimigo = _inimigo->escolherHabilidade(posicao);
+                
+                if(habInimigo.getCooldownAtual() > 0){
+                    continue; // Recarregando, repete o while para ele sortear outra
+                }
+
                 if(habInimigo.getAlvo()){
                     if(_inimigo->getVida() < 0.5 * vidaBase){
                         int impacto = habInimigo.calcularImpacto();
+                        habInimigo.iniciarCooldown(); // <--- Inicia o cooldown da cura!
                         _inimigo->alterarVida(impacto);
                         std::cout << "> " << _inimigo->getNome() << " recuperou " << impacto << " de vida!" << std::endl;
                         break;
@@ -205,10 +220,10 @@ int SalaCombate::executarSala(Personagem& personagem){
                     else{
                         continue;
                     }
-                    
                 }
                 else{
                     int impacto = habInimigo.calcularImpacto();
+                    habInimigo.iniciarCooldown(); // <--- Inicia o cooldown do ataque!
                     personagem.alterarVida(impacto);
                     personagem.receberEfeito(habInimigo.getEfeito());
                     Utils::coutDigitado(350) << "...\n[";
@@ -217,10 +232,7 @@ int SalaCombate::executarSala(Personagem& personagem){
                     break;
                 }
             }
-
-            
         }
-        
         turnoDoJogador = !turnoDoJogador;
     }
 
@@ -241,8 +253,8 @@ int SalaCombate::executarSala(Personagem& personagem){
     }
 }
 
-std::unique_ptr<Inimigo> SalaCombate::alocarInimigo(std::string nomePersonagem) {
-    return FabricaInimigo::criarInimigo(nomePersonagem);
+std::unique_ptr<Inimigo> SalaCombate::alocarInimigo(std::string nomePersonagem, int andar) {
+    return FabricaInimigo::criarInimigo(nomePersonagem, andar);
 }
 
 char SalaCombate::getTipo(){

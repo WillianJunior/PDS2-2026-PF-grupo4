@@ -10,7 +10,7 @@
 #include <cstdlib>
 
 namespace FabricaInimigo{
-    std::unique_ptr<Inimigo> criarInimigo(std::string nomePersonagem){
+    std::unique_ptr<Inimigo> criarInimigo(std::string nomePersonagem, int andar){
         //abrir arquivo txt dos inimigos dependendo do personagem
         std::string inimigos = "data/Inimigos_" + nomePersonagem + ".txt";
         std::ifstream arquivo(inimigos);
@@ -37,9 +37,9 @@ namespace FabricaInimigo{
 
             //vai pegar a primeira parte ate o primeiro ';' para ver o andar
             std::getline(corte, pedaco, ';');
-            int ordem = std::stoi(pedaco);
+            int andarInimigo = std::stoi(pedaco);
 
-            if(ordem == contador){
+            if(andarInimigo == andar){
                 //dados do inimigo:
                 std::string nomeInimigo;
                 std::getline(corte, nomeInimigo, ';');
@@ -62,7 +62,6 @@ namespace FabricaInimigo{
 
                 
                 arquivo.close();
-                contador++; 
                 
                 return std::unique_ptr<Inimigo>(new Inimigo(vidaInimigo, inventarioInimigo, nomeInimigo));
             }
