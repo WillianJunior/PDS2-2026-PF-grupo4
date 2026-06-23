@@ -443,7 +443,7 @@ namespace FabricaSE {
 
             salas.push_back(FernandoPessoa);
 
-            if (idEscolha != -1 && idEscolha >= 0 && idEscolha < salas.size()) {
+            if (idEscolha != -1 && idEscolha >= 0 && idEscolha < (int)salas.size()) {
                 return salas[idEscolha];
             } else {
                 int numeroEscolhido = rand() % 3;
@@ -682,7 +682,7 @@ namespace FabricaSE {
 
             salas.push_back(spotify);
 
-            if (idEscolha != -1 && idEscolha >= 0 && idEscolha < salas.size()) {
+            if (idEscolha != -1 && idEscolha >= 0 && idEscolha < (int)salas.size()) {
                 return salas[idEscolha];
             } else {
                 int numeroEscolhido = rand() % 3;
@@ -896,7 +896,7 @@ namespace FabricaSE {
             });
             salas.push_back(araujo);
 
-            if (idEscolha != -1 && idEscolha >= 0 && idEscolha < salas.size()) {
+            if (idEscolha != -1 && idEscolha >= 0 && idEscolha < (int)salas.size()) {
                 return salas[idEscolha];
             } else {
                 int numeroEscolhido = rand() % 3;
@@ -1336,7 +1336,7 @@ namespace FabricaSE {
             });
             salas.push_back(balaoVermelho);
 
-            if (idEscolha != -1 && idEscolha >= 0 && idEscolha < salas.size()) {
+            if (idEscolha != -1 && idEscolha >= 0 && idEscolha < (int)salas.size()) {
                 return salas[idEscolha];
             } else {
                 int numeroEscolhido = rand() % 3;
@@ -1531,7 +1531,7 @@ namespace FabricaSE {
 
             salas.push_back(fafich);
 
-            if (idEscolha != -1 && idEscolha >= 0 && idEscolha < salas.size()) {
+            if (idEscolha != -1 && idEscolha >= 0 && idEscolha < (int)salas.size()) {
                 return salas[idEscolha];
             } else {
                 int numeroEscolhido = rand() % 3;
