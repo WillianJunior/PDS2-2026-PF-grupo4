@@ -12,7 +12,7 @@ namespace FabricaItem{
     Item criarItem (std::string nomeItem){
         std::string itens = "data/Itens.txt";
         std::ifstream arquivo(itens);
-        Efeito vazio("vazio", 0 ,0);
+        Efeito vazio("Nenhum", 0 ,0);
 
         if(!arquivo.is_open()){
             std::cerr << "Arquivo " << itens << " não encontrado\n";
@@ -43,7 +43,7 @@ namespace FabricaItem{
         }
     
         arquivo.close();
-        return Item("Não encontrado", 0, 0, vazio, 0);
+        return Item("Nao encontrado", 0, 0, vazio, 0);
     }
 }
    

@@ -67,8 +67,8 @@ namespace FabricaInimigo{
             }
         }
         arquivo.close();
-        Efeito semEfeito("Vazio", 0, 0);
-        Habilidade semHab("Vazio", false, 0, false, semEfeito, 0);
+        Efeito semEfeito("Nenhum", 0, 0);
+        Habilidade semHab("Nenhum", false, 0, false, semEfeito, 0);
         InventarioHabilidade semInv;
         semInv.novaAcao(semHab);
         return std::unique_ptr<Inimigo>(new Inimigo(80, semInv, "Inimigo nao encontrado"));

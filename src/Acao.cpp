@@ -24,7 +24,7 @@ std::string Acao::mostrarDescricao(){
         descricao += "Cura " + std::to_string(this->_valor) + " de vida";
     }
 
-    if(this->_efeito.getNome() != "Nenhum" && this->_efeito.getNome() != "Vazio"){
+    if(this->_efeito.getNome() != "Nenhum"){
         descricao += " e aplica " + this->_efeito.getNome();
     }
 
