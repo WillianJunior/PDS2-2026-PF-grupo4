@@ -2,14 +2,21 @@
 #include "Excecoes.hpp"
 
 void InventarioHabilidade::mostrarInventario(){
-    int larguraInterna = 37;
+    int larguraInterna = 60;
 
-    std::cout << "    ╔═════════════════════════════════════╗\n";
-    std::cout << "    ║           SUAS HABILIDADES          ║\n";
-    std::cout << "    ╠═════════════════════════════════════╣\n";
+    std::cout << "    ╔════════════════════════════════════════════════════════════╗\n";
+    std::cout << "    ║                      SUAS HABILIDADES                      ║\n";
+    std::cout << "    ╠════════════════════════════════════════════════════════════╣\n";
 
     for (long unsigned int i = 0; i < listaHabilidades.size(); i++) {
-        std::string linha = " [ " + std::to_string(i + 1) + " ] - " + listaHabilidades[i].getNome() + " ";
+        std::string textoNome = listaHabilidades[i].getNome();
+
+        //aviso se estiver em Cooldown
+        if(listaHabilidades[i].getCooldownAtual() > 0){
+            textoNome += " [Em cooldown: " + std::to_string(listaHabilidades[i].getCooldownAtual()) + "]";
+        }
+
+        std::string linha = " [ " + std::to_string(i + 1) + " ] - " + textoNome + " ";
         int espacosFaltando = larguraInterna - linha.length() - 1;
         if (espacosFaltando < 0) {
             linha = linha.substr(0, larguraInterna - 4) + "... ";
@@ -17,6 +24,24 @@ void InventarioHabilidade::mostrarInventario(){
         }
         std::string padding(espacosFaltando, '.');
         Utils::coutDigitado(0) << "    ║" << linha << padding << " ║\n";
+
+        //descriçao da habilidade
+        std::string descricaoHab = "       > " + listaHabilidades[i].mostrarDescricao() + " ";
+        int espacosFaltandoDescricao = larguraInterna - descricaoHab.length() - 1;
+
+        if (espacosFaltandoDescricao < 0) {
+            descricaoHab = descricaoHab.substr(0, larguraInterna - 4) + "... ";
+            espacosFaltandoDescricao = 0;
+        }
+
+        std::string paddingDesc(espacosFaltandoDescricao, ' ');
+        Utils::coutDigitado(0) << "    ║" << descricaoHab << paddingDesc << " ║\n";
+
+        //separar as habilidades por uma linha em branco
+        if (i < listaHabilidades.size() - 1) {
+            std::string linhaVazia(larguraInterna - 1, ' ');
+            Utils::coutDigitado(0) << "    ║ " << linhaVazia << "║\n";
+        }
     }
     std::cout << "    ╚═════════════════════════════════════╝\n";
 }

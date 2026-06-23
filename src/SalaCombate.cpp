@@ -138,14 +138,14 @@ int SalaCombate::executarSala(Personagem& personagem){
                         _inimigo->receberEfeito(habEscolhida.getEfeito());
                         Utils::coutDigitado(350) << "...\n[";
                         Utils::esperar(350);
-                        std::cout << "> " << _inimigo->getNome() << " sofreu " << impacto << " de dano!" << std::endl;
+                        std::cout << "> " << _inimigo->getNome() << " sofreu " << std::abs(impacto) << " de dano!" << std::endl;
                     }
                     else{
                         personagem.alterarVida(impacto);
                         personagem.receberEfeito(habEscolhida.getEfeito());
                         Utils::coutDigitado(350) << "...";
                         Utils::esperar(350);
-                        std::cout << "> " << personagem.getNome() << " recuperou " << impacto << " de vida!" << std::endl;
+                        std::cout << "> " << personagem.getNome() << " recuperou " << std::abs(impacto) << " de vida!" << std::endl;
                     }
                 } catch (const std::exception& e) {
                     std::cout << "\n[ERRO] " << e.what() << "\n" << std::endl;
@@ -171,14 +171,14 @@ int SalaCombate::executarSala(Personagem& personagem){
                         _inimigo->receberEfeito(itEscolhido.getEfeito());
                         Utils::coutDigitado(350) << "...\n[";
                         Utils::esperar(350);
-                        std::cout << "> " << _inimigo->getNome() << " sofreu " << impacto << " de dano!" << std::endl;
+                        std::cout << "> " << _inimigo->getNome() << " sofreu " << std::abs(impacto) << " de dano!" << std::endl;
                     }
                     else{
                         personagem.alterarVida(impacto);
                         personagem.receberEfeito(itEscolhido.getEfeito());
                         Utils::coutDigitado(350) << "...\n[";
                         Utils::esperar(350);
-                        std::cout << "> " << personagem.getNome() << " recuperou " << impacto << " de vida!" << std::endl;
+                        std::cout << "> " << personagem.getNome() << " recuperou " << std::abs(impacto) << " de vida!" << std::endl;
                     }
                 } catch (const std::exception& e) {
                     std::cout << "FALHA " << e.what() << std::endl;
@@ -213,7 +213,7 @@ int SalaCombate::executarSala(Personagem& personagem){
                         int impacto = habInimigo.calcularImpacto();
                         habInimigo.iniciarCooldown(); // <--- Inicia o cooldown da cura!
                         _inimigo->alterarVida(impacto);
-                        std::cout << "> " << _inimigo->getNome() << " recuperou " << impacto << " de vida!" << std::endl;
+                        std::cout << "> " << _inimigo->getNome() << " recuperou " << std::abs(impacto) << " de vida!" << std::endl;
                         break;
                     }
                     else{
@@ -227,7 +227,7 @@ int SalaCombate::executarSala(Personagem& personagem){
                     personagem.receberEfeito(habInimigo.getEfeito());
                     Utils::coutDigitado(350) << "...\n[";
                         Utils::esperar(350);
-                    std::cout << "> " << _inimigo->getNome() << " atacou e causou " << impacto << " de dano!" << std::endl;
+                    std::cout << "> " << _inimigo->getNome() << " atacou e causou " << std::abs(impacto) << " de dano!" << std::endl;
                     break;
                 }
             }

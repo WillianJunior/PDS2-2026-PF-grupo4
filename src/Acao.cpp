@@ -15,7 +15,20 @@ int Acao::calcularImpacto(){
     }
 }
 
-void Acao::mostrarDescricao(){
+std::string Acao::mostrarDescricao(){
+    std::string descricao = "";
+    if(this->_tipo == false){
+        descricao += "Causa " + std::to_string(this->_valor) + " de dano";
+    }
+    else{
+        descricao += "Cura " + std::to_string(this->_valor) + " de vida";
+    }
+
+    if(this->_efeito.getNome() != "Nenhum" && this->_efeito.getNome() != "Vazio"){
+        descricao += " e aplica " + this->_efeito.getNome();
+    }
+
+    return descricao += ".";
 }
 
 std::string Acao::getNome(){
