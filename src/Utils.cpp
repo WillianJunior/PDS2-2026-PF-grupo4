@@ -67,9 +67,30 @@ namespace Utils {
     void limparTela() {
         system("clear"); 
     }
+
     void esperar(int milissegundos){
         if(!modoTeste) {
+            struct termios oldt, newt;
+            
+            // Desliga o terminal para ele não mostrar o que foi digitado durante a espera
+            tcgetattr(STDIN_FILENO, &oldt);
+            newt = oldt;
+            newt.c_lflag &= ~(ICANON | ECHO);
+            tcsetattr(STDIN_FILENO, TCSANOW, &newt);
+
+            // Espera o tempo determinado
             std::this_thread::sleep_for(std::chrono::milliseconds(milissegundos));
+
+            // Torna a leitura não bloqueante
+            int oldf = fcntl(STDIN_FILENO, F_GETFL, 0);
+            fcntl(STDIN_FILENO, F_SETFL, oldf | O_NONBLOCK);
+
+            // Limpa o buffer de teclas que o usuário segurou (como o espaço)
+            while(getchar() != EOF) {}
+
+            // Volta o terminal ao normal
+            tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
+            fcntl(STDIN_FILENO, F_SETFL, oldf);
         }
     }
 }
