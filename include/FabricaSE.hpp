@@ -4,7 +4,7 @@
 #include "SalaEscolha.hpp"
 
 namespace FabricaSE {
-    SalaEscolha criarSalas(std::string nome);
+    SalaEscolha criarSalas(std::string nome, int idEscolha = -1);
 }
 
 #endif

@@ -53,6 +53,12 @@ class SalaBase {
         virtual char getTipo() = 0;
 
         /**
+         * @brief Retorna o id do inimigo (sala combate) ou índice (sala escolha).
+         * Método virtual puro que deve ser implementado pelas classes filhas.
+         */
+        virtual int getId() = 0;
+
+        /**
          * @brief Destrutor virtual.
          * Garante que os recursos das classes derivadas sejam liberados corretamente.
          */

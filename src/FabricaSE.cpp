@@ -8,7 +8,7 @@
 
 namespace FabricaSE {
 
-    SalaEscolha criarSalas(std::string nome) {
+    SalaEscolha criarSalas(std::string nome, int idEscolha) {
         std::vector<SalaEscolha> salas;
         Utils::Animacao animacao;
         if (nome == "Maycon") {
@@ -79,7 +79,7 @@ namespace FabricaSE {
                          \        /
                           '------'
             )");
-            SalaEscolha Natora("Natora", animacaoNatora);
+            SalaEscolha Natora("Natora", animacaoNatora, 0);
             Natora.adicionarOpcao("Ir para o natora", [](Personagem *p){
                 p->alterarVida(50);
                 Utils::coutDigitado() << "Voce curtiu a noite e a madrugada como se não houvesse um amanhã.\n";
@@ -191,7 +191,7 @@ namespace FabricaSE {
                /                     \      
             )");
 
-            SalaEscolha newtonEspirito("Encontro com a genialidade", animacaonewtonEspirito);
+            SalaEscolha newtonEspirito("Encontro com a genialidade", animacaonewtonEspirito, 1);
             newtonEspirito.adicionarOpcao("Apertar a mao de Isaac Newton", [](Personagem *p){
                 Habilidade habilidade = FabricaHabilidade::criarHabilidade("Raio Gravitacional");
                 Utils::coutDigitado() << "Voce se levanta para apertar a mao do grandioso Isaac Newton.\n";
@@ -443,7 +443,7 @@ namespace FabricaSE {
                 |_____|                                      
             )");
             
-        SalaEscolha FernandoPessoa("Poesia em vida", animacaoFernandoPessoa);
+        SalaEscolha FernandoPessoa("Poesia em vida", animacaoFernandoPessoa, 2);
         FernandoPessoa.adicionarOpcao("Escrever sobre a arte de codar", [](Personagem *p){
         Item itens = FabricaItem::criarItem("Bencao de Linus Torvald");
         p->getInventarioItem().novaAcao(itens);
@@ -463,8 +463,12 @@ namespace FabricaSE {
         });
 
             salas.push_back(FernandoPessoa);
-            int numeroEscolhido = rand() % 3;
-            return salas[numeroEscolhido];
+            if (idEscolha != -1 && idEscolha >= 0 && idEscolha < salas.size()) {
+                return salas[idEscolha];
+            } else {
+                int numeroEscolhido = rand() % 3;
+                return salas[numeroEscolhido];
+            }
         } 
         else if (nome == "Vaz") {
         Utils::Animacao animacaoFormula;
@@ -527,7 +531,7 @@ namespace FabricaSE {
                   / \                                   / \
         )");
 
-        SalaEscolha formulaIncidente("Formula Incidente", animacaoFormula);
+        SalaEscolha formulaIncidente("Formula Incidente", animacaoFormula, 0);
         formulaIncidente.adicionarOpcao("Ir para o Formula", [](Personagem *p){
             Utils::coutDigitado() << "Nesse dia, voce decidiu ir para o Formula.\n";
             Utils::coutDigitado() << "Como voce passou suas horas dedicando-se a equipe,\n";
@@ -563,7 +567,7 @@ namespace FabricaSE {
              '-----------'
         )");
 
-        SalaEscolha checkpointAtrasado("Checkpoint Atrasado", animacaoCheckpoint);
+        SalaEscolha checkpointAtrasado("Checkpoint Atrasado", animacaoCheckpoint, 1);
 
         checkpointAtrasado.adicionarOpcao("Codar com o Gemini", [](Personagem *p){
             p->alterarVida(-10);
@@ -659,7 +663,7 @@ namespace FabricaSE {
             animacaoSpotify.frames.push_back(frame5);
         }
 
-        SalaEscolha spotify("Spotify", animacaoSpotify);
+        SalaEscolha spotify("Spotify", animacaoSpotify, 2);
 
         spotify.adicionarOpcao("Escutar Ceu Azul - Charlie Brown Jr", [](Personagem *p){
             p->alterarVida(30);
@@ -707,45 +711,61 @@ namespace FabricaSE {
 
         salas.push_back(spotify);
 
-            int numeroEscolhido = rand() % 3;
-            return salas[numeroEscolhido];
+            if (idEscolha != -1 && idEscolha >= 0 && idEscolha < salas.size()) {
+                return salas[idEscolha];
+            } else {
+                int numeroEscolhido = rand() % 3;
+                return salas[numeroEscolhido];
+            }
 
         } 
         else if (nome == "Isaque") {
-            SalaEscolha sala1("Sala do Isaque 1", animacao);
+            SalaEscolha sala1("Sala do Isaque 1", animacao, 0);
             // sala1.adicionarOpcao(descricao, consequencia);
             salas.push_back(sala1);
-            SalaEscolha sala2("Sala do Isaque 2", animacao);
+            SalaEscolha sala2("Sala do Isaque 2", animacao, 1);
             salas.push_back(sala2);
-            SalaEscolha sala3("Sala do Isaque 3", animacao);
+            SalaEscolha sala3("Sala do Isaque 3", animacao, 2);
             salas.push_back(sala3);
 
-            int numeroEscolhido = rand() % 3;
-            return salas[numeroEscolhido];
+            if (idEscolha != -1 && idEscolha >= 0 && idEscolha < salas.size()) {
+                return salas[idEscolha];
+            } else {
+                int numeroEscolhido = rand() % 3;
+                return salas[numeroEscolhido];
+            }
         } 
         else if (nome == "Nicole") {
-            SalaEscolha sala1("Sala do Nicole 1", animacao);
+            SalaEscolha sala1("Sala do Nicole 1", animacao, 0);
             // sala1.adicionarOpcao(descricao, consequencia);
             salas.push_back(sala1);
-            SalaEscolha sala2("Sala do Nicole 2", animacao);
+            SalaEscolha sala2("Sala do Nicole 2", animacao, 1);
             salas.push_back(sala2);
-            SalaEscolha sala3("Sala do Nicole 3", animacao);
+            SalaEscolha sala3("Sala do Nicole 3", animacao, 2);
             salas.push_back(sala3);
 
-            int numeroEscolhido = rand() % 3;
-            return salas[numeroEscolhido];
+            if (idEscolha != -1 && idEscolha >= 0 && idEscolha < salas.size()) {
+                return salas[idEscolha];
+            } else {
+                int numeroEscolhido = rand() % 3;
+                return salas[numeroEscolhido];
+            }
         } 
         else if (nome == "Marcos") {
-            SalaEscolha sala1("Sala do Marcos 1", animacao);
+            SalaEscolha sala1("Sala do Marcos 1", animacao, 0);
             // sala1.adicionarOpcao(descricao, consequencia);
             salas.push_back(sala1);
-            SalaEscolha sala2("Sala do Marcos 2", animacao);
+            SalaEscolha sala2("Sala do Marcos 2", animacao, 1);
             salas.push_back(sala2);
-            SalaEscolha sala3("Sala do Marcos 3", animacao);
+            SalaEscolha sala3("Sala do Marcos 3", animacao, 2);
             salas.push_back(sala3);
 
-            int numeroEscolhido = rand() % 3;
-            return salas[numeroEscolhido];
+            if (idEscolha != -1 && idEscolha >= 0 && idEscolha < salas.size()) {
+                return salas[idEscolha];
+            } else {
+                int numeroEscolhido = rand() % 3;
+                return salas[numeroEscolhido];
+            }
         } 
         else {
             SalaEscolha salaSegFault("Seg Fault", animacao);

@@ -3,12 +3,16 @@
 #include <random>
 #include "Utils.hpp"
 
-SalaEscolha::SalaEscolha(std::string nome, Utils::Animacao animacao) 
-    : SalaBase(nome), _animacao(animacao) {}
+SalaEscolha::SalaEscolha(std::string nome, Utils::Animacao animacao, int idEscolha) 
+    : SalaBase(nome), _animacao(animacao), _idEscolha(idEscolha) {}
 
 // adiciona uma opcao no vetores de opcoes que aquela salaescolha possui
 void SalaEscolha::adicionarOpcao(std::string descricao, std::function<void(Personagem*)> consequencia){
     _opcoes.push_back({descricao, consequencia});
+}
+
+int SalaEscolha::getId() {
+    return _idEscolha;
 }
 
 // imprime na tela a sala

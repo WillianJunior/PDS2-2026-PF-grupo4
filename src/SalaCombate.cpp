@@ -9,7 +9,11 @@
 #include "FabricaInimigo.hpp"
 
 SalaCombate::SalaCombate(std::string nome, std::string historia, std::string textoVitoria, std::string textoDerrota, std::string nomePersonagem, int andar)
-    : SalaBase(nome), _historia(historia), _inimigo(alocarInimigo(nomePersonagem, andar)), _textoVitoria(textoVitoria), _textoDerrota(textoDerrota) {
+    : SalaBase(nome), _historia(historia), _inimigo(alocarInimigo(nomePersonagem, andar)), _textoVitoria(textoVitoria), _textoDerrota(textoDerrota), _idInimigo(andar) {
+}
+
+int SalaCombate::getId() {
+    return _idInimigo;
 }
       
 void SalaCombate::mostrarSala(){
