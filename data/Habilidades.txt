@@ -1,17 +1,29 @@
 Anedota;1;20;1;Nenhum;0
-Forças Aereas;0;40;0;Nenhum;0
-Contar uma piada;0;20;0;Veneno;0
+Forças Aéreas;0;40;0;Nenhum;0
+Contar uma Piada;0;20;0;Veneno;0
+Doxygengaboom;0;30;0;Nenhum;0
+Maldade Humana;0;25;0;Veneno;0
+Poder da Amizade;0;30;0;Nenhum;0
 Arremessar um Livro;0;20;0;Nenhum;0
 Reclamar;1;25;1;Nenhum;0
+Plasma Hierarquico;0;25;0;Nenhum;0
+Codigos Macarronados;0;25;0;Veneno;0
 Chute de Ballet;0;30;0;Nenhum;0
 Passinho de Forro;0;20;0;Nenhum;0
-Saque de vôlei;0;30;0;Nenhum;0
-Invocar espíritos;0;25;0;Veneno;0
-Aviaozinho de Papel;0;20;0;Nenhum;0
+Saque de Vôlei;0;30;0;Nenhum;0
+Duro na Queda;0;25;0;Nenhum;0
+Overload Marianico;0;25;0;Queimadura;0
+Override Impiedoso;0;30;0;Nenhum;0
+Papelada de Codigos;0;25;0;Nenhum;0
+Arranhada do Gatinho;0;20;0;Nenhum;0
+Derrame do Arcanjo;0;30;0;Queimadura;0
+Aviãozinho de Papel;0;20;0;Nenhum;0
 Chamar a Ex;0;35;0;Nenhum;0
-Abrir o reels;1;20;1;Nenhum;0
+Abrir o Reels;1;20;1;Nenhum;0
 Raio Mayconiano;0;40;0;Queimadura;0
 Raio Gravitacional;0;25;0;Nenhum;0
+Bençao de Linus;1;25;1;Nenhum;0
+Bencao da Salvia;1;20;1;Nenhum;0
 Ataque Basico;0;15;0;Nenhum;0
 Ataque Forte;0;30;0;Nenhum;0
 Investida;0;20;0;Nenhum;0
