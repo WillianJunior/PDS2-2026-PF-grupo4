@@ -40,7 +40,7 @@ void SalaEscolha::mostrarSala() {
         std::cout << _animacao.frames[i] << "\n";
 
         if (i < _animacao.frames.size() - 1) {
-            Utils::esperar(200);
+            Utils::esperar(_animacao.tempoFrame);
         }
     }
     for (size_t i = 0; i < _animacao.textoFinal.size(); ++i) {

@@ -13,7 +13,7 @@ namespace FabricaSE {
         Utils::Animacao animacao;
         if (nome == "Maycon") {
             Utils::Animacao animacaoNatora;
-            animacaoNatora.tempoFrame = 250;
+            animacaoNatora.tempoFrame = 450;
             animacaoNatora.textoInicial.push_back("Ah, Mathias. Sei não...");
             animacaoNatora.textoInicial.push_back("- Vamo, Maycon! Cê precisa relaxar um pouco, mano.");
             animacaoNatora.textoInicial.push_back("Mas ainda falta implementar um monte de coisa.");
@@ -98,7 +98,7 @@ namespace FabricaSE {
             salas.push_back(Natora);
 
             Utils::Animacao animacaonewtonEspirito;
-            animacaonewtonEspirito.tempoFrame = 850;
+            animacaonewtonEspirito.tempoFrame = 1200;
             animacaonewtonEspirito.textoInicial.push_back("Passado um tempo, voce estava cansado de tanto codar.");
             animacaonewtonEspirito.textoInicial.push_back("No fundo, voce sabia que deveria descansar um pouco.");
             animacaonewtonEspirito.textoInicial.push_back("Deitou-se no sofa imundo do Gremio e olhando para cima, comecou a pensar.");
@@ -442,6 +442,78 @@ namespace FabricaSE {
                  /_|__                                           
                 |_____|                                      
             )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                          
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                              
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_    "Um grande programador sabe muito mais alem de codar..."                                             
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                               
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                          
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                              
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_    "Um grande programador sabe muito mais alem de codar..."                                             
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                               
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                          
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                              
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_    "Um grande programador sabe muito mais alem de codar..."                                             
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                               
+                 /_|__                                           
+                |_____|                                      
+            )");
             
         SalaEscolha FernandoPessoa("Poesia em vida", animacaoFernandoPessoa);
         FernandoPessoa.adicionarOpcao("Escrever sobre a arte de codar", [](Personagem *p){
@@ -470,7 +542,7 @@ namespace FabricaSE {
         Utils::Animacao animacaoFormula;
         animacaoFormula.textoInicial.push_back("O dia tem sido cansativo, e voce sabe que precisa abrir o codigo do grande jogo.");
         animacaoFormula.textoInicial.push_back("Entretanto, um evento inesperado acontece e... voce se depara com uma escolha.");
-        animacaoFormula.tempoFrame = 2250;
+        animacaoFormula.tempoFrame = 2550;
         animacaoFormula.frames.push_back(R"( 
                                                   "Ei Vaz, precisamos de voce!"
                    O                                     O
@@ -596,7 +668,7 @@ namespace FabricaSE {
         animacaoSpotify.textoInicial.push_back("decidindo o que ia ouvir ate chegar.");
         animacaoSpotify.textoInicial.push_back("Pensou, pensou e refletiu sobre todas as possibilidades...");
         animacaoSpotify.textoInicial.push_back("O que voce poderia ouvir?");
-        animacaoSpotify.tempoFrame = 350;
+        animacaoSpotify.tempoFrame = 850;
         std::string frame1 = R"( 
              .-----------.
              |  Spotify  |
@@ -712,36 +784,36 @@ namespace FabricaSE {
 
         } 
         else if (nome == "Isaque") {
-            SalaEscolha sala1("Sala do Isaque 1", animacao);
+            SalaEscolha sala1("Sala do Isaque", animacao);
             // sala1.adicionarOpcao(descricao, consequencia);
             salas.push_back(sala1);
-            SalaEscolha sala2("Sala do Isaque 2", animacao);
+            SalaEscolha sala2("Sala do Isaque", animacao);
             salas.push_back(sala2);
-            SalaEscolha sala3("Sala do Isaque 3", animacao);
+            SalaEscolha sala3("Sala do Isaque", animacao);
             salas.push_back(sala3);
 
             int numeroEscolhido = rand() % 3;
             return salas[numeroEscolhido];
         } 
         else if (nome == "Nicole") {
-            SalaEscolha sala1("Sala do Nicole 1", animacao);
+            SalaEscolha sala1("Sala do Nicole", animacao);
             // sala1.adicionarOpcao(descricao, consequencia);
             salas.push_back(sala1);
-            SalaEscolha sala2("Sala do Nicole 2", animacao);
+            SalaEscolha sala2("Sala do Nicole", animacao);
             salas.push_back(sala2);
-            SalaEscolha sala3("Sala do Nicole 3", animacao);
+            SalaEscolha sala3("Sala do Nicole", animacao);
             salas.push_back(sala3);
 
             int numeroEscolhido = rand() % 3;
             return salas[numeroEscolhido];
         } 
         else if (nome == "Marcos") {
-            SalaEscolha sala1("Sala do Marcos 1", animacao);
+            SalaEscolha sala1("Sala do Marcos", animacao);
             // sala1.adicionarOpcao(descricao, consequencia);
             salas.push_back(sala1);
-            SalaEscolha sala2("Sala do Marcos 2", animacao);
+            SalaEscolha sala2("Sala do Marcos", animacao);
             salas.push_back(sala2);
-            SalaEscolha sala3("Sala do Marcos 3", animacao);
+            SalaEscolha sala3("Sala do Marcos", animacao);
             salas.push_back(sala3);
 
             int numeroEscolhido = rand() % 3;
