@@ -38,7 +38,7 @@ int InventarioHabilidade::getTamanho(){
 }
 
 Habilidade& InventarioHabilidade::getHabilidade(int posicao){
-    if (posicao < 0 || posicao >= listaHabilidades.size()) {
+    if (posicao < 0 || posicao >= (int)listaHabilidades.size()) {
         throw IndiceInvalidoException();
     }
     return listaHabilidades[posicao];

@@ -25,7 +25,7 @@ int InventarioItem::getTamanho(){
 }
 
 Item InventarioItem::getItem(int posicao){
-    if (posicao < 0 || posicao >= _itens.size()){
+    if (posicao < 0 || posicao >= (int)_itens.size()){
         throw IndiceInvalidoException();
     }
     return _itens[posicao];

@@ -172,7 +172,7 @@ if (nome == "Maycon") {
             }
         }
 
-        else {
+        
         std::string intro = "CRITICAL ERROR: Memória violada. O Guardião do Ponteiro Nulo desperta!";
         return std::unique_ptr<SalaCombate>(new SalaCombate("SALA SEGFAULT", intro, "Memória restaurada.", "Core dumped.", nome, 1));
     }

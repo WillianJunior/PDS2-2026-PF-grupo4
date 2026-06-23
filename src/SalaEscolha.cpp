@@ -90,7 +90,7 @@ void SalaEscolha::executarEvento(Personagem& personagem) {
             std::cout << "Essa escolha não existe! Escolha uma opção: " << std::endl;
             continue; 
             }
-        if (escolha > 0 && escolha <= _opcoes.size()) {
+        if (escolha > 0 && escolha <= (int)_opcoes.size()) {
             int numeroSorteado = rand() % 3 + 1;
             switch (numeroSorteado){
             case 1:
