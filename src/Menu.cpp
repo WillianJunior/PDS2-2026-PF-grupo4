@@ -98,19 +98,19 @@ std::unique_ptr<Personagem> Menu::escolherPersonagemInicial() {
     Utils::coutDigitado(85) << "Desde o dia em que William trouxe a grande missao, 5 herois se dispuseram a concluir esse desafio. A jornada nao seria facil, nao seria simples e nao seria rapida, mas seria uma jornada e tanto.\n\n";
 
     // Herói 1: Maycon
-    std::vector<std::string> animacaoMaycon = {
+   std::vector<std::string> animacaoMaycon = {
         R"(
-          .------.
-         /  o  o  \
-        |    __    |
-         \        /
+          .------.       ___
+         /  o  o  \     [___]
+        |    __    |    | XM|
+         \        /     |___|
           '------'
         )",
         R"(
-          .------.
-         /  >  <  \
-        |    __    |
-         \        /
+          .------.       _/_
+         /  >  <  \     [___]
+        |    __    |    | XM|
+         \        /     |___|
           '------'
         )"
     };
@@ -127,15 +127,43 @@ std::unique_ptr<Personagem> Menu::escolherPersonagemInicial() {
     // Herói 2: Vaz
     std::vector<std::string> animacaoVaz = {
         R"(
-          .------.
-         /  o  o  \
+          .------.        __|__
+         /  o  o  \  --==-(_)LATAM-==--
+        |    __    |        '
+         \        / 
+          '------'  
+        )",
+        R"(
+          .------.               __|__
+         /  >  <  \         --==-(_)LATAM-==--
+        |    __    |               '
+         \        / 
+          '------'  
+        )",
+        R"(
+          .------.                        _|_
+         /  o  o  \                      --o--L
         |    __    |
-         \        /
-          '------'
+         \        / 
+          '------'  
+        )",
+        R"(
+          .------.                               _|_
+         /  o  o  \                             --o--L
+        |    __    |
+         \        / 
+          '------'  
+        )",
+        R"(
+          .------.                                     ~
+         /  >  <  \                                   -+-
+        |    __    |
+         \        / 
+          '------'  
         )",
         R"(
           .------.
-         /  >  <  \
+         /  o  o  \
         |    __    |
          \        /
           '------'
@@ -153,18 +181,32 @@ std::unique_ptr<Personagem> Menu::escolherPersonagemInicial() {
     // Heroína 3: Nicole
     std::vector<std::string> animacaoNicole = {
         R"(
+          .------.       ___
+         /  o  o  \     [___]
+        |    __    |    |CO |
+         \        /     |CA |
+          '------'      |___|
+        )",
+        R"(
+          .------.       _/_
+         /  >  <  \     [___]
+        |    __    |    |CO |
+         \        /     |CA |
+          '------'      |___|
+        )",
+        R"(
           .------.
-         /  o  o  \
-        |    __    |
-         \        /
-          '------'
+         /  o  o  \       \--\
+        |    o     |       \CO\
+         \        /         \CA\
+          '------'           \_/
         )",
         R"(
           .------.
          /  >  <  \
-        |    __    |
-         \        /
-          '------'
+        |   ___    |
+         \        /    [=COCA=]~~.
+          '------'             ~~._
         )"
     };
     for (size_t i = 0; i < animacaoNicole.size(); ++i) {
@@ -179,18 +221,34 @@ std::unique_ptr<Personagem> Menu::escolherPersonagemInicial() {
     // Herói 4: Marcos
     std::vector<std::string> animacaoMarcos = {
         R"(
-          .------.
-         /  o  o  \
-        |    __    |
-         \        /
-          '------'
+            O      [FORRO] ♪
+           /|\   ♪
+          //
+         / /
         )",
         R"(
-          .------.
-         /  >  <  \
-        |    __    |
-         \        /
-          '------'
+            O      ♪ [FORRO]
+           /|\                ♪
+            |
+           / \
+        )",
+        R"(
+            O        ♪ [FORRO] ♪
+           /|\
+            \\
+             \ \
+        )",
+        R"(
+            O       [FORRO] ♪
+           /|\    ♪
+            |
+           / \
+        )",
+        R"(
+            O         ♪          ♪
+          ~/|\~             ♪
+          //           ♪
+         / /     ♪               ♪
         )"
     };
     for (size_t i = 0; i < animacaoMarcos.size(); ++i) {
@@ -206,18 +264,40 @@ std::unique_ptr<Personagem> Menu::escolherPersonagemInicial() {
     std::vector<std::string> animacaoIsaque = {
         R"(
           .------.
-         /  o  o  \
-        |    __    |
-         \        /
+         /  >  <  \                         O
+        |    __    |                       /|\ 
+         \        /                        / \ 
+          '------'
+        )",
+       R"(
+          .------.
+         /  >  <  \                     O
+        |    ~~    |                   /|\ 
+         \        /                    / \ 
           '------'
         )",
         R"(
           .------.
-         /  >  <  \
-        |    __    |
-         \        /
+         /  >  o  \                   O
+        |    __    |                 /|\ 
+         \        /                  / \ 
           '------'
-        )"
+        )",
+        R"(
+          .------.
+         /  o  o  \             O
+        |    o     |           /|\ 
+         \        /            / \ 
+          '------'
+        )",
+        R"(
+                       "Eu vim para ajudar, Ex."
+          .------.
+         /  o  o  \        O
+        |   ____   |      /|\ 
+         \  \___/ /      / \ 
+          '------'
+        )",
     };
     for (size_t i = 0; i < animacaoIsaque.size(); ++i) {
         Utils::limparTela();
