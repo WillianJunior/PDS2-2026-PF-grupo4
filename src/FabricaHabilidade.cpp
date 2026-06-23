@@ -14,7 +14,7 @@ namespace FabricaHabilidade{
     Habilidade criarHabilidade(std::string nomeDaHabilidade){
         std::string habilidades = "data/Habilidades.txt";
         std::ifstream arquivo(habilidades);
-        Efeito vazio("vazio", 0, 0);
+        Efeito vazio("Nenhum", 0, 0);
 
         if(!arquivo.is_open()){
             std::cerr << "Arquivo " << habilidades << " nao encontrado\n";

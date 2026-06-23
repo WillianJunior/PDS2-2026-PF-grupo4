@@ -43,7 +43,7 @@ void InventarioHabilidade::mostrarInventario(){
             Utils::coutDigitado(0) << "    ║ " << linhaVazia << "║\n";
         }
     }
-    std::cout << "    ╚═════════════════════════════════════╝\n";
+    std::cout << "    ╚════════════════════════════════════════════════════════════╝\n";
 }
 
 void InventarioHabilidade::novaAcao(Habilidade habilidade){

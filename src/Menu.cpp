@@ -1,6 +1,8 @@
 #include "Menu.hpp"
 #include "InventarioHabilidade.hpp"
 #include "InventarioItem.hpp"
+#include "FabricaHabilidade.hpp"
+#include "FabricaItem.hpp"
 #include <utility>
 #include "Utils.hpp"
 
@@ -65,11 +67,11 @@ std::unique_ptr<Personagem> Menu::executarMenuInicial(bool existeSave) {
             {
                 std::string nomePersonagem = "PersonagemSalvo";
                 int vidaInicial = 100;
-                Efeito efeito(".", 0, 0);
+                Efeito efeito("Nenhum", 0, 0);
                 Habilidade habilidade(".", false, 10, false, efeito, 0);
                 InventarioHabilidade habilidadesIniciais;
                 habilidadesIniciais.novaAcao(habilidade);
-                Item item(".", true, 40, efeito, true);
+                Item item(".", true, 40, efeito, true, 1);
                 InventarioItem itensIniciais;
                 itensIniciais.novaAcao(item);
                 return std::unique_ptr<Personagem>(new Personagem(vidaInicial, habilidadesIniciais, nomePersonagem, itensIniciais));
@@ -263,57 +265,37 @@ std::unique_ptr<Personagem> Menu::escolherPersonagemInicial() {
     if (classeEscolhida == 1) {
         nomePersonagem = "Maycon";
         vidaInicial = 120;
-        
-        Efeito semEfeito("Nenhum", 0, 0);
-        Habilidade ataqueBasico("Investida", false, 25, false, semEfeito, 0);
-        habilidadesIniciais.novaAcao(ataqueBasico);
-        
-        Item xequemate("Xeque-Mate", true, 40, semEfeito, true);
-        itensIniciais.novaAcao(xequemate);
+
+        habilidadesIniciais.novaAcao(FabricaHabilidade::criarHabilidade("Investida"));
+        itensIniciais.novaAcao(FabricaItem::criarItem("Xeque Mate"));
     }
     if (classeEscolhida == 2) {
         nomePersonagem = "Vaz";
         vidaInicial = 100;
-        
-        Efeito semEfeito("Nenhum", 0, 0);
-        Habilidade ataqueBasico("Contar uma piada", false, 15, false, semEfeito, 0); // colocar um efeito
-        habilidadesIniciais.novaAcao(ataqueBasico);
-        
-        Habilidade ataqueEspecial("Forcas Aereas", false, 40, false, semEfeito, 0);
-        habilidadesIniciais.novaAcao(ataqueEspecial);
+
+        habilidadesIniciais.novaAcao(FabricaHabilidade::criarHabilidade("Contar uma piada"));
+        habilidadesIniciais.novaAcao(FabricaHabilidade::criarHabilidade("Forcas Aereas"));
     }
     if (classeEscolhida == 3) {
         nomePersonagem = "Nicole";
         vidaInicial = 120;
-        
-        Efeito semEfeito("Nenhum", 0, 0);
-        Habilidade ataqueBasico("Arremesar um Livro", false, 25, false, semEfeito, 0);
-        habilidadesIniciais.novaAcao(ataqueBasico);
-        
-        Item cocacola("Coca-cola", true, 40, semEfeito, true);
-        itensIniciais.novaAcao(cocacola);
+
+        habilidadesIniciais.novaAcao(FabricaHabilidade::criarHabilidade("Arremessar um Livro"));
+        itensIniciais.novaAcao(FabricaItem::criarItem("Coca-Cola"));
     }
     if (classeEscolhida == 4) {
         nomePersonagem = "Marcos";
         vidaInicial = 120;
-        
-        Efeito semEfeito("Nenhum", 0, 0);
-        Habilidade ataqueBasico("Passinho do Forro", false, 15, false, semEfeito, 0); // colocar um efeito
-        habilidadesIniciais.novaAcao(ataqueBasico);
-        
-        Item aguabenta("Agua Benta", true, 40, semEfeito, true);
-        itensIniciais.novaAcao(aguabenta);
+
+        habilidadesIniciais.novaAcao(FabricaHabilidade::criarHabilidade("Passinho do Forro"));
+        itensIniciais.novaAcao(FabricaItem::criarItem("Agua Benta"));
     }
     if (classeEscolhida == 5) {
         nomePersonagem = "Isaque";
         vidaInicial = 120;
-        
-        Efeito semEfeito("Nenhum", 0, 0);
-        Habilidade ataqueBasico("Aviaozinho de Papel", false, 25, false, semEfeito, 0);
-        habilidadesIniciais.novaAcao(ataqueBasico);
-        
-        Habilidade chamarEx("Chamar a Ex", false, 15, false, semEfeito, 0); // colocar um efeito
-        habilidadesIniciais.novaAcao(chamarEx);
+
+        habilidadesIniciais.novaAcao(FabricaHabilidade::criarHabilidade("Aviaozinho de Papel"));
+        habilidadesIniciais.novaAcao(FabricaHabilidade::criarHabilidade("Chamar a Ex"));
     }
     
 

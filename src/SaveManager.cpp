@@ -112,7 +112,7 @@ std::unique_ptr<Personagem> SaveManager::carregar(int& contadorSalas, std::vecto
         arquivo >> valorEfeito >> duracaoEfeito;
         arquivo.ignore();
         Efeito efeito(nomeEfeito, valorEfeito, duracaoEfeito);
-        Item item(nomeItem, tipo, valor, efeito, alvo);
+        Item item(nomeItem, tipo, valor, efeito, alvo, 1);
         inventarioItem.novaAcao(item);
     }
     auto personagemCarregado = std::unique_ptr<Personagem>(new Personagem(vidaMaxima, inventarioHabilidade, nome, inventarioItem));

@@ -41,7 +41,7 @@ class Personagem : public Entidade{
      * @param posicaoItem índice (posição) do item dentro do vetor.
      * @return Retorna a copia do objeto Item.
      */
-        Item escolherItem(int posicaoItem);
+        Item& escolherItem(int posicaoItem);
 
     /**
      * @brief Alterar a vida atual do personagem para mais ou para menos

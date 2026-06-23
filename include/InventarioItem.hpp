@@ -41,7 +41,7 @@ class InventarioItem : public Inventario<Item> {
     /**
      * @brief Retorna um item específico pela posição.
      */
-        Item getItem(int posicao);
+        Item& getItem(int posicao);
 
     /**
      * @brief Compara dois inventarios para verificar se sao iguais (usado em testes).

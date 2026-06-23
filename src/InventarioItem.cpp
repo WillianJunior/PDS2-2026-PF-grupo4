@@ -11,6 +11,9 @@ void InventarioItem::mostrarInventario(){
     for (long unsigned int i = 0; i < _itens.size(); i++) {
         std::string textoNome = _itens[i].getNome();
 
+        //usos restantes
+        textoNome += " [Usos restantes: " + std::to_string(_itens[i].getUsosRestantes()) + "]";
+
         std::string linha = " [ " + std::to_string(i + 1) + " ] - " + textoNome + " ";
         int espacosFaltando = larguraInterna - linha.length() - 1;
         if (espacosFaltando < 0) {
@@ -58,7 +61,7 @@ int InventarioItem::getTamanho(){
     return _itens.size();
 }
 
-Item InventarioItem::getItem(int posicao){
+Item& InventarioItem::getItem(int posicao){
     if (posicao < 0 || posicao >= (int)_itens.size()){
         throw IndiceInvalidoException();
     }

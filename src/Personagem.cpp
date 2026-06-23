@@ -5,15 +5,17 @@ Personagem::Personagem(int vida, InventarioHabilidade inventarioHabilidade, std:
 
 Habilidade& Personagem::escolherHabilidade(int posicaoHabilidade){
     Habilidade& habilidade = this->_inventarioHabilidade.getHabilidade(posicaoHabilidade);
-    habilidade.mostrarDescricao();
     return habilidade;
 }
 
-Item Personagem::escolherItem(int posicaoItem){
-    Item item = this->_inventario.getItem(posicaoItem);
-    item.mostrarDescricao();
-    this->_inventario.descartarAcao(posicaoItem);
-    return item;
+Item& Personagem::escolherItem(int posicaoItem){
+    Item& item = this->_inventario.getItem(posicaoItem);
+    item.atualizarUsos();
+    Item copia = item;
+    if(item.getUsosRestantes() == 0){
+        this->_inventario.descartarAcao(posicaoItem);
+    }
+    return copia;
 }
 
 void Personagem::alterarVida(int valor){
