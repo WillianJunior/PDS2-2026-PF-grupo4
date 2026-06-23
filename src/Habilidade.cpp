@@ -32,6 +32,10 @@ void Habilidade::atualizarCooldown(){
     }
 }
 
+void Habilidade::zerarCooldown(){
+    this->_cooldownAtual = 0;
+}
+
 void Habilidade::setCooldownAtual(int valor) {
     this->_cooldownAtual = valor;
 }

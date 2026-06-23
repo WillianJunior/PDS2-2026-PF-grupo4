@@ -1,4 +1,5 @@
 #include "Personagem.hpp"
+#include "Utils.hpp"
 
 Personagem::Personagem(int vida, InventarioHabilidade inventarioHabilidade, std::string nome, InventarioItem inventarioItem)
     : Entidade(vida, nome, inventarioHabilidade), _inventario(inventarioItem), _vidaMaxima(vida){}
@@ -20,18 +21,18 @@ Item Personagem::escolherItem(int posicaoItem){
 
 void Personagem::receberHabilidade(Habilidade habilidade){
     int limite = 3;
-    std::cout << "\n>>> Voce descobriu uma nova habilidade!! <<<\n";
-    std::cout << "[" << habilidade.getNome() << "] | Usos: " << habilidade.getCooldown() << "\n";
-    std::cout << "  > " << habilidade.mostrarDescricao() << "\n";
-    std::cout << "------------------------------------------------\n";
+    Utils::coutDigitado() << "\n>>> Voce descobriu uma nova habilidade!! <<<\n";
+    Utils::coutDigitado() << "[" << habilidade.getNome() << "] | Cooldown: " << habilidade.getCooldown() << "\n";
+    Utils::coutDigitado() << "  > " << habilidade.mostrarDescricao() << "\n";
+    Utils::coutDigitado() << "------------------------------------------------\n";
 
     if(this->_inventarioHabilidade.getTamanho() < limite){
         this->_inventarioHabilidade.novaAcao(habilidade);
-        std::cout << "Voce aprendeu a habilidade [" << habilidade.getNome() << "]!\n";
+        Utils::coutDigitado() << "Voce aprendeu a habilidade [" << habilidade.getNome() << "]!\n";
     }
     else{
-        std::cout << "\nSua mente esta sobrecarregada e nao consegue aprender [" << habilidade.getNome() << "].\n";
-        std::cout << "Deseja esquecer uma habilidade para aprender a nova?\n";
+        Utils::coutDigitado() << "\nSua mente esta sobrecarregada e nao consegue aprender [" << habilidade.getNome() << "].\n";
+        Utils::coutDigitado() << "Deseja esquecer uma habilidade para aprender a nova?\n";
 
         _inventarioHabilidade.mostrarInventario();
         std::cout << "Digite o numero da habilidade que deseja esquecer (0 para recusar a nova):\n";
@@ -52,17 +53,17 @@ void Personagem::receberHabilidade(Habilidade habilidade){
 void Personagem::receberItem(Item item){
     int limiteItens = 3;
 
-    std::cout << "\n>>> Voce achou um novo item!! <<<\n";
-    std::cout << "[" << item.getNome() << "] | Usos: " << item.getUsosRestantes() << "\n";
-    std::cout << "  > " << item.mostrarDescricao() << "\n";
-    std::cout << "------------------------------------------------\n";
+    Utils::coutDigitado() << "\n>>> Voce achou um novo item!! <<<\n";
+    Utils::coutDigitado() << "[" << item.getNome() << "] | Usos: " << item.getUsosRestantes() << "\n";
+    Utils::coutDigitado() << "  > " << item.mostrarDescricao() << "\n";
+    Utils::coutDigitado() << "------------------------------------------------\n";
 
     if (this->_inventario.getTamanho() < limiteItens) {
         this->_inventario.novaAcao(item);
-        std::cout << "Voce guardou o item [" << item.getNome() << "] na mochila!\n";
+        Utils::coutDigitado() << "Voce guardou o item [" << item.getNome() << "] na mochila!\n";
     } else {
-        std::cout << "\nSua mochila esta chei e nao tem espaco para [" << item.getNome() << "].\n";
-        std::cout << "Deseja descartar um item para pegar o novo?\n";
+        Utils::coutDigitado() << "\nSua mochila esta cheia e nao tem espaco para [" << item.getNome() << "].\n";
+        Utils::coutDigitado() << "Deseja descartar um item para pegar o novo?\n";
         
         this->_inventario.mostrarInventario();
         std::cout << "Digite o numero do item a ser descartado (0 para recusar o novo): ";

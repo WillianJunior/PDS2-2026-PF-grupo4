@@ -34,8 +34,8 @@ class Habilidade : public Acao {
         int getCooldownAtual();
         void iniciarCooldown();
         void atualizarCooldown();
-
-    void setCooldownAtual(int valor);
+        void zerarCooldown();
+        void setCooldownAtual(int valor);
 
     /** 
      * @brief Destrutor do objeto habilidade

@@ -252,11 +252,34 @@ int SalaCombate::executarSala(Personagem& personagem){
         std::cout << "\n[DERROTA] " << _textoDerrota << std::endl;
         return 0; //encerra na engine
     } else {
-        Item item = FabricaItem::criarItem("Bone pra tras");
         Utils::coutDigitado(350) << "...\n[";
         Utils::esperar(350);
         std::cout << "\n[VITORIA] " << _textoVitoria << std::endl;
-        personagem.receberItem(item);
+
+        //RECOMPENSA
+        int tamanhoInvInimigo = _inimigo->getInventarioHabilidade().getTamanho();
+        if(tamanhoInvInimigo > 0){
+            int sorteio = rand() % tamanhoInvInimigo;
+            Habilidade habilidadeInimigo = _inimigo->getInventarioHabilidade().getHabilidade(sorteio);
+            habilidadeInimigo.zerarCooldown();
+
+            Utils::coutDigitado() << "\nVoce derrotou seu inimigo e aprendeu com ele, agora voce esta mais forte!\n";
+            personagem.receberHabilidade(habilidadeInimigo);
+        }
+
+        //precisamos alterar isso e colocar apenas os itens que queremos que sejam entregues quando vence um combate
+        int itemAleatorio = rand() % 4;
+        std::string nomeItem;
+        if (itemAleatorio == 0){nomeItem = "Bone pra tras";}
+        else if(itemAleatorio == 1){nomeItem = "Xeque-Mate";}
+        else if(itemAleatorio == 2){nomeItem = "Coca-Cola";}
+        else{nomeItem = "Agua Benta";}
+        
+        Item itemRecompensa = FabricaItem::criarItem(nomeItem);
+
+        Utils::coutDigitado() << "\nSeu inimigo deixou algo para voce vencer as proximas batalhas...\n";
+        personagem.receberItem(itemRecompensa);
+        
         personagem.limparEfeitos();
         return 1; 
     }
