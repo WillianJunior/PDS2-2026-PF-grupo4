@@ -20,7 +20,7 @@ Engine::Engine() : _personagem(nullptr) {
     // leitura de arquivos de save.
 }
 
-//cria a sequencia aleatoria de salas que tera na run atual, podendo ir de 6 combates e 1 escolha, até 4 combates e 3 escolhas, finalizando em um boss
+//cria a sequencia aleatoria de salas que tera na run atual, 4 combates e 3 escolhas, finalizando em um boss
 void Engine::prepararSalas(std::string nome){
     int qtdCombate = 0;
     int qtdEscolha = 0;
@@ -28,22 +28,25 @@ void Engine::prepararSalas(std::string nome){
     for(int i = 0; i < 7; i++){
         std::string titulo = "Andar " + std::to_string(i + 1);
         int sala = rand() % 2;
-        if(sala == 1 && qtdEscolha < 3){
+        
+        // Se sorteou 1 e ainda não tem 3 escolhas, ou se já bateram os 4 combates maximos
+        if((sala == 1 && qtdEscolha < 3) || qtdCombate == 4){
             std::unique_ptr<SalaBase> salaEscolhida(new SalaEscolha(FabricaSE::criarSalas(nome)));
-            for (size_t j = 0; i < _salasDoJogo.size(); j++)
+            
+            for (size_t j = 0; j < _salasDoJogo.size(); j++)
             {
-                if(_salasDoJogo[i]->getNome() == salaEscolhida->getNome())
+                if(_salasDoJogo[j]->getNome() == salaEscolhida->getNome())
                 {
                     salaEscolhida.reset(new SalaEscolha(FabricaSE::criarSalas(nome)));
                     j = -1;
                 }
             }
-            
             _salasDoJogo.push_back(std::move(salaEscolhida));
             qtdEscolha++;
         }
         else{
             _salasDoJogo.push_back(FabricaSC::criarSalas(nome, i + 1));
+            qtdCombate++; // Adicionamos a contagem de combate aqui
         }
     }
     _salasDoJogo.push_back(FabricaSC::criarSalas("qualquer_coisa_invalida", 8));
@@ -51,7 +54,7 @@ void Engine::prepararSalas(std::string nome){
 
 void Engine::iniciar(){
     Menu menuPrincipal;
-    int contadorSalas = 0;
+    int salaID = 0;
     bool existeSave = false;
 
     if(!Engine::modoTeste) {
@@ -66,21 +69,21 @@ void Engine::iniciar(){
 
     if(_personagem->getNome() == "PersonagemSalvo")
     {
-        _personagem = SaveManager::carregar(contadorSalas, _salasDoJogo);
+        _personagem = SaveManager::carregar(salaID, _salasDoJogo);
         if (!_personagem) {
             std::cerr << "Erro ao carregar o save. Arquivo corrompido ou inacessível.\n";
             return;
         }
-        std::cout << "Jogo carregado! Continuando na sala " << contadorSalas + 1 << "...\n";
+        std::cout << "Jogo carregado! Continuando na sala " << salaID + 1 << "...\n";
     } else {
         this->prepararSalas(_personagem->getNome());
     }
 
     // loop principal - maquina de estados
-    while (contadorSalas < 8 && !_personagem->isMorto()) {
-        std::unique_ptr<SalaBase> salaAtual = fabricarProximaSala(contadorSalas);
+    while (salaID < 8 && !_personagem->isMorto()) {
+        std::unique_ptr<SalaBase> salaAtual = fabricarProximaSala(salaID);
         if (!salaAtual) {
-            std::cerr << "ERRO DE ROTEAMENTO - Ponteiro nulo retornado para a sala ID: " << contadorSalas << std::endl;
+            std::cerr << "ERRO DE ROTEAMENTO - Ponteiro nulo retornado para a sala ID: " << salaID << std::endl;
             break;
         }
         salaAtual->mostrarSala();
@@ -93,9 +96,9 @@ void Engine::iniciar(){
             std::remove("save.txt");
             break;
         } else {
-            contadorSalas++;
+            salaID++;
             // salva após cada sala
-            SaveManager::salvar(contadorSalas, *_personagem, _salasDoJogo);
+            SaveManager::salvar(salaID, *_personagem, _salasDoJogo);
         }
         salaAtual->encerrarSala();
         

@@ -9,7 +9,7 @@
 
 namespace FabricaItem{
 
-    Item CriarItem (std::string nomeItem){
+    Item criarItem (std::string nomeItem){
         std::string itens = "data/Itens.txt";
         std::ifstream arquivo(itens);
         Efeito vazio("vazio", 0 ,0);
