@@ -33,7 +33,7 @@ void Engine::prepararSalas(std::string nome){
         if((sala == 1 && qtdEscolha < 3) || qtdCombate == 4){
             std::unique_ptr<SalaBase> salaEscolhida(new SalaEscolha(FabricaSE::criarSalas(nome)));
             
-            for (size_t j = 0; j < _salasDoJogo.size(); j++)
+            for (int j = 0; j < _salasDoJogo.size(); j++)
             {
                 if(_salasDoJogo[j]->getNome() == salaEscolhida->getNome())
                 {
