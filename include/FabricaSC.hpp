@@ -5,7 +5,7 @@
 #include <memory>
 
 namespace FabricaSC {
-    std::unique_ptr<SalaCombate> criarSalas(std::string nome, int andar);
+    std::unique_ptr<SalaCombate> criarSalas(std::string nome, int idInimigo);
 }
 
 #endif

@@ -1,1 +1,5 @@
-1;Monstro de Teste;80;Ataque Basico
+1;Procrastinacao;80;Ataque Basico
+2;Bug Sinistro;100;Ataque Basico
+3;Gripe de Homem;120;Ataque Basico,Investida
+4;Alcoolismo;150;Ataque Forte
+5;Sauron;200;Ataque Forte,Investida

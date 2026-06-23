@@ -126,12 +126,14 @@ std::unique_ptr<Personagem> SaveManager::carregar(int& contadorSalas, std::vecto
         salas.push_back(nullptr);
     }
 
-    for (int i = 0; i < qtdSalas; i++) {
+for (int i = 0; i < qtdSalas; i++) {
         std::string nomeSala, tipoSala;
         std::getline(arquivo, nomeSala);
         std::getline(arquivo, tipoSala);
+        
         if (tipoSala == "C") {
-            salas.push_back(FabricaSC::criarSalas(nome, contadorSalas + i + 1));
+            int idAleatorio = (rand() % 5) + 1; 
+            salas.push_back(FabricaSC::criarSalas(nome, idAleatorio));
         } else {
             salas.push_back(std::unique_ptr<SalaBase>(new SalaEscolha(FabricaSE::criarSalas(nome))));
         }

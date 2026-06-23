@@ -20,36 +20,39 @@ Engine::Engine() : _personagem(nullptr) {
     // leitura de arquivos de save.
 }
 
-//cria a sequencia aleatoria de salas que tera na run atual, 4 combates e 3 escolhas, finalizando em um boss
+//cria a sequencia aleatoria de salas que tera na run atual, 5 combates e 3 escolhas, finalizando em um boss
 void Engine::prepararSalas(std::string nome){
     int qtdCombate = 0;
     int qtdEscolha = 0;
 
-    for(int i = 0; i < 7; i++){
-        std::string titulo = "Andar " + std::to_string(i + 1);
+    //// a logica de escolha dos inimigos aleatorios fica aqui, ela seleciona um numero aleatorio e manda pra fabrica que criar com o numero
+    //// correspondente
+    std::vector<int> idsInimigos = {1, 2, 3, 4, 5};
+    std::random_shuffle(idsInimigos.begin(), idsInimigos.end());
+
+    //// aqui alterei o loop pra 8 interações, 5 combates e 3 escolhas, se tiver boss final em conjunto teria que mudar
+    for(int i = 0; i < 8; i++){
         int sala = rand() % 2;
-        
-        // Se sorteou 1 e ainda não tem 3 escolhas, ou se já bateram os 4 combates maximos
-        if((sala == 1 && qtdEscolha < 3) || qtdCombate == 4){
+       
+        if((sala == 1 && qtdEscolha < 3) || qtdCombate == 5){
             std::unique_ptr<SalaBase> salaEscolhida(new SalaEscolha(FabricaSE::criarSalas(nome)));
             
-            for (int j = 0; j < _salasDoJogo.size(); j++)
-            {
-                if(_salasDoJogo[j]->getNome() == salaEscolhida->getNome())
-                {
+            for (int j = 0; j < (int)_salasDoJogo.size(); j++) {
+                if(_salasDoJogo[j]->getNome() == salaEscolhida->getNome()) {
                     salaEscolhida.reset(new SalaEscolha(FabricaSE::criarSalas(nome)));
-                    j = -1;
+                    j = -1; 
                 }
             }
             _salasDoJogo.push_back(std::move(salaEscolhida));
             qtdEscolha++;
         }
-        else{
-            _salasDoJogo.push_back(FabricaSC::criarSalas(nome, i + 1));
-            qtdCombate++; // Adicionamos a contagem de combate aqui
+        else {
+            // Entrega o id da sala aleatorio ao inves do sequencial
+            int idSorteado = idsInimigos[qtdCombate];
+            _salasDoJogo.push_back(FabricaSC::criarSalas(nome, idSorteado));
+            qtdCombate++;
         }
     }
-    _salasDoJogo.push_back(FabricaSC::criarSalas("qualquer_coisa_invalida", 8));
 }
 
 void Engine::iniciar(){
