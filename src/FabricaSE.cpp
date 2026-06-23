@@ -766,7 +766,7 @@ namespace FabricaSE {
             Habilidade hab = FabricaHabilidade::criarHabilidade("Passinho do Forro");
             p->getInventarioHabilidade().novaAcao(hab);
             
-            Utils::coutDigitado() << "Ouvindo o grupo Ferrugem, Vaz lembrou de seu amigo Marcos.\n";
+            Utils::coutDigitado() << "Ouvindo Crina Negra, Vaz lembrou de seu amigo Marcos.\n";
             Utils::coutDigitado() << "Conseguiu lembrar como Marcos dancava forro bem!\n";
             Utils::coutDigitado() << "Ao som da musica e das memorias de Marcos, Vaz captou a energia do forro.\n";
             Utils::coutDigitado() << "Vaz aprendeu o Passinho do Forro!\n";
@@ -776,7 +776,7 @@ namespace FabricaSE {
             p->alterarVida(-15);
             Utils::coutDigitado() << "Vaz ouviu Razoes e Emocoes e aquela musica...\n";
             Utils::coutDigitado() << "Aquela musica mexeu com ele.\n";
-            Utils::coutDigitado() << "Enquanto ouvia, sofreu com os vocais do Di e a letra sofrida...\n";
+            Utils::coutDigitado() << "Enquanto ouvia, sofreu com os vocais do Di e a letra melancolica...\n";
             Utils::coutDigitado() << "Por mais que seja um bom rock, Vaz ficou melancolico.\n";
             Utils::coutDigitado() << "Vaz perdeu 15 de vida!\n";
         });
@@ -792,21 +792,100 @@ namespace FabricaSE {
 
         } 
         else if (nome == "Isaque") {
-<<<<<<< HEAD
-            SalaEscolha sala1("Sala do Isaque", animacao);
-            // sala1.adicionarOpcao(descricao, consequencia);
-            salas.push_back(sala1);
-            SalaEscolha sala2("Sala do Isaque", animacao);
-            salas.push_back(sala2);
-            SalaEscolha sala3("Sala do Isaque", animacao);
-=======
-            SalaEscolha sala1("Sala do Isaque 1", animacao, 0);
-            // sala1.adicionarOpcao(descricao, consequencia);
-            salas.push_back(sala1);
+Utils::Animacao animacaoAbstinencia;
+        animacaoAbstinencia.textoInicial.push_back("Isaque encarava o computador pensando como e o que iria codar.");
+        animacaoAbstinencia.textoInicial.push_back("Diante do tamanho do trabalho, sabia que precisava fazer o maximo o quanto antes.");
+        animacaoAbstinencia.textoInicial.push_back("Com o VSCode de um lado, e a droga do outro, Isaque nao sabia por qual optar.");
+        animacaoAbstinencia.textoInicial.push_back("Isaque...");
+        animacaoAbstinencia.textoInicial.push_back("... Um viciado.");
+        animacaoAbstinencia.textoInicial.push_back("Um viciado em League of Legends!");
+        animacaoAbstinencia.textoInicial.push_back("E essa era sua droga.");
+        animacaoAbstinencia.textoInicial.push_back("Dias que ele nao jogava e a abstinencia comecava a apertar. O que ele deveria fazer?");
+        animacaoAbstinencia.tempoFrame = 500;
+
+        animacaoAbstinencia.frames.push_back(R"( 
+        [VSCode]                 [LOL]
+                   (<_<)
+
+        )");
+
+        animacaoAbstinencia.frames.push_back(R"( 
+        [VSCode]                 [LOL]
+                   (>_>)
+
+        )");
+
+        animacaoAbstinencia.frames.push_back(R"( 
+        [VSCode]                 [LOL]
+                   (<_<)
+
+        )");
+
+        animacaoAbstinencia.frames.push_back(R"( 
+        [VSCode]                 [LOL]
+                   (>_>)
+
+        )");
+
+        animacaoAbstinencia.frames.push_back(R"( 
+        [VSCode]                 [LOL]
+                   (<_<)
+
+        )");
+
+        animacaoAbstinencia.frames.push_back(R"( 
+        [VSCode]                 [LOL]
+                   (>_>)
+
+        )");
+
+        SalaEscolha abstinenciaDroga("Abstinencia de uma Droga", animacaoAbstinencia);
+
+        abstinenciaDroga.adicionarOpcao("Suprir a abstinencia e jogar LOL", [](Personagem *p){
+            Utils::coutDigitado() << "Sabendo do seu vicio, Isaque nao aguentou.\n";
+            Utils::coutDigitado() << "Abriu o LOL e mesmo que precisasse codar,\n";
+            Utils::coutDigitado() << "Jogou ate 3 da manha, atrapalhando seu sono...\n";
+            Utils::coutDigitado() << "No outro dia, acordou destruido mas contente,\n";
+            Utils::coutDigitado() << "Porque poucas coisas poderiam deixa-lo feliz...\n";
+            Utils::coutDigitado() << "Como o LOL.\n";
+            Utils::coutDigitado() << "Isaque perdeu 20 de vida por dormir mal!\n";
+            Utils::coutDigitado() << "Isaque ganhou 20 de vida por jogar feliz!\n";
+        });
+
+        abstinenciaDroga.adicionarOpcao("Abrir o VSCode e cumprir com os deveres", [](Personagem *p){
+            p->alterarVida(20);
+            Item item = FabricaItem::criarItem("Ritalina");
+            p->getInventarioItem().novaAcao(item);
+
+            Utils::coutDigitado() << "O dom da Responsabilidade tocou em seu coracao,\n";
+            Utils::coutDigitado() << "Pois por mais que seu vicio estivesse logo ali,\n";
+            Utils::coutDigitado() << "Ele decidiu abrir o VSCode e codar por horas.\n";
+            Utils::coutDigitado() << "Adiantou o trabalho e, no outro dia,\n";
+            Utils::coutDigitado() << "Participou dos LOLZEIROS ANONIMOS para desabafar.\n";
+            Utils::coutDigitado() << "Encontrou la um amigo, chamado Daniel.\n";
+            Utils::coutDigitado() << "Conversou por horas com ele e, no fim,\n";
+            Utils::coutDigitado() << "Daniel lhe deu um presente para ajudar a livrar-se do vicio.\n";
+            Utils::coutDigitado() << "Isaque ganhou o item Ritalina!\n";
+        });
+
+        abstinenciaDroga.adicionarOpcao("Jogar o computador para fora da janela", [](Personagem *p){
+            Habilidade hab = FabricaHabilidade::criarHabilidade("Papel com Codigos");
+            p->getInventarioHabilidade().novaAcao(hab);
+
+            Utils::coutDigitado() << "Cansado de tudo, voce nao aguentou.\n";
+            Utils::coutDigitado() << "Viu como unica opcao arremessar seu computador para fora da janela.\n";
+            Utils::coutDigitado() << "Viu ele voar como se fosse um passaro,\n";
+            Utils::coutDigitado() << "Ate se espatifar no chao.\n";
+            Utils::coutDigitado() << "Nessa decisao imprudente, Isaque percebeu que ainda precisava codar.\n";
+            Utils::coutDigitado() << "Lembrou-se das aulas de Henrique em PDS1, pegou um caderno e disse:\n";
+            Utils::coutDigitado() << "\"Eu sei o que fazer.\"\n";
+            Utils::coutDigitado() << "Isaque aprendeu a habilidade Papel com Codigos!\n";
+        });
+
+        salas.push_back(abstinenciaDroga);
             SalaEscolha sala2("Sala do Isaque 2", animacao, 1);
             salas.push_back(sala2);
             SalaEscolha sala3("Sala do Isaque 3", animacao, 2);
->>>>>>> f902e02f66fa6feef8a6bf1feccff0abbe37c00b
             salas.push_back(sala3);
 
             if (idEscolha != -1 && idEscolha >= 0 && idEscolha < salas.size()) {
@@ -817,21 +896,12 @@ namespace FabricaSE {
             }
         } 
         else if (nome == "Nicole") {
-<<<<<<< HEAD
             SalaEscolha sala1("Sala do Nicole", animacao);
             // sala1.adicionarOpcao(descricao, consequencia);
             salas.push_back(sala1);
             SalaEscolha sala2("Sala do Nicole", animacao);
             salas.push_back(sala2);
             SalaEscolha sala3("Sala do Nicole", animacao);
-=======
-            SalaEscolha sala1("Sala do Nicole 1", animacao, 0);
-            // sala1.adicionarOpcao(descricao, consequencia);
-            salas.push_back(sala1);
-            SalaEscolha sala2("Sala do Nicole 2", animacao, 1);
-            salas.push_back(sala2);
-            SalaEscolha sala3("Sala do Nicole 3", animacao, 2);
->>>>>>> f902e02f66fa6feef8a6bf1feccff0abbe37c00b
             salas.push_back(sala3);
 
             if (idEscolha != -1 && idEscolha >= 0 && idEscolha < salas.size()) {
@@ -842,21 +912,12 @@ namespace FabricaSE {
             }
         } 
         else if (nome == "Marcos") {
-<<<<<<< HEAD
             SalaEscolha sala1("Sala do Marcos", animacao);
             // sala1.adicionarOpcao(descricao, consequencia);
             salas.push_back(sala1);
             SalaEscolha sala2("Sala do Marcos", animacao);
             salas.push_back(sala2);
             SalaEscolha sala3("Sala do Marcos", animacao);
-=======
-            SalaEscolha sala1("Sala do Marcos 1", animacao, 0);
-            // sala1.adicionarOpcao(descricao, consequencia);
-            salas.push_back(sala1);
-            SalaEscolha sala2("Sala do Marcos 2", animacao, 1);
-            salas.push_back(sala2);
-            SalaEscolha sala3("Sala do Marcos 3", animacao, 2);
->>>>>>> f902e02f66fa6feef8a6bf1feccff0abbe37c00b
             salas.push_back(sala3);
 
             if (idEscolha != -1 && idEscolha >= 0 && idEscolha < salas.size()) {

@@ -124,19 +124,29 @@ void SalaEscolha::encerrarSala(){
     int numeroSorteado = rand() % 5 + 1;
     switch (numeroSorteado){
     case 1:
-        Utils::coutTempo("O codigo precisa ser feito. A vida continua.\n", 50);
+        Utils::coutTempo("O codigo precisa ser feito. A vida continua.\n", 150);
+        Utils::esperar(2000);
+        Utils::coutDigitado(400) << "...";
         break;
     case 2:
         Utils::coutTempo("A esperança de codar renasce. Esse evento já passou.\n", 50);
+        Utils::esperar(2000);
+        Utils::coutDigitado(400) << "...";
         break;
     case 3:
         Utils::coutTempo("Alan Turing nao pararia aqui. Preciso voltar a codar!\n", 50);
+        Utils::esperar(2000);
+        Utils::coutDigitado(400) << "...";
         break;
     case 4:
         Utils::coutTempo("O que o William pensaria de mim se eu desistisse? O VSCode me espera!\n", 50);
+        Utils::esperar(2000);
+        Utils::coutDigitado(400) << "...";
         break;
     case 5:
         Utils::coutTempo("Nenhuma IA vai me substituir, eu vou terminar esse codigo!\n", 50);
+        Utils::esperar(2000);
+        Utils::coutDigitado(400) << "...";
         break;
     }
 }
