@@ -2,11 +2,45 @@
 #include "Excecoes.hpp"
 
 void InventarioItem::mostrarInventario(){
-    for (long unsigned int i = 0; i < _itens.size(); i++)
-    {
-        Utils::coutDigitado(15) << std::to_string(i+1) << ". "<< _itens[i].getNome() << "\n";
+    int larguraInterna = 60;
+
+    std::cout << "    ╔════════════════════════════════════════════════════════════╗\n";
+    std::cout << "    ║                         SEUS ITENS                         ║\n";
+    std::cout << "    ╠════════════════════════════════════════════════════════════╣\n";
+
+    for (long unsigned int i = 0; i < _itens.size(); i++) {
+        std::string textoNome = _itens[i].getNome();
+
+        std::string linha = " [ " + std::to_string(i + 1) + " ] - " + textoNome + " ";
+        int espacosFaltando = larguraInterna - linha.length() - 1;
+        if (espacosFaltando < 0) {
+            linha = linha.substr(0, larguraInterna - 4) + "... ";
+            espacosFaltando = 0;
+        }
+        std::string padding(espacosFaltando, '.');
+        Utils::coutDigitado(0) << "    ║" << linha << padding << " ║\n";
+
+        // Descrição do item
+        std::string descricaoIt = "       > " + _itens[i].mostrarDescricao() + " ";
+        int espacosFaltandoDescricao = larguraInterna - descricaoIt.length() - 1;
+
+        if (espacosFaltandoDescricao < 0) {
+            descricaoIt = descricaoIt.substr(0, larguraInterna - 4) + "... ";
+            espacosFaltandoDescricao = 0;
+        }
+
+        std::string paddingDesc(espacosFaltandoDescricao, ' ');
+        Utils::coutDigitado(0) << "    ║" << descricaoIt << paddingDesc << " ║\n";
+
+        // Separar os itens por uma linha em branco
+        if (i < _itens.size() - 1) {
+            std::string linhaVazia(larguraInterna - 1, ' ');
+            Utils::coutDigitado(0) << "    ║ " << linhaVazia << "║\n";
+        }
     }
+    std::cout << "    ╚════════════════════════════════════════════════════════════╝\n";
 }
+
 
 void InventarioItem::novaAcao(Item item){
     this->_itens.push_back(item);

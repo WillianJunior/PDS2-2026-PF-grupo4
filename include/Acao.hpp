@@ -49,7 +49,7 @@ class Acao {
     /**
      * @brief Exibe os detalhes da ação (informações da habilidade ou do item).
      */
-        virtual void mostrarDescricao();
+        std::string mostrarDescricao();
 
     /**
      * @brief Retorna o nome da ação.
