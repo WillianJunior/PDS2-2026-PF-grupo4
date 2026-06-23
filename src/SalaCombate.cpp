@@ -119,10 +119,13 @@ int SalaCombate::executarSala(Personagem& personagem){
 
             if (opcao == 1) {
                 personagem.getInventarioHabilidade().mostrarInventario();
-                std::cout << "Escolha a habilidade: ";
+                std::cout << "Escolha a habilidade (0 para voltar): ";
                 int numeroHabilidade;
                 std::cin >> numeroHabilidade;
 
+                if(numeroHabilidade == 0){
+                    continue;
+                }
                 //protecao contra loop infinito de eof
                 if(std::cin.eof()){
                     throw EntradaInvalidaException();
@@ -159,10 +162,12 @@ int SalaCombate::executarSala(Personagem& personagem){
 
             } else if (opcao == 2) {
                 personagem.getInventarioItem().mostrarInventario();
-                std::cout << "Escolha o item: ";
+                std::cout << "Escolha o item (0 para voltar): ";
                 int numeroItem;
                 std::cin >> numeroItem;
-
+                if(numeroItem == 0){
+                    continue;
+                }
                 //protecao contra loop infinito de eof
                 if(std::cin.eof()){
                     throw EntradaInvalidaException();
@@ -248,11 +253,10 @@ int SalaCombate::executarSala(Personagem& personagem){
         return 0; //encerra na engine
     } else {
         Item item = FabricaItem::criarItem("Bone pra tras");
-        personagem.getInventarioItem().novaAcao(item);
         Utils::coutDigitado(350) << "...\n[";
         Utils::esperar(350);
         std::cout << "\n[VITORIA] " << _textoVitoria << std::endl;
-        std::cout << "Você recebeu o item: " << item.getNome() << std::endl;
+        personagem.receberItem(item);
         personagem.limparEfeitos();
         return 1; 
     }

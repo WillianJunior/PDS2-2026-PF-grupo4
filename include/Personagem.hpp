@@ -43,6 +43,9 @@ class Personagem : public Entidade{
      */
         Item escolherItem(int posicaoItem);
 
+        void receberHabilidade(Habilidade habilidade);
+        void receberItem(Item item);
+
     /**
      * @brief Alterar a vida atual do personagem para mais ou para menos
      * * Deverá ter um valor máximo: P1 tem 100 de vida máxima, tentou curar 60 estando com 50 : fica com 100
