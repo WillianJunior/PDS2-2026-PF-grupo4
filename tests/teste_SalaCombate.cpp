@@ -13,7 +13,7 @@ Personagem criarPersonagemParaTeste(int vidaInicial, int poderDeAtaque) {
     Efeito semEfeito("Nenhum", 0, 0);
     
     // Adiciona uma habilidade de ataque no índice 0
-    Habilidade ataque("Golpe Limpo", false, poderDeAtaque, false, semEfeito);
+    Habilidade ataque("Golpe Limpo", false, poderDeAtaque, false, semEfeito, 0);
     invHab.novaAcao(ataque);
   
     InventarioItem invItem; 
@@ -28,17 +28,17 @@ Personagem criarPersonagemParaTeste(int vidaInicial, int poderDeAtaque) {
 
 TEST_CASE("SALACOMBATE - Inicializacao e Getters") {
     InventarioHabilidade inventarioHabilidadeTeste;
-    std::unique_ptr<Inimigo> inimigoTeste(new Inimigo(100, inventarioHabilidadeTeste, "Inimigo Teste", false));
+    std::unique_ptr<Inimigo> inimigoTeste(new Inimigo(100, inventarioHabilidadeTeste, "Inimigo Teste"));
 
-    SalaCombate sala("Sala do Segmentation Fault", "Um ponteiro nulo bloqueia o caminho.", std::move(inimigoTeste));
+    SalaCombate sala("Sala do Segmentation Fault", "Um ponteiro nulo bloqueia o caminho.", "Você venceu!", "Você perdeu", "Vaz", 1);
     CHECK(sala.getNome() == "Sala do Segmentation Fault");
 }
 
 TEST_CASE("SALACOMBATE - mostrarSala (Redirecionamento de cout)") {
     InventarioHabilidade inventarioHabilidadeTeste;
-    std::unique_ptr<Inimigo> inimigoTeste(new Inimigo(100, inventarioHabilidadeTeste, "Inimigo Teste", false));
+    std::unique_ptr<Inimigo> inimigoTeste(new Inimigo(100, inventarioHabilidadeTeste, "Inimigo Teste"));
 
-    SalaCombate sala("Sala Teste", "Enredo especifico do teste.", std::move(inimigoTeste));
+    SalaCombate sala("Sala Teste", "Enredo especifico do teste.", "Você venceu!", "Você perdeu", "Vaz", 1);
     
     // 1. Redireciona o fluxo de saída para uma string local
     std::stringstream bufferSaida;
@@ -58,9 +58,9 @@ TEST_CASE("SALACOMBATE - mostrarSala (Redirecionamento de cout)") {
 
 TEST_CASE("SALACOMBATE - executarSala: Vitoria do Jogador") {
     InventarioHabilidade inventarioHabilidadeTeste;
-    std::unique_ptr<Inimigo> inimigoTeste(new Inimigo(100, inventarioHabilidadeTeste, "Inimigo Teste", false));
+    std::unique_ptr<Inimigo> inimigoTeste(new Inimigo(100, inventarioHabilidadeTeste, "Inimigo Teste"));
 
-    SalaCombate sala("Sala do Boss", "O chefe apareceu!", std::move(inimigoTeste));
+    SalaCombate sala("Sala do Boss", "O chefe apareceu!", "Você venceu!", "Você perdeu", "Vaz", 1);
     
     // O inimigo alocado internamente tem 80 de HP. 
     // Criamos um personagem com 100 de ataque para matá-lo em 1 hit.
@@ -76,22 +76,26 @@ TEST_CASE("SALACOMBATE - executarSala: Vitoria do Jogador") {
     std::streambuf* coutAntigo = std::cout.rdbuf(bufferSaida.rdbuf());
 
     // Executa a lógica (deve dar One-Hit Kill no inimigo)
-    int resultado = sala.executarSala(heroi);
-
+    int resultado = -1;
+    try {
+        resultado = sala.executarSala(heroi);
+    } catch (...) {
+        // Se der algum erro (como EntradaInvalida), cai aqui
+        // Isso evita que a função aborte antes de restaurar o cout/cin
+    }
     // Restauração obrigatória dos fluxos
     std::cin.rdbuf(cinAntigo);
     std::cout.rdbuf(coutAntigo);
 
-    // Valida se o retorno foi 1 (código de vitória configurado no cpp)
     CHECK(resultado == 1);
     CHECK(heroi.isMorto() == false);
 }
 
 TEST_CASE("SALACOMBATE - executarSala: Derrota do Jogador") {
     InventarioHabilidade inventarioHabilidadeTeste;
-    std::unique_ptr<Inimigo> inimigoTeste(new Inimigo(100, inventarioHabilidadeTeste, "Inimigo Teste", false));
+    std::unique_ptr<Inimigo> inimigoTeste(new Inimigo(100, inventarioHabilidadeTeste, "Inimigo Teste"));
 
-    SalaCombate sala("Sala Implacavel", "O inimigo ataca primeiro!", std::move(inimigoTeste));
+    SalaCombate sala("Sala Implacavel", "O inimigo ataca primeiro!", "Você venceu!", "Você perdeu", "Vaz", 1);
     
     // Personagem com 1 de vida. Qualquer ataque do inimigo o matará.
     Personagem heroi = criarPersonagemParaTeste(1, 0);
@@ -105,12 +109,17 @@ TEST_CASE("SALACOMBATE - executarSala: Derrota do Jogador") {
     std::stringstream bufferSaida;
     std::streambuf* coutAntigo = std::cout.rdbuf(bufferSaida.rdbuf());
 
-    int resultado = sala.executarSala(heroi);
-
+    int resultado = -1;
+    try {
+        resultado = sala.executarSala(heroi);
+    } catch (...) {
+        // Se der algum erro (como EntradaInvalida), cai aqui
+        // Isso evita que a função aborte antes de restaurar o cout/cin
+    }
+    // Restauração obrigatória dos fluxos
     std::cin.rdbuf(cinAntigo);
     std::cout.rdbuf(coutAntigo);
 
-    // Valida se o retorno foi 0 (código de falha crítica)
     CHECK(resultado == 0);
     CHECK(heroi.isMorto() == true);
 }

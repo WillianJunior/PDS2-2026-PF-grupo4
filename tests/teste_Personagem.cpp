@@ -13,8 +13,8 @@ TEST_CASE("Teste 01: Inicialização da classe Personagem"){
 TEST_CASE("Teste 02: Escolha de Habilidade dentro do inventario"){
     InventarioHabilidade inventarioHabilidade;
     Efeito efeitoTeste("EfeitoTeste", 10, 10);
-    Habilidade habilidadeTeste1("HabilidadeTeste1", 1, 10, 1, efeitoTeste);
-    Habilidade habilidadeTeste2("HabilidadeTeste2", 1, 20, 1, efeitoTeste);
+    Habilidade habilidadeTeste1("HabilidadeTeste1", 1, 10, 1, efeitoTeste, 0);
+    Habilidade habilidadeTeste2("HabilidadeTeste2", 1, 20, 1, efeitoTeste, 0);
     inventarioHabilidade.novaAcao(habilidadeTeste1);
     inventarioHabilidade.novaAcao(habilidadeTeste2);
     Personagem isaque(20, inventarioHabilidade, "Vaz", InventarioItem());

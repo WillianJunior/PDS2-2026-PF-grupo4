@@ -6,7 +6,7 @@
 
 TEST_CASE("Teste 01: Adiciona uma habilidade ao inventario e o exibe"){
     Efeito efeitoTeste = Efeito("EfeitoTeste", 15, 3);
-    Habilidade habilidadeTeste = Habilidade("HabilidadeTeste", false, 15, false, efeitoTeste);
+    Habilidade habilidadeTeste = Habilidade("HabilidadeTeste", false, 15, false, efeitoTeste, 0);
 
     InventarioHabilidade inventarioHabilidade;
 
@@ -30,10 +30,10 @@ TEST_CASE("Teste 02: Realiza a troca de uma habilidade por outra e exibe o inven
     Efeito efeito2 = Efeito("Efeito2", 3, 2);
     Efeito efeito3 = Efeito("Efeito3", 2, 3);
     Efeito efeito4 = Efeito("Efeito4", 1, 4);
-    Habilidade habilidade1 = Habilidade("Habilidade1", true, 4, true, efeito1);
-    Habilidade habilidade2 = Habilidade("Habilidade2", true, 3, false, efeito2);
-    Habilidade habilidade3 = Habilidade("Habilidade3", false, 2, true, efeito3);
-    Habilidade habilidade4 = Habilidade("Habilidade4", false, 1, false, efeito4);
+    Habilidade habilidade1 = Habilidade("Habilidade1", true, 4, true, efeito1, 0);
+    Habilidade habilidade2 = Habilidade("Habilidade2", true, 3, false, efeito2, 0);
+    Habilidade habilidade3 = Habilidade("Habilidade3", false, 2, true, efeito3, 0);
+    Habilidade habilidade4 = Habilidade("Habilidade4", false, 1, false, efeito4, 0);
 
     InventarioHabilidade inventarioHabilidade;
 
@@ -58,7 +58,7 @@ TEST_CASE("Teste 02: Realiza a troca de uma habilidade por outra e exibe o inven
 
 TEST_CASE("Teste 03: Adiciona uma habilidade ao inventario e veirifca o tamanho dele"){
     Efeito efeitoTeste = Efeito("EfeitoTeste", 15, 3);
-    Habilidade habilidadeTeste = Habilidade("HabilidadeTeste", false, 15, false, efeitoTeste);
+    Habilidade habilidadeTeste = Habilidade("HabilidadeTeste", false, 15, false, efeitoTeste, 0);
 
     InventarioHabilidade inventarioHabilidade;
 
@@ -70,8 +70,8 @@ TEST_CASE("Teste 03: Adiciona uma habilidade ao inventario e veirifca o tamanho 
 TEST_CASE("Teste 04: Cria um inventario de habilidades de teste e busca uma habilidade especifica pela posicao"){
     Efeito efeito1 = Efeito("Efeito1", 4, 1);
     Efeito efeito2 = Efeito("Efeito2", 3, 2);
-    Habilidade habilidade1 = Habilidade("Habilidade1", true, 4, true, efeito1);
-    Habilidade habilidade2 = Habilidade("Habilidade2", true, 3, false, efeito2);
+    Habilidade habilidade1 = Habilidade("Habilidade1", true, 4, true, efeito1, 0);
+    Habilidade habilidade2 = Habilidade("Habilidade2", true, 3, false, efeito2, 0);
 
     InventarioHabilidade inventarioHabilidade;
 
@@ -86,10 +86,10 @@ TEST_CASE("Teste 05: Cria dois inventarios de habilidades iguais e verifica se s
     Efeito efeito2 = Efeito("Efeito2", 3, 2);
     Efeito efeito3 = Efeito("Efeito3", 2, 3);
     Efeito efeito4 = Efeito("Efeito4", 1, 4);
-    Habilidade habilidade1 = Habilidade("Habilidade1", true, 4, true, efeito1);
-    Habilidade habilidade2 = Habilidade("Habilidade2", true, 3, false, efeito2);
-    Habilidade habilidade3 = Habilidade("Habilidade3", false, 2, true, efeito3);
-    Habilidade habilidade4 = Habilidade("Habilidade4", false, 1, false, efeito4);
+    Habilidade habilidade1 = Habilidade("Habilidade1", true, 4, true, efeito1, 0);
+    Habilidade habilidade2 = Habilidade("Habilidade2", true, 3, false, efeito2, 0);
+    Habilidade habilidade3 = Habilidade("Habilidade3", false, 2, true, efeito3, 0);
+    Habilidade habilidade4 = Habilidade("Habilidade4", false, 1, false, efeito4, 0);
 
     InventarioHabilidade inventarioHabilidade1;
     InventarioHabilidade inventarioHabilidade2;
@@ -111,9 +111,9 @@ TEST_CASE("Teste 06: Cria um inventario de habilidades de teste, remove uma acao
     Efeito efeito1 = Efeito("Efeito1", 4, 1);
     Efeito efeito2 = Efeito("Efeito2", 3, 2);
     Efeito efeito3 = Efeito("Efeito3", 2, 3);
-    Habilidade habilidade1 = Habilidade("Habilidade1", true, 4, true, efeito1);
-    Habilidade habilidade2 = Habilidade("Habilidade2", true, 3, false, efeito2);
-    Habilidade habilidade3 = Habilidade("Habilidade3", false, 2, true, efeito3);
+    Habilidade habilidade1 = Habilidade("Habilidade1", true, 4, true, efeito1, 0);
+    Habilidade habilidade2 = Habilidade("Habilidade2", true, 3, false, efeito2, 0);
+    Habilidade habilidade3 = Habilidade("Habilidade3", false, 2, true, efeito3, 0);
 
     InventarioHabilidade inventarioHabilidade;
 
