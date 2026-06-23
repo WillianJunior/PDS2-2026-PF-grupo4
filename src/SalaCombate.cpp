@@ -253,6 +253,7 @@ int SalaCombate::executarSala(Personagem& personagem){
         Utils::esperar(350);
         std::cout << "\n[VITORIA] " << _textoVitoria << std::endl;
         std::cout << "Você recebeu o item: " << item.getNome() << std::endl;
+        personagem.limparEfeitos();
         return 1; 
     }
 }

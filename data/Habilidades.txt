@@ -1,14 +1,14 @@
-Anedota;1;1;15;Nenhum;0
-Forças aéreas;0;0;40;Nenhum;0
-Contar uma piada;0;0;20;Veneno;0
-Arremessar um livro;0;0;20;Nenhum;0
-Reclamar;1;1;30;Nenhum;0
-Chute de Ballet;0;0;25;Nenhum;0
-Passinho de Forro;0;0;20;Nenhum;0
-Saque de vôlei;0;0;30;Nenhum;0
-Invocar espíritos;0;0;25;Veneno;0
-Aviãozinho de papel;0;0;15;Nenhum;0
-Chamar a ex;0;0;25;Nenhum;0
-Abrir o reels;1;1;20;Nenhum;0
-Raio Mayconiano;0;0;40;Queimadura;0
-Raio Gravitacional;0;0;25;Nenhum;0
+Anedota;1;15;1;Nenhum;0
+Forças aéreas;0;40;0;Nenhum;0
+Contar uma piada;0;20;0;Veneno;0
+Arremessar um livro;0;20;0;Nenhum;0
+Reclamar;1;30;1;Nenhum;0
+Chute de Ballet;0;25;0;Nenhum;0
+Passinho de Forro;0;20;0;Nenhum;0
+Saque de vôlei;0;30;0;Nenhum;0
+Invocar espíritos;0;25;0;Veneno;0
+Aviãozinho de papel;0;15;0;Nenhum;0
+Chamar a ex;0;25;0;Nenhum;0
+Abrir o reels;1;20;1;Nenhum;0
+Raio Mayconiano;0;40;0;Queimadura;0
+Raio Gravitacional;0;25;0;Nenhum;0

@@ -69,6 +69,8 @@ class Entidade{
      */
         void processarEfeitosAtivos();
 
+        void limparEfeitos();
+
     /**
      * @brief Retorna a vida atual da entidade.
      */
