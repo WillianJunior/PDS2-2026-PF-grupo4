@@ -7,6 +7,8 @@
  * * Herda da classe Acao e define as características específicas de um item consumível ou utilizável (como dano, cura ou efeitos).
  */
 class Item : public Acao {
+    private:
+        int _usosRestantes;
     public:
     /**
      * @brief Construtor padrão do Item.
@@ -17,7 +19,11 @@ class Item : public Acao {
      * @param valor O valor numérico do efeito do item (ex: quantidade de cura ou de dano).
      * @param efeito O efeito de status que o item aplica ao ser usado.
      */
-        Item(std::string nome, bool tipo, int valor, Efeito efeito, bool alvo);
+        Item(std::string nome, bool tipo, int valor, Efeito efeito, bool alvo, int usos);
+
+
+        void atualizarUsos();
+        int getUsosRestantes();
 
     /**
      * @brief Compara dois itens

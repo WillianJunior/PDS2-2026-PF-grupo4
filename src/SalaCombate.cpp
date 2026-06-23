@@ -247,7 +247,7 @@ int SalaCombate::executarSala(Personagem& personagem){
         return 0; //encerra na engine
     } else {
         Efeito semEfeito("Nenhum", 0, 0);
-        Item item("Boné pra trás", 1, 10, semEfeito, 1);
+        Item item("Boné pra trás", 1, 10, semEfeito, 1, 1);
         personagem.getInventarioItem().novaAcao(item);
         Utils::coutDigitado(350) << "...\n[";
         Utils::esperar(350);

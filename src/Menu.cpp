@@ -67,11 +67,11 @@ std::unique_ptr<Personagem> Menu::executarMenuInicial(bool existeSave) {
             {
                 std::string nomePersonagem = "PersonagemSalvo";
                 int vidaInicial = 100;
-                Efeito efeito(".", 0, 0);
+                Efeito efeito("Nenhum", 0, 0);
                 Habilidade habilidade(".", false, 10, false, efeito, 0);
                 InventarioHabilidade habilidadesIniciais;
                 habilidadesIniciais.novaAcao(habilidade);
-                Item item(".", true, 40, efeito, true);
+                Item item(".", true, 40, efeito, true, 1);
                 InventarioItem itensIniciais;
                 itensIniciais.novaAcao(item);
                 return std::unique_ptr<Personagem>(new Personagem(vidaInicial, habilidadesIniciais, nomePersonagem, itensIniciais));
