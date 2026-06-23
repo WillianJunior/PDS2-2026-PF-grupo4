@@ -1,6 +1,8 @@
 #include "FabricaSE.hpp"
 #include "Utils.hpp"
-#include "FabricaHabilidades.hpp"
+#include "FabricaHabilidade.hpp"
+#include "Item.hpp"
+#include "FabricaItem.hpp"
 #include <vector>
 #include <random>
 
@@ -11,6 +13,7 @@ namespace FabricaSE {
         Utils::Animacao animacao;
         if (nome == "Maycon") {
             Utils::Animacao animacaoNatora;
+            animacaoNatora.tempoFrame = 250;
             animacaoNatora.textoInicial.push_back("Ah, Mathias. Sei não...");
             animacaoNatora.textoInicial.push_back("- Vamo, Maycon! Cê precisa relaxar um pouco, mano.");
             animacaoNatora.textoInicial.push_back("Mas ainda falta implementar um monte de coisa.");
@@ -36,21 +39,61 @@ namespace FabricaSE {
                          \        /
                           '------'
             )");
+            animacaoNatora.frames.push_back(R"(
+
+     .------.
+    /        \
+   |       ¬  |
+   |          > IR PRO NA TORA?
+   |       __ |
+    \        /
+     '------'
+            )");
+            animacaoNatora.frames.push_back(R"(
+
+                              .------.
+                             /        \
+                           | O        |
+   NAO IR PRO NATORA?     <         /
+                         | __       |
+                         \        /
+                          '------'
+            )");
+            animacaoNatora.frames.push_back(R"(
+
+     .------.
+    /        \
+   |       ¬  |
+   |          > IR PRO NA TORA?
+   |       __ |
+    \        /
+     '------'
+            )");
+            animacaoNatora.frames.push_back(R"(
+
+                              .------.
+                             /        \
+                           | O        |
+   NAO IR PRO NATORA?     <         /
+                         | __       |
+                         \        /
+                          '------'
+            )");
             SalaEscolha Natora("Natora", animacaoNatora);
             Natora.adicionarOpcao("Ir para o natora", [](Personagem *p){
-                p->alterarVida(30);
+                p->alterarVida(50);
                 Utils::coutDigitado() << "Voce curtiu a noite e a madrugada como se não houvesse um amanhã.\n";
                 Utils::coutDigitado() << "No fim da festa, subiu na moto e no caminho até a casa pensou sobre o codigo.\n";
                 Utils::coutDigitado() << "Voce percebe que se nao tivesse relaxado, nao conseguiria continuar codando.\n";
                 Utils::coutDigitado() << "Feliz de ter se divertido, voce deita em sua cama, dorme e um novo dia se inicia.\n";
-                Utils::coutDigitado() << "MAYCON GANHOU +20 DE VIDA!\n";
+                Utils::coutDigitado() << "MAYCON GANHOU +50 DE VIDA!\n";
             });
             Natora.adicionarOpcao("Nao ir para o natora", [](Personagem *p){
-                p->alterarVida(-30);
+                p->alterarVida(-10);
                 Utils::coutDigitado() << "Voce negou a saída naquele dia, voce sabia que precisava codar.\n";
                 Utils::coutDigitado() << "Subindo na moto e indo para a casa, voce sentiu o FOMO lhe consumir.\n";
                 Utils::coutDigitado() << "Chateado por não ter descansado a cabeça e por não ter relaxado, você sente a dor do FOMO.\n";
-                Utils::coutDigitado() << "o Fear of Missing Out retira 30 de vida de Maycon.\n";
+                Utils::coutDigitado() << "o Fear of Missing Out retira 10 de vida de Maycon.\n";
             });
             salas.push_back(Natora);
 
@@ -168,13 +211,19 @@ namespace FabricaSE {
                 Utils::coutDigitado() << "Isaac Newton era mediocre.\n";
                 Utils::coutDigitado() << "...\n";
                 Utils::coutDigitado() << "...\n";
-                Utils::coutDigitado() << "Voce acorda e seus olhos se abrem, tudo foi um sonho, mas sua autoconfianca ficou.\n";
+                Utils::coutDigitado() << "Voce acorda e seus olhos se abrem, tudo foi um sonho, mas a autoconfianca ficou.\n";
+                Utils::coutDigitado() << "Se vendo como um inventor melhor do que o cientista Isaac Newton, Maycon aprende e CRIA algo novo.\n";
                 Utils::coutDigitado() << "Maycon aprendeu Raio Mayconiano.\n";
             });
             salas.push_back(newtonEspirito);
         
         Utils::Animacao animacaoFernandoPessoa;
-        animacaoFernandoPessoa.tempoFrame = 40;
+            animacaoFernandoPessoa.textoInicial.push_back("O mundo computacional o deixa ansioso, sendo a natureza uma fuga do estresse para o heroi.");
+            animacaoFernandoPessoa.textoInicial.push_back("Maycon senta-se em um banco e observa os passaros partirem migrando em bando.");
+            animacaoFernandoPessoa.textoInicial.push_back("Nao seria a natureza uma imagem-espelho de toda criacao?");
+            animacaoFernandoPessoa.textoInicial.push_back("A natureza copia a humanidade ou a humanidade copia a natureza?");
+            animacaoFernandoPessoa.textoInicial.push_back("Ao ver aquele bando, Maycon se sentiu inspirado, e antes de voltar a codar, queria escrever uma poesia.");
+            animacaoFernandoPessoa.tempoFrame = 40;
         animacaoFernandoPessoa.frames.push_back(R"( 
                    O                           v
                   /|\_                  ^           -
@@ -258,21 +307,405 @@ namespace FabricaSE {
                  /_|__                                   -
                 |_____|                            v
             )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                       v
+                  /|\_                              ^           -
+                 /_|__                                    v
+                |_____|                             -
+            )");
+
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                        -
+                  /|\_                               -           v
+                 /_|__                                     -
+                |_____|                              ^
+            )");
+
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                         ^
+                  /|\_                                v           -
+                 /_|__                                      ^
+                |_____|                               -
+            )");
+
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                          -
+                  /|\_                                 -           ^
+                 /_|__                                       -
+                |_____|                                v
+            )");
+
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                           v
+                  /|\_                                  ^          
+                 /_|__                                        v
+                |_____|                                 -
+            )");
+
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_                                   -         
+                 /_|__                                         -
+                |_____|                                  ^
+            )");
+
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_                                    v        
+                 /_|__                                          ^
+                |_____|                                   -
+            )");
+
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_                                     -       
+                 /_|__                                           
+                |_____|                                    v
+            )");
+
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_                                             
+                 /_|__                                           
+                |_____|                                     -
+            )");
+
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                          
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                              
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_    "Um grande programador sabe muito mais alem de codar..."                                             
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                               
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                          
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                              
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_    "Um grande programador sabe muito mais alem de codar..."                                             
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                               
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                          
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                              
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_    "Um grande programador sabe muito mais alem de codar..."                                             
+                 /_|__                                           
+                |_____|                                      
+            )");
+            animacaoFernandoPessoa.frames.push_back(R"( 
+                   O                                            
+                  /|\_   "Um grande programador sabe muito mais alem de codar..."                                               
+                 /_|__                                           
+                |_____|                                      
+            )");
             
         SalaEscolha FernandoPessoa("Poesia em vida", animacaoFernandoPessoa);
-        
+        FernandoPessoa.adicionarOpcao("Escrever sobre a arte de codar", [](Personagem *p){
+        Item itens = FabricaItem::criarItem("Bencao de Linus Torvald");
+        p->getInventarioItem().novaAcao(itens);
+        Utils::coutDigitado() << "\"...Outrora eu era deste escopo, e hoje regresso estrangeiro,\n";
+        Utils::coutDigitado() << "Forasteiro da logica que leio, obsoleto de mim.\n";
+        Utils::coutDigitado() << "Ja vi todos os bugs, ainda os que nunca criei, nem os que nunca resolverei.\n";
+        Utils::coutDigitado() << "Eu reinei no sistema que nunca rodei...\"\n";
+        });
+
+        FernandoPessoa.adicionarOpcao("Escrever sobre o observar e viver", [](Personagem *p){
+        Item itens = FabricaItem::criarItem("Bencao da Salvia");
+        Utils::coutDigitado() << "\"...Outrora eu era a acao, e hoje regresso espectador,\n";
+        Utils::coutDigitado() << "Amante do que vejo e ouco, pleno de mim.\n";
+        Utils::coutDigitado() << "Contemplo tudo, ainda o que nunca vi, nem o que nunca verei.\n";
+        Utils::coutDigitado() << "Eu reinei no que apenas observei...\"\n";
+        p->getInventarioItem().novaAcao(itens);
+        });
+
             salas.push_back(FernandoPessoa);
             int numeroEscolhido = rand() % 3;
             return salas[numeroEscolhido];
         } 
         else if (nome == "Vaz") {
-            SalaEscolha sala1("Sala do Vaz", animacao);
-            // sala1.adicionarOpcao(descricao, consequencia);
-            salas.push_back(sala1);
-            SalaEscolha sala2("Sala do Vaz", animacao);
-            salas.push_back(sala2);
-            SalaEscolha sala3("Sala do Vaz", animacao);
-            salas.push_back(sala3);
+        Utils::Animacao animacaoFormula;
+        animacaoFormula.textoInicial.push_back("O dia tem sido cansativo, e voce sabe que precisa abrir o codigo do grande jogo.");
+        animacaoFormula.textoInicial.push_back("Entretanto, um evento inesperado acontece e... voce se depara com uma escolha.");
+        animacaoFormula.tempoFrame = 2250;
+        animacaoFormula.frames.push_back(R"( 
+                                                  "Ei Vaz, precisamos de voce!"
+                   O                                     O
+                  /|\                                   /|\
+                  / \                                   / \
+        )");
+
+        animacaoFormula.frames.push_back(R"( 
+         "Precisam de mim onde?"
+                   O                                     O
+                  /|\                                   /|\
+                  / \                                   / \
+        )");
+
+        animacaoFormula.frames.push_back(R"( 
+                                                  "No Formula, uai!"
+                   O                                     O
+                  /|\                                   /|\
+                  / \                                   / \
+        )");
+
+        animacaoFormula.frames.push_back(R"( 
+         "Mas..."
+                   O                                     O
+                  /|\                                   /|\
+                  / \                                   / \
+        )");
+
+        animacaoFormula.frames.push_back(R"( 
+                                                  "O que, cara?"
+                   O                                     O
+                  /|\                                   /|\
+                  / \                                   / \
+        )");
+
+        animacaoFormula.frames.push_back(R"( 
+         "Eu preciso codar o projeto."
+                   O                                     O
+                  /|\                                   /|\
+                  / \                                   / \
+        )");
+
+        animacaoFormula.frames.push_back(R"( 
+                                                  "Deixa disso! Precisamos de voce."
+                   O                                     O
+                  /|\                                   /|\
+                  / \                                   / \
+        )");
+
+        animacaoFormula.frames.push_back(R"( 
+         "Mas eles precisam de mim..."
+                   O                                     O
+                  /|\                                   /|\
+                  / \                                   / \
+        )");
+
+        SalaEscolha formulaIncidente("Formula Incidente", animacaoFormula);
+        formulaIncidente.adicionarOpcao("Ir para o Formula", [](Personagem *p){
+            Utils::coutDigitado() << "Nesse dia, voce decidiu ir para o Formula.\n";
+            Utils::coutDigitado() << "Como voce passou suas horas dedicando-se a equipe,\n";
+            Utils::coutDigitado() << "Voce nao desenvolveu nenhuma habilidade...\n";
+        });
+
+        formulaIncidente.adicionarOpcao("Codar a Fabrica de Salas", [](Personagem *p){
+            Habilidade hab = FabricaHabilidade::criarHabilidade("Doxygengaboom");
+            p->getInventarioHabilidade().novaAcao(hab);
+            
+            Utils::coutDigitado() << "Nesse dia, voce decidiu ir codar e estudar.\n";
+            Utils::coutDigitado() << "Vendo o que o William pedia, voce estudou os doxygen.\n";
+            Utils::coutDigitado() << "Voce percebeu que estava ficando bom naquilo...\n";
+            Utils::coutDigitado() << "Vaz aprendeu o Doxygengaboom!\n";
+        });
+        salas.push_back(formulaIncidente);
+            Utils::Animacao animacaoCheckpoint;
+        animacaoCheckpoint.textoInicial.push_back("Nesse dia, voce estava no onibus, com a sensacao de que havia esquecido de algo.");
+        animacaoCheckpoint.textoInicial.push_back("De repente, voce se lembrou e percebeu que estava em apuros.");
+        animacaoCheckpoint.textoInicial.push_back("A C6 estava se aproximando, e o time contava com voce para completar a parte designada.");
+        animacaoCheckpoint.textoInicial.push_back("Voce abre o celular para codar e sabe que falta pouco tempo...");
+        animacaoCheckpoint.tempoFrame = 5000;
+
+        animacaoCheckpoint.frames.push_back(R"( 
+             .-----------.
+             |  23:59    |
+             |           |
+             | [VSCode]  |
+             |           |
+             | [Gemini]  |
+             |           |
+             |     O     |
+             '-----------'
+        )");
+
+        SalaEscolha checkpointAtrasado("Checkpoint Atrasado", animacaoCheckpoint);
+
+        checkpointAtrasado.adicionarOpcao("Codar com o Gemini", [](Personagem *p){
+            p->alterarVida(-10);
+            Habilidade hab = FabricaHabilidade::criarHabilidade("Maldade Humana");
+            p->getInventarioHabilidade().novaAcao(hab);
+            
+            Utils::coutDigitado() << "Voce percebeu que nao ia dar tempo e utilizou de metodos impuros.\n";
+            Utils::coutDigitado() << "Voce se sentiu mal por isso, e isso te consumiu por dentro...\n";
+            Utils::coutDigitado() << "Mas voce aprendeu a maldade...\n";
+            Utils::coutDigitado() << "Vaz perdeu 10 de vida!\n";
+            Utils::coutDigitado() << "Vaz aprendeu a habilidade Maldade Humana!\n";
+        });
+
+        checkpointAtrasado.adicionarOpcao("Codar no VSCODE", [](Personagem *p){
+            p->alterarVida(20);
+            Habilidade hab = FabricaHabilidade::criarHabilidade("Poder da Amizade");
+            p->getInventarioHabilidade().novaAcao(hab);
+            
+            Utils::coutDigitado() << "Nao ficou da melhor forma, mas voce percebeu...\n";
+            Utils::coutDigitado() << "Que voce tem o apoio do seu grupo!\n";
+            Utils::coutDigitado() << "Voce os avisou e eles o apoiaram na parte que faltava.\n";
+            Utils::coutDigitado() << "A amizade e o laco que os une.\n";
+            Utils::coutDigitado() << "Vaz recuperou 20 de vida!\n";
+            Utils::coutDigitado() << "Vaz aprendeu a habilidade Poder da Amizade!\n";
+        });
+
+        salas.push_back(checkpointAtrasado);
+            Utils::Animacao animacaoSpotify;
+        animacaoSpotify.textoInicial.push_back("Voce voltava para casa em seu carro,");
+        animacaoSpotify.textoInicial.push_back("decidindo o que ia ouvir ate chegar.");
+        animacaoSpotify.textoInicial.push_back("Pensou, pensou e refletiu sobre todas as possibilidades...");
+        animacaoSpotify.textoInicial.push_back("O que voce poderia ouvir?");
+        animacaoSpotify.tempoFrame = 350;
+        std::string frame1 = R"( 
+             .-----------.
+             |  Spotify  |
+             | CBJR      |
+             | Ceu Azul  |
+             | ==O------ |
+             | [|< > |>] |
+             |     O     |
+             '-----------'
+        )";
+
+        std::string frame2 = R"( 
+             .-----------.
+             |  Spotify  |
+             | OneRepuic |
+             | Counting S|
+             | ===O----- |
+             | [|< > |>] |
+             |     O     |
+             '-----------'
+        )";
+
+        std::string frame3 = R"( 
+             .-----------.
+             |  Spotify  |
+             | Katy Perry|
+             | Fireworks |
+             | =====O--- |
+             | [|< > |>] |
+             |     O     |
+             '-----------'
+        )";
+
+        std::string frame4 = R"( 
+             .-----------.
+             |  Spotify  |
+             | Can do Rei|
+             | Crina Negr|
+             | =======O- |
+             | [|< > |>] |
+             |     O     |
+             '-----------'
+        )";
+
+        std::string frame5 = R"( 
+             .-----------.
+             |  Spotify  |
+             | NX Zero   |
+             | Razoes    |
+             | ========O |
+             | [|< > |>] |
+             |     O     |
+             '-----------'
+        )";
+        for (int i = 0; i < 2; i++) {
+            animacaoSpotify.frames.push_back(frame1);
+            animacaoSpotify.frames.push_back(frame2);
+            animacaoSpotify.frames.push_back(frame3);
+            animacaoSpotify.frames.push_back(frame4);
+            animacaoSpotify.frames.push_back(frame5);
+        }
+
+        SalaEscolha spotify("Spotify", animacaoSpotify);
+
+        spotify.adicionarOpcao("Escutar Ceu Azul - Charlie Brown Jr", [](Personagem *p){
+            p->alterarVida(30);
+            Utils::coutDigitado() << "Voce ouviu as musicas do chorao e se sentiu restaurado pela energia do skate.\n";
+            Utils::coutDigitado() << "Vaz recebeu 30 de vida!\n";
+        });
+
+        spotify.adicionarOpcao("Escutar Counting Stars - OneRepublic", [](Personagem *p){
+            p->alterarVida(40);
+            Utils::coutDigitado() << "Ouvir Counting Stars foi insano.\n";
+            Utils::coutDigitado() << "Pouco a pouco acelerou o carro e se sentia em um filme.\n";
+            Utils::coutDigitado() << "Talvez nunca esteve tao inspirado.\n";
+            Utils::coutDigitado() << "Vaz se sente vivo! Vaz recebeu 40 de vida!\n";
+        });
+
+        spotify.adicionarOpcao("Escutar Katy Perry - Fireworks", [](Personagem *p){
+            Item item = FabricaItem::criarItem("Energetico");
+            p->getInventarioItem().novaAcao(item);
+            
+            Utils::coutDigitado() << "Ouvindo uma Katy Perry voce nao poderia se sentir melhor.\n";
+            Utils::coutDigitado() << "A energia te fez lembrar ate de algo que guardava!\n";
+            Utils::coutDigitado() << "Abrindo o porta-luvas pode ver um...\n";
+            Utils::coutDigitado() << "Um energetico!\n";
+            Utils::coutDigitado() << "Vaz ganhou o item Energetico.\n";
+        });
+
+        spotify.adicionarOpcao("Escutar Crina Negra - Canarios do Reino", [](Personagem *p){
+            Habilidade hab = FabricaHabilidade::criarHabilidade("Passinho do Forro");
+            p->getInventarioHabilidade().novaAcao(hab);
+            
+            Utils::coutDigitado() << "Ouvindo o grupo Ferrugem, Vaz lembrou de seu amigo Marcos.\n";
+            Utils::coutDigitado() << "Conseguiu lembrar como Marcos dancava forro bem!\n";
+            Utils::coutDigitado() << "Ao som da musica e das memorias de Marcos, Vaz captou a energia do forro.\n";
+            Utils::coutDigitado() << "Vaz aprendeu o Passinho do Forro!\n";
+        });
+
+        spotify.adicionarOpcao("Escutar Razoes e Emocoes - NX Zero", [](Personagem *p){
+            p->alterarVida(-15);
+            Utils::coutDigitado() << "Vaz ouviu Razoes e Emocoes e aquela musica...\n";
+            Utils::coutDigitado() << "Aquela musica mexeu com ele.\n";
+            Utils::coutDigitado() << "Enquanto ouvia, sofreu com os vocais do Di e a letra sofrida...\n";
+            Utils::coutDigitado() << "Por mais que seja um bom rock, Vaz ficou melancolico.\n";
+            Utils::coutDigitado() << "Vaz perdeu 15 de vida!\n";
+        });
+
+        salas.push_back(spotify);
 
             int numeroEscolhido = rand() % 3;
             return salas[numeroEscolhido];
