@@ -1,1 +1,1 @@
-Ataque Basico;0;15;0;Nenhum;0
+Ataque Basico;0;15;0;Nenhum

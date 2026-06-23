@@ -16,7 +16,7 @@ namespace FabricaItem{
 
         if(!arquivo.is_open()){
             std::cerr << "Arquivo " << itens << " não encontrado\n";
-            //return
+            return Item("Item Erro", 0, 0, Efeito("Nenhum", 0, 0), 0);
         }
 
         std::string item;
