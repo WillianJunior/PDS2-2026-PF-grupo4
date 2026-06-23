@@ -1,5 +1,5 @@
 Anedota;1;20;1;Nenhum;0
-Forças Aéreas;0;40;0;Nenhum;1
+Forças Aereas;0;40;0;Nenhum;1
 Contar uma Piada;0;20;0;Veneno;0
 Doxygengaboom;0;30;0;Nenhum;0
 Maldade Humana;0;25;0;Veneno;0

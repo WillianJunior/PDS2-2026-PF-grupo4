@@ -353,7 +353,7 @@ std::unique_ptr<Personagem> Menu::escolherPersonagemInicial() {
         nomePersonagem = "Vaz";
         vidaInicial = 100;
 
-        habilidadesIniciais.novaAcao(FabricaHabilidade::criarHabilidade("Contar uma piada"));
+        habilidadesIniciais.novaAcao(FabricaHabilidade::criarHabilidade("Contar uma Piada"));
         habilidadesIniciais.novaAcao(FabricaHabilidade::criarHabilidade("Forcas Aereas"));
     }
     if (classeEscolhida == 3) {
