@@ -36,6 +36,8 @@ void SaveManager::salvar(int contadorSalas, Personagem& personagem, const std::v
         arquivo << habilidade.getEfeito().getNome() << "\n";
         arquivo << habilidade.getEfeito().getValor() << "\n";
         arquivo << habilidade.getEfeito().getDuracao() << "\n";
+        arquivo << habilidade.getCooldown() << "\n";
+        arquivo << habilidade.getCooldownAtual() << "\n";
     }
     // Itens
     InventarioItem inventarioItem = personagem.getInventarioItem();
@@ -49,6 +51,7 @@ void SaveManager::salvar(int contadorSalas, Personagem& personagem, const std::v
         arquivo << item.getEfeito().getNome() << "\n";
         arquivo << item.getEfeito().getValor() << "\n";
         arquivo << item.getEfeito().getDuracao() << "\n";
+        arquivo << item.getUsosRestantes() << "\n";
     }
 
     // Sequência de salas
@@ -86,14 +89,17 @@ std::unique_ptr<Personagem> SaveManager::carregar(int& contadorSalas, std::vecto
         std::string nomeHabilidade, nomeEfeito;
         bool tipo, alvo;
         int valor, valorEfeito, duracaoEfeito;
+        int cooldown, cooldownAtual;
+
         std::getline(arquivo, nomeHabilidade);
         arquivo >> tipo >> valor >> alvo;
         arquivo.ignore();
         std::getline(arquivo, nomeEfeito);
-        arquivo >> valorEfeito >> duracaoEfeito;
+        arquivo >> valorEfeito >> duracaoEfeito >> cooldown >> cooldownAtual;
         arquivo.ignore();
         Efeito efeito(nomeEfeito, valorEfeito, duracaoEfeito);
-        Habilidade habilidade(nomeHabilidade, tipo, valor, alvo, efeito, 0);
+        Habilidade habilidade(nomeHabilidade, tipo, valor, alvo, efeito, cooldown);
+        habilidade.setCooldownAtual(cooldownAtual);
         inventarioHabilidade.novaAcao(habilidade);
     }
     // Itens
@@ -105,14 +111,16 @@ std::unique_ptr<Personagem> SaveManager::carregar(int& contadorSalas, std::vecto
         std::string nomeItem, nomeEfeito;
         bool tipo, alvo;
         int valor, valorEfeito, duracaoEfeito;
+        int usosRestantes;
+
         std::getline(arquivo, nomeItem);
         arquivo >> tipo >> valor >> alvo;
         arquivo.ignore();
         std::getline(arquivo, nomeEfeito);
-        arquivo >> valorEfeito >> duracaoEfeito;
+        arquivo >> valorEfeito >> duracaoEfeito >> usosRestantes;
         arquivo.ignore();
         Efeito efeito(nomeEfeito, valorEfeito, duracaoEfeito);
-        Item item(nomeItem, tipo, valor, efeito, alvo, 1);
+        Item item(nomeItem, tipo, valor, efeito, alvo, usosRestantes);
         inventarioItem.novaAcao(item);
     }
     auto personagemCarregado = std::unique_ptr<Personagem>(new Personagem(vidaMaxima, inventarioHabilidade, nome, inventarioItem));

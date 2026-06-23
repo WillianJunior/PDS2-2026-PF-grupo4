@@ -35,6 +35,8 @@ class Habilidade : public Acao {
         void iniciarCooldown();
         void atualizarCooldown();
 
+    void setCooldownAtual(int valor);
+
     /** 
      * @brief Destrutor do objeto habilidade
      * Garante que não vaze memória de habilidades.
