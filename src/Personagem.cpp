@@ -8,7 +8,7 @@ Habilidade& Personagem::escolherHabilidade(int posicaoHabilidade){
     return habilidade;
 }
 
-Item& Personagem::escolherItem(int posicaoItem){
+Item Personagem::escolherItem(int posicaoItem){
     Item& item = this->_inventario.getItem(posicaoItem);
     item.atualizarUsos();
     Item copia = item;

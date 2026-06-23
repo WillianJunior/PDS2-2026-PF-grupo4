@@ -7,6 +7,7 @@
 #include "Excecoes.hpp"
 #include "Utils.hpp"
 #include "FabricaInimigo.hpp"
+#include "FabricaItem.hpp"
 
 SalaCombate::SalaCombate(std::string nome, std::string historia, std::string textoVitoria, std::string textoDerrota, std::string nomePersonagem, int andar)
     : SalaBase(nome), _historia(historia), _inimigo(alocarInimigo(nomePersonagem, andar)), _textoVitoria(textoVitoria), _textoDerrota(textoDerrota), _idInimigo(andar) {
@@ -246,8 +247,7 @@ int SalaCombate::executarSala(Personagem& personagem){
         std::cout << "\n[DERROTA] " << _textoDerrota << std::endl;
         return 0; //encerra na engine
     } else {
-        Efeito semEfeito("Nenhum", 0, 0);
-        Item item("Boné pra trás", 1, 10, semEfeito, 1, 1);
+        Item item = FabricaItem::criarItem("Bone pra tras");
         personagem.getInventarioItem().novaAcao(item);
         Utils::coutDigitado(350) << "...\n[";
         Utils::esperar(350);
