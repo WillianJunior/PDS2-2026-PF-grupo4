@@ -1,5 +1,5 @@
 Anedota;1;20;1;Nenhum;0
-Forças Aéreas;0;40;0;Nenhum;0
+Forças Aéreas;0;40;0;Nenhum;1
 Contar uma Piada;0;20;0;Veneno;0
 Doxygengaboom;0;30;0;Nenhum;0
 Maldade Humana;0;25;0;Veneno;0
@@ -8,7 +8,7 @@ Arremessar um Livro;0;20;0;Nenhum;0
 Reclamar;1;25;1;Nenhum;0
 Plasma Hierarquico;0;25;0;Nenhum;0
 Codigos Macarronados;0;25;0;Veneno;0
-Chute de Ballet;0;30;0;Nenhum;0
+Chute de Ballet;0;30;0;Nenhum;1
 Passinho de Forro;0;20;0;Nenhum;0
 Saque de Vôlei;0;30;0;Nenhum;0
 Duro na Queda;0;25;0;Nenhum;0
@@ -18,9 +18,9 @@ Papelada de Codigos;0;25;0;Nenhum;0
 Arranhada do Gatinho;0;20;0;Nenhum;0
 Derrame do Arcanjo;0;30;0;Queimadura;0
 Aviaozinho de Papel;0;20;0;Nenhum;0
-Chamar a Ex;0;35;0;Nenhum;0
+Chamar a Ex;0;35;0;Nenhum;1
 Abrir o Reels;1;20;1;Nenhum;0
-Raio Mayconiano;0;40;0;Queimadura;0
+Raio Mayconiano;0;40;0;Queimadura;1
 Raio Gravitacional;0;25;0;Nenhum;0
 Bençao de Linus;1;25;1;Nenhum;0
 Bencao da Salvia;1;20;1;Nenhum;0
