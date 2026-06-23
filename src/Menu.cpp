@@ -267,7 +267,7 @@ std::unique_ptr<Personagem> Menu::escolherPersonagemInicial() {
         vidaInicial = 120;
 
         habilidadesIniciais.novaAcao(FabricaHabilidade::criarHabilidade("Investida"));
-        itensIniciais.novaAcao(FabricaItem::criarItem("Xeque Mate"));
+        itensIniciais.novaAcao(FabricaItem::criarItem("Xeque-Mate"));
     }
     if (classeEscolhida == 2) {
         nomePersonagem = "Vaz";
