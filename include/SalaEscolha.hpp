@@ -23,14 +23,17 @@ class SalaEscolha : public SalaBase{
     /** @brief Armazena a historia com a animacao da sala */
         Utils::Animacao _animacao;
         std::vector<OpcaoEscolha> _opcoes;
+
+        int _idEscolha;
     
     public:
     /**
      * @brief Construtor da SalaEscolha.
      * * Inicializa a sala configurando o seu nome ou título.
-     * @param nome O nome ou identificador da sala.
+     * @param nome O nome ou identificador da sala escolha (o 0 serve para não querbrar quem nao chama com esse parâmetro).
+     * @param idEscolha O id da sala.
      */
-        SalaEscolha(std::string nome, Utils::Animacao animacao);
+        SalaEscolha(std::string nome, Utils::Animacao animacao, int idEscolha = 0);
 
     /**
      * @brief Encerra as atividades da sala atual.
@@ -67,6 +70,11 @@ class SalaEscolha : public SalaBase{
     * @brief Retorna o tipo da sala ("C" para combate, "E" para escolha).
     */
         char getTipo() override;
+
+    /**
+    * @brief Retorna índice.
+    */
+    int getId() override;
 
     /**
      * @brief Adiciona uma opcao para a sala de escolhas

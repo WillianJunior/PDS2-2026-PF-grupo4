@@ -58,9 +58,11 @@ void SaveManager::salvar(int contadorSalas, Personagem& personagem, const std::v
         if (!sala) continue;
         qtdValidas++;
         dadosSalas += sala->getNome() + "\n";
-        dadosSalas += sala->getTipo();
-        dadosSalas += "\n";
+        dadosSalas += sala->getTipo(); // Adiciona o 'C' ou 'E' de forma segura
+        dadosSalas += "\n";            // Quebra a linha do tipo
+        dadosSalas += std::to_string(sala->getId()) + "\n"; // Adiciona o ID e já quebra a linha
     }
+
     arquivo << qtdValidas << "\n" << dadosSalas;
 }
 
@@ -126,16 +128,17 @@ std::unique_ptr<Personagem> SaveManager::carregar(int& contadorSalas, std::vecto
         salas.push_back(nullptr);
     }
 
-for (int i = 0; i < qtdSalas; i++) {
+    for (int i = 0; i < qtdSalas; i++) {
         std::string nomeSala, tipoSala;
+        int idSala;
         std::getline(arquivo, nomeSala);
         std::getline(arquivo, tipoSala);
-        
+        arquivo >> idSala;
+        arquivo.ignore(); 
         if (tipoSala == "C") {
-            int idAleatorio = (rand() % 5) + 1; 
-            salas.push_back(FabricaSC::criarSalas(nome, idAleatorio));
+            salas.push_back(FabricaSC::criarSalas(nome, idSala));
         } else {
-            salas.push_back(std::unique_ptr<SalaBase>(new SalaEscolha(FabricaSE::criarSalas(nome))));
+            salas.push_back(std::unique_ptr<SalaBase>(new SalaEscolha(FabricaSE::criarSalas(nome, idSala))));
         }
     }
 
