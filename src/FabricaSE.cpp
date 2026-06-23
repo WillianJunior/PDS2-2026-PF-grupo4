@@ -792,21 +792,12 @@ namespace FabricaSE {
 
         } 
         else if (nome == "Isaque") {
-<<<<<<< HEAD
-            SalaEscolha sala1("Sala do Isaque", animacao);
-            // sala1.adicionarOpcao(descricao, consequencia);
-            salas.push_back(sala1);
-            SalaEscolha sala2("Sala do Isaque", animacao);
-            salas.push_back(sala2);
-            SalaEscolha sala3("Sala do Isaque", animacao);
-=======
             SalaEscolha sala1("Sala do Isaque 1", animacao, 0);
             // sala1.adicionarOpcao(descricao, consequencia);
             salas.push_back(sala1);
             SalaEscolha sala2("Sala do Isaque 2", animacao, 1);
             salas.push_back(sala2);
             SalaEscolha sala3("Sala do Isaque 3", animacao, 2);
->>>>>>> f902e02f66fa6feef8a6bf1feccff0abbe37c00b
             salas.push_back(sala3);
 
             if (idEscolha != -1 && idEscolha >= 0 && idEscolha < salas.size()) {
@@ -817,21 +808,12 @@ namespace FabricaSE {
             }
         } 
         else if (nome == "Nicole") {
-<<<<<<< HEAD
-            SalaEscolha sala1("Sala do Nicole", animacao);
-            // sala1.adicionarOpcao(descricao, consequencia);
-            salas.push_back(sala1);
-            SalaEscolha sala2("Sala do Nicole", animacao);
-            salas.push_back(sala2);
-            SalaEscolha sala3("Sala do Nicole", animacao);
-=======
             SalaEscolha sala1("Sala do Nicole 1", animacao, 0);
             // sala1.adicionarOpcao(descricao, consequencia);
             salas.push_back(sala1);
             SalaEscolha sala2("Sala do Nicole 2", animacao, 1);
             salas.push_back(sala2);
             SalaEscolha sala3("Sala do Nicole 3", animacao, 2);
->>>>>>> f902e02f66fa6feef8a6bf1feccff0abbe37c00b
             salas.push_back(sala3);
 
             if (idEscolha != -1 && idEscolha >= 0 && idEscolha < salas.size()) {
@@ -842,21 +824,12 @@ namespace FabricaSE {
             }
         } 
         else if (nome == "Marcos") {
-<<<<<<< HEAD
-            SalaEscolha sala1("Sala do Marcos", animacao);
-            // sala1.adicionarOpcao(descricao, consequencia);
-            salas.push_back(sala1);
-            SalaEscolha sala2("Sala do Marcos", animacao);
-            salas.push_back(sala2);
-            SalaEscolha sala3("Sala do Marcos", animacao);
-=======
             SalaEscolha sala1("Sala do Marcos 1", animacao, 0);
             // sala1.adicionarOpcao(descricao, consequencia);
             salas.push_back(sala1);
             SalaEscolha sala2("Sala do Marcos 2", animacao, 1);
             salas.push_back(sala2);
             SalaEscolha sala3("Sala do Marcos 3", animacao, 2);
->>>>>>> f902e02f66fa6feef8a6bf1feccff0abbe37c00b
             salas.push_back(sala3);
 
             if (idEscolha != -1 && idEscolha >= 0 && idEscolha < salas.size()) {
