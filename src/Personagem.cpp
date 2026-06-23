@@ -3,8 +3,8 @@
 Personagem::Personagem(int vida, InventarioHabilidade inventarioHabilidade, std::string nome, InventarioItem inventarioItem)
     : Entidade(vida, nome, inventarioHabilidade), _inventario(inventarioItem), _vidaMaxima(vida){}
 
-Habilidade Personagem::escolherHabilidade(int posicaoHabilidade){
-    Habilidade habilidade = this->_inventarioHabilidade.getHabilidade(posicaoHabilidade);
+Habilidade& Personagem::escolherHabilidade(int posicaoHabilidade){
+    Habilidade& habilidade = this->_inventarioHabilidade.getHabilidade(posicaoHabilidade);
     habilidade.mostrarDescricao();
     return habilidade;
 }
@@ -27,7 +27,7 @@ bool Personagem::isMorto(){
     return this->_vida <= 0;
 }
 
-InventarioItem Personagem::getInventarioItem(){
+InventarioItem& Personagem::getInventarioItem(){
     return this->_inventario;
 }
 

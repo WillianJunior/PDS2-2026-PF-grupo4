@@ -8,6 +8,9 @@
  * * Herda da classe Acao e define as características específicas de uma habilidade, como dano, cura ou efeitos.
  */
 class Habilidade : public Acao {
+    private:
+        int _cooldown;
+        int _cooldownAtual;
     public:
     /**
      * @brief Construtor da habilidade que herda de Acao
@@ -18,7 +21,7 @@ class Habilidade : public Acao {
      * @param alvo Em quem a habilidade será usada
      * @param efeito Qual efeito ela causa no personagem ou em si
      */
-        Habilidade(std::string nome, bool tipo, int valor, bool alvo, Efeito efeito);
+        Habilidade(std::string nome, bool tipo, int valor, bool alvo, Efeito efeito, int cooldown);
     
     /**
      * @brief Compara duas habilidades
@@ -26,6 +29,11 @@ class Habilidade : public Acao {
      * @return Retorna true se sao iguais e false se sao diferentes
      */
         bool operator==(const Habilidade& outro) const;
+
+        int getCooldown();
+        int getCooldownAtual();
+        void iniciarCooldown();
+        void atualizarCooldown();
 
     /** 
      * @brief Destrutor do objeto habilidade

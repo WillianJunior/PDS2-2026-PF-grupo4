@@ -42,7 +42,7 @@ class Entidade{
      * @param posicaoHabilidade índice (posição) da Habilidade no vetor _habilidades em inventaroHabilidade
      * @return Retorna a copia do objeto Habilidade.
      */
-        virtual Habilidade escolherHabilidade(int posicaoHabilidade) = 0;
+        virtual Habilidade& escolherHabilidade(int posicaoHabilidade) = 0;
 
     /**
      * @brief Função virtual de alterar a vida
@@ -82,7 +82,7 @@ class Entidade{
     /**
      * @brief Retorna o inventário de habilidades.
      */
-        InventarioHabilidade getInventarioHabilidade();
+        InventarioHabilidade& getInventarioHabilidade();
     
     /**
      * @brief Função virtual destrutora da Entidade

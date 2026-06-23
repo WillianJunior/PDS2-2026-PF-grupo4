@@ -26,7 +26,7 @@ std::string Entidade::getNome(){
     return this->_nome;
 }
 
-InventarioHabilidade Entidade::getInventarioHabilidade(){
+InventarioHabilidade& Entidade::getInventarioHabilidade(){
     return this->_inventarioHabilidade;
 }
 

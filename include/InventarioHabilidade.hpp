@@ -41,7 +41,9 @@ class InventarioHabilidade : public Inventario<Habilidade> {
     /**
      * @brief Retorna uma habilidade específica pela posição.
      */
-        Habilidade getHabilidade(int posicao);
+        Habilidade& getHabilidade(int posicao);
+
+        void atualizarCooldowns();
 
     /**
      * @brief Compara dois inventarios para verificar se sao iguais (usado em testes).

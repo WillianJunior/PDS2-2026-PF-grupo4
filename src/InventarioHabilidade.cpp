@@ -37,11 +37,17 @@ int InventarioHabilidade::getTamanho(){
     return listaHabilidades.size();
 }
 
-Habilidade InventarioHabilidade::getHabilidade(int posicao){
+Habilidade& InventarioHabilidade::getHabilidade(int posicao){
     if (posicao < 0 || posicao >= listaHabilidades.size()) {
         throw IndiceInvalidoException();
     }
     return listaHabilidades[posicao];
+}
+
+void InventarioHabilidade::atualizarCooldowns(){
+    for(size_t i = 0; i < listaHabilidades.size(); i++){
+        listaHabilidades[i].atualizarCooldown();
+    }
 }
 
 bool InventarioHabilidade::operator==(const InventarioHabilidade& outro) const{

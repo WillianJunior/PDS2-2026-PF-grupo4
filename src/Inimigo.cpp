@@ -3,7 +3,7 @@
 Inimigo::Inimigo(int vida, InventarioHabilidade habilidade, std::string nome)
     : Entidade(vida, nome, habilidade), _vidaMaxima(vida){}
 
-Habilidade Inimigo::escolherHabilidade(int posicaoHabilidade){
+Habilidade& Inimigo::escolherHabilidade(int posicaoHabilidade){
     Habilidade habilidade = this->_inventarioHabilidade.getHabilidade(posicaoHabilidade);
     habilidade.mostrarDescricao();
     return habilidade;
