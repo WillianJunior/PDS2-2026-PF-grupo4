@@ -80,7 +80,7 @@ void SalaCombate::mostrarSala(){
 int SalaCombate::executarSala(Personagem& personagem){
     bool turnoDoJogador = true;
     int opcao = 0;
-
+    std::cout << _historia << "\n";
     std::cout << "========================================================\n";
     std::cout << "   BATALHA INICIADA: " << personagem.getNome() << " VS " << _inimigo->getNome() << "\n";
     std::cout << "========================================================\n";
@@ -256,7 +256,10 @@ int SalaCombate::executarSala(Personagem& personagem){
         Utils::coutDigitado(350) << "...\n[";
         Utils::esperar(350);
         std::cout << "\n[VITORIA] " << _textoVitoria << std::endl;
+        Utils::coutDigitado() << "Depois desse combate voce descansa, pois tem que voltar a codar.";
+        Utils::coutDigitado() << "Voce recebe 30 de vida";
         personagem.receberItem(item);
+        personagem.alterarVida(30);
         personagem.limparEfeitos();
         return 1; 
     }
@@ -271,5 +274,5 @@ char SalaCombate::getTipo(){
 }
 
 void SalaCombate::encerrarSala() {
-    Utils::coutDigitado() << "A poeira do combate baixa. Voce precisa voltar a codar.\n";
+    Utils::coutDigitado() << "Um novo dia se iniciara\n";
 }
