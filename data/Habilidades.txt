@@ -17,7 +17,7 @@ Override Impiedoso;0;30;0;Nenhum;0
 Papelada de Codigos;0;25;0;Nenhum;0
 Arranhada do Gatinho;0;20;0;Nenhum;0
 Derrame do Arcanjo;0;30;0;Queimadura;0
-Aviãozinho de Papel;0;20;0;Nenhum;0
+Aviaozinho de Papel;0;20;0;Nenhum;0
 Chamar a Ex;0;35;0;Nenhum;0
 Abrir o Reels;1;20;1;Nenhum;0
 Raio Mayconiano;0;40;0;Queimadura;0
