@@ -26,7 +26,7 @@ A motivação para o tema deste projeto surgiu de um desafio real enfrentado pel
 Assim nasceu a ideia de um "meta-jogo". A narrativa acompanha cinco estudantes que estão criando um jogo e enfrentam diversos empecilhos para conseguir terminá-lo. Cada membro do nosso grupo atua como uma "classe" de personagem selecionável no início da jornada. O jogador assume o papel de um desses estudantes e deve avançar por diversas salas de combate. Os inimigos enfrentados são, na verdade, metáforas para os desafios de desenvolvimento que tentam nos impedir de entregar o projeto final. Para auxiliar na progressão, o jogo também conta com salas interativas voltadas para a troca de itens especiais e gerenciamento de inventário, unindo nossa sátira criativa a todos os requisitos técnicos exigidos para o projeto do motor RPG.
 
 ## Arquitetura e Padrões de Projeto
-State Pattern / Máquina de Estados: O fluxo principal (Game Loop) orquestra a transição entre Salas de Combate e Salas de Escolha de forma desacoplada.
+Máquina de Estados: O fluxo principal (Game Loop) orquestra a transição entre Salas de Combate e Salas de Escolha de forma desacoplada.
 Factory Method: Instanciação dinâmica de inimigos, itens e salas através de classes fábricas (FabricaSC, FabricaSE, etc.).
 Gestão de Memória Utilização exclusiva de smart pointers (std::unique_ptr e std::shared_ptr) para mitigar vazamentos de memória.
 
