@@ -17,12 +17,16 @@ class SalaCombate : public SalaBase {
     private:
         std::string _historia;
         std::unique_ptr<Inimigo> _inimigo;
+        std::string _textoVitoria;
+        std::string _textoDerrota;
+
+
     public:
         /**
          * @brief Construtor da classe SalaCombate.
          * @param nome O nome ou identificador da sala de combate.
          */
-        SalaCombate(std::string nome, std::string historia, std::string nomePersonagem, int andar);
+        SalaCombate(std::string nome, std::string historia, std::string textoVitoria, std::string textoDerrota, std::string nomePersonagem, int andar);
 
         /**
          * @brief Finaliza os eventos da sala de combate.

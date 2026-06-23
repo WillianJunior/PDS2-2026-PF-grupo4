@@ -8,9 +8,8 @@
 #include "Utils.hpp"
 #include "FabricaInimigo.hpp"
 
-SalaCombate::SalaCombate(std::string nome, std::string historia, std::string nomePersonagem, int andar) 
-    : SalaBase(nome), _historia(historia), _inimigo(alocarInimigo(nomePersonagem, andar)) {
-        
+SalaCombate::SalaCombate(std::string nome, std::string historia, std::string textoVitoria, std::string textoDerrota, std::string nomePersonagem, int andar) 
+    : SalaBase(nome), _historia(historia), _textoVitoria(textoVitoria), _textoDerrota(textoDerrota), _inimigo(alocarInimigo(nomePersonagem, andar)) {
 }
 
 void SalaCombate::mostrarSala(){
@@ -239,7 +238,8 @@ int SalaCombate::executarSala(Personagem& personagem){
     if (personagem.isMorto()) {
         Utils::coutDigitado(350) << "...\n[";
         Utils::esperar(350);
-        std::cout << "\n[DERROTA] Suas forcas se esgotaram..." << std::endl;
+
+        std::cout << "\n[DERROTA] " << _textoDerrota << std::endl;
         return 0; //encerra na engine
     } else {
         Efeito semEfeito("Nenhum", 0, 0);
@@ -247,7 +247,7 @@ int SalaCombate::executarSala(Personagem& personagem){
         personagem.getInventarioItem().novaAcao(item);
         Utils::coutDigitado(350) << "...\n[";
         Utils::esperar(350);
-        std::cout << "\n[VITORIA] O " << _inimigo->getNome() << " foi derrotado!" << std::endl;
+        std::cout << "\n[VITORIA] " << _textoVitoria << std::endl;
         std::cout << "Você recebeu o item: " << item.getNome() << std::endl;
         return 1; 
     }
