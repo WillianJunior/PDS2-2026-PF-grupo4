@@ -66,7 +66,7 @@ std::unique_ptr<Personagem> Menu::executarMenuInicial(bool existeSave) {
                 std::string nomePersonagem = "PersonagemSalvo";
                 int vidaInicial = 100;
                 Efeito efeito(".", 0, 0);
-                Habilidade habilidade(".", false, 10, false, efeito);
+                Habilidade habilidade(".", false, 10, false, efeito, 0);
                 InventarioHabilidade habilidadesIniciais;
                 habilidadesIniciais.novaAcao(habilidade);
                 Item item(".", true, 40, efeito, true);
@@ -265,7 +265,7 @@ std::unique_ptr<Personagem> Menu::escolherPersonagemInicial() {
         vidaInicial = 120;
         
         Efeito semEfeito("Nenhum", 0, 0);
-        Habilidade ataqueBasico("Investida", false, 25, false, semEfeito);
+        Habilidade ataqueBasico("Investida", false, 25, false, semEfeito, 0);
         habilidadesIniciais.novaAcao(ataqueBasico);
         
         Item xequemate("Xeque-Mate", true, 40, semEfeito, true);
@@ -276,10 +276,10 @@ std::unique_ptr<Personagem> Menu::escolherPersonagemInicial() {
         vidaInicial = 100;
         
         Efeito semEfeito("Nenhum", 0, 0);
-        Habilidade ataqueBasico("Contar uma piada", false, 15, false, semEfeito); // colocar um efeito
+        Habilidade ataqueBasico("Contar uma piada", false, 15, false, semEfeito, 0); // colocar um efeito
         habilidadesIniciais.novaAcao(ataqueBasico);
         
-        Habilidade ataqueEspecial("Forcas Aereas", false, 40, false, semEfeito);
+        Habilidade ataqueEspecial("Forcas Aereas", false, 40, false, semEfeito, 0);
         habilidadesIniciais.novaAcao(ataqueEspecial);
     }
     if (classeEscolhida == 3) {
@@ -287,7 +287,7 @@ std::unique_ptr<Personagem> Menu::escolherPersonagemInicial() {
         vidaInicial = 120;
         
         Efeito semEfeito("Nenhum", 0, 0);
-        Habilidade ataqueBasico("Arremesar um Livro", false, 25, false, semEfeito);
+        Habilidade ataqueBasico("Arremesar um Livro", false, 25, false, semEfeito, 0);
         habilidadesIniciais.novaAcao(ataqueBasico);
         
         Item cocacola("Coca-cola", true, 40, semEfeito, true);
@@ -298,7 +298,7 @@ std::unique_ptr<Personagem> Menu::escolherPersonagemInicial() {
         vidaInicial = 120;
         
         Efeito semEfeito("Nenhum", 0, 0);
-        Habilidade ataqueBasico("Passinho do Forro", false, 15, false, semEfeito); // colocar um efeito
+        Habilidade ataqueBasico("Passinho do Forro", false, 15, false, semEfeito, 0); // colocar um efeito
         habilidadesIniciais.novaAcao(ataqueBasico);
         
         Item aguabenta("Agua Benta", true, 40, semEfeito, true);
@@ -309,10 +309,10 @@ std::unique_ptr<Personagem> Menu::escolherPersonagemInicial() {
         vidaInicial = 120;
         
         Efeito semEfeito("Nenhum", 0, 0);
-        Habilidade ataqueBasico("Aviaozinho de Papel", false, 25, false, semEfeito);
+        Habilidade ataqueBasico("Aviaozinho de Papel", false, 25, false, semEfeito, 0);
         habilidadesIniciais.novaAcao(ataqueBasico);
         
-        Habilidade chamarEx("Chamar a Ex", false, 15, false, semEfeito); // colocar um efeito
+        Habilidade chamarEx("Chamar a Ex", false, 15, false, semEfeito, 0); // colocar um efeito
         habilidadesIniciais.novaAcao(chamarEx);
     }
     
