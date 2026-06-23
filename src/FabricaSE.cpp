@@ -98,7 +98,7 @@ namespace FabricaSE {
             salas.push_back(Natora);
 
             Utils::Animacao animacaonewtonEspirito;
-            animacaonewtonEspirito.tempoFrame = 1200;
+            animacaonewtonEspirito.tempoFrame = 2000;
             animacaonewtonEspirito.textoInicial.push_back("Passado um tempo, voce estava cansado de tanto codar.");
             animacaonewtonEspirito.textoInicial.push_back("No fundo, voce sabia que deveria descansar um pouco.");
             animacaonewtonEspirito.textoInicial.push_back("Deitou-se no sofa imundo do Gremio e olhando para cima, comecou a pensar.");
@@ -166,6 +166,15 @@ namespace FabricaSE {
             animacaonewtonEspirito.frames.push_back(R"( 
                         "Porque?"
                        O                   
+                      /|\_           
+                 ____/_|_____________           O
+                |         |         |         / | \
+                |_________|_________|          / \
+               /                     \      
+            )");
+            animacaonewtonEspirito.frames.push_back(R"( 
+
+                       O                   
                       /|\_            "Voce precisa da minha ajuda."
                  ____/_|_____________           O
                 |         |         |         / | \
@@ -175,7 +184,16 @@ namespace FabricaSE {
             animacaonewtonEspirito.frames.push_back(R"( 
                         "Como?"
                        O                   
-                      /|\_              "Com os meus conhecimentos."
+                      /|\_             
+                 ____/_|_____________           O
+                |         |         |         / | \
+                |_________|_________|          / \
+               /                     \      
+            )");
+            animacaonewtonEspirito.frames.push_back(R"( 
+
+                       O                   
+                      /|\_            "Com os meus conhecimentos"
                  ____/_|_____________           O
                 |         |         |         / | \
                 |_________|_________|          / \
@@ -184,7 +202,17 @@ namespace FabricaSE {
             animacaonewtonEspirito.frames.push_back(R"( 
                 "O que devo fazer?"
                        O                   
-                      /|\_                    "Aperte a minha mão."
+                      /|\_                   
+                 ____/_|_____________           O
+                |         |         |         / | \
+                |_________|_________|          / \
+               /                     \      
+            )");
+
+            animacaonewtonEspirito.frames.push_back(R"( 
+    
+                       O                   
+                      /|\_            "Aperte a minha mão"
                  ____/_|_____________           O
                 |         |         |         / | \
                 |_________|_________|          / \
@@ -223,7 +251,7 @@ namespace FabricaSE {
             animacaoFernandoPessoa.textoInicial.push_back("Nao seria a natureza uma imagem-espelho de toda criacao?");
             animacaoFernandoPessoa.textoInicial.push_back("A natureza copia a humanidade ou a humanidade copia a natureza?");
             animacaoFernandoPessoa.textoInicial.push_back("Ao ver aquele bando, Maycon se sentiu inspirado, e antes de voltar a codar, queria escrever uma poesia.");
-            animacaoFernandoPessoa.tempoFrame = 40;
+            animacaoFernandoPessoa.tempoFrame = 150;
         animacaoFernandoPessoa.frames.push_back(R"( 
                    O                           v
                   /|\_                  ^           -
@@ -839,7 +867,7 @@ Utils::Animacao animacaoAbstinencia;
 
         )");
 
-        SalaEscolha abstinenciaDroga("Abstinencia de uma Droga", animacaoAbstinencia);
+        SalaEscolha abstinenciaDroga("Abstinencia de uma Droga", animacaoAbstinencia, 0);
 
         abstinenciaDroga.adicionarOpcao("Suprir a abstinencia e jogar LOL", [](Personagem *p){
             Utils::coutDigitado() << "Sabendo do seu vicio, Isaque nao aguentou.\n";
