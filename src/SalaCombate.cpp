@@ -272,5 +272,4 @@ char SalaCombate::getTipo(){
 
 void SalaCombate::encerrarSala() {
     Utils::coutDigitado() << "A poeira do combate baixa. Voce precisa voltar a codar.\n";
-    Utils::limparTela();
 }

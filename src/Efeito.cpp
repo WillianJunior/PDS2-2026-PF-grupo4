@@ -5,7 +5,9 @@ Efeito::Efeito(std::string nome, int valor, int duracao)
 
 void Efeito::mostrarEfeito(){
     if(!this->isEncerrado()){
-        Utils::coutDigitado() << "O alvo está com" << this->_nome << " (" << std::abs(this->_valor) << " de impacto por turno)\n";
+        //confere se eh dano ou cura pelo sinal do valor, nao tem calculo de impacto aqui
+        std::string tipoEfeito = (this->_valor < 0)? "de dano" : "de cura";
+        Utils::coutDigitado() << "O alvo está com " << this->_nome << " (" << std::abs(this->_valor) << " " << tipoEfeito << " por turno)\n";
     }
 }
 

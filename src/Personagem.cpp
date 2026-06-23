@@ -22,7 +22,7 @@ void Personagem::receberHabilidade(Habilidade habilidade){
     int limite = 3;
     std::cout << "\n>>> Voce descobriu uma nova habilidade!! <<<\n";
     std::cout << "[" << habilidade.getNome() << "] | Usos: " << habilidade.getCooldown() << "\n";
-    std::cout << "    >" << habilidade.mostrarDescricao() << "\n";
+    std::cout << "  > " << habilidade.mostrarDescricao() << "\n";
     std::cout << "------------------------------------------------\n";
 
     if(this->_inventarioHabilidade.getTamanho() < limite){
@@ -54,7 +54,7 @@ void Personagem::receberItem(Item item){
 
     std::cout << "\n>>> Voce achou um novo item!! <<<\n";
     std::cout << "[" << item.getNome() << "] | Usos: " << item.getUsosRestantes() << "\n";
-    std::cout << "    >" << item.mostrarDescricao() << "\n";
+    std::cout << "  > " << item.mostrarDescricao() << "\n";
     std::cout << "------------------------------------------------\n";
 
     if (this->_inventario.getTamanho() < limiteItens) {

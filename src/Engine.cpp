@@ -105,11 +105,44 @@ void Engine::iniciar(){
         }
         salaAtual->encerrarSala();
         
+        if(!_personagem->isMorto() && salaID < 8){
+            int escolhaSaida = 0;
+            while(true){
+                std::cout << "\n========================================================\n";
+                std::cout << "  SALA CONCLUIDA! O jogo foi salvo automaticamente.\n";
+                std::cout << "========================================================\n";
+                std::cout << "[ 1 ] - Seguir para a proxima sala\n";
+                std::cout << "[ 2 ] - Sair\n";
+                std::cout << "Escolha: ";
+            
+                std::cin >> escolhaSaida;
+                if(std::cin.fail()){
+                    std::cin.clear();
+                    std::cin.ignore(10000, '\n'); // Limpa o "lixo" do buffer
+                    std::cout << "Entrada invalida! Digite apenas o numero 1 ou 2.\n";
+                    continue; 
+                }
+                if(escolhaSaida == 1){
+                    break;
+                } 
+                else if(escolhaSaida == 2){
+                    std::cout << "\nFechando o terminal...\n";
+                    break;
+                } 
+                else{
+                    std::cout << "Opcao inexistente! Escolha 1 ou 2.\n";
+                }
+            }
+            //se escolheu 2, sai da engine
+            if (escolhaSaida == 2){
+                break; 
+            }
+        }
         // O escopo do while garante que salaAtual seja destruída 
     }
 
-    // Finalização e encerramento da gistória
-    if (!_personagem->isMorto()) {
+    // Finalização e encerramento da história
+    if (!_personagem->isMorto() && salaID >= 8){
         std::cout << "\nHISTORIA FINAL DO JOGO" << std::endl;
         // apaga save na vitória
         std::remove("save.txt");
