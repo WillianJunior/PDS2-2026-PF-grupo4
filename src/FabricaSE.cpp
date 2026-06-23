@@ -1,11 +1,8 @@
 #include "FabricaSE.hpp"
 #include "Utils.hpp"
 #include "FabricaHabilidade.hpp"
-<<<<<<< HEAD
 #include "Item.hpp"
 #include "FabricaItem.hpp"
-=======
->>>>>>> 67dc4c0d1596860e527cf202aa84c09bb66edacc
 #include <vector>
 #include <random>
 
