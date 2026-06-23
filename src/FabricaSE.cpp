@@ -192,7 +192,7 @@ namespace FabricaSE {
             )");
 
             SalaEscolha newtonEspirito("Encontro com a genialidade", animacaonewtonEspirito);
-            Natora.adicionarOpcao("Apertar a mao de Isaac Newton", [](Personagem *p){
+            newtonEspirito.adicionarOpcao("Apertar a mao de Isaac Newton", [](Personagem *p){
                 Habilidade habilidade = FabricaHabilidade::criarHabilidade("Raio Gravitacional");
                 Utils::coutDigitado() << "Voce se levanta para apertar a mao do grandioso Isaac Newton.\n";
                 Utils::coutDigitado() << "Quanto mais voce se aproxima, mais voce percebe a aura de sua inteligencia.\n";
@@ -203,7 +203,7 @@ namespace FabricaSE {
                 Utils::coutDigitado() << "Maycon aprendeu Raio Gravitacional.\n";
                 
             });
-            Natora.adicionarOpcao("Ignorar o dom da sabedoria", [](Personagem *p){
+            newtonEspirito.adicionarOpcao("Ignorar o dom da sabedoria", [](Personagem *p){
                 Habilidade habilidade = FabricaHabilidade::criarHabilidade("Raio Mayconiano");
                 p->getInventarioHabilidade().novaAcao(habilidade);
                 Utils::coutDigitado() << "Voce se recusa a apertar a mao do grandioso Isaac Newton.\n";
@@ -712,36 +712,36 @@ namespace FabricaSE {
 
         } 
         else if (nome == "Isaque") {
-            SalaEscolha sala1("Sala do Isaque", animacao);
+            SalaEscolha sala1("Sala do Isaque 1", animacao);
             // sala1.adicionarOpcao(descricao, consequencia);
             salas.push_back(sala1);
-            SalaEscolha sala2("Sala do Isaque", animacao);
+            SalaEscolha sala2("Sala do Isaque 2", animacao);
             salas.push_back(sala2);
-            SalaEscolha sala3("Sala do Isaque", animacao);
+            SalaEscolha sala3("Sala do Isaque 3", animacao);
             salas.push_back(sala3);
 
             int numeroEscolhido = rand() % 3;
             return salas[numeroEscolhido];
         } 
         else if (nome == "Nicole") {
-            SalaEscolha sala1("Sala do Nicole", animacao);
+            SalaEscolha sala1("Sala do Nicole 1", animacao);
             // sala1.adicionarOpcao(descricao, consequencia);
             salas.push_back(sala1);
-            SalaEscolha sala2("Sala do Nicole", animacao);
+            SalaEscolha sala2("Sala do Nicole 2", animacao);
             salas.push_back(sala2);
-            SalaEscolha sala3("Sala do Nicole", animacao);
+            SalaEscolha sala3("Sala do Nicole 3", animacao);
             salas.push_back(sala3);
 
             int numeroEscolhido = rand() % 3;
             return salas[numeroEscolhido];
         } 
         else if (nome == "Marcos") {
-            SalaEscolha sala1("Sala do Marcos", animacao);
+            SalaEscolha sala1("Sala do Marcos 1", animacao);
             // sala1.adicionarOpcao(descricao, consequencia);
             salas.push_back(sala1);
-            SalaEscolha sala2("Sala do Marcos", animacao);
+            SalaEscolha sala2("Sala do Marcos 2", animacao);
             salas.push_back(sala2);
-            SalaEscolha sala3("Sala do Marcos", animacao);
+            SalaEscolha sala3("Sala do Marcos 3", animacao);
             salas.push_back(sala3);
 
             int numeroEscolhido = rand() % 3;
