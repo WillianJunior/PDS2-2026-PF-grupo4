@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>WE CANT CODE THIS GAME: Código-Fonte de include/Utils.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">WE CANT CODE THIS GAME
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Utils.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Utils_8hpp.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef UTILS_HPP</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define UTILS_HPP</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespaceUtils.html">Utils</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceUtils.html#af9af19df13165c6a9b83b19b307c8042">coutTempo</a>(std::string texto, <span class="keywordtype">int</span> milisegundos = 55);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceUtils.html#a56a309c06b7bb1c947d573fb3c8d0e6a">limparTela</a>(); <span class="comment">// essa vai ser usada para mudança de sala e vai limpar tudo</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="namespaceUtils.html#ace8ded512d37a4a7599939f6ef227ef2">   11</a></span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceUtils.html#ace8ded512d37a4a7599939f6ef227ef2">limparTelaAnima</a>(); <span class="comment">// essa vai fazer o cursor voltar pra linha 1 e vai gerar uma especie de &quot;animação&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="namespaceUtils.html#a1d75c3fbc71b9d2a6417ec80a8d0c48c">esperar</a>(<span class="keywordtype">int</span> milissegundos); <span class="comment">// pra esperar né caba nao é de ferro</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keyword">extern</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="namespaceUtils.html#a6c273b4ba0d59386177d7ca64628dd98">modoTeste</a>;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="structUtils_1_1Animacao.html">   17</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structUtils_1_1Animacao.html">Animacao</a> {</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="structUtils_1_1Animacao.html#ab423cde74fdf71cbaac198e86d2ecbfd">   18</a></span>        std::vector&lt;std::string&gt; <a class="code hl_variable" href="structUtils_1_1Animacao.html#ab423cde74fdf71cbaac198e86d2ecbfd">textoInicial</a>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="structUtils_1_1Animacao.html#a180ecb27cf7d126ed2516fa6007fb72a">   19</a></span>        std::vector&lt;std::string&gt; <a class="code hl_variable" href="structUtils_1_1Animacao.html#a180ecb27cf7d126ed2516fa6007fb72a">frames</a>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="structUtils_1_1Animacao.html#af53e44afbfe452140374515f03c531d0">   20</a></span>        std::vector&lt;std::string&gt; <a class="code hl_variable" href="structUtils_1_1Animacao.html#af53e44afbfe452140374515f03c531d0">textoFinal</a>;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="structUtils_1_1Animacao.html#a8e446fdad71566f36033a626d892cce3">   21</a></span>        <span class="keywordtype">int</span> <a class="code hl_variable" href="structUtils_1_1Animacao.html#a8e446fdad71566f36033a626d892cce3">tempoFrame</a> = 200;</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    };</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="classUtils_1_1coutDigitado.html">   24</a></span>    <span class="keyword">class </span><a class="code hl_class" href="classUtils_1_1coutDigitado.html">coutDigitado</a> {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        std::ostringstream buffer;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">int</span> _tempo;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="classUtils_1_1coutDigitado.html#ae76468279cf37767cd74b53a7d09af3c">   29</a></span>        <a class="code hl_function" href="classUtils_1_1coutDigitado.html#ae76468279cf37767cd74b53a7d09af3c">coutDigitado</a>(<span class="keywordtype">int</span> tempo = 75) : _tempo(tempo) {}</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="foldopen" id="foldopen00031" data-start="{" data-end="}">
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="classUtils_1_1coutDigitado.html#a994c9df12b258c4bbea28e6a49d59eed">   31</a></span>        <a class="code hl_class" href="classUtils_1_1coutDigitado.html">coutDigitado</a>&amp; <a class="code hl_function" href="classUtils_1_1coutDigitado.html#a994c9df12b258c4bbea28e6a49d59eed">operator&lt;&lt;</a>(<span class="keyword">const</span> T&amp; valor) {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            buffer &lt;&lt; valor;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
+</div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="}">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="classUtils_1_1coutDigitado.html#a8d1ef5e40127190b5c93590155c58bfe">   35</a></span>        <a class="code hl_function" href="classUtils_1_1coutDigitado.html#a8d1ef5e40127190b5c93590155c58bfe">~coutDigitado</a>() {</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <a class="code hl_function" href="namespaceUtils.html#af9af19df13165c6a9b83b19b307c8042">coutTempo</a>(buffer.str(), _tempo);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>        }</div>
+</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    };</div>
+</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>}</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclassUtils_1_1coutDigitado_html"><div class="ttname"><a href="classUtils_1_1coutDigitado.html">Utils::coutDigitado</a></div><div class="ttdef"><b>Definição</b> Utils.hpp:24</div></div>
+<div class="ttc" id="aclassUtils_1_1coutDigitado_html_a8d1ef5e40127190b5c93590155c58bfe"><div class="ttname"><a href="classUtils_1_1coutDigitado.html#a8d1ef5e40127190b5c93590155c58bfe">Utils::coutDigitado::~coutDigitado</a></div><div class="ttdeci">~coutDigitado()</div><div class="ttdef"><b>Definição</b> Utils.hpp:35</div></div>
+<div class="ttc" id="aclassUtils_1_1coutDigitado_html_a994c9df12b258c4bbea28e6a49d59eed"><div class="ttname"><a href="classUtils_1_1coutDigitado.html#a994c9df12b258c4bbea28e6a49d59eed">Utils::coutDigitado::operator&lt;&lt;</a></div><div class="ttdeci">coutDigitado &amp; operator&lt;&lt;(const T &amp;valor)</div><div class="ttdef"><b>Definição</b> Utils.hpp:31</div></div>
+<div class="ttc" id="aclassUtils_1_1coutDigitado_html_ae76468279cf37767cd74b53a7d09af3c"><div class="ttname"><a href="classUtils_1_1coutDigitado.html#ae76468279cf37767cd74b53a7d09af3c">Utils::coutDigitado::coutDigitado</a></div><div class="ttdeci">coutDigitado(int tempo=75)</div><div class="ttdef"><b>Definição</b> Utils.hpp:29</div></div>
+<div class="ttc" id="anamespaceUtils_html"><div class="ttname"><a href="namespaceUtils.html">Utils</a></div><div class="ttdef"><b>Definição</b> Utils.cpp:10</div></div>
+<div class="ttc" id="anamespaceUtils_html_a1d75c3fbc71b9d2a6417ec80a8d0c48c"><div class="ttname"><a href="namespaceUtils.html#a1d75c3fbc71b9d2a6417ec80a8d0c48c">Utils::esperar</a></div><div class="ttdeci">void esperar(int milissegundos)</div><div class="ttdef"><b>Definição</b> Utils.cpp:72</div></div>
+<div class="ttc" id="anamespaceUtils_html_a56a309c06b7bb1c947d573fb3c8d0e6a"><div class="ttname"><a href="namespaceUtils.html#a56a309c06b7bb1c947d573fb3c8d0e6a">Utils::limparTela</a></div><div class="ttdeci">void limparTela()</div><div class="ttdef"><b>Definição</b> Utils.cpp:67</div></div>
+<div class="ttc" id="anamespaceUtils_html_a6c273b4ba0d59386177d7ca64628dd98"><div class="ttname"><a href="namespaceUtils.html#a6c273b4ba0d59386177d7ca64628dd98">Utils::modoTeste</a></div><div class="ttdeci">bool modoTeste</div><div class="ttdoc">Define se está acontecendo os testes (quando true, desativa comportamentos que atrapaham os testes (e...</div><div class="ttdef"><b>Definição</b> Utils.cpp:11</div></div>
+<div class="ttc" id="anamespaceUtils_html_ace8ded512d37a4a7599939f6ef227ef2"><div class="ttname"><a href="namespaceUtils.html#ace8ded512d37a4a7599939f6ef227ef2">Utils::limparTelaAnima</a></div><div class="ttdeci">void limparTelaAnima()</div></div>
+<div class="ttc" id="anamespaceUtils_html_af9af19df13165c6a9b83b19b307c8042"><div class="ttname"><a href="namespaceUtils.html#af9af19df13165c6a9b83b19b307c8042">Utils::coutTempo</a></div><div class="ttdeci">void coutTempo(std::string texto, int milisegundos)</div><div class="ttdef"><b>Definição</b> Utils.cpp:13</div></div>
+<div class="ttc" id="astructUtils_1_1Animacao_html"><div class="ttname"><a href="structUtils_1_1Animacao.html">Utils::Animacao</a></div><div class="ttdef"><b>Definição</b> Utils.hpp:17</div></div>
+<div class="ttc" id="astructUtils_1_1Animacao_html_a180ecb27cf7d126ed2516fa6007fb72a"><div class="ttname"><a href="structUtils_1_1Animacao.html#a180ecb27cf7d126ed2516fa6007fb72a">Utils::Animacao::frames</a></div><div class="ttdeci">std::vector&lt; std::string &gt; frames</div><div class="ttdef"><b>Definição</b> Utils.hpp:19</div></div>
+<div class="ttc" id="astructUtils_1_1Animacao_html_a8e446fdad71566f36033a626d892cce3"><div class="ttname"><a href="structUtils_1_1Animacao.html#a8e446fdad71566f36033a626d892cce3">Utils::Animacao::tempoFrame</a></div><div class="ttdeci">int tempoFrame</div><div class="ttdef"><b>Definição</b> Utils.hpp:21</div></div>
+<div class="ttc" id="astructUtils_1_1Animacao_html_ab423cde74fdf71cbaac198e86d2ecbfd"><div class="ttname"><a href="structUtils_1_1Animacao.html#ab423cde74fdf71cbaac198e86d2ecbfd">Utils::Animacao::textoInicial</a></div><div class="ttdeci">std::vector&lt; std::string &gt; textoInicial</div><div class="ttdef"><b>Definição</b> Utils.hpp:18</div></div>
+<div class="ttc" id="astructUtils_1_1Animacao_html_af53e44afbfe452140374515f03c531d0"><div class="ttname"><a href="structUtils_1_1Animacao.html#af53e44afbfe452140374515f03c531d0">Utils::Animacao::textoFinal</a></div><div class="ttdeci">std::vector&lt; std::string &gt; textoFinal</div><div class="ttdef"><b>Definição</b> Utils.hpp:20</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>

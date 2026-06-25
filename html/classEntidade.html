@@ -111,9 +111,9 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:a3e50f865ffcca548bdc7d97058c173d7" id="r_a3e50f865ffcca548bdc7d97058c173d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#a3e50f865ffcca548bdc7d97058c173d7">Entidade</a> (int vida, std::string nome, <a class="el" href="classInventarioHabilidade.html">InventarioHabilidade</a> inventarioHabilidade)</td></tr>
 <tr class="memdesc:a3e50f865ffcca548bdc7d97058c173d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão de entidade Aloca vida, nome e habilidades de entidade.  <br /></td></tr>
 <tr class="separator:a3e50f865ffcca548bdc7d97058c173d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67d66a335bc8975a3c1ac530dd7c0e33" id="r_a67d66a335bc8975a3c1ac530dd7c0e33"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classHabilidade.html">Habilidade</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#a67d66a335bc8975a3c1ac530dd7c0e33">escolherHabilidade</a> (int posicaoHabilidade)=0</td></tr>
-<tr class="memdesc:a67d66a335bc8975a3c1ac530dd7c0e33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função virtual de escolher habilidade.  <br /></td></tr>
-<tr class="separator:a67d66a335bc8975a3c1ac530dd7c0e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc58c8e74cbae83369fdc39988edc2d1" id="r_adc58c8e74cbae83369fdc39988edc2d1"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classHabilidade.html">Habilidade</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#adc58c8e74cbae83369fdc39988edc2d1">escolherHabilidade</a> (int posicaoHabilidade)=0</td></tr>
+<tr class="memdesc:adc58c8e74cbae83369fdc39988edc2d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função virtual de escolher habilidade.  <br /></td></tr>
+<tr class="separator:adc58c8e74cbae83369fdc39988edc2d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93bfebaf5a40c8ab214fd0068ca6149a" id="r_a93bfebaf5a40c8ab214fd0068ca6149a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#a93bfebaf5a40c8ab214fd0068ca6149a">alterarVida</a> (int valor)=0</td></tr>
 <tr class="memdesc:a93bfebaf5a40c8ab214fd0068ca6149a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função virtual de alterar a vida.  <br /></td></tr>
 <tr class="separator:a93bfebaf5a40c8ab214fd0068ca6149a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,15 +126,17 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:adfaf551744091e864c5b1acc96ff9c51" id="r_adfaf551744091e864c5b1acc96ff9c51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#adfaf551744091e864c5b1acc96ff9c51">processarEfeitosAtivos</a> ()</td></tr>
 <tr class="memdesc:adfaf551744091e864c5b1acc96ff9c51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Itera sobre os efeitos ativos aplicando eles e diminuindo a duracao deles.  <br /></td></tr>
 <tr class="separator:adfaf551744091e864c5b1acc96ff9c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac50d14a5d9632b45a87d2804e90ace72" id="r_ac50d14a5d9632b45a87d2804e90ace72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#ac50d14a5d9632b45a87d2804e90ace72">limparEfeitos</a> ()</td></tr>
+<tr class="separator:ac50d14a5d9632b45a87d2804e90ace72"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a273d26d69ff950d53fa9eaaff38bc163" id="r_a273d26d69ff950d53fa9eaaff38bc163"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#a273d26d69ff950d53fa9eaaff38bc163">getVida</a> ()</td></tr>
 <tr class="memdesc:a273d26d69ff950d53fa9eaaff38bc163"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a vida atual da entidade.  <br /></td></tr>
 <tr class="separator:a273d26d69ff950d53fa9eaaff38bc163"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a838b5a83d932111378efcb9e062a56a3" id="r_a838b5a83d932111378efcb9e062a56a3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#a838b5a83d932111378efcb9e062a56a3">getNome</a> ()</td></tr>
 <tr class="memdesc:a838b5a83d932111378efcb9e062a56a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o nome da entidade.  <br /></td></tr>
 <tr class="separator:a838b5a83d932111378efcb9e062a56a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52bd2e7409925a37d3c05ea3b57f9188" id="r_a52bd2e7409925a37d3c05ea3b57f9188"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInventarioHabilidade.html">InventarioHabilidade</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#a52bd2e7409925a37d3c05ea3b57f9188">getInventarioHabilidade</a> ()</td></tr>
-<tr class="memdesc:a52bd2e7409925a37d3c05ea3b57f9188"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o inventário de habilidades.  <br /></td></tr>
-<tr class="separator:a52bd2e7409925a37d3c05ea3b57f9188"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a9d00676f0384931e2f1b8053799252" id="r_a9a9d00676f0384931e2f1b8053799252"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInventarioHabilidade.html">InventarioHabilidade</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#a9a9d00676f0384931e2f1b8053799252">getInventarioHabilidade</a> ()</td></tr>
+<tr class="memdesc:a9a9d00676f0384931e2f1b8053799252"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o inventário de habilidades.  <br /></td></tr>
+<tr class="separator:a9a9d00676f0384931e2f1b8053799252"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b3a23b8307be2dcc4cfbe77e69baa50" id="r_a7b3a23b8307be2dcc4cfbe77e69baa50"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#a7b3a23b8307be2dcc4cfbe77e69baa50">~Entidade</a> ()</td></tr>
 <tr class="memdesc:a7b3a23b8307be2dcc4cfbe77e69baa50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função virtual destrutora da <a class="el" href="classEntidade.html" title="Classe abstrata para representar as entidades.">Entidade</a>.  <br /></td></tr>
 <tr class="separator:a7b3a23b8307be2dcc4cfbe77e69baa50"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -276,8 +278,8 @@ Atributos Protegidos</h2></td></tr>
 
 </div>
 </div>
-<a id="a67d66a335bc8975a3c1ac530dd7c0e33" name="a67d66a335bc8975a3c1ac530dd7c0e33"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67d66a335bc8975a3c1ac530dd7c0e33">&#9670;&#160;</a></span>escolherHabilidade()</h2>
+<a id="adc58c8e74cbae83369fdc39988edc2d1" name="adc58c8e74cbae83369fdc39988edc2d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc58c8e74cbae83369fdc39988edc2d1">&#9670;&#160;</a></span>escolherHabilidade()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -286,7 +288,7 @@ Atributos Protegidos</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="classHabilidade.html">Habilidade</a> Entidade::escolherHabilidade </td>
+          <td class="memname">virtual <a class="el" href="classHabilidade.html">Habilidade</a> &amp; Entidade::escolherHabilidade </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>posicaoHabilidade</em></td><td>)</td>
@@ -313,18 +315,18 @@ Atributos Protegidos</h2></td></tr>
 </li>
 </ul>
 
-<p>Implementado por <a class="el" href="classInimigo.html#af7d582fc95c3ca6f7c18e2f5c0e99152">Inimigo</a> e <a class="el" href="classPersonagem.html#a82d3d108b4eab95527ae48e2268f6c94">Personagem</a>.</p>
+<p>Implementado por <a class="el" href="classInimigo.html#af7f3dc00c0443dc85fbe87315c05b76b">Inimigo</a> e <a class="el" href="classPersonagem.html#a9d1d9d61a41c31270e05af0d51eaafce">Personagem</a>.</p>
 
 </div>
 </div>
-<a id="a52bd2e7409925a37d3c05ea3b57f9188" name="a52bd2e7409925a37d3c05ea3b57f9188"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52bd2e7409925a37d3c05ea3b57f9188">&#9670;&#160;</a></span>getInventarioHabilidade()</h2>
+<a id="a9a9d00676f0384931e2f1b8053799252" name="a9a9d00676f0384931e2f1b8053799252"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a9d00676f0384931e2f1b8053799252">&#9670;&#160;</a></span>getInventarioHabilidade()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classInventarioHabilidade.html">InventarioHabilidade</a> Entidade::getInventarioHabilidade </td>
+          <td class="memname"><a class="el" href="classInventarioHabilidade.html">InventarioHabilidade</a> &amp; Entidade::getInventarioHabilidade </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -401,6 +403,23 @@ Atributos Protegidos</h2></td></tr>
 <p>** Responsável por verificar se a vida do personagem esta maior ou igual que 0 </p><dl class="section return"><dt>Retorna</dt><dd>false or true </dd></dl>
 
 <p>Implementado por <a class="el" href="classInimigo.html#ad4ba5228c63de5ba1418f3257acf7361">Inimigo</a> e <a class="el" href="classPersonagem.html#afb52502006acf871aa5ebdcbca06a86c">Personagem</a>.</p>
+
+</div>
+</div>
+<a id="ac50d14a5d9632b45a87d2804e90ace72" name="ac50d14a5d9632b45a87d2804e90ace72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac50d14a5d9632b45a87d2804e90ace72">&#9670;&#160;</a></span>limparEfeitos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Entidade::limparEfeitos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

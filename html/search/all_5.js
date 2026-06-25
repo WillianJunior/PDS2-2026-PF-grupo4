@@ -1,18 +1,16 @@
 var searchData=
 [
-  ['efeito_0',['efeito',['../classEfeito.html',1,'Efeito'],['../classEfeito.html#a1f7ceced0871b644b475cf3acbaed2de',1,'Efeito::Efeito()']]],
-  ['efeito_2ecpp_1',['Efeito.cpp',['../Efeito_8cpp.html',1,'']]],
-  ['efeito_2ehpp_2',['Efeito.hpp',['../Efeito_8hpp.html',1,'']]],
-  ['encerrarsala_3',['encerrarsala',['../classSalaEscolha.html#a271e7269eeb090dcdf63f0c4988deab0',1,'SalaEscolha::encerrarSala()'],['../classSalaCombate.html#a79f0a1db3e17f3a9633c446f641e327b',1,'SalaCombate::encerrarSala()'],['../classSalaBase.html#a2bbb6cb055fc485d399ecf7a9a1d44fa',1,'SalaBase::encerrarSala()']]],
-  ['engine_4',['engine',['../classEngine.html',1,'Engine'],['../classEngine.html#a8c98683b0a3aa28d8ab72a8bcd0d52f2',1,'Engine::Engine()']]],
-  ['engine_2ecpp_5',['Engine.cpp',['../Engine_8cpp.html',1,'']]],
-  ['engine_2ehpp_6',['Engine.hpp',['../Engine_8hpp.html',1,'']]],
-  ['entidade_7',['entidade',['../classEntidade.html',1,'Entidade'],['../classEntidade.html#a3e50f865ffcca548bdc7d97058c173d7',1,'Entidade::Entidade()']]],
-  ['entidade_2ecpp_8',['Entidade.cpp',['../Entidade_8cpp.html',1,'']]],
-  ['entidade_2ehpp_9',['Entidade.hpp',['../Entidade_8hpp.html',1,'']]],
-  ['escolherhabilidade_10',['escolherhabilidade',['../classEntidade.html#a67d66a335bc8975a3c1ac530dd7c0e33',1,'Entidade::escolherHabilidade()'],['../classInimigo.html#af7d582fc95c3ca6f7c18e2f5c0e99152',1,'Inimigo::escolherHabilidade()'],['../classPersonagem.html#a82d3d108b4eab95527ae48e2268f6c94',1,'Personagem::escolherHabilidade(int posicaoHabilidade) override']]],
-  ['escolheritem_11',['escolherItem',['../classPersonagem.html#ad1ca55afcab097bc0ea8ce90606d9efc',1,'Personagem']]],
-  ['executarevento_12',['executarEvento',['../classSalaEscolha.html#a4993fece9ec8207ef29f0fba082d7742',1,'SalaEscolha']]],
-  ['executarmenuinicial_13',['executarMenuInicial',['../classMenu.html#ad9834948d0f1c352d745b877c4befacf',1,'Menu']]],
-  ['executarsala_14',['executarsala',['../classSalaBase.html#af8610b3e1cffc4fd2c85366ebc64bac0',1,'SalaBase::executarSala()'],['../classSalaCombate.html#afd8449c1ed680ebcbd8d70beeab860c8',1,'SalaCombate::executarSala()'],['../classSalaEscolha.html#ae733458ab6ba45b7d198ec09063250b3',1,'SalaEscolha::executarSala()']]]
+  ['calcularimpacto_0',['calcularImpacto',['../classAcao.html#ace32485f5cca5329ebb5e6fab9760ceb',1,'Acao']]],
+  ['carregar_1',['carregar',['../classSaveManager.html#a4793c897ea5c595149c7d01b5872e00c',1,'SaveManager']]],
+  ['combateinimigo_2',['combateInimigo',['../classInimigo.html#a9cc0f4932857cc7054aee2eedfb3c799',1,'Inimigo']]],
+  ['como_20jogar_3',['Como Jogar',['../index.html#autotoc_md11',1,'']]],
+  ['compilação_20e_20execução_4',['Compilação e Execução',['../index.html#autotoc_md10',1,'']]],
+  ['consequencia_5',['consequencia',['../structOpcaoEscolha.html#a45be4efab98032b20e7e221589635788',1,'OpcaoEscolha']]],
+  ['coutdigitado_6',['coutdigitado',['../classUtils_1_1coutDigitado.html',1,'Utils::coutDigitado'],['../classUtils_1_1coutDigitado.html#ae76468279cf37767cd74b53a7d09af3c',1,'Utils::coutDigitado::coutDigitado()']]],
+  ['couttempo_7',['coutTempo',['../namespaceUtils.html#af9af19df13165c6a9b83b19b307c8042',1,'Utils']]],
+  ['criarefeito_8',['criarEfeito',['../classEfeito.html#a14b16fdf6f0eada2cfe8185aa2afaa92',1,'Efeito']]],
+  ['criarhabilidade_9',['criarHabilidade',['../namespaceFabricaHabilidade.html#a3b435cbbc4f040088d97940478876e0e',1,'FabricaHabilidade']]],
+  ['criarinimigo_10',['criarInimigo',['../namespaceFabricaInimigo.html#a0176e1a8ed351bedf66fbd62f406b01b',1,'FabricaInimigo']]],
+  ['criaritem_11',['criarItem',['../namespaceFabricaItem.html#afa808f40ca2a9357f38be77920aedb52',1,'FabricaItem']]],
+  ['criarsalas_12',['criarsalas',['../namespaceFabricaSC.html#ab6e3e559ea6934ebaeace51e99cbbc4a',1,'FabricaSC::criarSalas()'],['../namespaceFabricaSE.html#a6f2c8fdf044b70716d981d0e8d6f326b',1,'FabricaSE::criarSalas()']]]
 ];

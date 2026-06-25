@@ -71,6 +71,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Membros Públicos</a> &#124;
+<a href="#pub-static-attribs">Atributos Públicos Estáticos</a> &#124;
 <a href="classEngine-members.html">Lista de todos os Membros</a>  </div>
   <div class="headertitle"><div class="title">Referência da Classe Engine</div></div>
 </div><!--header-->
@@ -100,6 +101,12 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:a756500478f6f6debf63da450107b7250" id="r_a756500478f6f6debf63da450107b7250"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a756500478f6f6debf63da450107b7250">~Engine</a> ()=default</td></tr>
 <tr class="memdesc:a756500478f6f6debf63da450107b7250"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da <a class="el" href="classEngine.html" title="Classe gerenciadora do loop principal do jogo - maquina de estados Cria o ciclo de vida do jogo,...">Engine</a>. Declarado como default para delegar a limpeza ao std::unique_ptr.  <br /></td></tr>
 <tr class="separator:a756500478f6f6debf63da450107b7250"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Atributos Públicos Estáticos</h2></td></tr>
+<tr class="memitem:a656ca98217f434ead752350db08258d6" id="r_a656ca98217f434ead752350db08258d6"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEngine.html#a656ca98217f434ead752350db08258d6">modoTeste</a> = false</td></tr>
+<tr class="memdesc:a656ca98217f434ead752350db08258d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define se está acontecendo os testes (quando true, desativa comportamentos que atrapaham os testes (ex: saves)).  <br /></td></tr>
+<tr class="separator:a656ca98217f434ead752350db08258d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
 <div class="textblock"><p>Classe gerenciadora do loop principal do jogo - maquina de estados Cria o ciclo de vida do jogo, desde a configuração inicial do personagem as instâncias das salas. </p>
@@ -167,6 +174,31 @@ Membros Públicos</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Inicia o motor do jogo. Delega a interface inicial ao <a class="el" href="classMenu.html" title="Classe responsável por gerenciar o menu principal do jogo.">Menu</a>, configura a entidade principal e entra no loop contínuo de transição de salas. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Atributos</h2>
+<a id="a656ca98217f434ead752350db08258d6" name="a656ca98217f434ead752350db08258d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a656ca98217f434ead752350db08258d6">&#9670;&#160;</a></span>modoTeste</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Engine::modoTeste = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Define se está acontecendo os testes (quando true, desativa comportamentos que atrapaham os testes (ex: saves)). </p>
 
 </div>
 </div>

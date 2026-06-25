@@ -11,37 +11,33 @@ Representa o personagem no jogo, herda da classe entidade.
 
 
 
-Diagrama de hierarquia da classe Personagem\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=227pt]{classPersonagem__inherit__graph}
-\end{center}
-\end{figure}
+Diagrama de hierarquia da classe Personagem\+:
+% FIG 0
 
 
-Diagrama de colaboração para Personagem\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=550pt]{classPersonagem__coll__graph}
-\end{center}
-\end{figure}
+Diagrama de colaboração para Personagem\+:
+% FIG 1
 \doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classPersonagem_a3c8985aea0d1b57844103e050ee3a9b4}{Personagem}} (int vida, \mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}} inventario\+Habilidade, std\+::string nome, \mbox{\hyperlink{classInventarioItem}{Inventario\+Item}} inventario\+Item)
 \begin{DoxyCompactList}\small\item\em Construtor padrão do personagem Aloca a vida do personagem, seu inventário de habilidades, seu nome e seu inventario de itens iniciais. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classHabilidade}{Habilidade}} \mbox{\hyperlink{classPersonagem_a82d3d108b4eab95527ae48e2268f6c94}{escolher\+Habilidade}} (int posicao\+Habilidade) override
+\mbox{\hyperlink{classHabilidade}{Habilidade}} \& \mbox{\hyperlink{classPersonagem_a9d1d9d61a41c31270e05af0d51eaafce}{escolher\+Habilidade}} (int posicao\+Habilidade) override
 \begin{DoxyCompactList}\small\item\em Retorna uma habilidade do inventario\+Habilidade baseada na posicao. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classItem}{Item}} \mbox{\hyperlink{classPersonagem_ad1ca55afcab097bc0ea8ce90606d9efc}{escolher\+Item}} (int posicao\+Item)
 \begin{DoxyCompactList}\small\item\em Retorna um \doxylink{classItem}{Item} a partir do inventario\+Item e consome. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPersonagem_adc877432714903519943ffa5aca21dd9}{receber\+Habilidade}} (\mbox{\hyperlink{classHabilidade}{Habilidade}} habilidade)
+\item 
+void \mbox{\hyperlink{classPersonagem_aeba92e80e2c4ef5d4bad1bcd9f859384}{receber\+Item}} (\mbox{\hyperlink{classItem}{Item}} item)
+\item 
 void \mbox{\hyperlink{classPersonagem_a30d115691def369c93d14834a7176590}{alterar\+Vida}} (int valor) override
 \begin{DoxyCompactList}\small\item\em Alterar a vida atual do personagem para mais ou para menos. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classPersonagem_afb52502006acf871aa5ebdcbca06a86c}{is\+Morto}} () override
 \begin{DoxyCompactList}\small\item\em Detecta se o personagem está morto ou vivo. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classInventarioItem}{Inventario\+Item}} \mbox{\hyperlink{classPersonagem_a5a3f9204f0c5d0645ab0e7d7e38ff86c}{get\+Inventario\+Item}} ()
+\mbox{\hyperlink{classInventarioItem}{Inventario\+Item}} \& \mbox{\hyperlink{classPersonagem_a5d5b2846cb53544103853bdac7656946}{get\+Inventario\+Item}} ()
 \begin{DoxyCompactList}\small\item\em Retorna o inventário de itens do personagem. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPersonagem_a8a5bfb4d0b64ae1bbcc07f6a022f846d}{get\+Vida\+Maxima}} ()
+\begin{DoxyCompactList}\small\item\em Retorna o valor numérico da vida máxima. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classPersonagem_a173c15f20799967d9b2acc5e6197b2b0}{\texorpdfstring{$\sim$}{\string~}\+Personagem}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor da classe \doxylink{classPersonagem}{Personagem}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classEntidade}{Entidade}}}
@@ -53,11 +49,13 @@ void \mbox{\hyperlink{classEntidade_aca0dccceffe0b3e458cd8d5e4ebc60fb}{receber\+
 \begin{DoxyCompactList}\small\item\em Adiciona um novo efeito na lista de efeitos ativos. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEntidade_adfaf551744091e864c5b1acc96ff9c51}{processar\+Efeitos\+Ativos}} ()
 \begin{DoxyCompactList}\small\item\em Itera sobre os efeitos ativos aplicando eles e diminuindo a duracao deles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEntidade_ac50d14a5d9632b45a87d2804e90ace72}{limpar\+Efeitos}} ()
+\item 
 int \mbox{\hyperlink{classEntidade_a273d26d69ff950d53fa9eaaff38bc163}{get\+Vida}} ()
 \begin{DoxyCompactList}\small\item\em Retorna a vida atual da entidade. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classEntidade_a838b5a83d932111378efcb9e062a56a3}{get\+Nome}} ()
 \begin{DoxyCompactList}\small\item\em Retorna o nome da entidade. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}} \mbox{\hyperlink{classEntidade_a52bd2e7409925a37d3c05ea3b57f9188}{get\+Inventario\+Habilidade}} ()
+\mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}} \& \mbox{\hyperlink{classEntidade_a9a9d00676f0384931e2f1b8053799252}{get\+Inventario\+Habilidade}} ()
 \begin{DoxyCompactList}\small\item\em Retorna o inventário de habilidades. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classEntidade_a7b3a23b8307be2dcc4cfbe77e69baa50}{\texorpdfstring{$\sim$}{\string~}\+Entidade}} ()
 \begin{DoxyCompactList}\small\item\em Função virtual destrutora da \doxylink{classEntidade}{Entidade}. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -144,11 +142,11 @@ Alterar a vida atual do personagem para mais ou para menos.
 
 Implementa \mbox{\hyperlink{classEntidade_a93bfebaf5a40c8ab214fd0068ca6149a}{Entidade}}.
 
-\Hypertarget{classPersonagem_a82d3d108b4eab95527ae48e2268f6c94}\label{classPersonagem_a82d3d108b4eab95527ae48e2268f6c94} 
+\Hypertarget{classPersonagem_a9d1d9d61a41c31270e05af0d51eaafce}\label{classPersonagem_a9d1d9d61a41c31270e05af0d51eaafce} 
 \index{Personagem@{Personagem}!escolherHabilidade@{escolherHabilidade}}
 \index{escolherHabilidade@{escolherHabilidade}!Personagem@{Personagem}}
 \doxysubsubsection{\texorpdfstring{escolherHabilidade()}{escolherHabilidade()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classHabilidade}{Habilidade}} Personagem\+::escolher\+Habilidade (\begin{DoxyParamCaption}\item[{int}]{posicao\+Habilidade }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHabilidade}{Habilidade}} \& Personagem\+::escolher\+Habilidade (\begin{DoxyParamCaption}\item[{int}]{posicao\+Habilidade }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -167,7 +165,7 @@ Retorna a copia do objeto \doxylink{classHabilidade}{Habilidade}.
 
 \end{DoxyItemize}
 
-Implementa \mbox{\hyperlink{classEntidade_a67d66a335bc8975a3c1ac530dd7c0e33}{Entidade}}.
+Implementa \mbox{\hyperlink{classEntidade_adc58c8e74cbae83369fdc39988edc2d1}{Entidade}}.
 
 \Hypertarget{classPersonagem_ad1ca55afcab097bc0ea8ce90606d9efc}\label{classPersonagem_ad1ca55afcab097bc0ea8ce90606d9efc} 
 \index{Personagem@{Personagem}!escolherItem@{escolherItem}}
@@ -187,16 +185,29 @@ Retorna um \doxylink{classItem}{Item} a partir do inventario\+Item e consome.
 \begin{DoxyReturn}{Retorna}
 Retorna a copia do objeto \doxylink{classItem}{Item}. 
 \end{DoxyReturn}
-\Hypertarget{classPersonagem_a5a3f9204f0c5d0645ab0e7d7e38ff86c}\label{classPersonagem_a5a3f9204f0c5d0645ab0e7d7e38ff86c} 
+\Hypertarget{classPersonagem_a5d5b2846cb53544103853bdac7656946}\label{classPersonagem_a5d5b2846cb53544103853bdac7656946} 
 \index{Personagem@{Personagem}!getInventarioItem@{getInventarioItem}}
 \index{getInventarioItem@{getInventarioItem}!Personagem@{Personagem}}
 \doxysubsubsection{\texorpdfstring{getInventarioItem()}{getInventarioItem()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classInventarioItem}{Inventario\+Item}} Personagem\+::get\+Inventario\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classInventarioItem}{Inventario\+Item}} \& Personagem\+::get\+Inventario\+Item (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
 Retorna o inventário de itens do personagem. 
 
+\Hypertarget{classPersonagem_a8a5bfb4d0b64ae1bbcc07f6a022f846d}\label{classPersonagem_a8a5bfb4d0b64ae1bbcc07f6a022f846d} 
+\index{Personagem@{Personagem}!getVidaMaxima@{getVidaMaxima}}
+\index{getVidaMaxima@{getVidaMaxima}!Personagem@{Personagem}}
+\doxysubsubsection{\texorpdfstring{getVidaMaxima()}{getVidaMaxima()}}
+{\footnotesize\ttfamily int Personagem\+::get\+Vida\+Maxima (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o valor numérico da vida máxima. 
+
+\begin{DoxyReturn}{Retorna}
+Inteiro representando a vida máxima que o personagem pode ter. 
+\end{DoxyReturn}
 \Hypertarget{classPersonagem_afb52502006acf871aa5ebdcbca06a86c}\label{classPersonagem_afb52502006acf871aa5ebdcbca06a86c} 
 \index{Personagem@{Personagem}!isMorto@{isMorto}}
 \index{isMorto@{isMorto}!Personagem@{Personagem}}
@@ -214,6 +225,18 @@ Detecta se o personagem está morto ou vivo.
 \end{DoxyItemize}
 
 Implementa \mbox{\hyperlink{classEntidade_ade89008844bd05a9becdbaf0c9c24506}{Entidade}}.
+
+\Hypertarget{classPersonagem_adc877432714903519943ffa5aca21dd9}\label{classPersonagem_adc877432714903519943ffa5aca21dd9} 
+\index{Personagem@{Personagem}!receberHabilidade@{receberHabilidade}}
+\index{receberHabilidade@{receberHabilidade}!Personagem@{Personagem}}
+\doxysubsubsection{\texorpdfstring{receberHabilidade()}{receberHabilidade()}}
+{\footnotesize\ttfamily void Personagem\+::receber\+Habilidade (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHabilidade}{Habilidade}}}]{habilidade }\end{DoxyParamCaption})}
+
+\Hypertarget{classPersonagem_aeba92e80e2c4ef5d4bad1bcd9f859384}\label{classPersonagem_aeba92e80e2c4ef5d4bad1bcd9f859384} 
+\index{Personagem@{Personagem}!receberItem@{receberItem}}
+\index{receberItem@{receberItem}!Personagem@{Personagem}}
+\doxysubsubsection{\texorpdfstring{receberItem()}{receberItem()}}
+{\footnotesize\ttfamily void Personagem\+::receber\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}}}]{item }\end{DoxyParamCaption})}
 
 
 

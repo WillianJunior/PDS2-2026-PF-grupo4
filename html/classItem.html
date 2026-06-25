@@ -105,9 +105,13 @@ Diagrama de colaboração para Item:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:a4bdb5d81023e9d46b7e4f99b5ad63948" id="r_a4bdb5d81023e9d46b7e4f99b5ad63948"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classItem.html#a4bdb5d81023e9d46b7e4f99b5ad63948">Item</a> (std::string nome, bool tipo, int valor, <a class="el" href="classEfeito.html">Efeito</a> efeito, bool alvo)</td></tr>
-<tr class="memdesc:a4bdb5d81023e9d46b7e4f99b5ad63948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão do <a class="el" href="classItem.html" title="Representa um item no jogo.">Item</a>.  <br /></td></tr>
-<tr class="separator:a4bdb5d81023e9d46b7e4f99b5ad63948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f89d74cb866d418fbaa59de034e02c2" id="r_a8f89d74cb866d418fbaa59de034e02c2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classItem.html#a8f89d74cb866d418fbaa59de034e02c2">Item</a> (std::string nome, bool tipo, int valor, <a class="el" href="classEfeito.html">Efeito</a> efeito, bool alvo, int usos)</td></tr>
+<tr class="memdesc:a8f89d74cb866d418fbaa59de034e02c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão do <a class="el" href="classItem.html" title="Representa um item no jogo.">Item</a>.  <br /></td></tr>
+<tr class="separator:a8f89d74cb866d418fbaa59de034e02c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6839958caf3c214eb7385bc558af1c6" id="r_ac6839958caf3c214eb7385bc558af1c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classItem.html#ac6839958caf3c214eb7385bc558af1c6">atualizarUsos</a> ()</td></tr>
+<tr class="separator:ac6839958caf3c214eb7385bc558af1c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace91550b3edf0a5c47ede9ac85798887" id="r_ace91550b3edf0a5c47ede9ac85798887"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classItem.html#ace91550b3edf0a5c47ede9ac85798887">getUsosRestantes</a> ()</td></tr>
+<tr class="separator:ace91550b3edf0a5c47ede9ac85798887"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae39548e834708e443bbee25f0880d1a1" id="r_ae39548e834708e443bbee25f0880d1a1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classItem.html#ae39548e834708e443bbee25f0880d1a1">operator==</a> (const <a class="el" href="classItem.html">Item</a> &amp;outro) const</td></tr>
 <tr class="memdesc:ae39548e834708e443bbee25f0880d1a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compara dois itens.  <br /></td></tr>
 <tr class="separator:ae39548e834708e443bbee25f0880d1a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,9 +125,9 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:ace32485f5cca5329ebb5e6fab9760ceb inherit pub_methods_classAcao" id="r_ace32485f5cca5329ebb5e6fab9760ceb"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#ace32485f5cca5329ebb5e6fab9760ceb">calcularImpacto</a> ()</td></tr>
 <tr class="memdesc:ace32485f5cca5329ebb5e6fab9760ceb inherit pub_methods_classAcao"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula a alteração de vida baseada na ação.  <br /></td></tr>
 <tr class="separator:ace32485f5cca5329ebb5e6fab9760ceb inherit pub_methods_classAcao"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af339f68e5999ff075e79eeef17f08a9c inherit pub_methods_classAcao" id="r_af339f68e5999ff075e79eeef17f08a9c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#af339f68e5999ff075e79eeef17f08a9c">mostrarDescricao</a> ()</td></tr>
-<tr class="memdesc:af339f68e5999ff075e79eeef17f08a9c inherit pub_methods_classAcao"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe os detalhes da ação (informações da habilidade ou do item).  <br /></td></tr>
-<tr class="separator:af339f68e5999ff075e79eeef17f08a9c inherit pub_methods_classAcao"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb39249ae6c4c1b1e9a1091aa92c495a inherit pub_methods_classAcao" id="r_acb39249ae6c4c1b1e9a1091aa92c495a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#acb39249ae6c4c1b1e9a1091aa92c495a">mostrarDescricao</a> ()</td></tr>
+<tr class="memdesc:acb39249ae6c4c1b1e9a1091aa92c495a inherit pub_methods_classAcao"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe os detalhes da ação (informações da habilidade ou do item).  <br /></td></tr>
+<tr class="separator:acb39249ae6c4c1b1e9a1091aa92c495a inherit pub_methods_classAcao"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8460ddeec0c7fa20e9e5c39ea64edd5 inherit pub_methods_classAcao" id="r_aa8460ddeec0c7fa20e9e5c39ea64edd5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#aa8460ddeec0c7fa20e9e5c39ea64edd5">getNome</a> ()</td></tr>
 <tr class="memdesc:aa8460ddeec0c7fa20e9e5c39ea64edd5 inherit pub_methods_classAcao"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o nome da ação.  <br /></td></tr>
 <tr class="separator:aa8460ddeec0c7fa20e9e5c39ea64edd5 inherit pub_methods_classAcao"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,8 +172,8 @@ Outros membros herdados</h2></td></tr>
 <li>Herda da classe <a class="el" href="classAcao.html" title="Classe base para representar qualquer ação do jogo (como Habilidades ou Itens).">Acao</a> e define as características específicas de um item consumível ou utilizável (como dano, cura ou efeitos). </li>
 </ul>
 </div><h2 class="groupheader">Construtores e Destrutores</h2>
-<a id="a4bdb5d81023e9d46b7e4f99b5ad63948" name="a4bdb5d81023e9d46b7e4f99b5ad63948"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4bdb5d81023e9d46b7e4f99b5ad63948">&#9670;&#160;</a></span>Item()</h2>
+<a id="a8f89d74cb866d418fbaa59de034e02c2" name="a8f89d74cb866d418fbaa59de034e02c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f89d74cb866d418fbaa59de034e02c2">&#9670;&#160;</a></span>Item()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,7 +206,13 @@ Outros membros herdados</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>alvo</em>&#160;</td>
+          <td class="paramname"><em>alvo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>usos</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -252,6 +262,40 @@ Outros membros herdados</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentação das funções</h2>
+<a id="ac6839958caf3c214eb7385bc558af1c6" name="ac6839958caf3c214eb7385bc558af1c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6839958caf3c214eb7385bc558af1c6">&#9670;&#160;</a></span>atualizarUsos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Item::atualizarUsos </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ace91550b3edf0a5c47ede9ac85798887" name="ace91550b3edf0a5c47ede9ac85798887"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace91550b3edf0a5c47ede9ac85798887">&#9670;&#160;</a></span>getUsosRestantes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Item::getUsosRestantes </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ae39548e834708e443bbee25f0880d1a1" name="ae39548e834708e443bbee25f0880d1a1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae39548e834708e443bbee25f0880d1a1">&#9670;&#160;</a></span>operator==()</h2>
 

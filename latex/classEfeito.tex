@@ -11,13 +11,8 @@ Representa um efeito de status contínuo no jogo.
 
 
 
-Diagrama de colaboração para Efeito\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=192pt]{classEfeito__coll__graph}
-\end{center}
-\end{figure}
+Diagrama de colaboração para Efeito\+:
+% FIG 0
 \doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
@@ -37,6 +32,8 @@ int \mbox{\hyperlink{classEfeito_a3e0833ec0b1bdc54e0bae59d30803c6a}{get\+Duracao
 \begin{DoxyCompactList}\small\item\em Retorna a duracao. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classEfeito_addb0d4e2e31e6f71ace27579ac149847}{operator==}} (const \mbox{\hyperlink{classEfeito}{Efeito}} \&outro) const
 \begin{DoxyCompactList}\small\item\em Compara dois efeitos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEfeito}{Efeito}} \mbox{\hyperlink{classEfeito_a14b16fdf6f0eada2cfe8185aa2afaa92}{criar\+Efeito}} (std\+::string nome\+Efeito)
+\item 
 \mbox{\hyperlink{classEfeito_aa906467d4bc07bfc97a5e8ecd9996888}{\texorpdfstring{$\sim$}{\string~}\+Efeito}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor do objeto \doxylink{classEfeito}{Efeito}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -101,7 +98,13 @@ Atualiza o tempo de vida restante do efeito.
 
 \begin{DoxyItemize}
 \item Diminui a duração do efeito toda vez que a rodada é concluída. 
-\end{DoxyItemize}\Hypertarget{classEfeito_a3e0833ec0b1bdc54e0bae59d30803c6a}\label{classEfeito_a3e0833ec0b1bdc54e0bae59d30803c6a} 
+\end{DoxyItemize}\Hypertarget{classEfeito_a14b16fdf6f0eada2cfe8185aa2afaa92}\label{classEfeito_a14b16fdf6f0eada2cfe8185aa2afaa92} 
+\index{Efeito@{Efeito}!criarEfeito@{criarEfeito}}
+\index{criarEfeito@{criarEfeito}!Efeito@{Efeito}}
+\doxysubsubsection{\texorpdfstring{criarEfeito()}{criarEfeito()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEfeito}{Efeito}} Efeito\+::criar\+Efeito (\begin{DoxyParamCaption}\item[{std\+::string}]{nome\+Efeito }\end{DoxyParamCaption})}
+
+\Hypertarget{classEfeito_a3e0833ec0b1bdc54e0bae59d30803c6a}\label{classEfeito_a3e0833ec0b1bdc54e0bae59d30803c6a} 
 \index{Efeito@{Efeito}!getDuracao@{getDuracao}}
 \index{getDuracao@{getDuracao}!Efeito@{Efeito}}
 \doxysubsubsection{\texorpdfstring{getDuracao()}{getDuracao()}}

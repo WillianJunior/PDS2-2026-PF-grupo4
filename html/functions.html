@@ -76,6 +76,7 @@ $(function() {
 <li>_efeito&#160;:&#160;<a class="el" href="classAcao.html#a573b75f29106a5b2668739037a1084d1">Acao</a></li>
 <li>_efeitosAtivos&#160;:&#160;<a class="el" href="classEntidade.html#aab0d8944e45718657680b5f1d627aa71">Entidade</a></li>
 <li>_inventarioHabilidade&#160;:&#160;<a class="el" href="classEntidade.html#ae164d58441370401d579536664263330">Entidade</a></li>
+<li>_mensagem&#160;:&#160;<a class="el" href="classRPGException.html#af563980c9464d1f981b2ce719e5ef318">RPGException</a></li>
 <li>_nome&#160;:&#160;<a class="el" href="classAcao.html#aa3edff2abd27b8805294781da8c345e5">Acao</a>, <a class="el" href="classEntidade.html#a2004c517d43cf6825a442d4f47e01dd1">Entidade</a>, <a class="el" href="classSalaBase.html#a05b5a645149ef1fd82fd132fae5b90c8">SalaBase</a></li>
 <li>_tipo&#160;:&#160;<a class="el" href="classAcao.html#af673981041cfec0071e4bf3b4ad7c790">Acao</a></li>
 <li>_valor&#160;:&#160;<a class="el" href="classAcao.html#a0111acdd90205925932781bfddaf8bf0">Acao</a></li>
@@ -86,15 +87,22 @@ $(function() {
 <h3><a id="index_a" name="index_a"></a>- a -</h3><ul>
 <li>Acao()&#160;:&#160;<a class="el" href="classAcao.html#a30e70a54ae7f2e02523f0efd3b423271">Acao</a></li>
 <li>adicionarOpcao()&#160;:&#160;<a class="el" href="classSalaEscolha.html#ae8b2db3644dae7204d6e9f320a9a3fea">SalaEscolha</a></li>
-<li>alocarInimigo()&#160;:&#160;<a class="el" href="classSalaCombate.html#a1e6bbed2a18d7bd3366a5a610d814409">SalaCombate</a></li>
+<li>alocarInimigo()&#160;:&#160;<a class="el" href="classSalaCombate.html#a773cf7fd8b12d0b4eb8540b211e98e43">SalaCombate</a></li>
 <li>alterarVida()&#160;:&#160;<a class="el" href="classEntidade.html#a93bfebaf5a40c8ab214fd0068ca6149a">Entidade</a>, <a class="el" href="classInimigo.html#a89ebd352bccd15499fbda8200bdc3730">Inimigo</a>, <a class="el" href="classPersonagem.html#a30d115691def369c93d14834a7176590">Personagem</a></li>
+<li>atualizarCooldown()&#160;:&#160;<a class="el" href="classHabilidade.html#a3feeae9fb00ff6bd3658144f1ffd641f">Habilidade</a></li>
+<li>atualizarCooldowns()&#160;:&#160;<a class="el" href="classInventarioHabilidade.html#a84a7c7b6f0c9095df4386439bac04476">InventarioHabilidade</a></li>
 <li>atualizarDuracao()&#160;:&#160;<a class="el" href="classEfeito.html#a19b45c454250f88acb863293b41cfb25">Efeito</a></li>
+<li>atualizarUsos()&#160;:&#160;<a class="el" href="classItem.html#ac6839958caf3c214eb7385bc558af1c6">Item</a></li>
 </ul>
 
 
 <h3><a id="index_c" name="index_c"></a>- c -</h3><ul>
 <li>calcularImpacto()&#160;:&#160;<a class="el" href="classAcao.html#ace32485f5cca5329ebb5e6fab9760ceb">Acao</a></li>
+<li>carregar()&#160;:&#160;<a class="el" href="classSaveManager.html#a4793c897ea5c595149c7d01b5872e00c">SaveManager</a></li>
+<li>combateInimigo()&#160;:&#160;<a class="el" href="classInimigo.html#a9cc0f4932857cc7054aee2eedfb3c799">Inimigo</a></li>
 <li>consequencia&#160;:&#160;<a class="el" href="structOpcaoEscolha.html#a45be4efab98032b20e7e221589635788">OpcaoEscolha</a></li>
+<li>coutDigitado()&#160;:&#160;<a class="el" href="classUtils_1_1coutDigitado.html#ae76468279cf37767cd74b53a7d09af3c">Utils::coutDigitado</a></li>
+<li>criarEfeito()&#160;:&#160;<a class="el" href="classEfeito.html#a14b16fdf6f0eada2cfe8185aa2afaa92">Efeito</a></li>
 </ul>
 
 
@@ -109,47 +117,67 @@ $(function() {
 <li>encerrarSala()&#160;:&#160;<a class="el" href="classSalaBase.html#a2bbb6cb055fc485d399ecf7a9a1d44fa">SalaBase</a>, <a class="el" href="classSalaCombate.html#a79f0a1db3e17f3a9633c446f641e327b">SalaCombate</a>, <a class="el" href="classSalaEscolha.html#a271e7269eeb090dcdf63f0c4988deab0">SalaEscolha</a></li>
 <li>Engine()&#160;:&#160;<a class="el" href="classEngine.html#a8c98683b0a3aa28d8ab72a8bcd0d52f2">Engine</a></li>
 <li>Entidade()&#160;:&#160;<a class="el" href="classEntidade.html#a3e50f865ffcca548bdc7d97058c173d7">Entidade</a></li>
-<li>escolherHabilidade()&#160;:&#160;<a class="el" href="classEntidade.html#a67d66a335bc8975a3c1ac530dd7c0e33">Entidade</a>, <a class="el" href="classInimigo.html#af7d582fc95c3ca6f7c18e2f5c0e99152">Inimigo</a>, <a class="el" href="classPersonagem.html#a82d3d108b4eab95527ae48e2268f6c94">Personagem</a></li>
+<li>EntradaInvalidaException()&#160;:&#160;<a class="el" href="classEntradaInvalidaException.html#ad73a146c303071f23ae480aa477c5031">EntradaInvalidaException</a></li>
+<li>escolherHabilidade()&#160;:&#160;<a class="el" href="classEntidade.html#adc58c8e74cbae83369fdc39988edc2d1">Entidade</a>, <a class="el" href="classInimigo.html#af7f3dc00c0443dc85fbe87315c05b76b">Inimigo</a>, <a class="el" href="classPersonagem.html#a9d1d9d61a41c31270e05af0d51eaafce">Personagem</a></li>
 <li>escolherItem()&#160;:&#160;<a class="el" href="classPersonagem.html#ad1ca55afcab097bc0ea8ce90606d9efc">Personagem</a></li>
-<li>executarEvento()&#160;:&#160;<a class="el" href="classSalaEscolha.html#a4993fece9ec8207ef29f0fba082d7742">SalaEscolha</a></li>
-<li>executarMenuInicial()&#160;:&#160;<a class="el" href="classMenu.html#ad9834948d0f1c352d745b877c4befacf">Menu</a></li>
-<li>executarSala()&#160;:&#160;<a class="el" href="classSalaBase.html#af8610b3e1cffc4fd2c85366ebc64bac0">SalaBase</a>, <a class="el" href="classSalaCombate.html#afd8449c1ed680ebcbd8d70beeab860c8">SalaCombate</a>, <a class="el" href="classSalaEscolha.html#ae733458ab6ba45b7d198ec09063250b3">SalaEscolha</a></li>
+<li>executarEvento()&#160;:&#160;<a class="el" href="classSalaEscolha.html#a22397ce76f8c7ec0bf884f8fb218327a">SalaEscolha</a></li>
+<li>executarMenuInicial()&#160;:&#160;<a class="el" href="classMenu.html#a993b743787628b2c0bda3b082d67fd70">Menu</a></li>
+<li>executarSala()&#160;:&#160;<a class="el" href="classSalaBase.html#a093d888ce8e8d1dd43dbc15cf2b0036b">SalaBase</a>, <a class="el" href="classSalaCombate.html#a427c6a3f3ff27ed7abb8ff9239302203">SalaCombate</a>, <a class="el" href="classSalaEscolha.html#addc074991b7f977ad4227da0a2631a2a">SalaEscolha</a></li>
+<li>existeSave()&#160;:&#160;<a class="el" href="classSaveManager.html#a05bca099adfc03411251cd1d855064f3">SaveManager</a></li>
+</ul>
+
+
+<h3><a id="index_f" name="index_f"></a>- f -</h3><ul>
+<li>frames&#160;:&#160;<a class="el" href="structUtils_1_1Animacao.html#a180ecb27cf7d126ed2516fa6007fb72a">Utils::Animacao</a></li>
 </ul>
 
 
 <h3><a id="index_g" name="index_g"></a>- g -</h3><ul>
 <li>getAlvo()&#160;:&#160;<a class="el" href="classAcao.html#aaa6cd394a36cfc92a250a5f1e060369a">Acao</a></li>
+<li>getCooldown()&#160;:&#160;<a class="el" href="classHabilidade.html#a802bbaa108d2cfc3bef378454b224f0c">Habilidade</a></li>
+<li>getCooldownAtual()&#160;:&#160;<a class="el" href="classHabilidade.html#a52b131266187e42e94c40cef9ee11555">Habilidade</a></li>
 <li>getDuracao()&#160;:&#160;<a class="el" href="classEfeito.html#a3e0833ec0b1bdc54e0bae59d30803c6a">Efeito</a></li>
 <li>getEfeito()&#160;:&#160;<a class="el" href="classAcao.html#a5487582097dfd32984f6437b113fab52">Acao</a></li>
-<li>getHabilidade()&#160;:&#160;<a class="el" href="classInventarioHabilidade.html#a0a8996b9cb37abe2fcc186773e5507e8">InventarioHabilidade</a></li>
-<li>getInventarioHabilidade()&#160;:&#160;<a class="el" href="classEntidade.html#a52bd2e7409925a37d3c05ea3b57f9188">Entidade</a></li>
-<li>getInventarioItem()&#160;:&#160;<a class="el" href="classPersonagem.html#a5a3f9204f0c5d0645ab0e7d7e38ff86c">Personagem</a></li>
-<li>getItem()&#160;:&#160;<a class="el" href="classInventarioItem.html#a2aae346df9f404421d76c0e18599bed2">InventarioItem</a></li>
+<li>getHabilidade()&#160;:&#160;<a class="el" href="classInventarioHabilidade.html#a944b16deb1bcd313698c7d4bf9a6f4fb">InventarioHabilidade</a></li>
+<li>getId()&#160;:&#160;<a class="el" href="classSalaBase.html#a2fdaa4f838c905e9311b069ec902092c">SalaBase</a>, <a class="el" href="classSalaCombate.html#aa0d0185a69b915e037452cac7a9c0d17">SalaCombate</a>, <a class="el" href="classSalaEscolha.html#a8b7af65827de1dcb8b8cc2a16791b9ee">SalaEscolha</a></li>
+<li>getInventarioHabilidade()&#160;:&#160;<a class="el" href="classEntidade.html#a9a9d00676f0384931e2f1b8053799252">Entidade</a></li>
+<li>getInventarioItem()&#160;:&#160;<a class="el" href="classPersonagem.html#a5d5b2846cb53544103853bdac7656946">Personagem</a></li>
+<li>getItem()&#160;:&#160;<a class="el" href="classInventarioItem.html#a5587ee58260415a0db1eb472e6456cb3">InventarioItem</a></li>
 <li>getNome()&#160;:&#160;<a class="el" href="classAcao.html#aa8460ddeec0c7fa20e9e5c39ea64edd5">Acao</a>, <a class="el" href="classEfeito.html#a32dfa0e683ee66be8e36b58b2a3447d7">Efeito</a>, <a class="el" href="classEntidade.html#a838b5a83d932111378efcb9e062a56a3">Entidade</a>, <a class="el" href="classSalaBase.html#aa70b904d98578ea6b8b42e607eeef7ca">SalaBase</a></li>
 <li>getTamanho()&#160;:&#160;<a class="el" href="classInventarioHabilidade.html#acaf84ee0bd4910b0d7c1af78aa38141f">InventarioHabilidade</a>, <a class="el" href="classInventarioItem.html#a97b1d530c27a67b0f10cf2dc197e7fc5">InventarioItem</a></li>
-<li>getTipo()&#160;:&#160;<a class="el" href="classAcao.html#a7f846d13ea7a8b3b9182dc3d646366b7">Acao</a>, <a class="el" href="classInimigo.html#ac91134def2580580fac102ffc9ac0971">Inimigo</a></li>
+<li>getTipo()&#160;:&#160;<a class="el" href="classAcao.html#a7f846d13ea7a8b3b9182dc3d646366b7">Acao</a>, <a class="el" href="classSalaBase.html#aac43b61e15aa7fd0970cc666b446fc9a">SalaBase</a>, <a class="el" href="classSalaCombate.html#a6acd5a705e5d04f1fec64d3ddf097001">SalaCombate</a>, <a class="el" href="classSalaEscolha.html#a41f08c829a1b1830254fedf552ee6ef0">SalaEscolha</a></li>
+<li>getUsosRestantes()&#160;:&#160;<a class="el" href="classItem.html#ace91550b3edf0a5c47ede9ac85798887">Item</a></li>
 <li>getValor()&#160;:&#160;<a class="el" href="classAcao.html#a4eb269228b7bf4d60dd3f5bff9fea566">Acao</a>, <a class="el" href="classEfeito.html#a3b2023d1f6985a000b68011c35058fd5">Efeito</a></li>
 <li>getVida()&#160;:&#160;<a class="el" href="classEntidade.html#a273d26d69ff950d53fa9eaaff38bc163">Entidade</a></li>
+<li>getVidaMaxima()&#160;:&#160;<a class="el" href="classPersonagem.html#a8a5bfb4d0b64ae1bbcc07f6a022f846d">Personagem</a></li>
 </ul>
 
 
 <h3><a id="index_h" name="index_h"></a>- h -</h3><ul>
-<li>Habilidade()&#160;:&#160;<a class="el" href="classHabilidade.html#a66ae3890cf037ea2374c67ad036a5d99">Habilidade</a></li>
+<li>Habilidade()&#160;:&#160;<a class="el" href="classHabilidade.html#a495f29a62700788427e86b6b0349fc1f">Habilidade</a></li>
 </ul>
 
 
 <h3><a id="index_i" name="index_i"></a>- i -</h3><ul>
+<li>IndiceInvalidoException()&#160;:&#160;<a class="el" href="classIndiceInvalidoException.html#a3762738a95d4700170ef586f1d821e0a">IndiceInvalidoException</a></li>
 <li>iniciar()&#160;:&#160;<a class="el" href="classEngine.html#a07490236fee13f031838eadb72f91536">Engine</a></li>
-<li>Inimigo()&#160;:&#160;<a class="el" href="classInimigo.html#ab52af90a0becc344e3a816575af95a8f">Inimigo</a></li>
+<li>iniciarCooldown()&#160;:&#160;<a class="el" href="classHabilidade.html#a48fa748616b683a54c78600f69d9fef3">Habilidade</a></li>
+<li>Inimigo()&#160;:&#160;<a class="el" href="classInimigo.html#ac6efcfe5458fa890a3e51cc4ca37a844">Inimigo</a></li>
 <li>isEncerrado()&#160;:&#160;<a class="el" href="classEfeito.html#a7f89d95be04cde8840a2e1fea2f12850">Efeito</a></li>
 <li>isMorto()&#160;:&#160;<a class="el" href="classEntidade.html#ade89008844bd05a9becdbaf0c9c24506">Entidade</a>, <a class="el" href="classInimigo.html#ad4ba5228c63de5ba1418f3257acf7361">Inimigo</a>, <a class="el" href="classPersonagem.html#afb52502006acf871aa5ebdcbca06a86c">Personagem</a></li>
-<li>Item()&#160;:&#160;<a class="el" href="classItem.html#a4bdb5d81023e9d46b7e4f99b5ad63948">Item</a></li>
+<li>Item()&#160;:&#160;<a class="el" href="classItem.html#a8f89d74cb866d418fbaa59de034e02c2">Item</a></li>
+</ul>
+
+
+<h3><a id="index_l" name="index_l"></a>- l -</h3><ul>
+<li>limparEfeitos()&#160;:&#160;<a class="el" href="classEntidade.html#ac50d14a5d9632b45a87d2804e90ace72">Entidade</a></li>
 </ul>
 
 
 <h3><a id="index_m" name="index_m"></a>- m -</h3><ul>
 <li>Menu()&#160;:&#160;<a class="el" href="classMenu.html#ad466dd83355124a6ed958430450bfe94">Menu</a></li>
-<li>mostrarDescricao()&#160;:&#160;<a class="el" href="classAcao.html#af339f68e5999ff075e79eeef17f08a9c">Acao</a></li>
+<li>modoTeste&#160;:&#160;<a class="el" href="classEngine.html#a656ca98217f434ead752350db08258d6">Engine</a></li>
+<li>mostrarDescricao()&#160;:&#160;<a class="el" href="classAcao.html#acb39249ae6c4c1b1e9a1091aa92c495a">Acao</a></li>
 <li>mostrarEfeito()&#160;:&#160;<a class="el" href="classEfeito.html#a6c4c5e293fd22742a2018551a789816d">Efeito</a></li>
 <li>mostrarInventario()&#160;:&#160;<a class="el" href="classInventario.html#a7e8cb8ba725d02311601667737e2ca6c">Inventario&lt; T &gt;</a>, <a class="el" href="classInventarioHabilidade.html#a523468bb8dbf6b1e0226923fcf0e99ab">InventarioHabilidade</a>, <a class="el" href="classInventarioItem.html#a955b5f99efab8b998bbf0f0538cfdaad">InventarioItem</a></li>
 <li>mostrarOpcoes()&#160;:&#160;<a class="el" href="classSalaEscolha.html#a89c73771446f7c2b62b88049cf82f2b4">SalaEscolha</a></li>
@@ -164,6 +192,7 @@ $(function() {
 
 <h3><a id="index_o" name="index_o"></a>- o -</h3><ul>
 <li>operator!=()&#160;:&#160;<a class="el" href="classInventarioHabilidade.html#a11586d38fe0c87598ae6e8acf17550b7">InventarioHabilidade</a>, <a class="el" href="classInventarioItem.html#a106591c1bcddef65c91d930cc9097c74">InventarioItem</a></li>
+<li>operator&lt;&lt;()&#160;:&#160;<a class="el" href="classUtils_1_1coutDigitado.html#a994c9df12b258c4bbea28e6a49d59eed">Utils::coutDigitado</a></li>
 <li>operator==()&#160;:&#160;<a class="el" href="classEfeito.html#addb0d4e2e31e6f71ace27579ac149847">Efeito</a>, <a class="el" href="classHabilidade.html#aa5226c2dc9ac5f6d14b65700cbdb817a">Habilidade</a>, <a class="el" href="classInventarioHabilidade.html#ac14b9594db264f62e6ec94b8e083378e">InventarioHabilidade</a>, <a class="el" href="classInventarioItem.html#aeaf5d2b463938cdce39ab8f298388a11">InventarioItem</a>, <a class="el" href="classItem.html#ae39548e834708e443bbee25f0880d1a1">Item</a></li>
 </ul>
 
@@ -176,23 +205,42 @@ $(function() {
 
 <h3><a id="index_r" name="index_r"></a>- r -</h3><ul>
 <li>receberEfeito()&#160;:&#160;<a class="el" href="classEntidade.html#aca0dccceffe0b3e458cd8d5e4ebc60fb">Entidade</a></li>
+<li>receberHabilidade()&#160;:&#160;<a class="el" href="classPersonagem.html#adc877432714903519943ffa5aca21dd9">Personagem</a></li>
+<li>receberItem()&#160;:&#160;<a class="el" href="classPersonagem.html#aeba92e80e2c4ef5d4bad1bcd9f859384">Personagem</a></li>
+<li>RPGException()&#160;:&#160;<a class="el" href="classRPGException.html#ac3d0e87ec130689fe032a2bcade32e99">RPGException</a></li>
 </ul>
 
 
 <h3><a id="index_s" name="index_s"></a>- s -</h3><ul>
 <li>SalaBase()&#160;:&#160;<a class="el" href="classSalaBase.html#aae385d1beb9c128e82435d43659f729e">SalaBase</a></li>
-<li>SalaCombate()&#160;:&#160;<a class="el" href="classSalaCombate.html#a583233b01161e692051ac462905bc650">SalaCombate</a></li>
-<li>SalaEscolha()&#160;:&#160;<a class="el" href="classSalaEscolha.html#abc910dbacaf179cd3d694e459c07f53a">SalaEscolha</a></li>
+<li>SalaCombate()&#160;:&#160;<a class="el" href="classSalaCombate.html#ad80b63fd145d9e1bb4e941ea3128a127">SalaCombate</a></li>
+<li>SalaEscolha()&#160;:&#160;<a class="el" href="classSalaEscolha.html#a04d70a0fed7ad26638fac03ccddc77df">SalaEscolha</a></li>
+<li>salvar()&#160;:&#160;<a class="el" href="classSaveManager.html#a754367566c3def7c47ea9908cfc042b9">SaveManager</a></li>
+<li>setCooldownAtual()&#160;:&#160;<a class="el" href="classHabilidade.html#ab1bf5831e8ee5364ed0c27a58764986b">Habilidade</a></li>
 </ul>
 
 
 <h3><a id="index_t" name="index_t"></a>- t -</h3><ul>
+<li>tempoFrame&#160;:&#160;<a class="el" href="structUtils_1_1Animacao.html#a8e446fdad71566f36033a626d892cce3">Utils::Animacao</a></li>
+<li>textoFinal&#160;:&#160;<a class="el" href="structUtils_1_1Animacao.html#af53e44afbfe452140374515f03c531d0">Utils::Animacao</a></li>
+<li>textoInicial&#160;:&#160;<a class="el" href="structUtils_1_1Animacao.html#ab423cde74fdf71cbaac198e86d2ecbfd">Utils::Animacao</a></li>
 <li>trocarAcao()&#160;:&#160;<a class="el" href="classInventario.html#acaa5f3b9586dc0d4a25f317bc1d22a1b">Inventario&lt; T &gt;</a>, <a class="el" href="classInventarioHabilidade.html#a236561cbb35f1e4502d14dcaddb82e3c">InventarioHabilidade</a>, <a class="el" href="classInventarioItem.html#a055c8007b2282b2f91999ae4e91e5db9">InventarioItem</a></li>
+</ul>
+
+
+<h3><a id="index_w" name="index_w"></a>- w -</h3><ul>
+<li>what()&#160;:&#160;<a class="el" href="classRPGException.html#ae06345b71719ee89c321ce06168107a9">RPGException</a></li>
+</ul>
+
+
+<h3><a id="index_z" name="index_z"></a>- z -</h3><ul>
+<li>zerarCooldown()&#160;:&#160;<a class="el" href="classHabilidade.html#a893646a68bf25967a89a0035876be25c">Habilidade</a></li>
 </ul>
 
 
 <h3><a id="index__7E" name="index__7E"></a>- ~ -</h3><ul>
 <li>~Acao()&#160;:&#160;<a class="el" href="classAcao.html#aeb8cbe2880da8eb2d2d2971a46810dac">Acao</a></li>
+<li>~coutDigitado()&#160;:&#160;<a class="el" href="classUtils_1_1coutDigitado.html#a8d1ef5e40127190b5c93590155c58bfe">Utils::coutDigitado</a></li>
 <li>~Efeito()&#160;:&#160;<a class="el" href="classEfeito.html#aa906467d4bc07bfc97a5e8ecd9996888">Efeito</a></li>
 <li>~Engine()&#160;:&#160;<a class="el" href="classEngine.html#a756500478f6f6debf63da450107b7250">Engine</a></li>
 <li>~Entidade()&#160;:&#160;<a class="el" href="classEntidade.html#a7b3a23b8307be2dcc4cfbe77e69baa50">Entidade</a></li>

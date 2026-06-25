@@ -1,0 +1,47 @@
+\doxysection{Utils.\+hpp}
+\hypertarget{Utils_8hpp_source}{}\label{Utils_8hpp_source}\index{include/Utils.hpp@{include/Utils.hpp}}
+\mbox{\hyperlink{Utils_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ UTILS\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ UTILS\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespaceUtils}{Utils}}\ \{}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceUtils_af9af19df13165c6a9b83b19b307c8042}{coutTempo}}(std::string\ texto,\ \textcolor{keywordtype}{int}\ milisegundos\ =\ 55);}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceUtils_a56a309c06b7bb1c947d573fb3c8d0e6a}{limparTela}}();\ \textcolor{comment}{//\ essa\ vai\ ser\ usada\ para\ mudança\ de\ sala\ e\ vai\ limpar\ tudo}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceUtils_ace8ded512d37a4a7599939f6ef227ef2}{limparTelaAnima}}();\ \textcolor{comment}{//\ essa\ vai\ fazer\ o\ cursor\ voltar\ pra\ linha\ 1\ e\ vai\ gerar\ uma\ especie\ de\ "{}animação"{}}}
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{namespaceUtils_a1d75c3fbc71b9d2a6417ec80a8d0c48c}{esperar}}(\textcolor{keywordtype}{int}\ milissegundos);\ \textcolor{comment}{//\ pra\ esperar\ né\ caba\ nao\ é\ de\ ferro}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{extern}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{namespaceUtils_a6c273b4ba0d59386177d7ca64628dd98}{modoTeste}};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structUtils_1_1Animacao}{Animacao}}\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{structUtils_1_1Animacao_ab423cde74fdf71cbaac198e86d2ecbfd}{textoInicial}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{structUtils_1_1Animacao_a180ecb27cf7d126ed2516fa6007fb72a}{frames}};}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::vector<std::string>\ \mbox{\hyperlink{structUtils_1_1Animacao_af53e44afbfe452140374515f03c531d0}{textoFinal}};}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structUtils_1_1Animacao_a8e446fdad71566f36033a626d892cce3}{tempoFrame}}\ =\ 200;}
+\DoxyCodeLine{00022\ \ \ \ \ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{class\ }\mbox{\hyperlink{classUtils_1_1coutDigitado}{coutDigitado}}\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ std::ostringstream\ buffer;}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_tempo;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classUtils_1_1coutDigitado_ae76468279cf37767cd74b53a7d09af3c}{coutDigitado}}(\textcolor{keywordtype}{int}\ tempo\ =\ 75)\ :\ \_tempo(tempo)\ \{\}}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classUtils_1_1coutDigitado}{coutDigitado}}\&\ \mbox{\hyperlink{classUtils_1_1coutDigitado_a994c9df12b258c4bbea28e6a49d59eed}{operator<<}}(\textcolor{keyword}{const}\ T\&\ valor)\ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ buffer\ <<\ valor;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classUtils_1_1coutDigitado_a8d1ef5e40127190b5c93590155c58bfe}{\string~coutDigitado}}()\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceUtils_af9af19df13165c6a9b83b19b307c8042}{coutTempo}}(buffer.str(),\ \_tempo);}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00038\ \ \ \ \ \};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -11,22 +11,12 @@ Classe base para representar qualquer ação do jogo (como Habilidades ou Itens)
 
 
 
-Diagrama de hierarquia da classe Acao\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=276pt]{classAcao__inherit__graph}
-\end{center}
-\end{figure}
+Diagrama de hierarquia da classe Acao\+:
+% FIG 0
 
 
-Diagrama de colaboração para Acao\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=195pt]{classAcao__coll__graph}
-\end{center}
-\end{figure}
+Diagrama de colaboração para Acao\+:
+% FIG 1
 \doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
@@ -34,7 +24,7 @@ Diagrama de colaboração para Acao\+:\nopagebreak
 \begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{classAcao}{Acao}. \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{classAcao_ace32485f5cca5329ebb5e6fab9760ceb}{calcular\+Impacto}} ()
 \begin{DoxyCompactList}\small\item\em Calcula a alteração de vida baseada na ação. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classAcao_af339f68e5999ff075e79eeef17f08a9c}{mostrar\+Descricao}} ()
+std\+::string \mbox{\hyperlink{classAcao_acb39249ae6c4c1b1e9a1091aa92c495a}{mostrar\+Descricao}} ()
 \begin{DoxyCompactList}\small\item\em Exibe os detalhes da ação (informações da habilidade ou do item). \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classAcao_aa8460ddeec0c7fa20e9e5c39ea64edd5}{get\+Nome}} ()
 \begin{DoxyCompactList}\small\item\em Retorna o nome da ação. \end{DoxyCompactList}\item 
@@ -192,11 +182,11 @@ Retorna o valor numérico da ação.
 \begin{DoxyReturn}{Retorna}
 Inteiro representando a magnitude (quantidade de dano, cura, etc). 
 \end{DoxyReturn}
-\Hypertarget{classAcao_af339f68e5999ff075e79eeef17f08a9c}\label{classAcao_af339f68e5999ff075e79eeef17f08a9c} 
+\Hypertarget{classAcao_acb39249ae6c4c1b1e9a1091aa92c495a}\label{classAcao_acb39249ae6c4c1b1e9a1091aa92c495a} 
 \index{Acao@{Acao}!mostrarDescricao@{mostrarDescricao}}
 \index{mostrarDescricao@{mostrarDescricao}!Acao@{Acao}}
 \doxysubsubsection{\texorpdfstring{mostrarDescricao()}{mostrarDescricao()}}
-{\footnotesize\ttfamily void Acao\+::mostrar\+Descricao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+{\footnotesize\ttfamily std\+::string Acao\+::mostrar\+Descricao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 

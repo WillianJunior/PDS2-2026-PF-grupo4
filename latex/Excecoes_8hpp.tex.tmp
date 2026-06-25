@@ -1,0 +1,17 @@
+\doxysection{Referência do Arquivo include/\+Excecoes.hpp}
+\hypertarget{Excecoes_8hpp}{}\label{Excecoes_8hpp}\index{include/Excecoes.hpp@{include/Excecoes.hpp}}
+{\ttfamily \#include $<$exception$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Gráfico de dependência de inclusões para Excecoes.\+hpp\+:
+% FIG 0
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+% FIG 1
+\doxysubsubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classRPGException}{RPGException}}
+\begin{DoxyCompactList}\small\item\em Classe base de todas as execeções. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classIndiceInvalidoException}{Indice\+Invalido\+Exception}}
+\begin{DoxyCompactList}\small\item\em Lançada quando o jogador tenta acessar um indice fora dos limites. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classEntradaInvalidaException}{Entrada\+Invalida\+Exception}}
+\begin{DoxyCompactList}\small\item\em Lançada quando ocorre uma falha na leitura da entrada. \end{DoxyCompactList}\end{DoxyCompactItemize}

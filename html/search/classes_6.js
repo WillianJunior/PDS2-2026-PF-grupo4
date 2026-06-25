@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['personagem_0',['Personagem',['../classPersonagem.html',1,'']]]
+  ['opcaoescolha_0',['OpcaoEscolha',['../structOpcaoEscolha.html',1,'']]]
 ];

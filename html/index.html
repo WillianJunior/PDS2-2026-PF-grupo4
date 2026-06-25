@@ -72,13 +72,81 @@ $(function() {
   <div class="headertitle"><div class="title">PDS2-2026-PF-grupo4 </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a> ---&mdash;Integrantes:---&mdash; • Maycon Jonnatha Rezende Ferreira • Isaque Daniel Freire Martins • Marcos Paulo Rodrigues Vilaça • João vaz Rousset • Nicole Araujo Campos Szuster</p>
-<p>---&mdash;Descrição:---&mdash;</p>
+<div class="textblock"><p><a class="anchor" id="md_README"></a> | We Can't Code This Game - Motor de RPG |</p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Integrantes:</h1>
+<p>• Maycon Jonnatha Rezende Ferreira • Isaque Daniel Freire Martins • Marcos Paulo Rodrigues Vilaça • João vaz Rousset • Nicole Araujo Campos Szuster</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Descrição:</h1>
 <p>Este projeto consiste na implementação de um motor simplificado de RPG baseado em turnos. O sistema, que será inteiramente desenvolvido em C++, exige a modelagem de personagens, regras de combate e o gerenciamento de recursos.</p>
-<p>---&mdash;Objetivos:---&mdash;</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Objetivos:</h1>
 <p>• Desenvolver Motor RPG: Implementar um sistema com diferentes personagens, inimigos, combate por turnos, regras de dano, inventário e uso de itens e habilidades. • Extensibilidade: Desenvolver o projeto de modo a ser possível adicionar facilmente novas salas de combates, inimigos e itens. • Qualidade Técnica: Aplicar os conceitos de Programação Orientada a Objetos, incluindo encapsulamento, herança e polimorfismo. • Qualidade de Software: Construir um sistema confiável, reutilizável e de fácil manutenção, com modularidade definida.</p>
-<p>---&mdash;Motivação e Enredo---&mdash;</p>
-<p>A motivação para o tema deste projeto surgiu de um desafio real enfrentado pela nossa equipe: durante as discussões iniciais de brainstorming, nenhuma das ideias de temas e cenários propostos parecia agradar a todos os membros do grupo. Diante desse bloqueio criativo, decidimos transformar o nosso próprio processo de desenvolvimento no enredo central do jogo e nossas características pessoais na temática dos personagens e inimigos. Assim nasceu a ideia de um "meta-jogo". A narrativa acompanha cinco estudantes que estão criando um jogo e enfrentam diversos empecilhos para conseguir terminá-lo. Cada membro do nosso grupo atua como uma "classe" de personagem selecionável no início da jornada. O jogador assume o papel de um desses estudantes e deve avançar por diversas salas de combate. Os inimigos enfrentados são, na verdade, metáforas para os desafios de desenvolvimento que tentam nos impedir de entregar o projeto final. Para auxiliar na progressão, o jogo também conta com salas interativas voltadas para a troca de itens especiais e gerenciamento de inventário, unindo nossa sátira criativa a todos os requisitos técnicos exigidos para o projeto do motor RPG. </p>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Motivação e Enredo</h1>
+<p>A motivação para o tema deste projeto surgiu de um desafio real enfrentado pela nossa equipe: durante as discussões iniciais de brainstorming, nenhuma das ideias de temas e cenários propostos parecia agradar a todos os membros do grupo. Diante desse bloqueio criativo, decidimos transformar o nosso próprio processo de desenvolvimento no enredo central do jogo e nossas características pessoais na temática dos personagens e inimigos. Assim nasceu a ideia de um "meta-jogo". A narrativa acompanha cinco estudantes que estão criando um jogo e enfrentam diversos empecilhos para conseguir terminá-lo. Cada membro do nosso grupo atua como uma "classe" de personagem selecionável no início da jornada. O jogador assume o papel de um desses estudantes e deve avançar por diversas salas de combate. Os inimigos enfrentados são, na verdade, metáforas para os desafios de desenvolvimento que tentam nos impedir de entregar o projeto final. Para auxiliar na progressão, o jogo também conta com salas interativas voltadas para a troca de itens especiais e gerenciamento de inventário, unindo nossa sátira criativa a todos os requisitos técnicos exigidos para o projeto do motor RPG.</p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Arquitetura e Padrões de Projeto</h1>
+<p>O projeto foi arquitetado sob os pilares fundamentais da <b>Programação Orientada a Objetos (POO)</b> e faz uso intensivo de padrões de projeto clássicos para garantir baixo acoplamento, alta coesão e facilidade de manutenção e expansão:</p>
+<h2><a class="anchor" id="autotoc_md6"></a>
+1. Pilares de POO Aplicados</h2>
+<ul>
+<li><b>Herança e Polimorfismo de Entidades:</b> A classe abstrata <code><a class="el" href="classEntidade.html" title="Classe abstrata para representar as entidades.">Entidade</a></code> define o contrato base (vida, nome, recebimento de dano/efeitos). Dela derivam <code><a class="el" href="classPersonagem.html" title="Representa o personagem no jogo, herda da classe entidade.">Personagem</a></code> (que adiciona inventários e mecânicas de recarga) e <code><a class="el" href="classInimigo.html" title="Entidade que irá contra o personagem principal Classe que herda de entidade, sendo o inimigo do jogo ...">Inimigo</a></code> (que implementa a mecânica de combate por aleatoriedade com alguns filtros).</li>
+<li><b>Herança e Polimorfismo de Salas:</b> O game loop manipula ponteiros genéricos para a classe abstrata <code><a class="el" href="classSalaBase.html" title="Classe base abstrata que representa uma sala genérica.">SalaBase</a></code>. As especializações <code><a class="el" href="classSalaCombate.html" title="Classe que representa uma sala focada em conflitos e batalhas.">SalaCombate</a></code> e <code><a class="el" href="classSalaEscolha.html" title="Representa uma sala focada em escolhas e eventos interativos.">SalaEscolha</a></code> sobrescrevem os métodos virtuais <code>mostrarSala()</code> e <code>executarSala()</code>, permitindo que a engine transicione entre diferentes modos de jogo sem conhecer os detalhes internos de cada sala.</li>
+<li><b>Encapsulamento e Templates:</b> O gerenciamento de ações é construído através de um template genérico de classe base (<code><a class="el" href="classInventario.html" title="Classe abstrata de inventário usando Templates.">Inventario</a>&lt;T&gt;</code>), que encapsula vetores seguros da STL. As classes <code><a class="el" href="classInventarioHabilidade.html" title="Classe que gerencia o inventário de habilidades de uma entidade.">InventarioHabilidade</a></code> e <code><a class="el" href="classInventarioItem.html" title="Classe que gerencia o inventário de itens de uma entidade.">InventarioItem</a></code> especializam esse comportamento para lidar com regras exclusivas de <em>cooldowns</em> e consumo de quantidade, respectivamente.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md7"></a>
+2. Padrões de Projeto (&lt;em&gt;Design Patterns&lt;/em&gt;)</h2>
+<ul>
+<li><b>Factory Method (Instanciação Dinâmica Desacoplada):</b> <br  />
+ A criação de objetos complexos é totalmente delegada a classes fábricas estáticas especializadas:<ul>
+<li><code><a class="el" href="namespaceFabricaSC.html">FabricaSC</a></code> e <code><a class="el" href="namespaceFabricaSE.html">FabricaSE</a></code>: Montam e entregam instâncias prontas de <code><a class="el" href="classSalaCombate.html" title="Classe que representa uma sala focada em conflitos e batalhas.">SalaCombate</a></code> e <code><a class="el" href="classSalaEscolha.html" title="Representa uma sala focada em escolhas e eventos interativos.">SalaEscolha</a></code>, já injetando descrições narrativas, artes ASCII e opções de interatividade baseadas em IDs.</li>
+<li><code><a class="el" href="namespaceFabricaInimigo.html">FabricaInimigo</a></code>, <code><a class="el" href="namespaceFabricaHabilidade.html">FabricaHabilidade</a></code> e <code><a class="el" href="namespaceFabricaItem.html">FabricaItem</a></code>: Centralizam atributos, falas de batalha e multiplicadores de impacto.</li>
+</ul>
+</li>
+<li><b>State Machine / Game Loop (Máquina de Estados Orquestrada):</b> <br  />
+ A classe <code><a class="el" href="classEngine.html" title="Classe gerenciadora do loop principal do jogo - maquina de estados Cria o ciclo de vida do jogo,...">Engine</a></code> atua como o orquestrador principal. Ela pré-carrega a sequência da run em um vetor polimórfico (<code>std::vector&lt;std::unique_ptr&lt;<a class="el" href="classSalaBase.html" title="Classe base abstrata que representa uma sala genérica.">SalaBase</a>&gt;&gt;</code>). Durante o ciclo de jogo, a sala atual assume o controle de fluxo atuando como um estado autônomo e, ao finalizar, devolve o controle para a engine avançar o ID da sala.</li>
+<li><b>Command / Callback Pattern (Eventos Narrativos):</b> <br  />
+ Na <code><a class="el" href="classSalaEscolha.html" title="Representa uma sala focada em escolhas e eventos interativos.">SalaEscolha</a></code>, as opções selecionáveis encapsulam suas consequências através do wrapper <code>std::function&lt;void(Personagem*)&gt;</code>. Isso permite injetar lambdas e comportamentos arbitrários em tempo de instanciação na fábrica, evitando a criação de infinitas sub-classes para cada evento específico.</li>
+<li><b>RAII e Gestão de Recursos Utilitários:</b> <br  />
+ A classe <code><a class="el" href="namespaceUtils.html">Utils</a></code> manipula chamadas de sistema POSIX (<code>termios</code> e <code>fcntl</code>) para desligar o eco do terminal e permitir leituras assíncronas não-bloqueantes durante animações de digitação. O paradigma RAII garante que as flags do terminal do usuário sejam rigorosamente restauradas ao estado original ao fim da execução.</li>
+<li><b>Persistência Centralizada:</b> <br  />
+ A classe <code><a class="el" href="classSaveManager.html">SaveManager</a></code> garante o salvamento em disco (<code>save.txt</code>), passando parâmetros como os da sala e o estado de vida e inventários do personagem, permitindo resgatar o progresso exato da sessão.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md8"></a>
+3. Gestão de Memória Moderna</h2>
+<p>O projeto <b>não utiliza gerenciamento manual de memória</b>. A posse dos objetos de salas e entidades é gerida estritamente por smart pointers de escopo único (**<code>std::unique_ptr</code>**) com transferências explícitas de propriedade via <code>std::move</code>. Isso anula riscos de vazamentos de memória (<em>memory leaks</em>) e ponteiros pendentes (<em>dangling pointers</em>).</p>
+<h1><a class="anchor" id="autotoc_md9"></a>
+Estrutura de Diretórios</h1>
+<p>O repositório segue uma organização modular: ├── src/ # Código-fonte (.cpp) com a implementação interna das mecânicas ├── include/ # Contratos e cabeçalhos (.hpp) ├── data/ # Arquivos de texto (.txt) contendo artes ASCII e status de entidades ├── design/ # Documentação de modelagem ├── tests/ # Casos de teste unitário automatizados ├── build/ # Diretório temporário gerado para armazenar relatórios de teste ├── html/ # Documentação técnica gerada automaticamente pelo Doxygen (formato Web) ├── latex/ # Documentação técnica gerada automaticamente pelo Doxygen (formato LaTeX) ├── Doxyfile # Arquivo de configuração de geração de documentação do Doxygen ├── Makefile # Automação de compilação, execução e testes └── <a class="el" href="README_8md.html">README.md</a> # Documentação principal do projeto</p>
+<h1><a class="anchor" id="autotoc_md10"></a>
+Compilação e Execução</h1>
+<p>O projeto conta com um Makefile configurado para automatizar os processos de build no Linux.</p>
+<p>Para compilar o código fonte e gerar o binário executável, execute na raiz do projeto: make</p>
+<p>Isso criará o arquivo binário rpg_game na pasta raiz. Para iniciá-lo manualmente em seguida, basta rodar: ./rpg_game</p>
+<p>Para compilar e executar o jogo em seguida: make run</p>
+<p>Para limpar os arquivos objetos .o gerados durante a compilação: make clean</p>
+<p>A cobertura de testes (cálculo de dano, limite de vida, uso de inventário e lançamento de exceções) foi implementada. Para executar a suíte de testes: make test</p>
+<h1><a class="anchor" id="autotoc_md11"></a>
+Como Jogar</h1>
+<p>We Can't Code This Game é um RPG por turnos no qual você assume o papel de um estudante universitário lutando contra metáforas de bugs, bloqueios criativos e prazos apertados para conseguir entregar o trabalho final de PDS II, além de outras situações adversas.</p>
+<ol type="1">
+<li><p class="startli">Início e Seleção de <a class="el" href="classPersonagem.html" title="Representa o personagem no jogo, herda da classe entidade.">Personagem</a> Ao executar o jogo, você terá acesso ao <a class="el" href="classMenu.html" title="Classe responsável por gerenciar o menu principal do jogo.">Menu</a> Principal:</p>
+<p class="startli">• New Game: Inicia uma nova jornada. Você deverá escolher seu desenvolvedor/herói digitando um número de 1 a 5: [1] Maycon (O Lutador Alquimista): 120 HP | <a class="el" href="classHabilidade.html" title="Representa uma habilidade no jogo.">Habilidade</a> inicial: Investida | <a class="el" href="classItem.html" title="Representa um item no jogo.">Item</a> inicial: Xeque-Mate [2] Vaz (O Mestre dos Ares): 100 HP | Habilidades iniciais: Contar uma Piada e Forças Aéreas [3] Nicole (A Exterminadora de Coca-Cola): 120 HP | <a class="el" href="classHabilidade.html" title="Representa uma habilidade no jogo.">Habilidade</a>: Arremessar um Livro | <a class="el" href="classItem.html" title="Representa um item no jogo.">Item</a>: Coca-Cola [4] Marcos (O Hipnotizador do Forró): 120 HP | <a class="el" href="classHabilidade.html" title="Representa uma habilidade no jogo.">Habilidade</a>: Passinho do Forró | <a class="el" href="classItem.html" title="Representa um item no jogo.">Item</a>: Água Benta [5] Isaque (O Invocador de Aliados): 120 HP | Habilidades: Aviãozinho de Papel e Chamar a Ex</p>
+<p class="startli">• Load Game: Carrega automaticamente seu último progresso salvo (disponível caso exista um jogo salvo no arquivo save.txt).</p>
+<p class="startli">• Out: Encerra o jogo.</p>
+</li>
+</ol>
+<p>• Dica: Acelerar Diálogos: O jogo exibe os diálogos com um efeito animado de digitação. Ao jogar as primeiras vezes é interessante acompanhar os diálogos com calma para entender melhor a história, mas, após entender a história, se você quiser acelerar a velocidade do texto em 10x, basta pressionar a tecla Espaço durante as falas.</p>
+<ol type="1">
+<li><p class="startli">Progredindo pelas Salas A sua campanha consiste em sobreviver a uma sequência gerada aleatoriamente de 8 salas (5 Salas de Combate e 3 Salas de Escolha), finalizando na batalha contra o Boss e na entrega final do código:</p>
+<p class="startli">• Salas de Combate (Batalhas por Turnos) Nos embates, os turnos alternam entre Sua Vez e a Vez do <a class="el" href="classInimigo.html" title="Entidade que irá contra o personagem principal Classe que herda de entidade, sendo o inimigo do jogo ...">Inimigo</a>. A cada rodada do jogador, os tempos de recarga (cooldowns) das suas habilidades diminuem e efeitos de status são calculados. Digite o número correspondente à ação desejada: [ 1 ] - Usar <a class="el" href="classHabilidade.html" title="Representa uma habilidade no jogo.">Habilidade</a>: Lista as habilidades disponíveis do seu personagem. Algumas causam dano ao inimigo, enquanto outras curam sua vida. Após o uso, a habilidade entra em cooldown por algumas rodadas. [ 2 ] - Usar <a class="el" href="classItem.html" title="Representa um item no jogo.">Item</a>: Abre seu inventário consumível. Itens possuem efeitos imediatos de cura, buffs ou dano direto e são gastos ao serem utilizados. (Em ambos os menus, você pode digitar 0 para cancelar e voltar à escolha de ação). Ao derrotar um inimigo, seu personagem descansa, recupera 30 pontos de vida, limpa penalidades de status e recebe recompensas antes de prosseguir.</p>
+<p class="startli">• Salas de Escolha (Eventos Interativos) Entre combates, você entrará em salas de eventos com decisões narrativas ou trocas de inventário. Serão exibidas opções numeradas [1], [2], etc. Leia a situação e digite o número da sua escolha para receber buffs, itens especiais ou possíveis penalidades em sua vida e atributos.</p>
+</li>
+<li><p class="startli">Sistema de Salvamento (Save Automático) O motor do jogo possui um sistema de save:</p>
+<p class="startli">Salvo ao Concluir Salas: Ao finalizar qualquer sala (seja de combate ou escolha), seu progresso, vida, inventário, histórico de salas percorridas, etc são salvos automaticamente em um arquivo save.txt. Pausa de Campanha: Após o salvamento automático de conclusão de sala, o jogo perguntará se você deseja: [ 1 ] - Seguir para a próxima sala [ 2 ] - Sair (Fecha com segurança; você poderá continuar exatamente de onde parou usando a opção Load Game no menu inicial posteriormente). Morte Permanente (Permadeath): Caso sua vida chegue a 0 (Game Over) ou você conclua a história final do jogo com vitória, o arquivo save.txt é excluído automaticamente para que uma nova história comece limpa. </p>
+</li>
+</ol>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->

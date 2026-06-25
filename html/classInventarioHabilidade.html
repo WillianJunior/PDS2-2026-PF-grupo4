@@ -115,9 +115,11 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:acaf84ee0bd4910b0d7c1af78aa38141f" id="r_acaf84ee0bd4910b0d7c1af78aa38141f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInventarioHabilidade.html#acaf84ee0bd4910b0d7c1af78aa38141f">getTamanho</a> ()</td></tr>
 <tr class="memdesc:acaf84ee0bd4910b0d7c1af78aa38141f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a quantidade de habilidades no inventário.  <br /></td></tr>
 <tr class="separator:acaf84ee0bd4910b0d7c1af78aa38141f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a8996b9cb37abe2fcc186773e5507e8" id="r_a0a8996b9cb37abe2fcc186773e5507e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHabilidade.html">Habilidade</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInventarioHabilidade.html#a0a8996b9cb37abe2fcc186773e5507e8">getHabilidade</a> (int posicao)</td></tr>
-<tr class="memdesc:a0a8996b9cb37abe2fcc186773e5507e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma habilidade específica pela posição.  <br /></td></tr>
-<tr class="separator:a0a8996b9cb37abe2fcc186773e5507e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a944b16deb1bcd313698c7d4bf9a6f4fb" id="r_a944b16deb1bcd313698c7d4bf9a6f4fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHabilidade.html">Habilidade</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInventarioHabilidade.html#a944b16deb1bcd313698c7d4bf9a6f4fb">getHabilidade</a> (int posicao)</td></tr>
+<tr class="memdesc:a944b16deb1bcd313698c7d4bf9a6f4fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma habilidade específica pela posição.  <br /></td></tr>
+<tr class="separator:a944b16deb1bcd313698c7d4bf9a6f4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84a7c7b6f0c9095df4386439bac04476" id="r_a84a7c7b6f0c9095df4386439bac04476"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInventarioHabilidade.html#a84a7c7b6f0c9095df4386439bac04476">atualizarCooldowns</a> ()</td></tr>
+<tr class="separator:a84a7c7b6f0c9095df4386439bac04476"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac14b9594db264f62e6ec94b8e083378e" id="r_ac14b9594db264f62e6ec94b8e083378e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classInventarioHabilidade.html#ac14b9594db264f62e6ec94b8e083378e">operator==</a> (const <a class="el" href="classInventarioHabilidade.html">InventarioHabilidade</a> &amp;outro) const</td></tr>
 <tr class="memdesc:ac14b9594db264f62e6ec94b8e083378e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compara dois inventarios para verificar se sao iguais (usado em testes).  <br /></td></tr>
 <tr class="separator:ac14b9594db264f62e6ec94b8e083378e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,6 +140,23 @@ Membros Públicos</h2></td></tr>
 <li>Implementa os métodos da classe abstrata <a class="el" href="classInventario.html" title="Classe abstrata de inventário usando Templates.">Inventario</a> focando em objetos <a class="el" href="classHabilidade.html" title="Representa uma habilidade no jogo.">Habilidade</a>. </li>
 </ul>
 </div><h2 class="groupheader">Documentação das funções</h2>
+<a id="a84a7c7b6f0c9095df4386439bac04476" name="a84a7c7b6f0c9095df4386439bac04476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84a7c7b6f0c9095df4386439bac04476">&#9670;&#160;</a></span>atualizarCooldowns()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InventarioHabilidade::atualizarCooldowns </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aad30f5cfc87152b4ecb8a8a355984756" name="aad30f5cfc87152b4ecb8a8a355984756"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad30f5cfc87152b4ecb8a8a355984756">&#9670;&#160;</a></span>descartarAcao()</h2>
 
@@ -174,14 +193,14 @@ Membros Públicos</h2></td></tr>
 
 </div>
 </div>
-<a id="a0a8996b9cb37abe2fcc186773e5507e8" name="a0a8996b9cb37abe2fcc186773e5507e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a8996b9cb37abe2fcc186773e5507e8">&#9670;&#160;</a></span>getHabilidade()</h2>
+<a id="a944b16deb1bcd313698c7d4bf9a6f4fb" name="a944b16deb1bcd313698c7d4bf9a6f4fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a944b16deb1bcd313698c7d4bf9a6f4fb">&#9670;&#160;</a></span>getHabilidade()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classHabilidade.html">Habilidade</a> InventarioHabilidade::getHabilidade </td>
+          <td class="memname"><a class="el" href="classHabilidade.html">Habilidade</a> &amp; InventarioHabilidade::getHabilidade </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>posicao</em></td><td>)</td>

@@ -8,15 +8,25 @@
 \DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Acao_8hpp}{Acao.hpp}}"{}}}
 \DoxyCodeLine{00005\ }
 \DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classHabilidade}{Habilidade}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classAcao}{Acao}}\ \{}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classHabilidade}{Habilidade}}(std::string\ nome,\ \textcolor{keywordtype}{bool}\ tipo,\ \textcolor{keywordtype}{int}\ valor,\ \textcolor{keywordtype}{bool}\ alvo,\ \mbox{\hyperlink{classEfeito}{Efeito}}\ efeito);}
-\DoxyCodeLine{00022\ \ \ \ \ }
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classHabilidade_aa5226c2dc9ac5f6d14b65700cbdb817a}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classHabilidade}{Habilidade}}\&\ outro)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classHabilidade_a4fd7e13420bc0909e701b1cb3a3983e4}{\string~Habilidade}}();}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00036\ \};}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_cooldown;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_cooldownAtual;}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classHabilidade}{Habilidade}}(std::string\ nome,\ \textcolor{keywordtype}{bool}\ tipo,\ \textcolor{keywordtype}{int}\ valor,\ \textcolor{keywordtype}{bool}\ alvo,\ \mbox{\hyperlink{classEfeito}{Efeito}}\ efeito,\ \textcolor{keywordtype}{int}\ cooldown);}
+\DoxyCodeLine{00025\ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classHabilidade_aa5226c2dc9ac5f6d14b65700cbdb817a}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classHabilidade}{Habilidade}}\&\ outro)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classHabilidade_a802bbaa108d2cfc3bef378454b224f0c}{getCooldown}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classHabilidade_a52b131266187e42e94c40cef9ee11555}{getCooldownAtual}}();}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHabilidade_a48fa748616b683a54c78600f69d9fef3}{iniciarCooldown}}();}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHabilidade_a3feeae9fb00ff6bd3658144f1ffd641f}{atualizarCooldown}}();}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHabilidade_a893646a68bf25967a89a0035876be25c}{zerarCooldown}}();}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classHabilidade_ab1bf5831e8ee5364ed0c27a58764986b}{setCooldownAtual}}(\textcolor{keywordtype}{int}\ valor);}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classHabilidade_a4fd7e13420bc0909e701b1cb3a3983e4}{\string~Habilidade}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

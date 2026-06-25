@@ -11,33 +11,27 @@ Classe base abstrata que representa uma sala genérica.
 
 
 
-Diagrama de hierarquia da classe Sala\+Base\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=300pt]{classSalaBase__inherit__graph}
-\end{center}
-\end{figure}
+Diagrama de hierarquia da classe Sala\+Base\+:
+% FIG 0
 
 
-Diagrama de colaboração para Sala\+Base\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=172pt]{classSalaBase__coll__graph}
-\end{center}
-\end{figure}
+Diagrama de colaboração para Sala\+Base\+:
+% FIG 1
 \doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
 virtual void \mbox{\hyperlink{classSalaBase_a2bbb6cb055fc485d399ecf7a9a1d44fa}{encerrar\+Sala}} ()=0
 \begin{DoxyCompactList}\small\item\em Encerra a execução ou o contexto da sala atual. Método virtual puro que deve ser implementado pelas classes filhas. \end{DoxyCompactList}\item 
-virtual int \mbox{\hyperlink{classSalaBase_af8610b3e1cffc4fd2c85366ebc64bac0}{executar\+Sala}} (\mbox{\hyperlink{classPersonagem}{Personagem}} \texorpdfstring{$\ast$}{*}personagem)=0
+virtual int \mbox{\hyperlink{classSalaBase_a093d888ce8e8d1dd43dbc15cf2b0036b}{executar\+Sala}} (\mbox{\hyperlink{classPersonagem}{Personagem}} \&personagem)=0
 \begin{DoxyCompactList}\small\item\em Executa o loop da sala. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classSalaBase_a266d17999fecc33d2afeb1c9fd9083a3}{mostrar\+Sala}} ()=0
 \begin{DoxyCompactList}\small\item\em Exibe as informações, o menu ou o conteúdo da sala na tela. Método virtual puro que deve ser implementado pelas classes filhas. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classSalaBase_aa70b904d98578ea6b8b42e607eeef7ca}{get\+Nome}} ()
 \begin{DoxyCompactList}\small\item\em Retorna o nome da sala. \end{DoxyCompactList}\item 
+virtual char \mbox{\hyperlink{classSalaBase_aac43b61e15aa7fd0970cc666b446fc9a}{get\+Tipo}} ()=0
+\begin{DoxyCompactList}\small\item\em Retorna o tipo da sala ("{}\+C"{} para combate, "{}\+E"{} para escolha). Método virtual puro que deve ser implementado pelas classes filhas. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classSalaBase_a2fdaa4f838c905e9311b069ec902092c}{get\+Id}} ()=0
+\begin{DoxyCompactList}\small\item\em Retorna o id do inimigo (sala combate) ou índice (sala escolha). Método virtual puro que deve ser implementado pelas classes filhas. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classSalaBase_a26b843086d5f0b0ebbcd1bf5331f90f6}{\texorpdfstring{$\sim$}{\string~}\+Sala\+Base}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor virtual. Garante que os recursos das classes derivadas sejam liberados corretamente. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Membros protegidos}
@@ -103,11 +97,11 @@ Encerra a execução ou o contexto da sala atual. Método virtual puro que deve 
 
 Implementado por \mbox{\hyperlink{classSalaCombate_a79f0a1db3e17f3a9633c446f641e327b}{Sala\+Combate}} e \mbox{\hyperlink{classSalaEscolha_a271e7269eeb090dcdf63f0c4988deab0}{Sala\+Escolha}}.
 
-\Hypertarget{classSalaBase_af8610b3e1cffc4fd2c85366ebc64bac0}\label{classSalaBase_af8610b3e1cffc4fd2c85366ebc64bac0} 
+\Hypertarget{classSalaBase_a093d888ce8e8d1dd43dbc15cf2b0036b}\label{classSalaBase_a093d888ce8e8d1dd43dbc15cf2b0036b} 
 \index{SalaBase@{SalaBase}!executarSala@{executarSala}}
 \index{executarSala@{executarSala}!SalaBase@{SalaBase}}
 \doxysubsubsection{\texorpdfstring{executarSala()}{executarSala()}}
-{\footnotesize\ttfamily virtual int Sala\+Base\+::executar\+Sala (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPersonagem}{Personagem}} \texorpdfstring{$\ast$}{*}}]{personagem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual int Sala\+Base\+::executar\+Sala (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPersonagem}{Personagem}} \&}]{personagem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
@@ -118,7 +112,21 @@ Numero que representa a ID da proxima sala a ser carregada
 \end{DoxyReturn}
 
 
-Implementado por \mbox{\hyperlink{classSalaCombate_afd8449c1ed680ebcbd8d70beeab860c8}{Sala\+Combate}} e \mbox{\hyperlink{classSalaEscolha_ae733458ab6ba45b7d198ec09063250b3}{Sala\+Escolha}}.
+Implementado por \mbox{\hyperlink{classSalaCombate_a427c6a3f3ff27ed7abb8ff9239302203}{Sala\+Combate}} e \mbox{\hyperlink{classSalaEscolha_addc074991b7f977ad4227da0a2631a2a}{Sala\+Escolha}}.
+
+\Hypertarget{classSalaBase_a2fdaa4f838c905e9311b069ec902092c}\label{classSalaBase_a2fdaa4f838c905e9311b069ec902092c} 
+\index{SalaBase@{SalaBase}!getId@{getId}}
+\index{getId@{getId}!SalaBase@{SalaBase}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily virtual int Sala\+Base\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retorna o id do inimigo (sala combate) ou índice (sala escolha). Método virtual puro que deve ser implementado pelas classes filhas. 
+
+
+
+Implementado por \mbox{\hyperlink{classSalaCombate_aa0d0185a69b915e037452cac7a9c0d17}{Sala\+Combate}} e \mbox{\hyperlink{classSalaEscolha_a8b7af65827de1dcb8b8cc2a16791b9ee}{Sala\+Escolha}}.
 
 \Hypertarget{classSalaBase_aa70b904d98578ea6b8b42e607eeef7ca}\label{classSalaBase_aa70b904d98578ea6b8b42e607eeef7ca} 
 \index{SalaBase@{SalaBase}!getNome@{getNome}}
@@ -129,6 +137,20 @@ Implementado por \mbox{\hyperlink{classSalaCombate_afd8449c1ed680ebcbd8d70beeab8
 
 
 Retorna o nome da sala. 
+
+\Hypertarget{classSalaBase_aac43b61e15aa7fd0970cc666b446fc9a}\label{classSalaBase_aac43b61e15aa7fd0970cc666b446fc9a} 
+\index{SalaBase@{SalaBase}!getTipo@{getTipo}}
+\index{getTipo@{getTipo}!SalaBase@{SalaBase}}
+\doxysubsubsection{\texorpdfstring{getTipo()}{getTipo()}}
+{\footnotesize\ttfamily virtual char Sala\+Base\+::get\+Tipo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Retorna o tipo da sala ("{}\+C"{} para combate, "{}\+E"{} para escolha). Método virtual puro que deve ser implementado pelas classes filhas. 
+
+
+
+Implementado por \mbox{\hyperlink{classSalaCombate_a6acd5a705e5d04f1fec64d3ddf097001}{Sala\+Combate}} e \mbox{\hyperlink{classSalaEscolha_a41f08c829a1b1830254fedf552ee6ef0}{Sala\+Escolha}}.
 
 \Hypertarget{classSalaBase_a266d17999fecc33d2afeb1c9fd9083a3}\label{classSalaBase_a266d17999fecc33d2afeb1c9fd9083a3} 
 \index{SalaBase@{SalaBase}!mostrarSala@{mostrarSala}}

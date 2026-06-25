@@ -110,21 +110,28 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:a3c8985aea0d1b57844103e050ee3a9b4" id="r_a3c8985aea0d1b57844103e050ee3a9b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPersonagem.html#a3c8985aea0d1b57844103e050ee3a9b4">Personagem</a> (int vida, <a class="el" href="classInventarioHabilidade.html">InventarioHabilidade</a> inventarioHabilidade, std::string nome, <a class="el" href="classInventarioItem.html">InventarioItem</a> inventarioItem)</td></tr>
 <tr class="memdesc:a3c8985aea0d1b57844103e050ee3a9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor padrão do personagem Aloca a vida do personagem, seu inventário de habilidades, seu nome e seu inventario de itens iniciais.  <br /></td></tr>
 <tr class="separator:a3c8985aea0d1b57844103e050ee3a9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82d3d108b4eab95527ae48e2268f6c94" id="r_a82d3d108b4eab95527ae48e2268f6c94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHabilidade.html">Habilidade</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPersonagem.html#a82d3d108b4eab95527ae48e2268f6c94">escolherHabilidade</a> (int posicaoHabilidade) override</td></tr>
-<tr class="memdesc:a82d3d108b4eab95527ae48e2268f6c94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma habilidade do inventarioHabilidade baseada na posicao.  <br /></td></tr>
-<tr class="separator:a82d3d108b4eab95527ae48e2268f6c94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d1d9d61a41c31270e05af0d51eaafce" id="r_a9d1d9d61a41c31270e05af0d51eaafce"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classHabilidade.html">Habilidade</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPersonagem.html#a9d1d9d61a41c31270e05af0d51eaafce">escolherHabilidade</a> (int posicaoHabilidade) override</td></tr>
+<tr class="memdesc:a9d1d9d61a41c31270e05af0d51eaafce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna uma habilidade do inventarioHabilidade baseada na posicao.  <br /></td></tr>
+<tr class="separator:a9d1d9d61a41c31270e05af0d51eaafce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1ca55afcab097bc0ea8ce90606d9efc" id="r_ad1ca55afcab097bc0ea8ce90606d9efc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classItem.html">Item</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPersonagem.html#ad1ca55afcab097bc0ea8ce90606d9efc">escolherItem</a> (int posicaoItem)</td></tr>
 <tr class="memdesc:ad1ca55afcab097bc0ea8ce90606d9efc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna um <a class="el" href="classItem.html" title="Representa um item no jogo.">Item</a> a partir do inventarioItem e consome.  <br /></td></tr>
 <tr class="separator:ad1ca55afcab097bc0ea8ce90606d9efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc877432714903519943ffa5aca21dd9" id="r_adc877432714903519943ffa5aca21dd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPersonagem.html#adc877432714903519943ffa5aca21dd9">receberHabilidade</a> (<a class="el" href="classHabilidade.html">Habilidade</a> habilidade)</td></tr>
+<tr class="separator:adc877432714903519943ffa5aca21dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeba92e80e2c4ef5d4bad1bcd9f859384" id="r_aeba92e80e2c4ef5d4bad1bcd9f859384"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPersonagem.html#aeba92e80e2c4ef5d4bad1bcd9f859384">receberItem</a> (<a class="el" href="classItem.html">Item</a> item)</td></tr>
+<tr class="separator:aeba92e80e2c4ef5d4bad1bcd9f859384"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30d115691def369c93d14834a7176590" id="r_a30d115691def369c93d14834a7176590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPersonagem.html#a30d115691def369c93d14834a7176590">alterarVida</a> (int valor) override</td></tr>
 <tr class="memdesc:a30d115691def369c93d14834a7176590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alterar a vida atual do personagem para mais ou para menos.  <br /></td></tr>
 <tr class="separator:a30d115691def369c93d14834a7176590"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb52502006acf871aa5ebdcbca06a86c" id="r_afb52502006acf871aa5ebdcbca06a86c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPersonagem.html#afb52502006acf871aa5ebdcbca06a86c">isMorto</a> () override</td></tr>
 <tr class="memdesc:afb52502006acf871aa5ebdcbca06a86c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detecta se o personagem está morto ou vivo.  <br /></td></tr>
 <tr class="separator:afb52502006acf871aa5ebdcbca06a86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a3f9204f0c5d0645ab0e7d7e38ff86c" id="r_a5a3f9204f0c5d0645ab0e7d7e38ff86c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInventarioItem.html">InventarioItem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPersonagem.html#a5a3f9204f0c5d0645ab0e7d7e38ff86c">getInventarioItem</a> ()</td></tr>
-<tr class="memdesc:a5a3f9204f0c5d0645ab0e7d7e38ff86c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o inventário de itens do personagem.  <br /></td></tr>
-<tr class="separator:a5a3f9204f0c5d0645ab0e7d7e38ff86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d5b2846cb53544103853bdac7656946" id="r_a5d5b2846cb53544103853bdac7656946"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInventarioItem.html">InventarioItem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPersonagem.html#a5d5b2846cb53544103853bdac7656946">getInventarioItem</a> ()</td></tr>
+<tr class="memdesc:a5d5b2846cb53544103853bdac7656946"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o inventário de itens do personagem.  <br /></td></tr>
+<tr class="separator:a5d5b2846cb53544103853bdac7656946"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a5bfb4d0b64ae1bbcc07f6a022f846d" id="r_a8a5bfb4d0b64ae1bbcc07f6a022f846d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPersonagem.html#a8a5bfb4d0b64ae1bbcc07f6a022f846d">getVidaMaxima</a> ()</td></tr>
+<tr class="memdesc:a8a5bfb4d0b64ae1bbcc07f6a022f846d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o valor numérico da vida máxima.  <br /></td></tr>
+<tr class="separator:a8a5bfb4d0b64ae1bbcc07f6a022f846d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a173c15f20799967d9b2acc5e6197b2b0" id="r_a173c15f20799967d9b2acc5e6197b2b0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPersonagem.html#a173c15f20799967d9b2acc5e6197b2b0">~Personagem</a> ()</td></tr>
 <tr class="memdesc:a173c15f20799967d9b2acc5e6197b2b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor da classe <a class="el" href="classPersonagem.html" title="Representa o personagem no jogo, herda da classe entidade.">Personagem</a>.  <br /></td></tr>
 <tr class="separator:a173c15f20799967d9b2acc5e6197b2b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -138,15 +145,17 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:adfaf551744091e864c5b1acc96ff9c51 inherit pub_methods_classEntidade" id="r_adfaf551744091e864c5b1acc96ff9c51"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#adfaf551744091e864c5b1acc96ff9c51">processarEfeitosAtivos</a> ()</td></tr>
 <tr class="memdesc:adfaf551744091e864c5b1acc96ff9c51 inherit pub_methods_classEntidade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Itera sobre os efeitos ativos aplicando eles e diminuindo a duracao deles.  <br /></td></tr>
 <tr class="separator:adfaf551744091e864c5b1acc96ff9c51 inherit pub_methods_classEntidade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac50d14a5d9632b45a87d2804e90ace72 inherit pub_methods_classEntidade" id="r_ac50d14a5d9632b45a87d2804e90ace72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#ac50d14a5d9632b45a87d2804e90ace72">limparEfeitos</a> ()</td></tr>
+<tr class="separator:ac50d14a5d9632b45a87d2804e90ace72 inherit pub_methods_classEntidade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a273d26d69ff950d53fa9eaaff38bc163 inherit pub_methods_classEntidade" id="r_a273d26d69ff950d53fa9eaaff38bc163"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#a273d26d69ff950d53fa9eaaff38bc163">getVida</a> ()</td></tr>
 <tr class="memdesc:a273d26d69ff950d53fa9eaaff38bc163 inherit pub_methods_classEntidade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a vida atual da entidade.  <br /></td></tr>
 <tr class="separator:a273d26d69ff950d53fa9eaaff38bc163 inherit pub_methods_classEntidade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a838b5a83d932111378efcb9e062a56a3 inherit pub_methods_classEntidade" id="r_a838b5a83d932111378efcb9e062a56a3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#a838b5a83d932111378efcb9e062a56a3">getNome</a> ()</td></tr>
 <tr class="memdesc:a838b5a83d932111378efcb9e062a56a3 inherit pub_methods_classEntidade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o nome da entidade.  <br /></td></tr>
 <tr class="separator:a838b5a83d932111378efcb9e062a56a3 inherit pub_methods_classEntidade"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52bd2e7409925a37d3c05ea3b57f9188 inherit pub_methods_classEntidade" id="r_a52bd2e7409925a37d3c05ea3b57f9188"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInventarioHabilidade.html">InventarioHabilidade</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#a52bd2e7409925a37d3c05ea3b57f9188">getInventarioHabilidade</a> ()</td></tr>
-<tr class="memdesc:a52bd2e7409925a37d3c05ea3b57f9188 inherit pub_methods_classEntidade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o inventário de habilidades.  <br /></td></tr>
-<tr class="separator:a52bd2e7409925a37d3c05ea3b57f9188 inherit pub_methods_classEntidade"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a9d00676f0384931e2f1b8053799252 inherit pub_methods_classEntidade" id="r_a9a9d00676f0384931e2f1b8053799252"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classInventarioHabilidade.html">InventarioHabilidade</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#a9a9d00676f0384931e2f1b8053799252">getInventarioHabilidade</a> ()</td></tr>
+<tr class="memdesc:a9a9d00676f0384931e2f1b8053799252 inherit pub_methods_classEntidade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o inventário de habilidades.  <br /></td></tr>
+<tr class="separator:a9a9d00676f0384931e2f1b8053799252 inherit pub_methods_classEntidade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b3a23b8307be2dcc4cfbe77e69baa50 inherit pub_methods_classEntidade" id="r_a7b3a23b8307be2dcc4cfbe77e69baa50"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#a7b3a23b8307be2dcc4cfbe77e69baa50">~Entidade</a> ()</td></tr>
 <tr class="memdesc:a7b3a23b8307be2dcc4cfbe77e69baa50 inherit pub_methods_classEntidade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função virtual destrutora da <a class="el" href="classEntidade.html" title="Classe abstrata para representar as entidades.">Entidade</a>.  <br /></td></tr>
 <tr class="separator:a7b3a23b8307be2dcc4cfbe77e69baa50 inherit pub_methods_classEntidade"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -287,8 +296,8 @@ Outros membros herdados</h2></td></tr>
 
 </div>
 </div>
-<a id="a82d3d108b4eab95527ae48e2268f6c94" name="a82d3d108b4eab95527ae48e2268f6c94"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82d3d108b4eab95527ae48e2268f6c94">&#9670;&#160;</a></span>escolherHabilidade()</h2>
+<a id="a9d1d9d61a41c31270e05af0d51eaafce" name="a9d1d9d61a41c31270e05af0d51eaafce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d1d9d61a41c31270e05af0d51eaafce">&#9670;&#160;</a></span>escolherHabilidade()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -297,7 +306,7 @@ Outros membros herdados</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classHabilidade.html">Habilidade</a> Personagem::escolherHabilidade </td>
+          <td class="memname"><a class="el" href="classHabilidade.html">Habilidade</a> &amp; Personagem::escolherHabilidade </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>posicaoHabilidade</em></td><td>)</td>
@@ -323,7 +332,7 @@ Outros membros herdados</h2></td></tr>
 </li>
 </ul>
 
-<p>Implementa <a class="el" href="classEntidade.html#a67d66a335bc8975a3c1ac530dd7c0e33">Entidade</a>.</p>
+<p>Implementa <a class="el" href="classEntidade.html#adc58c8e74cbae83369fdc39988edc2d1">Entidade</a>.</p>
 
 </div>
 </div>
@@ -354,14 +363,14 @@ Outros membros herdados</h2></td></tr>
 
 </div>
 </div>
-<a id="a5a3f9204f0c5d0645ab0e7d7e38ff86c" name="a5a3f9204f0c5d0645ab0e7d7e38ff86c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a3f9204f0c5d0645ab0e7d7e38ff86c">&#9670;&#160;</a></span>getInventarioItem()</h2>
+<a id="a5d5b2846cb53544103853bdac7656946" name="a5d5b2846cb53544103853bdac7656946"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d5b2846cb53544103853bdac7656946">&#9670;&#160;</a></span>getInventarioItem()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classInventarioItem.html">InventarioItem</a> Personagem::getInventarioItem </td>
+          <td class="memname"><a class="el" href="classInventarioItem.html">InventarioItem</a> &amp; Personagem::getInventarioItem </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -370,6 +379,26 @@ Outros membros herdados</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Retorna o inventário de itens do personagem. </p>
+
+</div>
+</div>
+<a id="a8a5bfb4d0b64ae1bbcc07f6a022f846d" name="a8a5bfb4d0b64ae1bbcc07f6a022f846d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a5bfb4d0b64ae1bbcc07f6a022f846d">&#9670;&#160;</a></span>getVidaMaxima()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Personagem::getVidaMaxima </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna o valor numérico da vida máxima. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Inteiro representando a vida máxima que o personagem pode ter. </dd></dl>
 
 </div>
 </div>
@@ -403,6 +432,42 @@ Outros membros herdados</h2></td></tr>
 </ul>
 
 <p>Implementa <a class="el" href="classEntidade.html#ade89008844bd05a9becdbaf0c9c24506">Entidade</a>.</p>
+
+</div>
+</div>
+<a id="adc877432714903519943ffa5aca21dd9" name="adc877432714903519943ffa5aca21dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc877432714903519943ffa5aca21dd9">&#9670;&#160;</a></span>receberHabilidade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Personagem::receberHabilidade </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classHabilidade.html">Habilidade</a>&#160;</td>
+          <td class="paramname"><em>habilidade</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aeba92e80e2c4ef5d4bad1bcd9f859384" name="aeba92e80e2c4ef5d4bad1bcd9f859384"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba92e80e2c4ef5d4bad1bcd9f859384">&#9670;&#160;</a></span>receberItem()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Personagem::receberItem </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classItem.html">Item</a>&#160;</td>
+          <td class="paramname"><em>item</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

@@ -11,34 +11,28 @@ Classe que representa uma sala focada em conflitos e batalhas.
 
 
 
-Diagrama de hierarquia da classe Sala\+Combate\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=176pt]{classSalaCombate__inherit__graph}
-\end{center}
-\end{figure}
+Diagrama de hierarquia da classe Sala\+Combate\+:
+% FIG 0
 
 
-Diagrama de colaboração para Sala\+Combate\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=176pt]{classSalaCombate__coll__graph}
-\end{center}
-\end{figure}
+Diagrama de colaboração para Sala\+Combate\+:
+% FIG 1
 \doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classSalaCombate_a583233b01161e692051ac462905bc650}{Sala\+Combate}} (std\+::string nome, std\+::string historia)
+\mbox{\hyperlink{classSalaCombate_ad80b63fd145d9e1bb4e941ea3128a127}{Sala\+Combate}} (std\+::string nome, std\+::string historia, std\+::string texto\+Vitoria, std\+::string texto\+Derrota, std\+::string nome\+Personagem, int id\+Inimigo)
 \begin{DoxyCompactList}\small\item\em Construtor da classe \doxylink{classSalaCombate}{Sala\+Combate}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSalaCombate_a79f0a1db3e17f3a9633c446f641e327b}{encerrar\+Sala}} () override
 \begin{DoxyCompactList}\small\item\em Finaliza os eventos da sala de combate. Sobrescreve o método da classe mãe. \end{DoxyCompactList}\item 
-int \mbox{\hyperlink{classSalaCombate_afd8449c1ed680ebcbd8d70beeab860c8}{executar\+Sala}} (\mbox{\hyperlink{classPersonagem}{Personagem}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{classPersonagem}{Personagem}}) override
+int \mbox{\hyperlink{classSalaCombate_a427c6a3f3ff27ed7abb8ff9239302203}{executar\+Sala}} (\mbox{\hyperlink{classPersonagem}{Personagem}} \&\mbox{\hyperlink{classPersonagem}{Personagem}}) override
 \begin{DoxyCompactList}\small\item\em Faz a transição para a próxima sala após o término do combate. Sobrescreve o método da classe mãe. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSalaCombate_a5dd4fce1fa15c75b49abfe84d84da8c5}{mostrar\+Sala}} () override
 \begin{DoxyCompactList}\small\item\em Exibe a interface da sala de combate (status, opções de batalha, etc.). Sobrescreve o método da classe mãe. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{classSalaCombate_a1e6bbed2a18d7bd3366a5a610d814409}{alocar\+Inimigo}} ()
+char \mbox{\hyperlink{classSalaCombate_a6acd5a705e5d04f1fec64d3ddf097001}{get\+Tipo}} () override
+\begin{DoxyCompactList}\small\item\em Retorna o tipo da sala ("{}\+C"{} para combate, "{}\+E"{} para escolha). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSalaCombate_aa0d0185a69b915e037452cac7a9c0d17}{get\+Id}} () override
+\begin{DoxyCompactList}\small\item\em Retorna o id do inimigo. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classInimigo}{Inimigo}} $>$ \mbox{\hyperlink{classSalaCombate_a773cf7fd8b12d0b4eb8540b211e98e43}{alocar\+Inimigo}} (std\+::string nome\+Personagem, int id\+Inimigo)
 \begin{DoxyCompactList}\small\item\em Instancia ou prepara o(s) inimigo(s) que o jogador enfrentará nesta sala. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classSalaBase}{Sala\+Base}}}
 \begin{DoxyCompactItemize}
@@ -69,11 +63,11 @@ Classe que representa uma sala focada em conflitos e batalhas.
 \end{DoxyItemize}
 
 \doxysubsection{Construtores e Destrutores}
-\Hypertarget{classSalaCombate_a583233b01161e692051ac462905bc650}\label{classSalaCombate_a583233b01161e692051ac462905bc650} 
+\Hypertarget{classSalaCombate_ad80b63fd145d9e1bb4e941ea3128a127}\label{classSalaCombate_ad80b63fd145d9e1bb4e941ea3128a127} 
 \index{SalaCombate@{SalaCombate}!SalaCombate@{SalaCombate}}
 \index{SalaCombate@{SalaCombate}!SalaCombate@{SalaCombate}}
 \doxysubsubsection{\texorpdfstring{SalaCombate()}{SalaCombate()}}
-{\footnotesize\ttfamily Sala\+Combate\+::\+Sala\+Combate (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{std\+::string}]{historia }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Sala\+Combate\+::\+Sala\+Combate (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{std\+::string}]{historia,  }\item[{std\+::string}]{texto\+Vitoria,  }\item[{std\+::string}]{texto\+Derrota,  }\item[{std\+::string}]{nome\+Personagem,  }\item[{int}]{id\+Inimigo }\end{DoxyParamCaption})}
 
 
 
@@ -87,11 +81,11 @@ Construtor da classe \doxylink{classSalaCombate}{Sala\+Combate}.
 
 
 \doxysubsection{Documentação das funções}
-\Hypertarget{classSalaCombate_a1e6bbed2a18d7bd3366a5a610d814409}\label{classSalaCombate_a1e6bbed2a18d7bd3366a5a610d814409} 
+\Hypertarget{classSalaCombate_a773cf7fd8b12d0b4eb8540b211e98e43}\label{classSalaCombate_a773cf7fd8b12d0b4eb8540b211e98e43} 
 \index{SalaCombate@{SalaCombate}!alocarInimigo@{alocarInimigo}}
 \index{alocarInimigo@{alocarInimigo}!SalaCombate@{SalaCombate}}
 \doxysubsubsection{\texorpdfstring{alocarInimigo()}{alocarInimigo()}}
-{\footnotesize\ttfamily void Sala\+Combate\+::alocar\+Inimigo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classInimigo}{Inimigo}} $>$ Sala\+Combate\+::alocar\+Inimigo (\begin{DoxyParamCaption}\item[{std\+::string}]{nome\+Personagem,  }\item[{int}]{id\+Inimigo }\end{DoxyParamCaption})}
 
 
 
@@ -111,11 +105,11 @@ Finaliza os eventos da sala de combate. Sobrescreve o método da classe mãe.
 
 Implementa \mbox{\hyperlink{classSalaBase_a2bbb6cb055fc485d399ecf7a9a1d44fa}{Sala\+Base}}.
 
-\Hypertarget{classSalaCombate_afd8449c1ed680ebcbd8d70beeab860c8}\label{classSalaCombate_afd8449c1ed680ebcbd8d70beeab860c8} 
+\Hypertarget{classSalaCombate_a427c6a3f3ff27ed7abb8ff9239302203}\label{classSalaCombate_a427c6a3f3ff27ed7abb8ff9239302203} 
 \index{SalaCombate@{SalaCombate}!executarSala@{executarSala}}
 \index{executarSala@{executarSala}!SalaCombate@{SalaCombate}}
 \doxysubsubsection{\texorpdfstring{executarSala()}{executarSala()}}
-{\footnotesize\ttfamily int Sala\+Combate\+::executar\+Sala (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPersonagem}{Personagem}} \texorpdfstring{$\ast$}{*}}]{Personagem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily int Sala\+Combate\+::executar\+Sala (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPersonagem}{Personagem}} \&}]{Personagem }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -123,7 +117,35 @@ Faz a transição para a próxima sala após o término do combate. Sobrescreve 
 
 
 
-Implementa \mbox{\hyperlink{classSalaBase_af8610b3e1cffc4fd2c85366ebc64bac0}{Sala\+Base}}.
+Implementa \mbox{\hyperlink{classSalaBase_a093d888ce8e8d1dd43dbc15cf2b0036b}{Sala\+Base}}.
+
+\Hypertarget{classSalaCombate_aa0d0185a69b915e037452cac7a9c0d17}\label{classSalaCombate_aa0d0185a69b915e037452cac7a9c0d17} 
+\index{SalaCombate@{SalaCombate}!getId@{getId}}
+\index{getId@{getId}!SalaCombate@{SalaCombate}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Sala\+Combate\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retorna o id do inimigo. 
+
+
+
+Implementa \mbox{\hyperlink{classSalaBase_a2fdaa4f838c905e9311b069ec902092c}{Sala\+Base}}.
+
+\Hypertarget{classSalaCombate_a6acd5a705e5d04f1fec64d3ddf097001}\label{classSalaCombate_a6acd5a705e5d04f1fec64d3ddf097001} 
+\index{SalaCombate@{SalaCombate}!getTipo@{getTipo}}
+\index{getTipo@{getTipo}!SalaCombate@{SalaCombate}}
+\doxysubsubsection{\texorpdfstring{getTipo()}{getTipo()}}
+{\footnotesize\ttfamily char Sala\+Combate\+::get\+Tipo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Retorna o tipo da sala ("{}\+C"{} para combate, "{}\+E"{} para escolha). 
+
+
+
+Implementa \mbox{\hyperlink{classSalaBase_aac43b61e15aa7fd0970cc666b446fc9a}{Sala\+Base}}.
 
 \Hypertarget{classSalaCombate_a5dd4fce1fa15c75b49abfe84d84da8c5}\label{classSalaCombate_a5dd4fce1fa15c75b49abfe84d84da8c5} 
 \index{SalaCombate@{SalaCombate}!mostrarSala@{mostrarSala}}

@@ -11,35 +11,25 @@
 
 
 
-Diagrama de hierarquia da classe Inimigo\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=227pt]{classInimigo__inherit__graph}
-\end{center}
-\end{figure}
+Diagrama de hierarquia da classe Inimigo\+:
+% FIG 0
 
 
-Diagrama de colaboração para Inimigo\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=550pt]{classInimigo__coll__graph}
-\end{center}
-\end{figure}
+Diagrama de colaboração para Inimigo\+:
+% FIG 1
 \doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classInimigo_ab52af90a0becc344e3a816575af95a8f}{Inimigo}} (int vida, \mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}} habilidade, std\+::string nome, bool tipo)
+\mbox{\hyperlink{classInimigo_ac6efcfe5458fa890a3e51cc4ca37a844}{Inimigo}} (int vida, \mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}} habilidade, std\+::string nome)
 \begin{DoxyCompactList}\small\item\em Construtor do \doxylink{classInimigo}{Inimigo}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classHabilidade}{Habilidade}} \mbox{\hyperlink{classInimigo_af7d582fc95c3ca6f7c18e2f5c0e99152}{escolher\+Habilidade}} (int posicao\+Habilidade) override
+\mbox{\hyperlink{classHabilidade}{Habilidade}} \& \mbox{\hyperlink{classInimigo_af7f3dc00c0443dc85fbe87315c05b76b}{escolher\+Habilidade}} (int posicao\+Habilidade) override
 \begin{DoxyCompactList}\small\item\em Selecionar uma habilidade a ser executada no turno. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classInimigo_a89ebd352bccd15499fbda8200bdc3730}{alterar\+Vida}} (int valor) override
 \begin{DoxyCompactList}\small\item\em Alterar a vida atual do inimigo para mais ou para menos. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classInimigo_ad4ba5228c63de5ba1418f3257acf7361}{is\+Morto}} () override
 \begin{DoxyCompactList}\small\item\em Detecta se o personagem está morto ou vivo. \end{DoxyCompactList}\item 
-bool \mbox{\hyperlink{classInimigo_ac91134def2580580fac102ffc9ac0971}{get\+Tipo}} ()
-\begin{DoxyCompactList}\small\item\em Retorna o tipo do inimigo (menor ou Boss). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInimigo_a9cc0f4932857cc7054aee2eedfb3c799}{combate\+Inimigo}} (\mbox{\hyperlink{classPersonagem}{Personagem}} \&personagem)
+\begin{DoxyCompactList}\small\item\em Realiza o combate do inimigo. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classInimigo_a7bca5d4fc1e8424669ca4a28f8767726}{\texorpdfstring{$\sim$}{\string~}\+Inimigo}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor de inimigo. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classEntidade}{Entidade}}}
@@ -51,11 +41,13 @@ void \mbox{\hyperlink{classEntidade_aca0dccceffe0b3e458cd8d5e4ebc60fb}{receber\+
 \begin{DoxyCompactList}\small\item\em Adiciona um novo efeito na lista de efeitos ativos. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEntidade_adfaf551744091e864c5b1acc96ff9c51}{processar\+Efeitos\+Ativos}} ()
 \begin{DoxyCompactList}\small\item\em Itera sobre os efeitos ativos aplicando eles e diminuindo a duracao deles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEntidade_ac50d14a5d9632b45a87d2804e90ace72}{limpar\+Efeitos}} ()
+\item 
 int \mbox{\hyperlink{classEntidade_a273d26d69ff950d53fa9eaaff38bc163}{get\+Vida}} ()
 \begin{DoxyCompactList}\small\item\em Retorna a vida atual da entidade. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classEntidade_a838b5a83d932111378efcb9e062a56a3}{get\+Nome}} ()
 \begin{DoxyCompactList}\small\item\em Retorna o nome da entidade. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}} \mbox{\hyperlink{classEntidade_a52bd2e7409925a37d3c05ea3b57f9188}{get\+Inventario\+Habilidade}} ()
+\mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}} \& \mbox{\hyperlink{classEntidade_a9a9d00676f0384931e2f1b8053799252}{get\+Inventario\+Habilidade}} ()
 \begin{DoxyCompactList}\small\item\em Retorna o inventário de habilidades. \end{DoxyCompactList}\item 
 virtual \mbox{\hyperlink{classEntidade_a7b3a23b8307be2dcc4cfbe77e69baa50}{\texorpdfstring{$\sim$}{\string~}\+Entidade}} ()
 \begin{DoxyCompactList}\small\item\em Função virtual destrutora da \doxylink{classEntidade}{Entidade}. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -77,11 +69,11 @@ std\+::vector$<$ \mbox{\hyperlink{classEfeito}{Efeito}} $>$ \mbox{\hyperlink{cla
 \doxylink{classEntidade}{Entidade} que irá contra o personagem principal Classe que herda de entidade, sendo o inimigo do jogo com vida, habilidade e nomes específicos. 
 
 \doxysubsection{Construtores e Destrutores}
-\Hypertarget{classInimigo_ab52af90a0becc344e3a816575af95a8f}\label{classInimigo_ab52af90a0becc344e3a816575af95a8f} 
+\Hypertarget{classInimigo_ac6efcfe5458fa890a3e51cc4ca37a844}\label{classInimigo_ac6efcfe5458fa890a3e51cc4ca37a844} 
 \index{Inimigo@{Inimigo}!Inimigo@{Inimigo}}
 \index{Inimigo@{Inimigo}!Inimigo@{Inimigo}}
 \doxysubsubsection{\texorpdfstring{Inimigo()}{Inimigo()}}
-{\footnotesize\ttfamily Inimigo\+::\+Inimigo (\begin{DoxyParamCaption}\item[{int}]{vida,  }\item[{\mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}}}]{habilidade,  }\item[{std\+::string}]{nome,  }\item[{bool}]{tipo }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Inimigo\+::\+Inimigo (\begin{DoxyParamCaption}\item[{int}]{vida,  }\item[{\mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}}}]{habilidade,  }\item[{std\+::string}]{nome }\end{DoxyParamCaption})}
 
 
 
@@ -141,11 +133,29 @@ Alterar a vida atual do inimigo para mais ou para menos.
 
 Implementa \mbox{\hyperlink{classEntidade_a93bfebaf5a40c8ab214fd0068ca6149a}{Entidade}}.
 
-\Hypertarget{classInimigo_af7d582fc95c3ca6f7c18e2f5c0e99152}\label{classInimigo_af7d582fc95c3ca6f7c18e2f5c0e99152} 
+\Hypertarget{classInimigo_a9cc0f4932857cc7054aee2eedfb3c799}\label{classInimigo_a9cc0f4932857cc7054aee2eedfb3c799} 
+\index{Inimigo@{Inimigo}!combateInimigo@{combateInimigo}}
+\index{combateInimigo@{combateInimigo}!Inimigo@{Inimigo}}
+\doxysubsubsection{\texorpdfstring{combateInimigo()}{combateInimigo()}}
+{\footnotesize\ttfamily void Inimigo\+::combate\+Inimigo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPersonagem}{Personagem}} \&}]{personagem }\end{DoxyParamCaption})}
+
+
+
+Realiza o combate do inimigo. 
+
+
+\begin{DoxyItemize}
+\item Possui um sistema de alaetoriedade para escolher as ações, mas filtra para tomar decisões um pouco mais lógicas. 
+\begin{DoxyParams}{Parâmetros}
+{\em personagem} & Recebe o personagem que está combatendo o inimigo. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{classInimigo_af7f3dc00c0443dc85fbe87315c05b76b}\label{classInimigo_af7f3dc00c0443dc85fbe87315c05b76b} 
 \index{Inimigo@{Inimigo}!escolherHabilidade@{escolherHabilidade}}
 \index{escolherHabilidade@{escolherHabilidade}!Inimigo@{Inimigo}}
 \doxysubsubsection{\texorpdfstring{escolherHabilidade()}{escolherHabilidade()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classHabilidade}{Habilidade}} Inimigo\+::escolher\+Habilidade (\begin{DoxyParamCaption}\item[{int}]{posicao\+Habilidade }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHabilidade}{Habilidade}} \& Inimigo\+::escolher\+Habilidade (\begin{DoxyParamCaption}\item[{int}]{posicao\+Habilidade }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
@@ -165,17 +175,7 @@ Retorna a copia do objeto \doxylink{classHabilidade}{Habilidade}.
 
 \end{DoxyItemize}
 
-Implementa \mbox{\hyperlink{classEntidade_a67d66a335bc8975a3c1ac530dd7c0e33}{Entidade}}.
-
-\Hypertarget{classInimigo_ac91134def2580580fac102ffc9ac0971}\label{classInimigo_ac91134def2580580fac102ffc9ac0971} 
-\index{Inimigo@{Inimigo}!getTipo@{getTipo}}
-\index{getTipo@{getTipo}!Inimigo@{Inimigo}}
-\doxysubsubsection{\texorpdfstring{getTipo()}{getTipo()}}
-{\footnotesize\ttfamily bool Inimigo\+::get\+Tipo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Retorna o tipo do inimigo (menor ou Boss). 
+Implementa \mbox{\hyperlink{classEntidade_adc58c8e74cbae83369fdc39988edc2d1}{Entidade}}.
 
 \Hypertarget{classInimigo_ad4ba5228c63de5ba1418f3257acf7361}\label{classInimigo_ad4ba5228c63de5ba1418f3257acf7361} 
 \index{Inimigo@{Inimigo}!isMorto@{isMorto}}

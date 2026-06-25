@@ -103,24 +103,30 @@ Diagrama de colaboração para SalaEscolha:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:abc910dbacaf179cd3d694e459c07f53a" id="r_abc910dbacaf179cd3d694e459c07f53a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSalaEscolha.html#abc910dbacaf179cd3d694e459c07f53a">SalaEscolha</a> (std::string nome, std::string historia)</td></tr>
-<tr class="memdesc:abc910dbacaf179cd3d694e459c07f53a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da <a class="el" href="classSalaEscolha.html" title="Representa uma sala focada em escolhas e eventos interativos.">SalaEscolha</a>.  <br /></td></tr>
-<tr class="separator:abc910dbacaf179cd3d694e459c07f53a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04d70a0fed7ad26638fac03ccddc77df" id="r_a04d70a0fed7ad26638fac03ccddc77df"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSalaEscolha.html#a04d70a0fed7ad26638fac03ccddc77df">SalaEscolha</a> (std::string nome, <a class="el" href="structUtils_1_1Animacao.html">Utils::Animacao</a> animacao, int idEscolha=0)</td></tr>
+<tr class="memdesc:a04d70a0fed7ad26638fac03ccddc77df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da <a class="el" href="classSalaEscolha.html" title="Representa uma sala focada em escolhas e eventos interativos.">SalaEscolha</a>.  <br /></td></tr>
+<tr class="separator:a04d70a0fed7ad26638fac03ccddc77df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a271e7269eeb090dcdf63f0c4988deab0" id="r_a271e7269eeb090dcdf63f0c4988deab0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSalaEscolha.html#a271e7269eeb090dcdf63f0c4988deab0">encerrarSala</a> () override</td></tr>
 <tr class="memdesc:a271e7269eeb090dcdf63f0c4988deab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encerra as atividades da sala atual.  <br /></td></tr>
 <tr class="separator:a271e7269eeb090dcdf63f0c4988deab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae733458ab6ba45b7d198ec09063250b3" id="r_ae733458ab6ba45b7d198ec09063250b3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSalaEscolha.html#ae733458ab6ba45b7d198ec09063250b3">executarSala</a> (<a class="el" href="classPersonagem.html">Personagem</a> *personagem) override</td></tr>
-<tr class="memdesc:ae733458ab6ba45b7d198ec09063250b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepara ou avança o jogo para a próxima sala.  <br /></td></tr>
-<tr class="separator:ae733458ab6ba45b7d198ec09063250b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addc074991b7f977ad4227da0a2631a2a" id="r_addc074991b7f977ad4227da0a2631a2a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSalaEscolha.html#addc074991b7f977ad4227da0a2631a2a">executarSala</a> (<a class="el" href="classPersonagem.html">Personagem</a> &amp;personagem) override</td></tr>
+<tr class="memdesc:addc074991b7f977ad4227da0a2631a2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prepara ou avança o jogo para a próxima sala.  <br /></td></tr>
+<tr class="separator:addc074991b7f977ad4227da0a2631a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad99bb15b16532d1148c920c9d1b0d7ba" id="r_ad99bb15b16532d1148c920c9d1b0d7ba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSalaEscolha.html#ad99bb15b16532d1148c920c9d1b0d7ba">mostrarSala</a> () override</td></tr>
 <tr class="memdesc:ad99bb15b16532d1148c920c9d1b0d7ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe as informações e o ambiente da sala para o jogador.  <br /></td></tr>
 <tr class="separator:ad99bb15b16532d1148c920c9d1b0d7ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89c73771446f7c2b62b88049cf82f2b4" id="r_a89c73771446f7c2b62b88049cf82f2b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSalaEscolha.html#a89c73771446f7c2b62b88049cf82f2b4">mostrarOpcoes</a> ()</td></tr>
 <tr class="memdesc:a89c73771446f7c2b62b88049cf82f2b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe as opções de decisão disponíveis para o jogador nesta sala.  <br /></td></tr>
 <tr class="separator:a89c73771446f7c2b62b88049cf82f2b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4993fece9ec8207ef29f0fba082d7742" id="r_a4993fece9ec8207ef29f0fba082d7742"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSalaEscolha.html#a4993fece9ec8207ef29f0fba082d7742">executarEvento</a> (<a class="el" href="classPersonagem.html">Personagem</a> *personagem)</td></tr>
-<tr class="memdesc:a4993fece9ec8207ef29f0fba082d7742"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processa a decisão do jogador e executa o evento correspondente.  <br /></td></tr>
-<tr class="separator:a4993fece9ec8207ef29f0fba082d7742"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22397ce76f8c7ec0bf884f8fb218327a" id="r_a22397ce76f8c7ec0bf884f8fb218327a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSalaEscolha.html#a22397ce76f8c7ec0bf884f8fb218327a">executarEvento</a> (<a class="el" href="classPersonagem.html">Personagem</a> &amp;personagem)</td></tr>
+<tr class="memdesc:a22397ce76f8c7ec0bf884f8fb218327a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processa a decisão do jogador e executa o evento correspondente.  <br /></td></tr>
+<tr class="separator:a22397ce76f8c7ec0bf884f8fb218327a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41f08c829a1b1830254fedf552ee6ef0" id="r_a41f08c829a1b1830254fedf552ee6ef0"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSalaEscolha.html#a41f08c829a1b1830254fedf552ee6ef0">getTipo</a> () override</td></tr>
+<tr class="memdesc:a41f08c829a1b1830254fedf552ee6ef0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o tipo da sala ("C" para combate, "E" para escolha).  <br /></td></tr>
+<tr class="separator:a41f08c829a1b1830254fedf552ee6ef0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b7af65827de1dcb8b8cc2a16791b9ee" id="r_a8b7af65827de1dcb8b8cc2a16791b9ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSalaEscolha.html#a8b7af65827de1dcb8b8cc2a16791b9ee">getId</a> () override</td></tr>
+<tr class="memdesc:a8b7af65827de1dcb8b8cc2a16791b9ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna índice.  <br /></td></tr>
+<tr class="separator:a8b7af65827de1dcb8b8cc2a16791b9ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8b2db3644dae7204d6e9f320a9a3fea" id="r_ae8b2db3644dae7204d6e9f320a9a3fea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSalaEscolha.html#ae8b2db3644dae7204d6e9f320a9a3fea">adicionarOpcao</a> (std::string descricao, std::function&lt; void(<a class="el" href="classPersonagem.html">Personagem</a> *)&gt; consequencia)</td></tr>
 <tr class="memdesc:ae8b2db3644dae7204d6e9f320a9a3fea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona uma opcao para a sala de escolhas.  <br /></td></tr>
 <tr class="separator:ae8b2db3644dae7204d6e9f320a9a3fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -149,8 +155,8 @@ Outros membros herdados</h2></td></tr>
 <li>Herda da classe <a class="el" href="classSalaBase.html" title="Classe base abstrata que representa uma sala genérica.">SalaBase</a> e adiciona lógicas específicas para apresentar opções ao jogador e executar consequências. </li>
 </ul>
 </div><h2 class="groupheader">Construtores e Destrutores</h2>
-<a id="abc910dbacaf179cd3d694e459c07f53a" name="abc910dbacaf179cd3d694e459c07f53a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc910dbacaf179cd3d694e459c07f53a">&#9670;&#160;</a></span>SalaEscolha()</h2>
+<a id="a04d70a0fed7ad26638fac03ccddc77df" name="a04d70a0fed7ad26638fac03ccddc77df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04d70a0fed7ad26638fac03ccddc77df">&#9670;&#160;</a></span>SalaEscolha()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -164,8 +170,14 @@ Outros membros herdados</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>historia</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="structUtils_1_1Animacao.html">Utils::Animacao</a>&#160;</td>
+          <td class="paramname"><em>animacao</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>idEscolha</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -179,7 +191,8 @@ Outros membros herdados</h2></td></tr>
 <ul>
 <li>Inicializa a sala configurando o seu nome ou título. <dl class="params"><dt>Parâmetros</dt><dd>
   <table class="params">
-    <tr><td class="paramname">nome</td><td>O nome ou identificador da sala. </td></tr>
+    <tr><td class="paramname">nome</td><td>O nome ou identificador da sala escolha (o 0 serve para não querbrar quem nao chama com esse parâmetro). </td></tr>
+    <tr><td class="paramname">idEscolha</td><td>O id da sala. </td></tr>
   </table>
   </dd>
 </dl>
@@ -261,8 +274,8 @@ Outros membros herdados</h2></td></tr>
 
 </div>
 </div>
-<a id="a4993fece9ec8207ef29f0fba082d7742" name="a4993fece9ec8207ef29f0fba082d7742"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4993fece9ec8207ef29f0fba082d7742">&#9670;&#160;</a></span>executarEvento()</h2>
+<a id="a22397ce76f8c7ec0bf884f8fb218327a" name="a22397ce76f8c7ec0bf884f8fb218327a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22397ce76f8c7ec0bf884f8fb218327a">&#9670;&#160;</a></span>executarEvento()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -270,7 +283,7 @@ Outros membros herdados</h2></td></tr>
         <tr>
           <td class="memname">void SalaEscolha::executarEvento </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPersonagem.html">Personagem</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classPersonagem.html">Personagem</a> &amp;&#160;</td>
           <td class="paramname"><em>personagem</em></td><td>)</td>
           <td></td>
         </tr>
@@ -290,8 +303,8 @@ Outros membros herdados</h2></td></tr>
 
 </div>
 </div>
-<a id="ae733458ab6ba45b7d198ec09063250b3" name="ae733458ab6ba45b7d198ec09063250b3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae733458ab6ba45b7d198ec09063250b3">&#9670;&#160;</a></span>executarSala()</h2>
+<a id="addc074991b7f977ad4227da0a2631a2a" name="addc074991b7f977ad4227da0a2631a2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addc074991b7f977ad4227da0a2631a2a">&#9670;&#160;</a></span>executarSala()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -302,7 +315,7 @@ Outros membros herdados</h2></td></tr>
         <tr>
           <td class="memname">int SalaEscolha::executarSala </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classPersonagem.html">Personagem</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classPersonagem.html">Personagem</a> &amp;&#160;</td>
           <td class="paramname"><em>personagem</em></td><td>)</td>
           <td></td>
         </tr>
@@ -325,7 +338,65 @@ Outros membros herdados</h2></td></tr>
 </li>
 </ul>
 
-<p>Implementa <a class="el" href="classSalaBase.html#af8610b3e1cffc4fd2c85366ebc64bac0">SalaBase</a>.</p>
+<p>Implementa <a class="el" href="classSalaBase.html#a093d888ce8e8d1dd43dbc15cf2b0036b">SalaBase</a>.</p>
+
+</div>
+</div>
+<a id="a8b7af65827de1dcb8b8cc2a16791b9ee" name="a8b7af65827de1dcb8b8cc2a16791b9ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b7af65827de1dcb8b8cc2a16791b9ee">&#9670;&#160;</a></span>getId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SalaEscolha::getId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retorna índice. </p>
+
+<p>Implementa <a class="el" href="classSalaBase.html#a2fdaa4f838c905e9311b069ec902092c">SalaBase</a>.</p>
+
+</div>
+</div>
+<a id="a41f08c829a1b1830254fedf552ee6ef0" name="a41f08c829a1b1830254fedf552ee6ef0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41f08c829a1b1830254fedf552ee6ef0">&#9670;&#160;</a></span>getTipo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char SalaEscolha::getTipo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retorna o tipo da sala ("C" para combate, "E" para escolha). </p>
+
+<p>Implementa <a class="el" href="classSalaBase.html#aac43b61e15aa7fd0970cc666b446fc9a">SalaBase</a>.</p>
 
 </div>
 </div>

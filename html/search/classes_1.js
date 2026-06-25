@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['efeito_0',['Efeito',['../classEfeito.html',1,'']]],
-  ['engine_1',['Engine',['../classEngine.html',1,'']]],
-  ['entidade_2',['Entidade',['../classEntidade.html',1,'']]]
+  ['coutdigitado_0',['coutDigitado',['../classUtils_1_1coutDigitado.html',1,'Utils']]]
 ];

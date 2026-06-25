@@ -1,0 +1,46 @@
+\doxysection{Referência da Classe Save\+Manager}
+\hypertarget{classSaveManager}{}\label{classSaveManager}\index{SaveManager@{SaveManager}}
+
+
+{\ttfamily \#include $<$Save\+Manager.\+hpp$>$}
+
+
+
+Diagrama de colaboração para Save\+Manager\+:
+% FIG 0
+\doxysubsubsection*{Membros públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classSaveManager_a754367566c3def7c47ea9908cfc042b9}{salvar}} (int contador\+Salas, \mbox{\hyperlink{classPersonagem}{Personagem}} \&personagem, const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classSalaBase}{Sala\+Base}} $>$ $>$ \&salas)
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPersonagem}{Personagem}} $>$ \mbox{\hyperlink{classSaveManager_a4793c897ea5c595149c7d01b5872e00c}{carregar}} (int \&contador\+Salas, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classSalaBase}{Sala\+Base}} $>$ $>$ \&salas)
+\item 
+static bool \mbox{\hyperlink{classSaveManager_a05bca099adfc03411251cd1d855064f3}{existe\+Save}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{classSaveManager_a4793c897ea5c595149c7d01b5872e00c}\label{classSaveManager_a4793c897ea5c595149c7d01b5872e00c} 
+\index{SaveManager@{SaveManager}!carregar@{carregar}}
+\index{carregar@{carregar}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{carregar()}{carregar()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPersonagem}{Personagem}} $>$ Save\+Manager\+::carregar (\begin{DoxyParamCaption}\item[{int \&}]{contador\+Salas,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classSalaBase}{Sala\+Base}} $>$ $>$ \&}]{salas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classSaveManager_a05bca099adfc03411251cd1d855064f3}\label{classSaveManager_a05bca099adfc03411251cd1d855064f3} 
+\index{SaveManager@{SaveManager}!existeSave@{existeSave}}
+\index{existeSave@{existeSave}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{existeSave()}{existeSave()}}
+{\footnotesize\ttfamily bool Save\+Manager\+::existe\+Save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\Hypertarget{classSaveManager_a754367566c3def7c47ea9908cfc042b9}\label{classSaveManager_a754367566c3def7c47ea9908cfc042b9} 
+\index{SaveManager@{SaveManager}!salvar@{salvar}}
+\index{salvar@{salvar}!SaveManager@{SaveManager}}
+\doxysubsubsection{\texorpdfstring{salvar()}{salvar()}}
+{\footnotesize\ttfamily void Save\+Manager\+::salvar (\begin{DoxyParamCaption}\item[{int}]{contador\+Salas,  }\item[{\mbox{\hyperlink{classPersonagem}{Personagem}} \&}]{personagem,  }\item[{const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classSalaBase}{Sala\+Base}} $>$ $>$ \&}]{salas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{SaveManager_8hpp}{Save\+Manager.\+hpp}}\item 
+src/\mbox{\hyperlink{SaveManager_8cpp}{Save\+Manager.\+cpp}}\end{DoxyCompactItemize}

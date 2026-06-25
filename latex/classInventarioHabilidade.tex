@@ -11,22 +11,12 @@ Classe que gerencia o inventário de habilidades de uma entidade.
 
 
 
-Diagrama de hierarquia da classe Inventario\+Habilidade\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=215pt]{classInventarioHabilidade__inherit__graph}
-\end{center}
-\end{figure}
+Diagrama de hierarquia da classe Inventario\+Habilidade\+:
+% FIG 0
 
 
-Diagrama de colaboração para Inventario\+Habilidade\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=215pt]{classInventarioHabilidade__coll__graph}
-\end{center}
-\end{figure}
+Diagrama de colaboração para Inventario\+Habilidade\+:
+% FIG 1
 \doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
@@ -38,8 +28,10 @@ void \mbox{\hyperlink{classInventarioHabilidade_a236561cbb35f1e4502d14dcaddb82e3
 \begin{DoxyCompactList}\small\item\em Remove uma habilidade de uma posição específica e insere uma nova. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classInventarioHabilidade_acaf84ee0bd4910b0d7c1af78aa38141f}{get\+Tamanho}} ()
 \begin{DoxyCompactList}\small\item\em Retorna a quantidade de habilidades no inventário. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classHabilidade}{Habilidade}} \mbox{\hyperlink{classInventarioHabilidade_a0a8996b9cb37abe2fcc186773e5507e8}{get\+Habilidade}} (int posicao)
+\mbox{\hyperlink{classHabilidade}{Habilidade}} \& \mbox{\hyperlink{classInventarioHabilidade_a944b16deb1bcd313698c7d4bf9a6f4fb}{get\+Habilidade}} (int posicao)
 \begin{DoxyCompactList}\small\item\em Retorna uma habilidade específica pela posição. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classInventarioHabilidade_a84a7c7b6f0c9095df4386439bac04476}{atualizar\+Cooldowns}} ()
+\item 
 bool \mbox{\hyperlink{classInventarioHabilidade_ac14b9594db264f62e6ec94b8e083378e}{operator==}} (const \mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}} \&outro) const
 \begin{DoxyCompactList}\small\item\em Compara dois inventarios para verificar se sao iguais (usado em testes). \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classInventarioHabilidade_a11586d38fe0c87598ae6e8acf17550b7}{operator!=}} (const \mbox{\hyperlink{classInventarioHabilidade}{Inventario\+Habilidade}} \&outro) const
@@ -62,6 +54,12 @@ Classe que gerencia o inventário de habilidades de uma entidade.
 \end{DoxyItemize}
 
 \doxysubsection{Documentação das funções}
+\Hypertarget{classInventarioHabilidade_a84a7c7b6f0c9095df4386439bac04476}\label{classInventarioHabilidade_a84a7c7b6f0c9095df4386439bac04476} 
+\index{InventarioHabilidade@{InventarioHabilidade}!atualizarCooldowns@{atualizarCooldowns}}
+\index{atualizarCooldowns@{atualizarCooldowns}!InventarioHabilidade@{InventarioHabilidade}}
+\doxysubsubsection{\texorpdfstring{atualizarCooldowns()}{atualizarCooldowns()}}
+{\footnotesize\ttfamily void Inventario\+Habilidade\+::atualizar\+Cooldowns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \Hypertarget{classInventarioHabilidade_aad30f5cfc87152b4ecb8a8a355984756}\label{classInventarioHabilidade_aad30f5cfc87152b4ecb8a8a355984756} 
 \index{InventarioHabilidade@{InventarioHabilidade}!descartarAcao@{descartarAcao}}
 \index{descartarAcao@{descartarAcao}!InventarioHabilidade@{InventarioHabilidade}}
@@ -81,11 +79,11 @@ Remove permanentemente uma habilidade do vetor.
 
 Implementa \mbox{\hyperlink{classInventario_ae333c77a15db3cbd7f46bfd9df8f5b3d}{Inventario$<$ Habilidade $>$}}.
 
-\Hypertarget{classInventarioHabilidade_a0a8996b9cb37abe2fcc186773e5507e8}\label{classInventarioHabilidade_a0a8996b9cb37abe2fcc186773e5507e8} 
+\Hypertarget{classInventarioHabilidade_a944b16deb1bcd313698c7d4bf9a6f4fb}\label{classInventarioHabilidade_a944b16deb1bcd313698c7d4bf9a6f4fb} 
 \index{InventarioHabilidade@{InventarioHabilidade}!getHabilidade@{getHabilidade}}
 \index{getHabilidade@{getHabilidade}!InventarioHabilidade@{InventarioHabilidade}}
 \doxysubsubsection{\texorpdfstring{getHabilidade()}{getHabilidade()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{classHabilidade}{Habilidade}} Inventario\+Habilidade\+::get\+Habilidade (\begin{DoxyParamCaption}\item[{int}]{posicao }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \mbox{\hyperlink{classHabilidade}{Habilidade}} \& Inventario\+Habilidade\+::get\+Habilidade (\begin{DoxyParamCaption}\item[{int}]{posicao }\end{DoxyParamCaption})}
 
 
 

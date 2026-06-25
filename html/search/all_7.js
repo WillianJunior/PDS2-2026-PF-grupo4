@@ -1,6 +1,29 @@
 var searchData=
 [
-  ['habilidade_0',['habilidade',['../classHabilidade.html',1,'Habilidade'],['../classHabilidade.html#a66ae3890cf037ea2374c67ad036a5d99',1,'Habilidade::Habilidade()']]],
-  ['habilidade_2ecpp_1',['Habilidade.cpp',['../Habilidade_8cpp.html',1,'']]],
-  ['habilidade_2ehpp_2',['Habilidade.hpp',['../Habilidade_8hpp.html',1,'']]]
+  ['e_20enredo_0',['Motivação e Enredo',['../index.html#autotoc_md4',1,'']]],
+  ['e_20execução_1',['Compilação e Execução',['../index.html#autotoc_md10',1,'']]],
+  ['e_20padrões_20de_20projeto_2',['Arquitetura e Padrões de Projeto',['../index.html#autotoc_md5',1,'']]],
+  ['efeito_3',['efeito',['../classEfeito.html#a1f7ceced0871b644b475cf3acbaed2de',1,'Efeito::Efeito()'],['../classEfeito.html',1,'Efeito']]],
+  ['efeito_2ecpp_4',['Efeito.cpp',['../Efeito_8cpp.html',1,'']]],
+  ['efeito_2ehpp_5',['Efeito.hpp',['../Efeito_8hpp.html',1,'']]],
+  ['em_20design_20patterns_20em_6',['2. Padrões de Projeto (&lt;em&gt;Design Patterns&lt;/em&gt;)',['../index.html#autotoc_md7',1,'']]],
+  ['encerrarsala_7',['encerrarsala',['../classSalaEscolha.html#a271e7269eeb090dcdf63f0c4988deab0',1,'SalaEscolha::encerrarSala()'],['../classSalaCombate.html#a79f0a1db3e17f3a9633c446f641e327b',1,'SalaCombate::encerrarSala()'],['../classSalaBase.html#a2bbb6cb055fc485d399ecf7a9a1d44fa',1,'SalaBase::encerrarSala()']]],
+  ['engine_8',['engine',['../classEngine.html',1,'Engine'],['../classEngine.html#a8c98683b0a3aa28d8ab72a8bcd0d52f2',1,'Engine::Engine()']]],
+  ['engine_2ecpp_9',['Engine.cpp',['../Engine_8cpp.html',1,'']]],
+  ['engine_2ehpp_10',['Engine.hpp',['../Engine_8hpp.html',1,'']]],
+  ['enredo_11',['Motivação e Enredo',['../index.html#autotoc_md4',1,'']]],
+  ['entidade_12',['entidade',['../classEntidade.html#a3e50f865ffcca548bdc7d97058c173d7',1,'Entidade::Entidade()'],['../classEntidade.html',1,'Entidade']]],
+  ['entidade_2ecpp_13',['Entidade.cpp',['../Entidade_8cpp.html',1,'']]],
+  ['entidade_2ehpp_14',['Entidade.hpp',['../Entidade_8hpp.html',1,'']]],
+  ['entradainvalidaexception_15',['entradainvalidaexception',['../classEntradaInvalidaException.html#ad73a146c303071f23ae480aa477c5031',1,'EntradaInvalidaException::EntradaInvalidaException()'],['../classEntradaInvalidaException.html',1,'EntradaInvalidaException']]],
+  ['escolherhabilidade_16',['escolherhabilidade',['../classEntidade.html#adc58c8e74cbae83369fdc39988edc2d1',1,'Entidade::escolherHabilidade()'],['../classPersonagem.html#a9d1d9d61a41c31270e05af0d51eaafce',1,'Personagem::escolherHabilidade()'],['../classInimigo.html#af7f3dc00c0443dc85fbe87315c05b76b',1,'Inimigo::escolherHabilidade()']]],
+  ['escolheritem_17',['escolherItem',['../classPersonagem.html#ad1ca55afcab097bc0ea8ce90606d9efc',1,'Personagem']]],
+  ['esperar_18',['esperar',['../namespaceUtils.html#a1d75c3fbc71b9d2a6417ec80a8d0c48c',1,'Utils']]],
+  ['estrutura_20de_20diretórios_19',['Estrutura de Diretórios',['../index.html#autotoc_md9',1,'']]],
+  ['excecoes_2ehpp_20',['Excecoes.hpp',['../Excecoes_8hpp.html',1,'']]],
+  ['execução_21',['Compilação e Execução',['../index.html#autotoc_md10',1,'']]],
+  ['executarevento_22',['executarEvento',['../classSalaEscolha.html#a22397ce76f8c7ec0bf884f8fb218327a',1,'SalaEscolha']]],
+  ['executarmenuinicial_23',['executarMenuInicial',['../classMenu.html#a993b743787628b2c0bda3b082d67fd70',1,'Menu']]],
+  ['executarsala_24',['executarsala',['../classSalaBase.html#a093d888ce8e8d1dd43dbc15cf2b0036b',1,'SalaBase::executarSala()'],['../classSalaCombate.html#a427c6a3f3ff27ed7abb8ff9239302203',1,'SalaCombate::executarSala()'],['../classSalaEscolha.html#addc074991b7f977ad4227da0a2631a2a',1,'SalaEscolha::executarSala()']]],
+  ['existesave_25',['existeSave',['../classSaveManager.html#a05bca099adfc03411251cd1d855064f3',1,'SaveManager']]]
 ];

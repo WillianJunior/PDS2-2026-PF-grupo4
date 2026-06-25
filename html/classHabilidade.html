@@ -105,12 +105,24 @@ Diagrama de colaboração para Habilidade:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Membros Públicos</h2></td></tr>
-<tr class="memitem:a66ae3890cf037ea2374c67ad036a5d99" id="r_a66ae3890cf037ea2374c67ad036a5d99"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHabilidade.html#a66ae3890cf037ea2374c67ad036a5d99">Habilidade</a> (std::string nome, bool tipo, int valor, bool alvo, <a class="el" href="classEfeito.html">Efeito</a> efeito)</td></tr>
-<tr class="memdesc:a66ae3890cf037ea2374c67ad036a5d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da habilidade que herda de <a class="el" href="classAcao.html" title="Classe base para representar qualquer ação do jogo (como Habilidades ou Itens).">Acao</a>.  <br /></td></tr>
-<tr class="separator:a66ae3890cf037ea2374c67ad036a5d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a495f29a62700788427e86b6b0349fc1f" id="r_a495f29a62700788427e86b6b0349fc1f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHabilidade.html#a495f29a62700788427e86b6b0349fc1f">Habilidade</a> (std::string nome, bool tipo, int valor, bool alvo, <a class="el" href="classEfeito.html">Efeito</a> efeito, int cooldown)</td></tr>
+<tr class="memdesc:a495f29a62700788427e86b6b0349fc1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor da habilidade que herda de <a class="el" href="classAcao.html" title="Classe base para representar qualquer ação do jogo (como Habilidades ou Itens).">Acao</a>.  <br /></td></tr>
+<tr class="separator:a495f29a62700788427e86b6b0349fc1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa5226c2dc9ac5f6d14b65700cbdb817a" id="r_aa5226c2dc9ac5f6d14b65700cbdb817a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHabilidade.html#aa5226c2dc9ac5f6d14b65700cbdb817a">operator==</a> (const <a class="el" href="classHabilidade.html">Habilidade</a> &amp;outro) const</td></tr>
 <tr class="memdesc:aa5226c2dc9ac5f6d14b65700cbdb817a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compara duas habilidades.  <br /></td></tr>
 <tr class="separator:aa5226c2dc9ac5f6d14b65700cbdb817a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a802bbaa108d2cfc3bef378454b224f0c" id="r_a802bbaa108d2cfc3bef378454b224f0c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHabilidade.html#a802bbaa108d2cfc3bef378454b224f0c">getCooldown</a> ()</td></tr>
+<tr class="separator:a802bbaa108d2cfc3bef378454b224f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52b131266187e42e94c40cef9ee11555" id="r_a52b131266187e42e94c40cef9ee11555"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHabilidade.html#a52b131266187e42e94c40cef9ee11555">getCooldownAtual</a> ()</td></tr>
+<tr class="separator:a52b131266187e42e94c40cef9ee11555"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48fa748616b683a54c78600f69d9fef3" id="r_a48fa748616b683a54c78600f69d9fef3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHabilidade.html#a48fa748616b683a54c78600f69d9fef3">iniciarCooldown</a> ()</td></tr>
+<tr class="separator:a48fa748616b683a54c78600f69d9fef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3feeae9fb00ff6bd3658144f1ffd641f" id="r_a3feeae9fb00ff6bd3658144f1ffd641f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHabilidade.html#a3feeae9fb00ff6bd3658144f1ffd641f">atualizarCooldown</a> ()</td></tr>
+<tr class="separator:a3feeae9fb00ff6bd3658144f1ffd641f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a893646a68bf25967a89a0035876be25c" id="r_a893646a68bf25967a89a0035876be25c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHabilidade.html#a893646a68bf25967a89a0035876be25c">zerarCooldown</a> ()</td></tr>
+<tr class="separator:a893646a68bf25967a89a0035876be25c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1bf5831e8ee5364ed0c27a58764986b" id="r_ab1bf5831e8ee5364ed0c27a58764986b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHabilidade.html#ab1bf5831e8ee5364ed0c27a58764986b">setCooldownAtual</a> (int valor)</td></tr>
+<tr class="separator:ab1bf5831e8ee5364ed0c27a58764986b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4fd7e13420bc0909e701b1cb3a3983e4" id="r_a4fd7e13420bc0909e701b1cb3a3983e4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classHabilidade.html#a4fd7e13420bc0909e701b1cb3a3983e4">~Habilidade</a> ()</td></tr>
 <tr class="memdesc:a4fd7e13420bc0909e701b1cb3a3983e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destrutor do objeto habilidade Garante que não vaze memória de habilidades.  <br /></td></tr>
 <tr class="separator:a4fd7e13420bc0909e701b1cb3a3983e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -121,9 +133,9 @@ Membros Públicos</h2></td></tr>
 <tr class="memitem:ace32485f5cca5329ebb5e6fab9760ceb inherit pub_methods_classAcao" id="r_ace32485f5cca5329ebb5e6fab9760ceb"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#ace32485f5cca5329ebb5e6fab9760ceb">calcularImpacto</a> ()</td></tr>
 <tr class="memdesc:ace32485f5cca5329ebb5e6fab9760ceb inherit pub_methods_classAcao"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calcula a alteração de vida baseada na ação.  <br /></td></tr>
 <tr class="separator:ace32485f5cca5329ebb5e6fab9760ceb inherit pub_methods_classAcao"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af339f68e5999ff075e79eeef17f08a9c inherit pub_methods_classAcao" id="r_af339f68e5999ff075e79eeef17f08a9c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#af339f68e5999ff075e79eeef17f08a9c">mostrarDescricao</a> ()</td></tr>
-<tr class="memdesc:af339f68e5999ff075e79eeef17f08a9c inherit pub_methods_classAcao"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe os detalhes da ação (informações da habilidade ou do item).  <br /></td></tr>
-<tr class="separator:af339f68e5999ff075e79eeef17f08a9c inherit pub_methods_classAcao"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb39249ae6c4c1b1e9a1091aa92c495a inherit pub_methods_classAcao" id="r_acb39249ae6c4c1b1e9a1091aa92c495a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#acb39249ae6c4c1b1e9a1091aa92c495a">mostrarDescricao</a> ()</td></tr>
+<tr class="memdesc:acb39249ae6c4c1b1e9a1091aa92c495a inherit pub_methods_classAcao"><td class="mdescLeft">&#160;</td><td class="mdescRight">Exibe os detalhes da ação (informações da habilidade ou do item).  <br /></td></tr>
+<tr class="separator:acb39249ae6c4c1b1e9a1091aa92c495a inherit pub_methods_classAcao"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa8460ddeec0c7fa20e9e5c39ea64edd5 inherit pub_methods_classAcao" id="r_aa8460ddeec0c7fa20e9e5c39ea64edd5"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAcao.html#aa8460ddeec0c7fa20e9e5c39ea64edd5">getNome</a> ()</td></tr>
 <tr class="memdesc:aa8460ddeec0c7fa20e9e5c39ea64edd5 inherit pub_methods_classAcao"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna o nome da ação.  <br /></td></tr>
 <tr class="separator:aa8460ddeec0c7fa20e9e5c39ea64edd5 inherit pub_methods_classAcao"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -168,8 +180,8 @@ Outros membros herdados</h2></td></tr>
 <li>Herda da classe <a class="el" href="classAcao.html" title="Classe base para representar qualquer ação do jogo (como Habilidades ou Itens).">Acao</a> e define as características específicas de uma habilidade, como dano, cura ou efeitos. </li>
 </ul>
 </div><h2 class="groupheader">Construtores e Destrutores</h2>
-<a id="a66ae3890cf037ea2374c67ad036a5d99" name="a66ae3890cf037ea2374c67ad036a5d99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a66ae3890cf037ea2374c67ad036a5d99">&#9670;&#160;</a></span>Habilidade()</h2>
+<a id="a495f29a62700788427e86b6b0349fc1f" name="a495f29a62700788427e86b6b0349fc1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a495f29a62700788427e86b6b0349fc1f">&#9670;&#160;</a></span>Habilidade()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -202,7 +214,13 @@ Outros membros herdados</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classEfeito.html">Efeito</a>&#160;</td>
-          <td class="paramname"><em>efeito</em>&#160;</td>
+          <td class="paramname"><em>efeito</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cooldown</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -249,6 +267,74 @@ Outros membros herdados</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Documentação das funções</h2>
+<a id="a3feeae9fb00ff6bd3658144f1ffd641f" name="a3feeae9fb00ff6bd3658144f1ffd641f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3feeae9fb00ff6bd3658144f1ffd641f">&#9670;&#160;</a></span>atualizarCooldown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Habilidade::atualizarCooldown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a802bbaa108d2cfc3bef378454b224f0c" name="a802bbaa108d2cfc3bef378454b224f0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a802bbaa108d2cfc3bef378454b224f0c">&#9670;&#160;</a></span>getCooldown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Habilidade::getCooldown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52b131266187e42e94c40cef9ee11555" name="a52b131266187e42e94c40cef9ee11555"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52b131266187e42e94c40cef9ee11555">&#9670;&#160;</a></span>getCooldownAtual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Habilidade::getCooldownAtual </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a48fa748616b683a54c78600f69d9fef3" name="a48fa748616b683a54c78600f69d9fef3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48fa748616b683a54c78600f69d9fef3">&#9670;&#160;</a></span>iniciarCooldown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Habilidade::iniciarCooldown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa5226c2dc9ac5f6d14b65700cbdb817a" name="aa5226c2dc9ac5f6d14b65700cbdb817a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa5226c2dc9ac5f6d14b65700cbdb817a">&#9670;&#160;</a></span>operator==()</h2>
 
@@ -270,6 +356,41 @@ Outros membros herdados</h2></td></tr>
 <li>Compara todos os parâmetros de duas habilidades para ver se sao iguais <dl class="section return"><dt>Retorna</dt><dd>Retorna true se sao iguais e false se sao diferentes </dd></dl>
 </li>
 </ul>
+
+</div>
+</div>
+<a id="ab1bf5831e8ee5364ed0c27a58764986b" name="ab1bf5831e8ee5364ed0c27a58764986b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1bf5831e8ee5364ed0c27a58764986b">&#9670;&#160;</a></span>setCooldownAtual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Habilidade::setCooldownAtual </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>valor</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a893646a68bf25967a89a0035876be25c" name="a893646a68bf25967a89a0035876be25c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a893646a68bf25967a89a0035876be25c">&#9670;&#160;</a></span>zerarCooldown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Habilidade::zerarCooldown </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

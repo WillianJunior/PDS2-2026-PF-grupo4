@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['trocaracao_0',['trocaracao',['../classInventario.html#acaa5f3b9586dc0d4a25f317bc1d22a1b',1,'Inventario::trocarAcao()'],['../classInventarioHabilidade.html#a236561cbb35f1e4502d14dcaddb82e3c',1,'InventarioHabilidade::trocarAcao()'],['../classInventarioItem.html#a055c8007b2282b2f91999ae4e91e5db9',1,'InventarioItem::trocarAcao()']]]
+  ['novaacao_0',['novaacao',['../classInventario.html#a8bd558d0ac7eb6e77922fbf5c0a31db7',1,'Inventario::novaAcao()'],['../classInventarioHabilidade.html#ae42114e4cf02b62cbdc6686d53f8dc64',1,'InventarioHabilidade::novaAcao()'],['../classInventarioItem.html#a38f1ccb980fff37db8e8ac53186a32af',1,'InventarioItem::novaAcao()']]]
 ];

@@ -11,29 +11,31 @@ Representa uma habilidade no jogo.
 
 
 
-Diagrama de hierarquia da classe Habilidade\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=195pt]{classHabilidade__inherit__graph}
-\end{center}
-\end{figure}
+Diagrama de hierarquia da classe Habilidade\+:
+% FIG 0
 
 
-Diagrama de colaboração para Habilidade\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=550pt]{classHabilidade__coll__graph}
-\end{center}
-\end{figure}
+Diagrama de colaboração para Habilidade\+:
+% FIG 1
 \doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classHabilidade_a66ae3890cf037ea2374c67ad036a5d99}{Habilidade}} (std\+::string nome, bool tipo, int valor, bool alvo, \mbox{\hyperlink{classEfeito}{Efeito}} efeito)
+\mbox{\hyperlink{classHabilidade_a495f29a62700788427e86b6b0349fc1f}{Habilidade}} (std\+::string nome, bool tipo, int valor, bool alvo, \mbox{\hyperlink{classEfeito}{Efeito}} efeito, int cooldown)
 \begin{DoxyCompactList}\small\item\em Construtor da habilidade que herda de \doxylink{classAcao}{Acao}. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classHabilidade_aa5226c2dc9ac5f6d14b65700cbdb817a}{operator==}} (const \mbox{\hyperlink{classHabilidade}{Habilidade}} \&outro) const
 \begin{DoxyCompactList}\small\item\em Compara duas habilidades. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classHabilidade_a802bbaa108d2cfc3bef378454b224f0c}{get\+Cooldown}} ()
+\item 
+int \mbox{\hyperlink{classHabilidade_a52b131266187e42e94c40cef9ee11555}{get\+Cooldown\+Atual}} ()
+\item 
+void \mbox{\hyperlink{classHabilidade_a48fa748616b683a54c78600f69d9fef3}{iniciar\+Cooldown}} ()
+\item 
+void \mbox{\hyperlink{classHabilidade_a3feeae9fb00ff6bd3658144f1ffd641f}{atualizar\+Cooldown}} ()
+\item 
+void \mbox{\hyperlink{classHabilidade_a893646a68bf25967a89a0035876be25c}{zerar\+Cooldown}} ()
+\item 
+void \mbox{\hyperlink{classHabilidade_ab1bf5831e8ee5364ed0c27a58764986b}{set\+Cooldown\+Atual}} (int valor)
+\item 
 \mbox{\hyperlink{classHabilidade_a4fd7e13420bc0909e701b1cb3a3983e4}{\texorpdfstring{$\sim$}{\string~}\+Habilidade}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor do objeto habilidade Garante que não vaze memória de habilidades. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classAcao}{Acao}}}
@@ -43,7 +45,7 @@ bool \mbox{\hyperlink{classHabilidade_aa5226c2dc9ac5f6d14b65700cbdb817a}{operato
 \begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{classAcao}{Acao}. \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{classAcao_ace32485f5cca5329ebb5e6fab9760ceb}{calcular\+Impacto}} ()
 \begin{DoxyCompactList}\small\item\em Calcula a alteração de vida baseada na ação. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classAcao_af339f68e5999ff075e79eeef17f08a9c}{mostrar\+Descricao}} ()
+std\+::string \mbox{\hyperlink{classAcao_acb39249ae6c4c1b1e9a1091aa92c495a}{mostrar\+Descricao}} ()
 \begin{DoxyCompactList}\small\item\em Exibe os detalhes da ação (informações da habilidade ou do item). \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classAcao_aa8460ddeec0c7fa20e9e5c39ea64edd5}{get\+Nome}} ()
 \begin{DoxyCompactList}\small\item\em Retorna o nome da ação. \end{DoxyCompactList}\item 
@@ -82,11 +84,11 @@ Representa uma habilidade no jogo.
 \end{DoxyItemize}
 
 \doxysubsection{Construtores e Destrutores}
-\Hypertarget{classHabilidade_a66ae3890cf037ea2374c67ad036a5d99}\label{classHabilidade_a66ae3890cf037ea2374c67ad036a5d99} 
+\Hypertarget{classHabilidade_a495f29a62700788427e86b6b0349fc1f}\label{classHabilidade_a495f29a62700788427e86b6b0349fc1f} 
 \index{Habilidade@{Habilidade}!Habilidade@{Habilidade}}
 \index{Habilidade@{Habilidade}!Habilidade@{Habilidade}}
 \doxysubsubsection{\texorpdfstring{Habilidade()}{Habilidade()}}
-{\footnotesize\ttfamily Habilidade\+::\+Habilidade (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{bool}]{tipo,  }\item[{int}]{valor,  }\item[{bool}]{alvo,  }\item[{\mbox{\hyperlink{classEfeito}{Efeito}}}]{efeito }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Habilidade\+::\+Habilidade (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{bool}]{tipo,  }\item[{int}]{valor,  }\item[{bool}]{alvo,  }\item[{\mbox{\hyperlink{classEfeito}{Efeito}}}]{efeito,  }\item[{int}]{cooldown }\end{DoxyParamCaption})}
 
 
 
@@ -121,6 +123,30 @@ Destrutor do objeto habilidade Garante que não vaze memória de habilidades.
 
 
 \doxysubsection{Documentação das funções}
+\Hypertarget{classHabilidade_a3feeae9fb00ff6bd3658144f1ffd641f}\label{classHabilidade_a3feeae9fb00ff6bd3658144f1ffd641f} 
+\index{Habilidade@{Habilidade}!atualizarCooldown@{atualizarCooldown}}
+\index{atualizarCooldown@{atualizarCooldown}!Habilidade@{Habilidade}}
+\doxysubsubsection{\texorpdfstring{atualizarCooldown()}{atualizarCooldown()}}
+{\footnotesize\ttfamily void Habilidade\+::atualizar\+Cooldown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classHabilidade_a802bbaa108d2cfc3bef378454b224f0c}\label{classHabilidade_a802bbaa108d2cfc3bef378454b224f0c} 
+\index{Habilidade@{Habilidade}!getCooldown@{getCooldown}}
+\index{getCooldown@{getCooldown}!Habilidade@{Habilidade}}
+\doxysubsubsection{\texorpdfstring{getCooldown()}{getCooldown()}}
+{\footnotesize\ttfamily int Habilidade\+::get\+Cooldown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classHabilidade_a52b131266187e42e94c40cef9ee11555}\label{classHabilidade_a52b131266187e42e94c40cef9ee11555} 
+\index{Habilidade@{Habilidade}!getCooldownAtual@{getCooldownAtual}}
+\index{getCooldownAtual@{getCooldownAtual}!Habilidade@{Habilidade}}
+\doxysubsubsection{\texorpdfstring{getCooldownAtual()}{getCooldownAtual()}}
+{\footnotesize\ttfamily int Habilidade\+::get\+Cooldown\+Atual (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classHabilidade_a48fa748616b683a54c78600f69d9fef3}\label{classHabilidade_a48fa748616b683a54c78600f69d9fef3} 
+\index{Habilidade@{Habilidade}!iniciarCooldown@{iniciarCooldown}}
+\index{iniciarCooldown@{iniciarCooldown}!Habilidade@{Habilidade}}
+\doxysubsubsection{\texorpdfstring{iniciarCooldown()}{iniciarCooldown()}}
+{\footnotesize\ttfamily void Habilidade\+::iniciar\+Cooldown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \Hypertarget{classHabilidade_aa5226c2dc9ac5f6d14b65700cbdb817a}\label{classHabilidade_aa5226c2dc9ac5f6d14b65700cbdb817a} 
 \index{Habilidade@{Habilidade}!operator==@{operator==}}
 \index{operator==@{operator==}!Habilidade@{Habilidade}}
@@ -137,7 +163,19 @@ Compara duas habilidades.
 Retorna true se sao iguais e false se sao diferentes 
 \end{DoxyReturn}
 
-\end{DoxyItemize}
+\end{DoxyItemize}\Hypertarget{classHabilidade_ab1bf5831e8ee5364ed0c27a58764986b}\label{classHabilidade_ab1bf5831e8ee5364ed0c27a58764986b} 
+\index{Habilidade@{Habilidade}!setCooldownAtual@{setCooldownAtual}}
+\index{setCooldownAtual@{setCooldownAtual}!Habilidade@{Habilidade}}
+\doxysubsubsection{\texorpdfstring{setCooldownAtual()}{setCooldownAtual()}}
+{\footnotesize\ttfamily void Habilidade\+::set\+Cooldown\+Atual (\begin{DoxyParamCaption}\item[{int}]{valor }\end{DoxyParamCaption})}
+
+\Hypertarget{classHabilidade_a893646a68bf25967a89a0035876be25c}\label{classHabilidade_a893646a68bf25967a89a0035876be25c} 
+\index{Habilidade@{Habilidade}!zerarCooldown@{zerarCooldown}}
+\index{zerarCooldown@{zerarCooldown}!Habilidade@{Habilidade}}
+\doxysubsubsection{\texorpdfstring{zerarCooldown()}{zerarCooldown()}}
+{\footnotesize\ttfamily void Habilidade\+::zerar\+Cooldown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
 
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 

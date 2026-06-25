@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['novaacao_0',['novaacao',['../classInventario.html#a8bd558d0ac7eb6e77922fbf5c0a31db7',1,'Inventario::novaAcao()'],['../classInventarioHabilidade.html#ae42114e4cf02b62cbdc6686d53f8dc64',1,'InventarioHabilidade::novaAcao()'],['../classInventarioItem.html#a38f1ccb980fff37db8e8ac53186a32af',1,'InventarioItem::novaAcao()']]]
+  ['habilidade_0',['habilidade',['../classHabilidade.html',1,'Habilidade'],['../classHabilidade.html#a495f29a62700788427e86b6b0349fc1f',1,'Habilidade::Habilidade()']]],
+  ['habilidade_2ecpp_1',['Habilidade.cpp',['../Habilidade_8cpp.html',1,'']]],
+  ['habilidade_2ehpp_2',['Habilidade.hpp',['../Habilidade_8hpp.html',1,'']]]
 ];

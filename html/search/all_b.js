@@ -1,6 +1,25 @@
 var searchData=
 [
-  ['opcaoescolha_0',['OpcaoEscolha',['../structOpcaoEscolha.html',1,'']]],
-  ['operator_21_3d_1',['operator!=',['../classInventarioHabilidade.html#a11586d38fe0c87598ae6e8acf17550b7',1,'InventarioHabilidade::operator!=()'],['../classInventarioItem.html#a106591c1bcddef65c91d930cc9097c74',1,'InventarioItem::operator!=()']]],
-  ['operator_3d_3d_2',['operator==',['../classEfeito.html#addb0d4e2e31e6f71ace27579ac149847',1,'Efeito::operator==()'],['../classHabilidade.html#aa5226c2dc9ac5f6d14b65700cbdb817a',1,'Habilidade::operator==()'],['../classInventarioHabilidade.html#ac14b9594db264f62e6ec94b8e083378e',1,'InventarioHabilidade::operator==()'],['../classInventarioItem.html#aeaf5d2b463938cdce39ab8f298388a11',1,'InventarioItem::operator==()'],['../classItem.html#ae39548e834708e443bbee25f0880d1a1',1,'Item::operator==()']]]
+  ['indiceinvalidoexception_0',['indiceinvalidoexception',['../classIndiceInvalidoException.html#a3762738a95d4700170ef586f1d821e0a',1,'IndiceInvalidoException::IndiceInvalidoException()'],['../classIndiceInvalidoException.html',1,'IndiceInvalidoException']]],
+  ['iniciar_1',['iniciar',['../classEngine.html#a07490236fee13f031838eadb72f91536',1,'Engine']]],
+  ['iniciarcooldown_2',['iniciarCooldown',['../classHabilidade.html#a48fa748616b683a54c78600f69d9fef3',1,'Habilidade']]],
+  ['inimigo_3',['inimigo',['../classInimigo.html',1,'Inimigo'],['../classInimigo.html#ac6efcfe5458fa890a3e51cc4ca37a844',1,'Inimigo::Inimigo()']]],
+  ['inimigo_2ecpp_4',['Inimigo.cpp',['../Inimigo_8cpp.html',1,'']]],
+  ['inimigo_2ehpp_5',['Inimigo.hpp',['../Inimigo_8hpp.html',1,'']]],
+  ['integrantes_3a_6',['Integrantes:',['../index.html#autotoc_md1',1,'']]],
+  ['inventario_7',['Inventario',['../classInventario.html',1,'']]],
+  ['inventario_2ehpp_8',['Inventario.hpp',['../Inventario_8hpp.html',1,'']]],
+  ['inventario_3c_20habilidade_20_3e_9',['Inventario&lt; Habilidade &gt;',['../classInventario.html',1,'']]],
+  ['inventario_3c_20item_20_3e_10',['Inventario&lt; Item &gt;',['../classInventario.html',1,'']]],
+  ['inventariohabilidade_11',['InventarioHabilidade',['../classInventarioHabilidade.html',1,'']]],
+  ['inventariohabilidade_2ecpp_12',['InventarioHabilidade.cpp',['../InventarioHabilidade_8cpp.html',1,'']]],
+  ['inventariohabilidade_2ehpp_13',['InventarioHabilidade.hpp',['../InventarioHabilidade_8hpp.html',1,'']]],
+  ['inventarioitem_14',['InventarioItem',['../classInventarioItem.html',1,'']]],
+  ['inventarioitem_2ecpp_15',['InventarioItem.cpp',['../InventarioItem_8cpp.html',1,'']]],
+  ['inventarioitem_2ehpp_16',['InventarioItem.hpp',['../InventarioItem_8hpp.html',1,'']]],
+  ['isencerrado_17',['isEncerrado',['../classEfeito.html#a7f89d95be04cde8840a2e1fea2f12850',1,'Efeito']]],
+  ['ismorto_18',['ismorto',['../classEntidade.html#ade89008844bd05a9becdbaf0c9c24506',1,'Entidade::isMorto()'],['../classInimigo.html#ad4ba5228c63de5ba1418f3257acf7361',1,'Inimigo::isMorto()'],['../classPersonagem.html#afb52502006acf871aa5ebdcbca06a86c',1,'Personagem::isMorto()']]],
+  ['item_19',['item',['../classItem.html#a8f89d74cb866d418fbaa59de034e02c2',1,'Item::Item()'],['../classItem.html',1,'Item']]],
+  ['item_2ecpp_20',['Item.cpp',['../Item_8cpp.html',1,'']]],
+  ['item_2ehpp_21',['Item.hpp',['../Item_8hpp.html',1,'']]]
 ];

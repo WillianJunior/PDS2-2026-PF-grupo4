@@ -1,0 +1,31 @@
+\doxysection{Referência do Arquivo src/\+Utils.cpp}
+\hypertarget{Utils_8cpp}{}\label{Utils_8cpp}\index{src/Utils.cpp@{src/Utils.cpp}}
+{\ttfamily \#include "{}Utils.\+hpp"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$termios.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Gráfico de dependência de inclusões para Utils.\+cpp\+:
+% FIG 0
+\doxysubsubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespaceUtils}{Utils}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespaceUtils_af9af19df13165c6a9b83b19b307c8042}{Utils\+::cout\+Tempo}} (std\+::string texto, int milisegundos)
+\item 
+void \mbox{\hyperlink{namespaceUtils_a56a309c06b7bb1c947d573fb3c8d0e6a}{Utils\+::limpar\+Tela}} ()
+\item 
+void \mbox{\hyperlink{namespaceUtils_a1d75c3fbc71b9d2a6417ec80a8d0c48c}{Utils\+::esperar}} (int milissegundos)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{namespaceUtils_a6c273b4ba0d59386177d7ca64628dd98}{Utils\+::modo\+Teste}} = false
+\begin{DoxyCompactList}\small\item\em Define se está acontecendo os testes (quando true, desativa comportamentos que atrapaham os testes (ex\+: tempo de escrita)). \end{DoxyCompactList}\end{DoxyCompactItemize}

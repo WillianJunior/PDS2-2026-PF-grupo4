@@ -11,13 +11,8 @@ Classe gerenciadora do loop principal do jogo -\/ maquina de estados Cria o cicl
 
 
 
-Diagrama de colaboração para Engine\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=150pt]{classEngine__coll__graph}
-\end{center}
-\end{figure}
+Diagrama de colaboração para Engine\+:
+% FIG 0
 \doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
@@ -27,6 +22,11 @@ void \mbox{\hyperlink{classEngine_a07490236fee13f031838eadb72f91536}{iniciar}} (
 \begin{DoxyCompactList}\small\item\em Inicia o motor do jogo. Delega a interface inicial ao \doxylink{classMenu}{Menu}, configura a entidade principal e entra no loop contínuo de transição de salas. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classEngine_a756500478f6f6debf63da450107b7250}{\texorpdfstring{$\sim$}{\string~}\+Engine}} ()=default
 \begin{DoxyCompactList}\small\item\em Destrutor da \doxylink{classEngine}{Engine}. Declarado como default para delegar a limpeza ao std\+::unique\+\_\+ptr. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classEngine_a656ca98217f434ead752350db08258d6}{modo\+Teste}} = false
+\begin{DoxyCompactList}\small\item\em Define se está acontecendo os testes (quando true, desativa comportamentos que atrapaham os testes (ex\+: saves)). \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Descrição detalhada}
@@ -65,6 +65,19 @@ Destrutor da \doxylink{classEngine}{Engine}. Declarado como default para delegar
 
 
 Inicia o motor do jogo. Delega a interface inicial ao \doxylink{classMenu}{Menu}, configura a entidade principal e entra no loop contínuo de transição de salas. 
+
+
+
+\doxysubsection{Atributos}
+\Hypertarget{classEngine_a656ca98217f434ead752350db08258d6}\label{classEngine_a656ca98217f434ead752350db08258d6} 
+\index{Engine@{Engine}!modoTeste@{modoTeste}}
+\index{modoTeste@{modoTeste}!Engine@{Engine}}
+\doxysubsubsection{\texorpdfstring{modoTeste}{modoTeste}}
+{\footnotesize\ttfamily bool Engine\+::modo\+Teste = false\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Define se está acontecendo os testes (quando true, desativa comportamentos que atrapaham os testes (ex\+: saves)). 
 
 
 

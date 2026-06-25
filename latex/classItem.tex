@@ -11,27 +11,21 @@ Representa um item no jogo.
 
 
 
-Diagrama de hierarquia da classe Item\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=195pt]{classItem__inherit__graph}
-\end{center}
-\end{figure}
+Diagrama de hierarquia da classe Item\+:
+% FIG 0
 
 
-Diagrama de colaboração para Item\+:\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=550pt]{classItem__coll__graph}
-\end{center}
-\end{figure}
+Diagrama de colaboração para Item\+:
+% FIG 1
 \doxysubsubsection*{Membros Públicos}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classItem_a4bdb5d81023e9d46b7e4f99b5ad63948}{Item}} (std\+::string nome, bool tipo, int valor, \mbox{\hyperlink{classEfeito}{Efeito}} efeito, bool alvo)
+\mbox{\hyperlink{classItem_a8f89d74cb866d418fbaa59de034e02c2}{Item}} (std\+::string nome, bool tipo, int valor, \mbox{\hyperlink{classEfeito}{Efeito}} efeito, bool alvo, int usos)
 \begin{DoxyCompactList}\small\item\em Construtor padrão do \doxylink{classItem}{Item}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classItem_ac6839958caf3c214eb7385bc558af1c6}{atualizar\+Usos}} ()
+\item 
+int \mbox{\hyperlink{classItem_ace91550b3edf0a5c47ede9ac85798887}{get\+Usos\+Restantes}} ()
+\item 
 bool \mbox{\hyperlink{classItem_ae39548e834708e443bbee25f0880d1a1}{operator==}} (const \mbox{\hyperlink{classItem}{Item}} \&outro) const
 \begin{DoxyCompactList}\small\item\em Compara dois itens. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classItem_a11663c84075b78c3ae5e30fdfcd7c458}{\texorpdfstring{$\sim$}{\string~}\+Item}} ()
@@ -43,7 +37,7 @@ bool \mbox{\hyperlink{classItem_ae39548e834708e443bbee25f0880d1a1}{operator==}} 
 \begin{DoxyCompactList}\small\item\em Construtor padrão da classe \doxylink{classAcao}{Acao}. \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{classAcao_ace32485f5cca5329ebb5e6fab9760ceb}{calcular\+Impacto}} ()
 \begin{DoxyCompactList}\small\item\em Calcula a alteração de vida baseada na ação. \end{DoxyCompactList}\item 
-virtual void \mbox{\hyperlink{classAcao_af339f68e5999ff075e79eeef17f08a9c}{mostrar\+Descricao}} ()
+std\+::string \mbox{\hyperlink{classAcao_acb39249ae6c4c1b1e9a1091aa92c495a}{mostrar\+Descricao}} ()
 \begin{DoxyCompactList}\small\item\em Exibe os detalhes da ação (informações da habilidade ou do item). \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classAcao_aa8460ddeec0c7fa20e9e5c39ea64edd5}{get\+Nome}} ()
 \begin{DoxyCompactList}\small\item\em Retorna o nome da ação. \end{DoxyCompactList}\item 
@@ -82,11 +76,11 @@ Representa um item no jogo.
 \end{DoxyItemize}
 
 \doxysubsection{Construtores e Destrutores}
-\Hypertarget{classItem_a4bdb5d81023e9d46b7e4f99b5ad63948}\label{classItem_a4bdb5d81023e9d46b7e4f99b5ad63948} 
+\Hypertarget{classItem_a8f89d74cb866d418fbaa59de034e02c2}\label{classItem_a8f89d74cb866d418fbaa59de034e02c2} 
 \index{Item@{Item}!Item@{Item}}
 \index{Item@{Item}!Item@{Item}}
 \doxysubsubsection{\texorpdfstring{Item()}{Item()}}
-{\footnotesize\ttfamily Item\+::\+Item (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{bool}]{tipo,  }\item[{int}]{valor,  }\item[{\mbox{\hyperlink{classEfeito}{Efeito}}}]{efeito,  }\item[{bool}]{alvo }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily Item\+::\+Item (\begin{DoxyParamCaption}\item[{std\+::string}]{nome,  }\item[{bool}]{tipo,  }\item[{int}]{valor,  }\item[{\mbox{\hyperlink{classEfeito}{Efeito}}}]{efeito,  }\item[{bool}]{alvo,  }\item[{int}]{usos }\end{DoxyParamCaption})}
 
 
 
@@ -124,6 +118,18 @@ Destrutor do objeto \doxylink{classItem}{Item}.
 \end{DoxyItemize}
 
 \doxysubsection{Documentação das funções}
+\Hypertarget{classItem_ac6839958caf3c214eb7385bc558af1c6}\label{classItem_ac6839958caf3c214eb7385bc558af1c6} 
+\index{Item@{Item}!atualizarUsos@{atualizarUsos}}
+\index{atualizarUsos@{atualizarUsos}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{atualizarUsos()}{atualizarUsos()}}
+{\footnotesize\ttfamily void Item\+::atualizar\+Usos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classItem_ace91550b3edf0a5c47ede9ac85798887}\label{classItem_ace91550b3edf0a5c47ede9ac85798887} 
+\index{Item@{Item}!getUsosRestantes@{getUsosRestantes}}
+\index{getUsosRestantes@{getUsosRestantes}!Item@{Item}}
+\doxysubsubsection{\texorpdfstring{getUsosRestantes()}{getUsosRestantes()}}
+{\footnotesize\ttfamily int Item\+::get\+Usos\+Restantes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
 \Hypertarget{classItem_ae39548e834708e443bbee25f0880d1a1}\label{classItem_ae39548e834708e443bbee25f0880d1a1} 
 \index{Item@{Item}!operator==@{operator==}}
 \index{operator==@{operator==}!Item@{Item}}

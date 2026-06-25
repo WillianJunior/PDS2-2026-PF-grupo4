@@ -1,0 +1,33 @@
+\doxysection{Excecoes.\+hpp}
+\hypertarget{Excecoes_8hpp_source}{}\label{Excecoes_8hpp_source}\index{include/Excecoes.hpp@{include/Excecoes.hpp}}
+\mbox{\hyperlink{Excecoes_8hpp}{Ir para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ EXCECOES\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ EXCECOES\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <exception>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classRPGException}{RPGException}}\ :\ \textcolor{keyword}{public}\ std::exception\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00012\ \ \ \ \ std::string\ \mbox{\hyperlink{classRPGException_af563980c9464d1f981b2ce719e5ef318}{\_mensagem}};}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{classRPGException_ac3d0e87ec130689fe032a2bcade32e99}{RPGException}}(\textcolor{keyword}{const}\ std::string\&\ msg)\ :\ \mbox{\hyperlink{classRPGException_af563980c9464d1f981b2ce719e5ef318}{\_mensagem}}(msg)\ \{\}}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \mbox{\hyperlink{classRPGException_ae06345b71719ee89c321ce06168107a9}{what}}()\ const\ noexcept\textcolor{keyword}{\ override\ }\{}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classRPGException_af563980c9464d1f981b2ce719e5ef318}{\_mensagem}}.c\_str();}
+\DoxyCodeLine{00017\ \ \ \ \ \}}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classIndiceInvalidoException}{IndiceInvalidoException}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classRPGException}{RPGException}}\ \{}
+\DoxyCodeLine{00024\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classIndiceInvalidoException_a3762738a95d4700170ef586f1d821e0a}{IndiceInvalidoException}}()\ :\ \mbox{\hyperlink{classRPGException}{RPGException}}(\textcolor{stringliteral}{"{}Erro:\ Indice\ nao\ existe\ no\ inventario."{}})\ \{\}}
+\DoxyCodeLine{00026\ \};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classEntradaInvalidaException}{EntradaInvalidaException}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classRPGException}{RPGException}}\ \{}
+\DoxyCodeLine{00032\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{classEntradaInvalidaException_ad73a146c303071f23ae480aa477c5031}{EntradaInvalidaException}}()\ :\ \mbox{\hyperlink{classRPGException}{RPGException}}(\textcolor{stringliteral}{"{}Erro:\ Entrada\ invalida"{}})\ \{\}}
+\DoxyCodeLine{00034\ \};}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
