@@ -21,30 +21,31 @@
 \DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSalaEscolha}{SalaEscolha}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classSalaBase}{SalaBase}}\{}
 \DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{private}:}
 \DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structUtils_1_1Animacao}{Utils::Animacao}}\ \_animacao;}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::vector<OpcaoEscolha>\ \_opcoes;}
-\DoxyCodeLine{00026\ }
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_idEscolha;}
-\DoxyCodeLine{00028\ \ \ \ \ }
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSalaEscolha}{SalaEscolha}}(std::string\ nome,\ \mbox{\hyperlink{structUtils_1_1Animacao}{Utils::Animacao}}\ animacao,\ \textcolor{keywordtype}{int}\ idEscolha\ =\ 0);}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSalaEscolha_a271e7269eeb090dcdf63f0c4988deab0}{encerrarSala}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classSalaEscolha_addc074991b7f977ad4227da0a2631a2a}{executarSala}}(\mbox{\hyperlink{classPersonagem}{Personagem}}\&\ personagem)\textcolor{keyword}{override};}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSalaEscolha_ad99bb15b16532d1148c920c9d1b0d7ba}{mostrarSala}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSalaEscolha_a89c73771446f7c2b62b88049cf82f2b4}{mostrarOpcoes}}();}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSalaEscolha_a22397ce76f8c7ec0bf884f8fb218327a}{executarEvento}}(\mbox{\hyperlink{classPersonagem}{Personagem}}\&\ personagem);}
-\DoxyCodeLine{00068\ }
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classSalaEscolha_a41f08c829a1b1830254fedf552ee6ef0}{getTipo}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00073\ }
-\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classSalaEscolha_a8b7af65827de1dcb8b8cc2a16791b9ee}{getId}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00078\ }
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSalaEscolha_ae8b2db3644dae7204d6e9f320a9a3fea}{adicionarOpcao}}(std::string\ descricao,\ std::function<\textcolor{keywordtype}{void}(\mbox{\hyperlink{classPersonagem}{Personagem}}*)>\ consequencia);}
-\DoxyCodeLine{00086\ \};}
-\DoxyCodeLine{00087\ }
-\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ std::vector<OpcaoEscolha>\ \_opcoes;}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_idEscolha;}
+\DoxyCodeLine{00031\ \ \ \ \ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSalaEscolha}{SalaEscolha}}(std::string\ nome,\ \mbox{\hyperlink{structUtils_1_1Animacao}{Utils::Animacao}}\ animacao,\ \textcolor{keywordtype}{int}\ idEscolha\ =\ 0);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSalaEscolha_a271e7269eeb090dcdf63f0c4988deab0}{encerrarSala}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classSalaEscolha_addc074991b7f977ad4227da0a2631a2a}{executarSala}}(\mbox{\hyperlink{classPersonagem}{Personagem}}\&\ personagem)\textcolor{keyword}{override};}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSalaEscolha_ad99bb15b16532d1148c920c9d1b0d7ba}{mostrarSala}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSalaEscolha_a89c73771446f7c2b62b88049cf82f2b4}{mostrarOpcoes}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSalaEscolha_a22397ce76f8c7ec0bf884f8fb218327a}{executarEvento}}(\mbox{\hyperlink{classPersonagem}{Personagem}}\&\ personagem);}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classSalaEscolha_a41f08c829a1b1830254fedf552ee6ef0}{getTipo}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classSalaEscolha_a8b7af65827de1dcb8b8cc2a16791b9ee}{getId}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSalaEscolha_ae8b2db3644dae7204d6e9f320a9a3fea}{adicionarOpcao}}(std::string\ descricao,\ std::function<\textcolor{keywordtype}{void}(\mbox{\hyperlink{classPersonagem}{Personagem}}*)>\ consequencia);}
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

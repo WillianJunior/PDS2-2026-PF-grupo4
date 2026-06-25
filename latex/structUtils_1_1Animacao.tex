@@ -2,6 +2,11 @@
 \hypertarget{structUtils_1_1Animacao}{}\label{structUtils_1_1Animacao}\index{Utils::Animacao@{Utils::Animacao}}
 
 
+Estrutura que armazena os quadros e textos de uma animação em ASCII.  
+
+
+
+
 {\ttfamily \#include $<$Utils.\+hpp$>$}
 
 
@@ -12,14 +17,17 @@ Diagrama de colaboração para Utils\+::Animacao\+:
 \begin{DoxyCompactItemize}
 \item 
 std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structUtils_1_1Animacao_ab423cde74fdf71cbaac198e86d2ecbfd}{texto\+Inicial}}
-\item 
+\begin{DoxyCompactList}\small\item\em Linhas de texto exibidas antes da animação começar. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structUtils_1_1Animacao_a180ecb27cf7d126ed2516fa6007fb72a}{frames}}
-\item 
+\begin{DoxyCompactList}\small\item\em Vetor contendo os quadros (frames) da animação em sequência. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{structUtils_1_1Animacao_af53e44afbfe452140374515f03c531d0}{texto\+Final}}
-\item 
+\begin{DoxyCompactList}\small\item\em Linhas de texto exibidas após o término da animação. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{structUtils_1_1Animacao_a8e446fdad71566f36033a626d892cce3}{tempo\+Frame}} = 200
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Duração de cada quadro da animação em milissegundos. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Descrição detalhada}
+Estrutura que armazena os quadros e textos de uma animação em ASCII. 
 
 \doxysubsection{Atributos}
 \Hypertarget{structUtils_1_1Animacao_a180ecb27cf7d126ed2516fa6007fb72a}\label{structUtils_1_1Animacao_a180ecb27cf7d126ed2516fa6007fb72a} 
@@ -28,11 +36,19 @@ int \mbox{\hyperlink{structUtils_1_1Animacao_a8e446fdad71566f36033a626d892cce3}{
 \doxysubsubsection{\texorpdfstring{frames}{frames}}
 {\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Utils\+::\+Animacao\+::frames}
 
+
+
+Vetor contendo os quadros (frames) da animação em sequência. 
+
 \Hypertarget{structUtils_1_1Animacao_a8e446fdad71566f36033a626d892cce3}\label{structUtils_1_1Animacao_a8e446fdad71566f36033a626d892cce3} 
 \index{Utils::Animacao@{Utils::Animacao}!tempoFrame@{tempoFrame}}
 \index{tempoFrame@{tempoFrame}!Utils::Animacao@{Utils::Animacao}}
 \doxysubsubsection{\texorpdfstring{tempoFrame}{tempoFrame}}
 {\footnotesize\ttfamily int Utils\+::\+Animacao\+::tempo\+Frame = 200}
+
+
+
+Duração de cada quadro da animação em milissegundos. 
 
 \Hypertarget{structUtils_1_1Animacao_af53e44afbfe452140374515f03c531d0}\label{structUtils_1_1Animacao_af53e44afbfe452140374515f03c531d0} 
 \index{Utils::Animacao@{Utils::Animacao}!textoFinal@{textoFinal}}
@@ -40,11 +56,19 @@ int \mbox{\hyperlink{structUtils_1_1Animacao_a8e446fdad71566f36033a626d892cce3}{
 \doxysubsubsection{\texorpdfstring{textoFinal}{textoFinal}}
 {\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Utils\+::\+Animacao\+::texto\+Final}
 
+
+
+Linhas de texto exibidas após o término da animação. 
+
 \Hypertarget{structUtils_1_1Animacao_ab423cde74fdf71cbaac198e86d2ecbfd}\label{structUtils_1_1Animacao_ab423cde74fdf71cbaac198e86d2ecbfd} 
 \index{Utils::Animacao@{Utils::Animacao}!textoInicial@{textoInicial}}
 \index{textoInicial@{textoInicial}!Utils::Animacao@{Utils::Animacao}}
 \doxysubsubsection{\texorpdfstring{textoInicial}{textoInicial}}
 {\footnotesize\ttfamily std\+::vector$<$std\+::string$>$ Utils\+::\+Animacao\+::texto\+Inicial}
+
+
+
+Linhas de texto exibidas antes da animação começar. 
 
 
 

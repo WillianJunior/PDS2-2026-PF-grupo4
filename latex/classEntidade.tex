@@ -33,7 +33,7 @@ void \mbox{\hyperlink{classEntidade_aca0dccceffe0b3e458cd8d5e4ebc60fb}{receber\+
 void \mbox{\hyperlink{classEntidade_adfaf551744091e864c5b1acc96ff9c51}{processar\+Efeitos\+Ativos}} ()
 \begin{DoxyCompactList}\small\item\em Itera sobre os efeitos ativos aplicando eles e diminuindo a duracao deles. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEntidade_ac50d14a5d9632b45a87d2804e90ace72}{limpar\+Efeitos}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Limpa os efeitos. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classEntidade_a273d26d69ff950d53fa9eaaff38bc163}{get\+Vida}} ()
 \begin{DoxyCompactList}\small\item\em Retorna a vida atual da entidade. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classEntidade_a838b5a83d932111378efcb9e062a56a3}{get\+Nome}} ()
@@ -80,7 +80,7 @@ Construtor padrão de entidade Aloca vida, nome e habilidades de entidade.
 \hline
 {\em nome} & Nome da entidade \\
 \hline
-{\em habilidades} & Inventário de habilidades da entidade \\
+{\em inventario\+Habilidade} & Inventário de habilidades da entidade \\
 \hline
 \end{DoxyParams}
 \Hypertarget{classEntidade_a7b3a23b8307be2dcc4cfbe77e69baa50}\label{classEntidade_a7b3a23b8307be2dcc4cfbe77e69baa50} 
@@ -201,6 +201,10 @@ Implementado por \mbox{\hyperlink{classInimigo_ad4ba5228c63de5ba1418f3257acf7361
 \index{limparEfeitos@{limparEfeitos}!Entidade@{Entidade}}
 \doxysubsubsection{\texorpdfstring{limparEfeitos()}{limparEfeitos()}}
 {\footnotesize\ttfamily void Entidade\+::limpar\+Efeitos (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Limpa os efeitos. 
 
 \Hypertarget{classEntidade_adfaf551744091e864c5b1acc96ff9c51}\label{classEntidade_adfaf551744091e864c5b1acc96ff9c51} 
 \index{Entidade@{Entidade}!processarEfeitosAtivos@{processarEfeitosAtivos}}

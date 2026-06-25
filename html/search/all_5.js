@@ -7,10 +7,10 @@ var searchData=
   ['compilação_20e_20execução_4',['Compilação e Execução',['../index.html#autotoc_md10',1,'']]],
   ['consequencia_5',['consequencia',['../structOpcaoEscolha.html#a45be4efab98032b20e7e221589635788',1,'OpcaoEscolha']]],
   ['coutdigitado_6',['coutdigitado',['../classUtils_1_1coutDigitado.html',1,'Utils::coutDigitado'],['../classUtils_1_1coutDigitado.html#ae76468279cf37767cd74b53a7d09af3c',1,'Utils::coutDigitado::coutDigitado()']]],
-  ['couttempo_7',['coutTempo',['../namespaceUtils.html#af9af19df13165c6a9b83b19b307c8042',1,'Utils']]],
+  ['couttempo_7',['coutTempo',['../namespaceUtils.html#a61784c37676e6ff39d9d4eba404e119e',1,'Utils']]],
   ['criarefeito_8',['criarEfeito',['../classEfeito.html#a14b16fdf6f0eada2cfe8185aa2afaa92',1,'Efeito']]],
   ['criarhabilidade_9',['criarHabilidade',['../namespaceFabricaHabilidade.html#a3b435cbbc4f040088d97940478876e0e',1,'FabricaHabilidade']]],
   ['criarinimigo_10',['criarInimigo',['../namespaceFabricaInimigo.html#a0176e1a8ed351bedf66fbd62f406b01b',1,'FabricaInimigo']]],
-  ['criaritem_11',['criarItem',['../namespaceFabricaItem.html#afa808f40ca2a9357f38be77920aedb52',1,'FabricaItem']]],
-  ['criarsalas_12',['criarsalas',['../namespaceFabricaSC.html#ab6e3e559ea6934ebaeace51e99cbbc4a',1,'FabricaSC::criarSalas()'],['../namespaceFabricaSE.html#a6f2c8fdf044b70716d981d0e8d6f326b',1,'FabricaSE::criarSalas()']]]
+  ['criaritem_11',['criarItem',['../namespaceFabricaItem.html#a5ea1c33a04c35998a33136b709edcd7c',1,'FabricaItem']]],
+  ['criarsalas_12',['criarsalas',['../namespaceFabricaSC.html#ab6e3e559ea6934ebaeace51e99cbbc4a',1,'FabricaSC::criarSalas()'],['../namespaceFabricaSE.html#a3eb82ef68b15cb24de7c402bad4f813e',1,'FabricaSE::criarSalas()']]]
 ];

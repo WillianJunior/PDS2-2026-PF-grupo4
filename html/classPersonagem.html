@@ -117,8 +117,10 @@ Membros Públicos</h2></td></tr>
 <tr class="memdesc:ad1ca55afcab097bc0ea8ce90606d9efc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna um <a class="el" href="classItem.html" title="Representa um item no jogo.">Item</a> a partir do inventarioItem e consome.  <br /></td></tr>
 <tr class="separator:ad1ca55afcab097bc0ea8ce90606d9efc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc877432714903519943ffa5aca21dd9" id="r_adc877432714903519943ffa5aca21dd9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPersonagem.html#adc877432714903519943ffa5aca21dd9">receberHabilidade</a> (<a class="el" href="classHabilidade.html">Habilidade</a> habilidade)</td></tr>
+<tr class="memdesc:adc877432714903519943ffa5aca21dd9"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPersonagem.html" title="Representa o personagem no jogo, herda da classe entidade.">Personagem</a> recebe uma nova habilidade.  <br /></td></tr>
 <tr class="separator:adc877432714903519943ffa5aca21dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeba92e80e2c4ef5d4bad1bcd9f859384" id="r_aeba92e80e2c4ef5d4bad1bcd9f859384"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPersonagem.html#aeba92e80e2c4ef5d4bad1bcd9f859384">receberItem</a> (<a class="el" href="classItem.html">Item</a> item)</td></tr>
+<tr class="memdesc:aeba92e80e2c4ef5d4bad1bcd9f859384"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classPersonagem.html" title="Representa o personagem no jogo, herda da classe entidade.">Personagem</a> recebe um novo item.  <br /></td></tr>
 <tr class="separator:aeba92e80e2c4ef5d4bad1bcd9f859384"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a30d115691def369c93d14834a7176590" id="r_a30d115691def369c93d14834a7176590"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPersonagem.html#a30d115691def369c93d14834a7176590">alterarVida</a> (int valor) override</td></tr>
 <tr class="memdesc:a30d115691def369c93d14834a7176590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alterar a vida atual do personagem para mais ou para menos.  <br /></td></tr>
@@ -146,6 +148,7 @@ Membros Públicos</h2></td></tr>
 <tr class="memdesc:adfaf551744091e864c5b1acc96ff9c51 inherit pub_methods_classEntidade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Itera sobre os efeitos ativos aplicando eles e diminuindo a duracao deles.  <br /></td></tr>
 <tr class="separator:adfaf551744091e864c5b1acc96ff9c51 inherit pub_methods_classEntidade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac50d14a5d9632b45a87d2804e90ace72 inherit pub_methods_classEntidade" id="r_ac50d14a5d9632b45a87d2804e90ace72"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#ac50d14a5d9632b45a87d2804e90ace72">limparEfeitos</a> ()</td></tr>
+<tr class="memdesc:ac50d14a5d9632b45a87d2804e90ace72 inherit pub_methods_classEntidade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limpa os efeitos.  <br /></td></tr>
 <tr class="separator:ac50d14a5d9632b45a87d2804e90ace72 inherit pub_methods_classEntidade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a273d26d69ff950d53fa9eaaff38bc163 inherit pub_methods_classEntidade" id="r_a273d26d69ff950d53fa9eaaff38bc163"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classEntidade.html#a273d26d69ff950d53fa9eaaff38bc163">getVida</a> ()</td></tr>
 <tr class="memdesc:a273d26d69ff950d53fa9eaaff38bc163 inherit pub_methods_classEntidade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna a vida atual da entidade.  <br /></td></tr>
@@ -451,6 +454,17 @@ Outros membros herdados</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p><a class="el" href="classPersonagem.html" title="Representa o personagem no jogo, herda da classe entidade.">Personagem</a> recebe uma nova habilidade. </p>
+<ul>
+<li>Há um limite de habilidades no inventario <dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">habilidade</td><td>Nova habilidade que será adicionada ao inventário de habilidades do personagem. </td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+</ul>
+
 </div>
 </div>
 <a id="aeba92e80e2c4ef5d4bad1bcd9f859384" name="aeba92e80e2c4ef5d4bad1bcd9f859384"></a>
@@ -468,6 +482,17 @@ Outros membros herdados</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p><a class="el" href="classPersonagem.html" title="Representa o personagem no jogo, herda da classe entidade.">Personagem</a> recebe um novo item. </p>
+<ul>
+<li>Há um limite de itens no inventario <dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">item</td><td>Novo item que será adicionado ao inventário de itens do personagem. </td></tr>
+  </table>
+  </dd>
+</dl>
+</li>
+</ul>
 
 </div>
 </div>

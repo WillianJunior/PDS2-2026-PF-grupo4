@@ -103,32 +103,33 @@ $(document).ready(function() { init_codefold(0); });
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="classSalaEscolha.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="classSalaEscolha.html">SalaEscolha</a> : <span class="keyword">public</span> <a class="code hl_class" href="classSalaBase.html">SalaBase</a>{</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keyword">private</span>:</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_struct" href="structUtils_1_1Animacao.html">Utils::Animacao</a> _animacao;</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        std::vector&lt;OpcaoEscolha&gt; _opcoes;</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordtype">int</span> _idEscolha;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        <a class="code hl_class" href="classSalaEscolha.html">SalaEscolha</a>(std::string nome, <a class="code hl_struct" href="structUtils_1_1Animacao.html">Utils::Animacao</a> animacao, <span class="keywordtype">int</span> idEscolha = 0);</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classSalaEscolha.html#a271e7269eeb090dcdf63f0c4988deab0">encerrarSala</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classSalaEscolha.html#addc074991b7f977ad4227da0a2631a2a">executarSala</a>(<a class="code hl_class" href="classPersonagem.html">Personagem</a>&amp; personagem)<span class="keyword">override</span>;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classSalaEscolha.html#ad99bb15b16532d1148c920c9d1b0d7ba">mostrarSala</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classSalaEscolha.html#a89c73771446f7c2b62b88049cf82f2b4">mostrarOpcoes</a>();</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classSalaEscolha.html#a22397ce76f8c7ec0bf884f8fb218327a">executarEvento</a>(<a class="code hl_class" href="classPersonagem.html">Personagem</a>&amp; personagem);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        <span class="keywordtype">char</span> <a class="code hl_function" href="classSalaEscolha.html#a41f08c829a1b1830254fedf552ee6ef0">getTipo</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classSalaEscolha.html#a8b7af65827de1dcb8b8cc2a16791b9ee">getId</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classSalaEscolha.html#ae8b2db3644dae7204d6e9f320a9a3fea">adicionarOpcao</a>(std::string descricao, std::function&lt;<span class="keywordtype">void</span>(<a class="code hl_class" href="classPersonagem.html">Personagem</a>*)&gt; consequencia);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>};</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        std::vector&lt;OpcaoEscolha&gt; _opcoes;</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordtype">int</span> _idEscolha;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <a class="code hl_class" href="classSalaEscolha.html">SalaEscolha</a>(std::string nome, <a class="code hl_struct" href="structUtils_1_1Animacao.html">Utils::Animacao</a> animacao, <span class="keywordtype">int</span> idEscolha = 0);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classSalaEscolha.html#a271e7269eeb090dcdf63f0c4988deab0">encerrarSala</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keywordtype">int</span> <a class="code hl_function" href="classSalaEscolha.html#addc074991b7f977ad4227da0a2631a2a">executarSala</a>(<a class="code hl_class" href="classPersonagem.html">Personagem</a>&amp; personagem)<span class="keyword">override</span>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classSalaEscolha.html#ad99bb15b16532d1148c920c9d1b0d7ba">mostrarSala</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classSalaEscolha.html#a89c73771446f7c2b62b88049cf82f2b4">mostrarOpcoes</a>();</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classSalaEscolha.html#a22397ce76f8c7ec0bf884f8fb218327a">executarEvento</a>(<a class="code hl_class" href="classPersonagem.html">Personagem</a>&amp; personagem);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        <span class="keywordtype">char</span> <a class="code hl_function" href="classSalaEscolha.html#a41f08c829a1b1830254fedf552ee6ef0">getTipo</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="classSalaEscolha.html#a8b7af65827de1dcb8b8cc2a16791b9ee">getId</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="classSalaEscolha.html#ae8b2db3644dae7204d6e9f320a9a3fea">adicionarOpcao</a>(std::string descricao, std::function&lt;<span class="keywordtype">void</span>(<a class="code hl_class" href="classPersonagem.html">Personagem</a>*)&gt; consequencia);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>};</div>
 </div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aPersonagem_8hpp_html"><div class="ttname"><a href="Personagem_8hpp.html">Personagem.hpp</a></div></div>
 <div class="ttc" id="aSalaBase_8hpp_html"><div class="ttname"><a href="SalaBase_8hpp.html">SalaBase.hpp</a></div></div>
 <div class="ttc" id="aUtils_8hpp_html"><div class="ttname"><a href="Utils_8hpp.html">Utils.hpp</a></div></div>
@@ -146,7 +147,7 @@ $(document).ready(function() { init_codefold(0); });
 <div class="ttc" id="astructOpcaoEscolha_html"><div class="ttname"><a href="structOpcaoEscolha.html">OpcaoEscolha</a></div><div class="ttdef"><b>Definição</b> SalaEscolha.hpp:12</div></div>
 <div class="ttc" id="astructOpcaoEscolha_html_a45be4efab98032b20e7e221589635788"><div class="ttname"><a href="structOpcaoEscolha.html#a45be4efab98032b20e7e221589635788">OpcaoEscolha::consequencia</a></div><div class="ttdeci">std::function&lt; void(Personagem *)&gt; consequencia</div><div class="ttdef"><b>Definição</b> SalaEscolha.hpp:14</div></div>
 <div class="ttc" id="astructOpcaoEscolha_html_a6234f35f6d89a8a34ee33d506461b677"><div class="ttname"><a href="structOpcaoEscolha.html#a6234f35f6d89a8a34ee33d506461b677">OpcaoEscolha::descricao</a></div><div class="ttdeci">std::string descricao</div><div class="ttdef"><b>Definição</b> SalaEscolha.hpp:13</div></div>
-<div class="ttc" id="astructUtils_1_1Animacao_html"><div class="ttname"><a href="structUtils_1_1Animacao.html">Utils::Animacao</a></div><div class="ttdef"><b>Definição</b> Utils.hpp:17</div></div>
+<div class="ttc" id="astructUtils_1_1Animacao_html"><div class="ttname"><a href="structUtils_1_1Animacao.html">Utils::Animacao</a></div><div class="ttdoc">Estrutura que armazena os quadros e textos de uma animação em ASCII.</div><div class="ttdef"><b>Definição</b> Utils.hpp:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

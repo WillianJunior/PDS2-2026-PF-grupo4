@@ -12,11 +12,11 @@ Diagrama de colaboração para Save\+Manager\+:
 \begin{DoxyCompactItemize}
 \item 
 static void \mbox{\hyperlink{classSaveManager_a754367566c3def7c47ea9908cfc042b9}{salvar}} (int contador\+Salas, \mbox{\hyperlink{classPersonagem}{Personagem}} \&personagem, const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classSalaBase}{Sala\+Base}} $>$ $>$ \&salas)
-\item 
+\begin{DoxyCompactList}\small\item\em Salva as informações da run. \end{DoxyCompactList}\item 
 static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPersonagem}{Personagem}} $>$ \mbox{\hyperlink{classSaveManager_a4793c897ea5c595149c7d01b5872e00c}{carregar}} (int \&contador\+Salas, std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classSalaBase}{Sala\+Base}} $>$ $>$ \&salas)
-\item 
+\begin{DoxyCompactList}\small\item\em Carrega as informações salvas de uma run, permitindo que o jogador retome do mesmo ponto que havia parado. \end{DoxyCompactList}\item 
 static bool \mbox{\hyperlink{classSaveManager_a05bca099adfc03411251cd1d855064f3}{existe\+Save}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Verifica se existe um arquivo de save. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Documentação das funções}
@@ -26,18 +26,49 @@ static bool \mbox{\hyperlink{classSaveManager_a05bca099adfc03411251cd1d855064f3}
 \doxysubsubsection{\texorpdfstring{carregar()}{carregar()}}
 {\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classPersonagem}{Personagem}} $>$ Save\+Manager\+::carregar (\begin{DoxyParamCaption}\item[{int \&}]{contador\+Salas,  }\item[{std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classSalaBase}{Sala\+Base}} $>$ $>$ \&}]{salas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Carrega as informações salvas de uma run, permitindo que o jogador retome do mesmo ponto que havia parado. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em contador\+Salas} & Inteiro que indica em qual sala o jogador estava. \\
+\hline
+{\em salas} & Vetor com as salas para retomar a run com a mesma sequência de salas. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classSaveManager_a05bca099adfc03411251cd1d855064f3}\label{classSaveManager_a05bca099adfc03411251cd1d855064f3} 
 \index{SaveManager@{SaveManager}!existeSave@{existeSave}}
 \index{existeSave@{existeSave}!SaveManager@{SaveManager}}
 \doxysubsubsection{\texorpdfstring{existeSave()}{existeSave()}}
 {\footnotesize\ttfamily bool Save\+Manager\+::existe\+Save (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Verifica se existe um arquivo de save. 
+
+\begin{DoxyReturn}{Retorna}
+Retorna true se existir um save. 
+\end{DoxyReturn}
 \Hypertarget{classSaveManager_a754367566c3def7c47ea9908cfc042b9}\label{classSaveManager_a754367566c3def7c47ea9908cfc042b9} 
 \index{SaveManager@{SaveManager}!salvar@{salvar}}
 \index{salvar@{salvar}!SaveManager@{SaveManager}}
 \doxysubsubsection{\texorpdfstring{salvar()}{salvar()}}
 {\footnotesize\ttfamily void Save\+Manager\+::salvar (\begin{DoxyParamCaption}\item[{int}]{contador\+Salas,  }\item[{\mbox{\hyperlink{classPersonagem}{Personagem}} \&}]{personagem,  }\item[{const std\+::vector$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classSalaBase}{Sala\+Base}} $>$ $>$ \&}]{salas }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
 
+
+
+Salva as informações da run. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em contador\+Salas} & Inteiro que indica em qual sala o jogador está. \\
+\hline
+{\em personagem} & \doxylink{classPersonagem}{Personagem} da run. \\
+\hline
+{\em salas} & Vetor com as salas para, se a run for retomada, ter a mesma sequência. \\
+\hline
+\end{DoxyParams}
 
 
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}

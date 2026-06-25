@@ -86,10 +86,13 @@ Diagrama de colaboração para SaveManager:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Membros públicos estáticos</h2></td></tr>
 <tr class="memitem:a754367566c3def7c47ea9908cfc042b9" id="r_a754367566c3def7c47ea9908cfc042b9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSaveManager.html#a754367566c3def7c47ea9908cfc042b9">salvar</a> (int contadorSalas, <a class="el" href="classPersonagem.html">Personagem</a> &amp;personagem, const std::vector&lt; std::unique_ptr&lt; <a class="el" href="classSalaBase.html">SalaBase</a> &gt; &gt; &amp;salas)</td></tr>
+<tr class="memdesc:a754367566c3def7c47ea9908cfc042b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Salva as informações da run.  <br /></td></tr>
 <tr class="separator:a754367566c3def7c47ea9908cfc042b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4793c897ea5c595149c7d01b5872e00c" id="r_a4793c897ea5c595149c7d01b5872e00c"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="classPersonagem.html">Personagem</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSaveManager.html#a4793c897ea5c595149c7d01b5872e00c">carregar</a> (int &amp;contadorSalas, std::vector&lt; std::unique_ptr&lt; <a class="el" href="classSalaBase.html">SalaBase</a> &gt; &gt; &amp;salas)</td></tr>
+<tr class="memdesc:a4793c897ea5c595149c7d01b5872e00c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carrega as informações salvas de uma run, permitindo que o jogador retome do mesmo ponto que havia parado.  <br /></td></tr>
 <tr class="separator:a4793c897ea5c595149c7d01b5872e00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05bca099adfc03411251cd1d855064f3" id="r_a05bca099adfc03411251cd1d855064f3"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSaveManager.html#a05bca099adfc03411251cd1d855064f3">existeSave</a> ()</td></tr>
+<tr class="memdesc:a05bca099adfc03411251cd1d855064f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se existe um arquivo de save.  <br /></td></tr>
 <tr class="separator:a05bca099adfc03411251cd1d855064f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentação das funções</h2>
@@ -127,6 +130,15 @@ Membros públicos estáticos</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Carrega as informações salvas de uma run, permitindo que o jogador retome do mesmo ponto que havia parado. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contadorSalas</td><td>Inteiro que indica em qual sala o jogador estava. </td></tr>
+    <tr><td class="paramname">salas</td><td>Vetor com as salas para retomar a run com a mesma sequência de salas. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a05bca099adfc03411251cd1d855064f3" name="a05bca099adfc03411251cd1d855064f3"></a>
@@ -151,6 +163,9 @@ Membros públicos estáticos</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Verifica se existe um arquivo de save. </p>
+<dl class="section return"><dt>Retorna</dt><dd>Retorna true se existir um save. </dd></dl>
 
 </div>
 </div>
@@ -193,6 +208,16 @@ Membros públicos estáticos</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Salva as informações da run. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">contadorSalas</td><td>Inteiro que indica em qual sala o jogador está. </td></tr>
+    <tr><td class="paramname">personagem</td><td><a class="el" href="classPersonagem.html" title="Representa o personagem no jogo, herda da classe entidade.">Personagem</a> da run. </td></tr>
+    <tr><td class="paramname">salas</td><td>Vetor com as salas para, se a run for retomada, ter a mesma sequência. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

@@ -25,17 +25,17 @@ Diagrama de colaboração para Habilidade\+:
 bool \mbox{\hyperlink{classHabilidade_aa5226c2dc9ac5f6d14b65700cbdb817a}{operator==}} (const \mbox{\hyperlink{classHabilidade}{Habilidade}} \&outro) const
 \begin{DoxyCompactList}\small\item\em Compara duas habilidades. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classHabilidade_a802bbaa108d2cfc3bef378454b224f0c}{get\+Cooldown}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna o valor de cooldown da habilidade. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classHabilidade_a52b131266187e42e94c40cef9ee11555}{get\+Cooldown\+Atual}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Retorna o valor de cooldown atual da habilidade. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classHabilidade_a48fa748616b683a54c78600f69d9fef3}{iniciar\+Cooldown}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Atribui o cooldown ao cooldown atual. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classHabilidade_a3feeae9fb00ff6bd3658144f1ffd641f}{atualizar\+Cooldown}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Se o cooldown for maior que 0, ele o diminui. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classHabilidade_a893646a68bf25967a89a0035876be25c}{zerar\+Cooldown}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Zera o cooldown. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classHabilidade_ab1bf5831e8ee5364ed0c27a58764986b}{set\+Cooldown\+Atual}} (int valor)
-\item 
+\begin{DoxyCompactList}\small\item\em Atribui um valor ao cooldown atual. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classHabilidade_a4fd7e13420bc0909e701b1cb3a3983e4}{\texorpdfstring{$\sim$}{\string~}\+Habilidade}} ()
 \begin{DoxyCompactList}\small\item\em Destrutor do objeto habilidade Garante que não vaze memória de habilidades. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Membros Públicos herdados de \mbox{\hyperlink{classAcao}{Acao}}}
@@ -129,23 +129,51 @@ Destrutor do objeto habilidade Garante que não vaze memória de habilidades.
 \doxysubsubsection{\texorpdfstring{atualizarCooldown()}{atualizarCooldown()}}
 {\footnotesize\ttfamily void Habilidade\+::atualizar\+Cooldown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Se o cooldown for maior que 0, ele o diminui. 
+
 \Hypertarget{classHabilidade_a802bbaa108d2cfc3bef378454b224f0c}\label{classHabilidade_a802bbaa108d2cfc3bef378454b224f0c} 
 \index{Habilidade@{Habilidade}!getCooldown@{getCooldown}}
 \index{getCooldown@{getCooldown}!Habilidade@{Habilidade}}
 \doxysubsubsection{\texorpdfstring{getCooldown()}{getCooldown()}}
 {\footnotesize\ttfamily int Habilidade\+::get\+Cooldown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\Hypertarget{classHabilidade_a52b131266187e42e94c40cef9ee11555}\label{classHabilidade_a52b131266187e42e94c40cef9ee11555} 
+
+
+Retorna o valor de cooldown da habilidade. 
+
+
+\begin{DoxyItemize}
+\item Getter para retornar o valor de cooldown \begin{DoxyReturn}{Retorna}
+Retorna uma número inteiro que corresponde ao valor do cooldown 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\Hypertarget{classHabilidade_a52b131266187e42e94c40cef9ee11555}\label{classHabilidade_a52b131266187e42e94c40cef9ee11555} 
 \index{Habilidade@{Habilidade}!getCooldownAtual@{getCooldownAtual}}
 \index{getCooldownAtual@{getCooldownAtual}!Habilidade@{Habilidade}}
 \doxysubsubsection{\texorpdfstring{getCooldownAtual()}{getCooldownAtual()}}
 {\footnotesize\ttfamily int Habilidade\+::get\+Cooldown\+Atual (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\Hypertarget{classHabilidade_a48fa748616b683a54c78600f69d9fef3}\label{classHabilidade_a48fa748616b683a54c78600f69d9fef3} 
+
+
+Retorna o valor de cooldown atual da habilidade. 
+
+
+\begin{DoxyItemize}
+\item Getter para retornar o valor de cooldown atual \begin{DoxyReturn}{Retorna}
+Retorna uma número inteiro que corresponde ao valor do cooldown atual 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\Hypertarget{classHabilidade_a48fa748616b683a54c78600f69d9fef3}\label{classHabilidade_a48fa748616b683a54c78600f69d9fef3} 
 \index{Habilidade@{Habilidade}!iniciarCooldown@{iniciarCooldown}}
 \index{iniciarCooldown@{iniciarCooldown}!Habilidade@{Habilidade}}
 \doxysubsubsection{\texorpdfstring{iniciarCooldown()}{iniciarCooldown()}}
 {\footnotesize\ttfamily void Habilidade\+::iniciar\+Cooldown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Atribui o cooldown ao cooldown atual. 
 
 \Hypertarget{classHabilidade_aa5226c2dc9ac5f6d14b65700cbdb817a}\label{classHabilidade_aa5226c2dc9ac5f6d14b65700cbdb817a} 
 \index{Habilidade@{Habilidade}!operator==@{operator==}}
@@ -169,11 +197,24 @@ Retorna true se sao iguais e false se sao diferentes
 \doxysubsubsection{\texorpdfstring{setCooldownAtual()}{setCooldownAtual()}}
 {\footnotesize\ttfamily void Habilidade\+::set\+Cooldown\+Atual (\begin{DoxyParamCaption}\item[{int}]{valor }\end{DoxyParamCaption})}
 
+
+
+Atribui um valor ao cooldown atual. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & O valor que será atribuído ao cooldown atual \\
+\hline
+\end{DoxyParams}
 \Hypertarget{classHabilidade_a893646a68bf25967a89a0035876be25c}\label{classHabilidade_a893646a68bf25967a89a0035876be25c} 
 \index{Habilidade@{Habilidade}!zerarCooldown@{zerarCooldown}}
 \index{zerarCooldown@{zerarCooldown}!Habilidade@{Habilidade}}
 \doxysubsubsection{\texorpdfstring{zerarCooldown()}{zerarCooldown()}}
 {\footnotesize\ttfamily void Habilidade\+::zerar\+Cooldown (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Zera o cooldown. 
 
 
 

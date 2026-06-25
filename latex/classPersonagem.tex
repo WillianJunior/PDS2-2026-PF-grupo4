@@ -27,9 +27,9 @@ Diagrama de colaboração para Personagem\+:
 \mbox{\hyperlink{classItem}{Item}} \mbox{\hyperlink{classPersonagem_ad1ca55afcab097bc0ea8ce90606d9efc}{escolher\+Item}} (int posicao\+Item)
 \begin{DoxyCompactList}\small\item\em Retorna um \doxylink{classItem}{Item} a partir do inventario\+Item e consome. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classPersonagem_adc877432714903519943ffa5aca21dd9}{receber\+Habilidade}} (\mbox{\hyperlink{classHabilidade}{Habilidade}} habilidade)
-\item 
+\begin{DoxyCompactList}\small\item\em \doxylink{classPersonagem}{Personagem} recebe uma nova habilidade. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classPersonagem_aeba92e80e2c4ef5d4bad1bcd9f859384}{receber\+Item}} (\mbox{\hyperlink{classItem}{Item}} item)
-\item 
+\begin{DoxyCompactList}\small\item\em \doxylink{classPersonagem}{Personagem} recebe um novo item. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classPersonagem_a30d115691def369c93d14834a7176590}{alterar\+Vida}} (int valor) override
 \begin{DoxyCompactList}\small\item\em Alterar a vida atual do personagem para mais ou para menos. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{classPersonagem_afb52502006acf871aa5ebdcbca06a86c}{is\+Morto}} () override
@@ -50,7 +50,7 @@ void \mbox{\hyperlink{classEntidade_aca0dccceffe0b3e458cd8d5e4ebc60fb}{receber\+
 void \mbox{\hyperlink{classEntidade_adfaf551744091e864c5b1acc96ff9c51}{processar\+Efeitos\+Ativos}} ()
 \begin{DoxyCompactList}\small\item\em Itera sobre os efeitos ativos aplicando eles e diminuindo a duracao deles. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classEntidade_ac50d14a5d9632b45a87d2804e90ace72}{limpar\+Efeitos}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Limpa os efeitos. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classEntidade_a273d26d69ff950d53fa9eaaff38bc163}{get\+Vida}} ()
 \begin{DoxyCompactList}\small\item\em Retorna a vida atual da entidade. \end{DoxyCompactList}\item 
 std\+::string \mbox{\hyperlink{classEntidade_a838b5a83d932111378efcb9e062a56a3}{get\+Nome}} ()
@@ -232,13 +232,37 @@ Implementa \mbox{\hyperlink{classEntidade_ade89008844bd05a9becdbaf0c9c24506}{Ent
 \doxysubsubsection{\texorpdfstring{receberHabilidade()}{receberHabilidade()}}
 {\footnotesize\ttfamily void Personagem\+::receber\+Habilidade (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classHabilidade}{Habilidade}}}]{habilidade }\end{DoxyParamCaption})}
 
-\Hypertarget{classPersonagem_aeba92e80e2c4ef5d4bad1bcd9f859384}\label{classPersonagem_aeba92e80e2c4ef5d4bad1bcd9f859384} 
+
+
+\doxylink{classPersonagem}{Personagem} recebe uma nova habilidade. 
+
+
+\begin{DoxyItemize}
+\item Há um limite de habilidades no inventario 
+\begin{DoxyParams}{Parâmetros}
+{\em habilidade} & Nova habilidade que será adicionada ao inventário de habilidades do personagem. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}\Hypertarget{classPersonagem_aeba92e80e2c4ef5d4bad1bcd9f859384}\label{classPersonagem_aeba92e80e2c4ef5d4bad1bcd9f859384} 
 \index{Personagem@{Personagem}!receberItem@{receberItem}}
 \index{receberItem@{receberItem}!Personagem@{Personagem}}
 \doxysubsubsection{\texorpdfstring{receberItem()}{receberItem()}}
 {\footnotesize\ttfamily void Personagem\+::receber\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classItem}{Item}}}]{item }\end{DoxyParamCaption})}
 
 
+
+\doxylink{classPersonagem}{Personagem} recebe um novo item. 
+
+
+\begin{DoxyItemize}
+\item Há um limite de itens no inventario 
+\begin{DoxyParams}{Parâmetros}
+{\em item} & Novo item que será adicionado ao inventário de itens do personagem. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
 
 A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
 \item 

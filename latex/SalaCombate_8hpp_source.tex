@@ -14,29 +14,33 @@
 \DoxyCodeLine{00010\ }
 \DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSalaCombate}{SalaCombate}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classSalaBase}{SalaBase}}\ \{}
 \DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ std::string\ \_historia;}
-\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::unique\_ptr<Inimigo>\ \_inimigo;}
-\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ std::string\ \_textoVitoria;}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ std::string\ \_textoDerrota;}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_idInimigo;}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ std::string\ \_historia;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ std::unique\_ptr<Inimigo>\ \_inimigo;}
 \DoxyCodeLine{00023\ }
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSalaCombate}{SalaCombate}}(std::string\ nome,\ std::string\ historia,\ std::string\ textoVitoria,\ std::string\ textoDerrota,\ std::string\ nomePersonagem,\ \textcolor{keywordtype}{int}\ idInimigo);}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSalaCombate_a79f0a1db3e17f3a9633c446f641e327b}{encerrarSala}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00036\ }
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classSalaCombate_a427c6a3f3ff27ed7abb8ff9239302203}{executarSala}}(\mbox{\hyperlink{classPersonagem}{Personagem}}\&\ \mbox{\hyperlink{classPersonagem}{Personagem}})\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSalaCombate_a5dd4fce1fa15c75b49abfe84d84da8c5}{mostrarSala}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classSalaCombate_a6acd5a705e5d04f1fec64d3ddf097001}{getTipo}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00053\ }
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classSalaCombate_aa0d0185a69b915e037452cac7a9c0d17}{getId}}()\ \textcolor{keyword}{override};}
-\DoxyCodeLine{00058\ }
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ std::unique\_ptr<Inimigo>\ \mbox{\hyperlink{classSalaCombate_a773cf7fd8b12d0b4eb8540b211e98e43}{alocarInimigo}}(std::string\ nomePersonagem,\ \textcolor{keywordtype}{int}\ idInimigo);}
-\DoxyCodeLine{00064\ \};}
-\DoxyCodeLine{00065\ }
-\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ std::string\ \_textoVitoria;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ std::string\ \_textoDerrota;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \_idInimigo;}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSalaCombate}{SalaCombate}}(std::string\ nome,\ std::string\ historia,\ std::string\ textoVitoria,\ std::string\ textoDerrota,\ std::string\ nomePersonagem,\ \textcolor{keywordtype}{int}\ idInimigo);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSalaCombate_a79f0a1db3e17f3a9633c446f641e327b}{encerrarSala}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classSalaCombate_a427c6a3f3ff27ed7abb8ff9239302203}{executarSala}}(\mbox{\hyperlink{classPersonagem}{Personagem}}\&\ \mbox{\hyperlink{classPersonagem}{Personagem}})\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classSalaCombate_a5dd4fce1fa15c75b49abfe84d84da8c5}{mostrarSala}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{classSalaCombate_a6acd5a705e5d04f1fec64d3ddf097001}{getTipo}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classSalaCombate_aa0d0185a69b915e037452cac7a9c0d17}{getId}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ std::unique\_ptr<Inimigo>\ \mbox{\hyperlink{classSalaCombate_a773cf7fd8b12d0b4eb8540b211e98e43}{alocarInimigo}}(std::string\ nomePersonagem,\ \textcolor{keywordtype}{int}\ idInimigo);}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}
