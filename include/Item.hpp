@@ -8,6 +8,7 @@
  */
 class Item : public Acao {
     private:
+    /** @brief Inteiro que armazena usos restantes. */
         int _usosRestantes;
     public:
     /**
@@ -21,8 +22,14 @@ class Item : public Acao {
      */
         Item(std::string nome, bool tipo, int valor, Efeito efeito, bool alvo, int usos);
 
-
+    /** @brief Se os usos restantes for maior que 0, ele o diminui */
         void atualizarUsos();
+
+    /**
+     * @brief Retorna o valor de usos restantes do item
+     * * Getter para retornar o valor de usos restantes do item
+     * @return Retorna uma número inteiro que corresponde ao valor de usos restantes do item
+     */
         int getUsosRestantes();
 
     /**

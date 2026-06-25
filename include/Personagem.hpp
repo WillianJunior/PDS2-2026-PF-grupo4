@@ -43,7 +43,18 @@ class Personagem : public Entidade{
      */
         Item escolherItem(int posicaoItem);
 
+    /**
+     * @brief Personagem recebe uma nova habilidade
+     * * Há um limite de habilidades no inventario
+     * @param habilidade Nova habilidade que será adicionada ao inventário de habilidades do personagem.
+     */
         void receberHabilidade(Habilidade habilidade);
+
+    /**
+     * @brief Personagem recebe um novo item
+     * * Há um limite de itens no inventario
+     * @param item Novo item que será adicionado ao inventário de itens do personagem.
+     */
         void receberItem(Item item);
 
     /**

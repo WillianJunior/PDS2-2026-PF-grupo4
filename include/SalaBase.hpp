@@ -13,8 +13,7 @@ class Personagem;
  */
 class SalaBase {
     protected:
-        /** * @brief Nome ou identificador da sala. 
-         */
+        /** @brief Nome ou identificador da sala. */
         std::string _nome;
 
         /**

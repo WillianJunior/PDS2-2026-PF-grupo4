@@ -22,7 +22,6 @@ class Inimigo : public Entidade{
      * @param vida Quantidade de vida que o inimigo tem
      * @param habilidade Quais são as habilidades do inimigo
      * @param nome Qual é o nome do inimigo
-     * @param tipo Se o inimigo é um boss ou um inimigo menor
      */
         Inimigo(int vida, InventarioHabilidade habilidade, std::string nome);
 

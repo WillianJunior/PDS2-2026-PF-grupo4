@@ -22,8 +22,11 @@ class SalaEscolha : public SalaBase{
     private:
     /** @brief Armazena a historia com a animacao da sala */
         Utils::Animacao _animacao;
+
+    /** @brief Vetor com as opções */
         std::vector<OpcaoEscolha> _opcoes;
 
+    /** @brief Inteiro que corresponde a escolha */
         int _idEscolha;
     
     public:

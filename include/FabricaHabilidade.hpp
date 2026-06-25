@@ -5,7 +5,11 @@
 #include <memory>
 
 namespace FabricaHabilidade{
-    Habilidade criarHabilidade(std::string nomeDaHabilidade);
+    /**
+     * @brief Cria a habilidade que realmente será utilizada no jogo baseado no txt das habilidades
+     * @param nomeDaHabilidade O nome da habilidade que deve ser criada
+     */
+        Habilidade criarHabilidade(std::string nomeDaHabilidade);
 }
 
 #endif

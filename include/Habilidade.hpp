@@ -9,8 +9,11 @@
  */
 class Habilidade : public Acao {
     private:
+    /** @brief Tempo de cooldown */
         int _cooldown;
+    /** @brief Tempo de cooldownAtual */
         int _cooldownAtual;
+
     public:
     /**
      * @brief Construtor da habilidade que herda de Acao
@@ -30,11 +33,33 @@ class Habilidade : public Acao {
      */
         bool operator==(const Habilidade& outro) const;
 
+    /**
+     * @brief Retorna o valor de cooldown da habilidade
+     * * Getter para retornar o valor de cooldown
+     * @return Retorna uma número inteiro que corresponde ao valor do cooldown
+     */
         int getCooldown();
+
+    /**
+     * @brief Retorna o valor de cooldown atual da habilidade
+     * * Getter para retornar o valor de cooldown atual
+     * @return Retorna uma número inteiro que corresponde ao valor do cooldown atual
+     */
         int getCooldownAtual();
+
+    /** @brief Atribui o cooldown ao cooldown atual */
         void iniciarCooldown();
+
+    /** @brief Se o cooldown for maior que 0, ele o diminui */
         void atualizarCooldown();
+
+    /** @brief Zera o cooldown */
         void zerarCooldown();
+
+    /**
+     * @brief Atribui um valor ao cooldown atual
+     * @param valor O valor que será atribuído ao cooldown atual
+     */
         void setCooldownAtual(int valor);
 
     /** 

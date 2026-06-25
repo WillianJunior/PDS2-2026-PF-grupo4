@@ -43,6 +43,9 @@ class InventarioHabilidade : public Inventario<Habilidade> {
      */
         Habilidade& getHabilidade(int posicao);
 
+    /**
+     * @brief Atualiza os cooldowns das habilidades.
+     */
         void atualizarCooldowns();
 
     /**

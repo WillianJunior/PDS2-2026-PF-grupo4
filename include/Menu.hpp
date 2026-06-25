@@ -14,6 +14,7 @@
  */
 class Menu {
     private:
+    /** @brief Ponteiro para a escolha inicial de personagem. */
         std::unique_ptr<Personagem> escolherPersonagemInicial();
     
     public:

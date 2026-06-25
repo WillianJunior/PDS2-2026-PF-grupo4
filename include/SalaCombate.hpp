@@ -15,19 +15,33 @@
  */
 class SalaCombate : public SalaBase {
     private:
+        /** @brief String que contem a historia da sala. */
         std::string _historia;
-        std::unique_ptr<Inimigo> _inimigo;
-        std::string _textoVitoria;
-        std::string _textoDerrota;
-        int _idInimigo;
 
+        /** @brief Ponteiro que contem o inimigo. */
+        std::unique_ptr<Inimigo> _inimigo;
+
+        /** @brief String que contem o texto de vitória da sala. */
+        std::string _textoVitoria;
+
+        /** @brief String que contem o texto de derrota da sala. */
+        std::string _textoDerrota;
+
+        /** @brief Inteiro que armazena o id do inimigo. */
+        int _idInimigo;
 
     public:
         /**
          * @brief Construtor da classe SalaCombate.
          * @param nome O nome ou identificador da sala de combate.
+         * @param historia A história da sala apresentada ao jogador.
+         * @param textoVitoria O texto que aparece para o jogador caso ele vença o combate na sala.
+         * @param textoVitoria O texto que aparece para o jogador caso ele perca o combate na sala.
+         * @param nomePersonagem O nome do personagem.
+         * @param idInimigo O id do inimigo da sala.
          */
         SalaCombate(std::string nome, std::string historia, std::string textoVitoria, std::string textoDerrota, std::string nomePersonagem, int idInimigo);
+        
         /**
          * @brief Finaliza os eventos da sala de combate.
          * Sobrescreve o método da classe mãe.
@@ -59,6 +73,8 @@ class SalaCombate : public SalaBase {
 
         /**
          * @brief Instancia ou prepara o(s) inimigo(s) que o jogador enfrentará nesta sala.
+         * @param nomePersonagem O nome do personagem.
+         * @param idInimigo O id do inimigo da sala.
          */
         std::unique_ptr<Inimigo> alocarInimigo(std::string nomePersonagem, int idInimigo);
 };

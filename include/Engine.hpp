@@ -19,7 +19,10 @@ class Engine {
         /** @brief Vector que irá guardar todas as salas da run */
         std::vector<std::unique_ptr<SalaBase>> _salasDoJogo;
 
-        /** @brief Irá gerar aleatoriamente a sequencias das salas da run */
+        /**
+        * @brief Irá gerar aleatoriamente a sequencias das salas da run
+        * @param nome O nome do personagem
+        */
         void prepararSalas(std::string nome);
 
         /** * @brief 

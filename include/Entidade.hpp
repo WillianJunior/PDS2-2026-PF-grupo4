@@ -31,7 +31,7 @@ class Entidade{
      * Aloca vida, nome e habilidades de entidade
      * @param vida Quantidade de vida que a entidade possui
      * @param nome Nome da entidade
-     * @param habilidades Inventário de habilidades da entidade
+     * @param inventarioHabilidade Inventário de habilidades da entidade
      */
         Entidade(int vida, std::string nome, InventarioHabilidade inventarioHabilidade);
 
@@ -69,6 +69,9 @@ class Entidade{
      */
         void processarEfeitosAtivos();
 
+    /**
+     * @brief Limpa os efeitos
+     */
         void limparEfeitos();
 
     /**
