@@ -84,8 +84,6 @@ int SalaCombate::executarSala(Personagem& personagem){
     std::cout << "========================================================\n";
     std::cout << "   BATALHA INICIADA: " << personagem.getNome() << " VS " << _inimigo->getNome() << "\n";
     std::cout << "========================================================\n";
-
-    double vidaBase = _inimigo->getVida();
     
     while (!personagem.isMorto() && !_inimigo->isMorto()) {
         
@@ -202,45 +200,7 @@ int SalaCombate::executarSala(Personagem& personagem){
 
         } else {
             std::cout << "\n=== VEZ DO INIMIGO ===" << std::endl;
-            //atualiza os cooldowns de todas as habilidades
-            _inimigo->getInventarioHabilidade().atualizarCooldowns();
-            //aplica todos os efeitos no inimigo
-            _inimigo->processarEfeitosAtivos();
-            if(_inimigo->isMorto()) break;
-
-            while(true){
-                int numHabilidades = _inimigo->getInventarioHabilidade().getTamanho();
-                int posicao = rand() % numHabilidades;
-                
-                Habilidade& habInimigo = _inimigo->escolherHabilidade(posicao);
-                
-                if(habInimigo.getCooldownAtual() > 0){
-                    continue; // Recarregando, repete o while para ele sortear outra
-                }
-
-                if(habInimigo.getAlvo()){
-                    if(_inimigo->getVida() < 0.5 * vidaBase){
-                        int impacto = habInimigo.calcularImpacto();
-                        habInimigo.iniciarCooldown(); // <--- Inicia o cooldown da cura!
-                        _inimigo->alterarVida(impacto);
-                        std::cout << "> " << _inimigo->getNome() << " recuperou " << std::abs(impacto) << " de vida!" << std::endl;
-                        break;
-                    }
-                    else{
-                        continue;
-                    }
-                }
-                else{
-                    int impacto = habInimigo.calcularImpacto();
-                    habInimigo.iniciarCooldown(); // <--- Inicia o cooldown do ataque!
-                    personagem.alterarVida(impacto);
-                    personagem.receberEfeito(habInimigo.getEfeito());
-                    Utils::coutDigitado(350) << "...\n[";
-                        Utils::esperar(350);
-                    std::cout << "> " << _inimigo->getNome() << " atacou e causou " << std::abs(impacto) << " de dano!" << std::endl;
-                    break;
-                }
-            }
+            _inimigo->combateInimigo(personagem);
         }
         turnoDoJogador = !turnoDoJogador;
     }

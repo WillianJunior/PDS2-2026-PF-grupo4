@@ -2,6 +2,7 @@
 #define INIMIGO_H
 
 #include "Entidade.hpp"
+#include "Personagem.hpp"
 #include <iostream>
 #include <string>
 
@@ -48,6 +49,8 @@ class Inimigo : public Entidade{
      * @return Retorna true se estiver morto (vida <= 0), e false caso contrário.
      */
         bool isMorto() override;
+
+        void combateInimigo(Personagem& personagem);
 
     /**
      * @brief Destrutor de inimigo
