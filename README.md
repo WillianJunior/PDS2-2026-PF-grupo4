@@ -26,19 +26,44 @@ A motivação para o tema deste projeto surgiu de um desafio real enfrentado pel
 Assim nasceu a ideia de um "meta-jogo". A narrativa acompanha cinco estudantes que estão criando um jogo e enfrentam diversos empecilhos para conseguir terminá-lo. Cada membro do nosso grupo atua como uma "classe" de personagem selecionável no início da jornada. O jogador assume o papel de um desses estudantes e deve avançar por diversas salas de combate. Os inimigos enfrentados são, na verdade, metáforas para os desafios de desenvolvimento que tentam nos impedir de entregar o projeto final. Para auxiliar na progressão, o jogo também conta com salas interativas voltadas para a troca de itens especiais e gerenciamento de inventário, unindo nossa sátira criativa a todos os requisitos técnicos exigidos para o projeto do motor RPG.
 
 ## Arquitetura e Padrões de Projeto
-Máquina de Estados: O fluxo principal (Game Loop) orquestra a transição entre Salas de Combate e Salas de Escolha de forma desacoplada.
-Factory Method: Instanciação dinâmica de inimigos, itens e salas através de classes fábricas (FabricaSC, FabricaSE, etc.).
-Gestão de Memória Utilização exclusiva de smart pointers (std::unique_ptr e std::shared_ptr) para mitigar vazamentos de memória.
+O projeto foi arquitetado sob os pilares fundamentais da **Programação Orientada a Objetos (POO)** e faz uso intensivo de padrões de projeto clássicos para garantir baixo acoplamento, alta coesão e facilidade de manutenção e expansão:
+
+### 1. Pilares de POO Aplicados
+- **Herança e Polimorfismo de Entidades:** A classe abstrata `Entidade` define o contrato base (vida, nome, recebimento de dano/efeitos). Dela derivam `Personagem` (que adiciona inventários e mecânicas de recarga) e `Inimigo` (que implementa a mecânica de combate por aleatoriedade com alguns filtros).
+- **Herança e Polimorfismo de Salas:** O game loop manipula ponteiros genéricos para a classe abstrata `SalaBase`. As especializações `SalaCombate` e `SalaEscolha` sobrescrevem os métodos virtuais `mostrarSala()` e `executarSala()`, permitindo que a engine transicione entre diferentes modos de jogo sem conhecer os detalhes internos de cada sala.
+- **Encapsulamento e Templates:** O gerenciamento de ações é construído através de um template genérico de classe base (`Inventario<T>`), que encapsula vetores seguros da STL. As classes `InventarioHabilidade` e `InventarioItem` especializam esse comportamento para lidar com regras exclusivas de *cooldowns* e consumo de quantidade, respectivamente.
+
+### 2. Padrões de Projeto (*Design Patterns*)
+- **Factory Method (Instanciação Dinâmica Desacoplada):**  
+  A criação de objetos complexos é totalmente delegada a classes fábricas estáticas especializadas:
+  - `FabricaSC` e `FabricaSE`: Montam e entregam instâncias prontas de `SalaCombate` e `SalaEscolha`, já injetando descrições narrativas, artes ASCII e opções de interatividade baseadas em IDs.
+  - `FabricaInimigo`, `FabricaHabilidade` e `FabricaItem`: Centralizam atributos, falas de batalha e multiplicadores de impacto.
+- **State Machine / Game Loop (Máquina de Estados Orquestrada):**  
+  A classe `Engine` atua como o orquestrador principal. Ela pré-carrega a sequência da run em um vetor polimórfico (`std::vector<std::unique_ptr<SalaBase>>`). Durante o ciclo de jogo, a sala atual assume o controle de fluxo atuando como um estado autônomo e, ao finalizar, devolve o controle para a engine avançar o ID da sala.
+- **Command / Callback Pattern (Eventos Narrativos):**  
+  Na `SalaEscolha`, as opções selecionáveis encapsulam suas consequências através do wrapper `std::function<void(Personagem*)>`. Isso permite injetar lambdas e comportamentos arbitrários em tempo de instanciação na fábrica, evitando a criação de infinitas sub-classes para cada evento específico.
+- **RAII e Gestão de Recursos Utilitários:**  
+  A classe `Utils` manipula chamadas de sistema POSIX (`termios` e `fcntl`) para desligar o eco do terminal e permitir leituras assíncronas não-bloqueantes durante animações de digitação. O paradigma RAII garante que as flags do terminal do usuário sejam rigorosamente restauradas ao estado original ao fim da execução.
+- **Persistência Centralizada:**  
+  A classe `SaveManager` garante o salvamento em disco (`save.txt`), passando parâmetros como os da sala e o estado de vida e inventários do personagem, permitindo resgatar o progresso exato da sessão.
+
+
+### 3. Gestão de Memória Moderna
+O projeto **não utiliza gerenciamento manual de memória**. A posse dos objetos de salas e entidades é gerida estritamente por smart pointers de escopo único (**`std::unique_ptr`**) com transferências explícitas de propriedade via `std::move`. Isso anula riscos de vazamentos de memória (*memory leaks*) e ponteiros pendentes (*dangling pointers*).
 
 ## Estrutura de Diretórios
-O repositório segue uma organização modular padrão:
-├── src/        # Arquivos de implementação (.cpp)
+O repositório segue uma organização modular:
+├── src/        # Código-fonte (.cpp) com a implementação interna das mecânicas
 ├── include/    # Contratos e cabeçalhos (.hpp)
-├── data/       # Arquivos de texto (.txt) contendo status, histórias e ASCII arts
-├── tests/      # Casos de teste unitário
-├── docs/       # Arquivos de configuração e saída do Doxygen
-├── Makefile    # Automação de compilação
-└── README.md   # Documentação principal
+├── data/       # Arquivos de texto (.txt) contendo artes ASCII e status de entidades
+├── design/     # Documentação de modelagem
+├── tests/      # Casos de teste unitário automatizados
+├── build/      # Diretório temporário gerado para armazenar relatórios de teste
+├── html/       # Documentação técnica gerada automaticamente pelo Doxygen (formato Web)
+├── latex/      # Documentação técnica gerada automaticamente pelo Doxygen (formato LaTeX)
+├── Doxyfile    # Arquivo de configuração de geração de documentação do Doxygen
+├── Makefile    # Automação de compilação, execução e testes
+└── README.md   # Documentação principal do projeto
 
 ## Compilação e Execução
 O projeto conta com um Makefile configurado para automatizar os processos de build no Linux. 
