@@ -65,7 +65,8 @@ namespace Utils {
 
 
     void limparTela() {
-        system("clear"); 
+        if(!modoTeste)
+            system("clear"); 
     }
 
     void esperar(int milissegundos){
