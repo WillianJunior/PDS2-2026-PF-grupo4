@@ -11,7 +11,7 @@ TEST_CASE("Teste 01: Testando construcao de item e getters"){
     bool tipoTeste = true;
     int valorTeste = 50;
     Efeito efeitoTeste = Efeito("Envenenado", 10, 3);
-    Item itemTeste(nomeTeste, tipoTeste, valorTeste, efeitoTeste, alvoTeste);
+    Item itemTeste(nomeTeste, tipoTeste, valorTeste, efeitoTeste, alvoTeste, 1);
 
     CHECK(itemTeste.getNome() == nomeTeste);
     CHECK(itemTeste.getValor() == valorTeste);
@@ -21,7 +21,7 @@ TEST_CASE("Teste 01: Testando construcao de item e getters"){
 }
 
 TEST_CASE("Teste 02: Testando a funcao calcularImpacto em Item"){
-    Item itemTeste("Pocao", true, 10, Efeito("Regeneracao", 10, 2), true);
+    Item itemTeste("Pocao", true, 10, Efeito("Regeneracao", 10, 2), true, 1);
     int teste_impacto = itemTeste.calcularImpacto();
     
     //Como o _tipo do item eh true, ou seja cura (podemos mudar isso dps), a logica tem que retornar positivo
@@ -29,7 +29,7 @@ TEST_CASE("Teste 02: Testando a funcao calcularImpacto em Item"){
 }
 
 TEST_CASE("Teste 03: Testando a funcao mostrarDescricao em Item"){
-    Item itemTeste("Pocao", true, 10, Efeito("Regeneracao", 10, 2), true);
+    Item itemTeste("Pocao", true, 10, Efeito("Regeneracao", 10, 2), true, 1);
     
     itemTeste.mostrarDescricao();
     std::stringstream bufferSaida;

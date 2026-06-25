@@ -6,7 +6,7 @@
 
 TEST_CASE("Teste 01: Adiciona um item ao inventario e o exibe"){
     Efeito efeitoTeste = Efeito("EfeitoTeste", 15, 3);
-    Item itemTeste = Item("ItemTeste", false, 15, efeitoTeste, false);
+    Item itemTeste = Item("ItemTeste", false, 15, efeitoTeste, false, 1);
 
     InventarioItem inventarioItem;
 
@@ -30,10 +30,10 @@ TEST_CASE("Teste 02: Realiza a troca de um item por outro e exibe o inventario")
     Efeito efeito2 = Efeito("Efeito2", 3, 2);
     Efeito efeito3 = Efeito("Efeito3", 2, 3);
     Efeito efeito4 = Efeito("Efeito4", 1, 4);
-    Item item1 = Item("Item1", true, 4, efeito1, true);
-    Item item2 = Item("Item2", true, 3, efeito2, false);
-    Item item3 = Item("Item3", false, 2, efeito3, true);
-    Item item4 = Item("Item4", false, 1, efeito4, false);
+    Item item1 = Item("Item1", true, 4, efeito1, true, 1);
+    Item item2 = Item("Item2", true, 3, efeito2, false, 1);
+    Item item3 = Item("Item3", false, 2, efeito3, true, 1);
+    Item item4 = Item("Item4", false, 1, efeito4, false, 1);
 
     InventarioItem inventarioItem;
 
@@ -58,7 +58,7 @@ TEST_CASE("Teste 02: Realiza a troca de um item por outro e exibe o inventario")
 
 TEST_CASE("Teste 03: Adiciona um item ao inventario e veirifca o tamanho dele"){
     Efeito efeitoTeste = Efeito("EfeitoTeste", 15, 3);
-    Item itemTeste = Item("ItemTeste", false, 15, efeitoTeste, false);
+    Item itemTeste = Item("ItemTeste", false, 15, efeitoTeste, false, 1);
 
     InventarioItem inventarioItem;
 
@@ -70,8 +70,8 @@ TEST_CASE("Teste 03: Adiciona um item ao inventario e veirifca o tamanho dele"){
 TEST_CASE("Teste 04: Cria um inventario de itens de teste e busca um item especifico pela posicao"){
     Efeito efeito1 = Efeito("Efeito1", 4, 1);
     Efeito efeito2 = Efeito("Efeito2", 3, 2);
-    Item item1 = Item("Item1", true, 4, efeito1, true);
-    Item item2 = Item("Item2", true, 3, efeito2, false);
+    Item item1 = Item("Item1", true, 4, efeito1, true, 1);
+    Item item2 = Item("Item2", true, 3, efeito2, false, 1);
 
     InventarioItem inventarioItem;
 
@@ -86,10 +86,10 @@ TEST_CASE("Teste 05: Cria dois inventarios de itens iguais e verifica se sao igu
     Efeito efeito2 = Efeito("Efeito2", 3, 2);
     Efeito efeito3 = Efeito("Efeito3", 2, 3);
     Efeito efeito4 = Efeito("Efeito4", 1, 4);
-    Item item1 = Item("Item1", true, 4, efeito1, true);
-    Item item2 = Item("Item2", true, 3, efeito2, false);
-    Item item3 = Item("Item3", false, 2, efeito3, true);
-    Item item4 = Item("Item4", false, 1, efeito4, false);
+    Item item1 = Item("Item1", true, 4, efeito1, true, 1);
+    Item item2 = Item("Item2", true, 3, efeito2, false, 1);
+    Item item3 = Item("Item3", false, 2, efeito3, true, 1);
+    Item item4 = Item("Item4", false, 1, efeito4, false, 1);
 
     InventarioItem inventarioItem1;
     InventarioItem inventarioItem2;
@@ -111,9 +111,9 @@ TEST_CASE("Teste 06: Cria um inventario de itens de teste, remove uma acao e ver
     Efeito efeito1 = Efeito("Efeito1", 4, 1);
     Efeito efeito2 = Efeito("Efeito2", 3, 2);
     Efeito efeito3 = Efeito("Efeito3", 2, 3);
-    Item item1 = Item("Item1", true, 4, efeito1, true);
-    Item item2 = Item("Item2", true, 3, efeito2, false);
-    Item item3 = Item("Item3", false, 2, efeito3, true);
+    Item item1 = Item("Item1", true, 4, efeito1, true, 1);
+    Item item2 = Item("Item2", true, 3, efeito2, false, 1);
+    Item item3 = Item("Item3", false, 2, efeito3, true, 1);
 
     InventarioItem inventarioItem;
 

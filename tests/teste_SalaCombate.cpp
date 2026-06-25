@@ -18,7 +18,7 @@ Personagem criarPersonagemParaTeste(int vidaInicial, int poderDeAtaque) {
   
     InventarioItem invItem; 
     // Adiciona um item de cura no indice 0
-    Item pocao_de_cura_vazia("Pocao Teste", true, 0, semEfeito, true);
+    Item pocao_de_cura_vazia("Pocao Teste", true, 0, semEfeito, true, 1);
     invItem.novaAcao(pocao_de_cura_vazia);
     
     return Personagem(vidaInicial, invHab, "Estudante Tester", invItem);

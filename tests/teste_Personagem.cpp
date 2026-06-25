@@ -25,8 +25,8 @@ TEST_CASE("Teste 02: Escolha de Habilidade dentro do inventario"){
 TEST_CASE("Teste 03: Escolha de Item dentro do inventario"){
     InventarioItem inventarioItem;
     Efeito efeitoTeste("EfeitoTeste", 10, 10);
-    Item itemTeste1("ItemTeste1", 1, 10, efeitoTeste, 1);
-    Item itemTeste2("ItemTeste2", 1, 20, efeitoTeste, 1);
+    Item itemTeste1("ItemTeste1", 1, 10, efeitoTeste, 1, 1);
+    Item itemTeste2("ItemTeste2", 1, 20, efeitoTeste, 1, 1);
     inventarioItem.novaAcao(itemTeste1);
     inventarioItem.novaAcao(itemTeste2);
     Personagem nicole(20, InventarioHabilidade(), "Vaz", inventarioItem);
