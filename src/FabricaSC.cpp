@@ -68,41 +68,41 @@ if (nome == "Maycon") {
                 return std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, intro, vit, der, nome, idInimigo));
             }
             else if (idInimigo == 5) {
-                std::string intro = "O temível Chefe da Escala 6x1 percebeu que você está tentando estudar C++ durante o expediente.\nEle exige que você pare imediatamente e vá organizar o estoque. Derrote-o para garantir seu tempo de estudo!";
-                std::string vit = "Você provou seu valor, conseguiu uma folga e agora tem tempo para finalizar o motor RPG.";
-                std::string der = "Você foi engolido pela rotina corporativa abusiva. Adeus, projeto final.";
-                return std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, intro, vit, der, nome, idInimigo));
-            }
-        }
-        else if (nome == "Isaque") {
-            if (idInimigo == 1) {
                 std::string intro = "Você foi surpreendido pelo seu grande amigo Isaque, mas agora ele está possuído, não consegue parar de contar historias sobre suas ex namoradas.\nÉ melhor derrotá-lo pois ele não irá te deixar em paz nunca.";
                 std::string vit = "Você venceu Isaque, conseguiu desmaiá-lo para poder codar em paz.";
                 std::string der = "Você foi derrotado, ele não vai te deixar concentrar nunca mais.";
                 return std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, intro, vit, der, nome, idInimigo));
             }
-            else if (idInimigo == 2) {
+        }
+        else if (nome == "Isaque") {
+            if (idInimigo == 1) {
                 std::string intro = "O seu inimigo mortal acaba de cruzar seu caminho.\nMunido de dopamina barata e scroll infinito, o maldito Reels não vai te deixar terminar o jogo.\nDerrote-o e mande todos os videos de sabonete sendo cortados para o inferno de onde eles vieram.";
                 std::string vit = "Você derrotou o Reels, agora pode ter sua atenção de volta para programar.";
                 std::string der = "Nãoo, você foi vencido, está completamente preso e não pode mais sair do Scroll infinito.";
                 return std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, intro, vit, der, nome, idInimigo));
             }
-            else if (idInimigo == 3) {
+            else if (idInimigo == 2) {
                 std::string intro = "Você estava andando de forma muito suspeita, agora precisa derrotar a policia para poder continuar programando.\nSe não derrotá-lo ele vai te incriminar e encher sua mochila de DVDs piratas.";
                 std::string vit = "Você venceu a policia, pode seguir sua vida e terminar o jogo.";
                 std::string der = "Foi derrotado, a policia te incriminou e você puxou 30 anos de cadeia.";
                 return std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, intro, vit, der, nome, idInimigo));
             }
-            else if (idInimigo == 4) {
+            else if (idInimigo == 3) {
                 std::string intro = "Você se deparou com seu inimigo mortal, a fome te impede de fazer qualquer coisa, ela não deixa você pensar em mais nada.\nÉ completamente impossível programar com fome!!!";
                 std::string vit = "Você venceu a fome, pode seguir programando em paz.";
                 std::string der = "Você foi vencido pela fome eterna, não há comida no mundo que tape esse buraco no estômago.";
                 return std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, intro, vit, der, nome, idInimigo));
             }
-            else if (idInimigo == 5) {
+            else if (idInimigo == 4) {
                 std::string intro = "Um dos piores inimigos existentes cruzam seu caminho, ele está totalmente tomado de crueldade e sadismo.\nTung Tung Sahur quer te destruir completamente.";
                 std::string vit = "Você venceu Tung Tung Sahur esta livre para continuar codando.";
                 std::string der = "Voce perdeu, Tung Tung Sahur roubou sua alma.";
+                return std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, intro, vit, der, nome, idInimigo));
+            }
+            else if (idInimigo == 5) {
+                std::string intro = "Quando você menos esperava surge o inimigo a sua frente com seu skate maligno\nEnfrente Kick Butowski para continuar programando";
+                std::string vit = "Você venceu Kick Butowski e não precisa praticar manobras mortais";
+                std::string der = "Voce perdeu, Kick te obriga a praticar uma manobra mortal e você não pode mais codar";
                 return std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, intro, vit, der, nome, idInimigo));
             }
         }
