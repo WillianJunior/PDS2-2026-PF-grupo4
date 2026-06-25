@@ -1,13 +1,13 @@
 #include "SalaCombate.hpp"
+#include "Excecoes.hpp"
+#include "Utils.hpp"
+#include "FabricaInimigo.hpp"
+#include "FabricaItem.hpp"
 #include <iostream>
 #include <limits>
 #include <stdexcept>
 #include <random>
 #include <algorithm>
-#include "Excecoes.hpp"
-#include "Utils.hpp"
-#include "FabricaInimigo.hpp"
-#include "FabricaItem.hpp"
 
 SalaCombate::SalaCombate(std::string nome, std::string historia, std::string textoVitoria, std::string textoDerrota, std::string nomePersonagem, int andar)
     : SalaBase(nome), _historia(historia), _inimigo(alocarInimigo(nomePersonagem, andar)), _textoVitoria(textoVitoria), _textoDerrota(textoDerrota), _idInimigo(andar) {

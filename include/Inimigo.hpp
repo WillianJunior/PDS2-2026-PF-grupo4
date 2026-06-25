@@ -50,6 +50,11 @@ class Inimigo : public Entidade{
      */
         bool isMorto() override;
 
+    /**
+     * @brief Realiza o combate do inimigo
+     * * Possui um sistema de alaetoriedade para escolher as ações, mas filtra para tomar decisões um pouco mais lógicas.
+     * @param personagem Recebe o personagem que está combatendo o inimigo.
+     */
         void combateInimigo(Personagem& personagem);
 
     /**
