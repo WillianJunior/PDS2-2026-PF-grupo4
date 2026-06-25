@@ -437,7 +437,7 @@ namespace FabricaSE {
                 Utils::coutDigitado() << "Contemplo tudo, ainda o que nunca vi, nem o que nunca verei.\n";
                 Utils::coutDigitado() << "Eu reinei no que apenas observei...\"\n";
                 
-                p->receberItem(FabricaItem::criarItem("Bencao da Salvia"));
+                p->receberHabilidade(FabricaHabilidade::criarHabilidade("Bencao da Salvia"));
                 Utils::esperar(5000);
             });
 
