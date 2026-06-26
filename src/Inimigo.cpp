@@ -48,7 +48,7 @@ void Inimigo::combateInimigo(Personagem& personagem) {
     if(opcoesValidas.empty()) {
         Utils::coutDigitado(350) << "...\n[";
         Utils::esperar(350);
-        std::cout << "> " << this->getNome() << " está exausto e não conseguiu agir neste turno!" << std::endl;
+        std::cout << "> " << this->getNome() << " está exausto e não conseguiu fazer nada neste turno!" << std::endl;
         return;
     }
 
