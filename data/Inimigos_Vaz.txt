@@ -1,6 +1,6 @@
 1;O Tempo;80;Ataque Basico
-2;Carro do Formula;100;Ataque Basico
-3;Missel Antiaereo;120;Ataque Basico,Investida
-4;Erro de Compilacao;150;Ataque Forte
-5;Prova de Calculo 2;200;Ataque Forte,Investida
+2;Carro do Formula;90;Ataque Basico
+3;Missel Antiaereo;100;Ataque Basico,Investida
+4;Erro de Compilacao;100;Ataque Forte
+5;Prova de Calculo 2;110;Ataque Forte,Investida
 6;Trabalho de PDS;250;Vazamento de Memoria,Desespero da Madrugada,Gambiarra Suprema

@@ -1,6 +1,6 @@
 1;Cabrita de Esmeraldas;80;Ataque Basico
-2;Espirito Obsessor;100;Ataque Basico
-3;Carteira de Trabalho;120;Ataque Basico,Investida
-4;Hearthstone;150;Ataque Forte
-5;Isaque;200;Ataque Forte,Investida
+2;Espirito Obsessor;90;Ataque Basico
+3;Carteira de Trabalho;100;Ataque Basico,Investida
+4;Hearthstone;100;Ataque Forte
+5;Isaque;110;Ataque Forte,Investida
 6;Trabalho de PDS;250;Vazamento de Memoria,Desespero da Madrugada,Gambiarra Suprema

@@ -1,6 +1,6 @@
 1;Reels;80;Ataque Basico
-2;Policia Enquadrando;100;Ataque Basico,Investida
-3;Fome;120;Ataque Forte
-4;Tun Tun Sahur;160;Ataque Forte,Investida
-5;Kick Buttowski;200;Ataque Forte
+2;Policia Enquadrando;90;Ataque Basico,Investida
+3;Fome;100;Ataque Forte
+4;Tun Tun Sahur;110;Ataque Forte,Investida
+5;Kick Buttowski;110;Ataque Forte
 6;Trabalho de PDS;250;Vazamento de Memoria,Desespero da Madrugada,Gambiarra Suprema

@@ -1,32 +1,32 @@
-Anedota;1;20;1;Nenhum;0
+Anedota;1;25;1;Nenhum;1
 Forcas Aereas;0;40;0;Nenhum;1
-Contar uma Piada;0;20;0;Veneno;0
-Doxygengaboom;0;30;0;Nenhum;0
-Maldade Humana;0;25;0;Veneno;0
-Poder da Amizade;0;30;0;Nenhum;0
-Arremessar um Livro;0;20;0;Nenhum;0
-Reclamar;1;25;1;Nenhum;0
-Plasma Hierarquico;0;25;0;Nenhum;0
-Codigos Macarronados;0;25;0;Veneno;0
+Contar uma Piada;0;15;0;Veneno;1
+Doxygengaboom;0;20;0;Queimadura;2
+Maldade Humana;0;15;0;Veneno;2
+Poder da Amizade;1;20;1;Regeneracao;3
+Arremessar um Livro;0;25;0;Nenhum;0
+Reclamar;1;20;1;Regeneracao;3
+Plasma Hierarquico;0;25;0;Queimadura;2
+Codigos Macarronados;0;20;0;Veneno;1
 Chute de Ballet;0;30;0;Nenhum;1
 Passinho do Forro;0;20;0;Nenhum;0
-Saque de Vôlei;0;30;0;Nenhum;0
-Duro na Queda;0;25;0;Nenhum;0
-Overload Marianico;0;25;0;Queimadura;0
-Override Impiedoso;0;30;0;Nenhum;0
-Papelada de Codigos;0;25;0;Nenhum;0
-Arranhada do Gatinho;0;20;0;Nenhum;0
-Derrame do Arcanjo;0;30;0;Queimadura;0
+Saque de Vôlei;0;35;0;Nenhum;1
+Duro na Queda;1;25;1;Nenhum;1
+Overload Marianico;0;25;0;Queimadura;3
+Override Impiedoso;0;30;0;Nenhum;1
+Papelada de Codigos;0;15;0;Veneno;2
+Arranhada do Gatinho;0;15;0;Veneno;2
+Derrame do Arcanjo;0;35;0;Queimadura;3
 Aviaozinho de Papel;0;20;0;Nenhum;0
-Chamar a Ex;0;35;0;Nenhum;1
-Abrir o Reels;1;20;1;Nenhum;0
-Raio Mayconiano;0;40;0;Queimadura;1
-Raio Gravitacional;0;25;0;Nenhum;0
-Bencao de Linus;1;25;1;Nenhum;0
-Bencao da Salvia;1;20;1;Nenhum;0
+Chamar a Ex;0;25;0;Veneno;2
+Abrir o Reels;1;25;1;Nenhum;1
+Raio Mayconiano;0;40;0;Queimadura;3
+Raio Gravitacional;0;30;0;Nenhum;1
+Bencao de Linus;1;35;1;Nenhum;2
+Bencao da Salvia;1;20;1;Regeneracao;3
 Ataque Basico;0;15;0;Nenhum;0
-Ataque Forte;0;30;0;Nenhum;0
+Ataque Forte;0;25;0;Nenhum;1
 Investida;0;20;0;Nenhum;0
-Vazamento de Memoria;0;30;0;Veneno;1
-Desespero da Madrugada;0;50;0;Queimadura;2
-Gambiarra Suprema;1;50;1;Regeneracao;3
+Vazamento de Memoria;0;25;0;Veneno;1
+Desespero da Madrugada;0;35;0;Queimadura;2
+Gambiarra Suprema;1;40;1;Regeneracao;3

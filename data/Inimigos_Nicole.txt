@@ -1,6 +1,6 @@
 1;C++;80;Ataque Basico
-2;GitHub;100;Ataque Basico
-3;VSCode;120;Ataque Basico,Investida
-4;Livro Fascinante;150;Ataque Forte
-5;Carro Manual;200;Ataque Forte,Investida
+2;GitHub;90;Ataque Basico
+3;VSCode;100;Ataque Basico,Investida
+4;Livro Fascinante;100;Ataque Forte
+5;Carro Manual;110;Ataque Forte,Investida
 6;Trabalho de PDS;250;Vazamento de Memoria,Desespero da Madrugada,Gambiarra Suprema
