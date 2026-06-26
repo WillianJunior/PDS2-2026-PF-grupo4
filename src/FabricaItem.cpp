@@ -2,9 +2,7 @@
 #include "Item.hpp"
 #include "Efeito.hpp"
 #include <fstream>
-#include <sstream>
 #include <iostream>
-#include <vector>
 #include <cstdlib>
 
 namespace FabricaItem{
