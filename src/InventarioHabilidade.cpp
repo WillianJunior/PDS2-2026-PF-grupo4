@@ -11,9 +11,16 @@ void InventarioHabilidade::mostrarInventario(){
     for (long unsigned int i = 0; i < listaHabilidades.size(); i++) {
         std::string textoNome = listaHabilidades[i].getNome();
 
-        //aviso se estiver em Cooldown
-        if(listaHabilidades[i].getCooldownAtual() > 0){
-            textoNome += " [Em cooldown: " + std::to_string(listaHabilidades[i].getCooldownAtual()) + "]";
+        int cooldownAtual = listaHabilidades[i].getCooldownAtual();
+        int cooldownMax = listaHabilidades[i].getCooldown();
+        
+        // Exibe o status do cooldown apenas se a habilidade tiver um cooldown definido
+        if(cooldownMax > 0) {
+            if(cooldownAtual > 0) {
+                textoNome += " [Em cooldown: " + std::to_string(cooldownAtual) + "]";
+            } else {
+                textoNome += " [PRONTA]";
+            }
         }
 
         std::string linha = " [ " + std::to_string(i + 1) + " ] - " + textoNome + " ";

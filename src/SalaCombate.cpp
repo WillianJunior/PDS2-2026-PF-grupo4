@@ -79,6 +79,7 @@ void SalaCombate::mostrarSala(){
 
 int SalaCombate::executarSala(Personagem& personagem){
     bool turnoDoJogador = true;
+    bool turnoIniciado = false;
     int opcao = 0;
     std::cout << _historia << "\n";
     std::cout << "========================================================\n";
@@ -88,11 +89,15 @@ int SalaCombate::executarSala(Personagem& personagem){
     while (!personagem.isMorto() && !_inimigo->isMorto()) {
         
         if (turnoDoJogador) {
-            std::cout << "\n=== SUA VEZ ===" << std::endl;
-            //atualiza os cooldowns de todas as habilidades
-            personagem.getInventarioHabilidade().atualizarCooldowns();
-            //aplica todos os efeitos no personagem
-            personagem.processarEfeitosAtivos(); 
+            if (!turnoIniciado) {
+                std::cout << "\n=== SUA VEZ ===" << std::endl;
+                //atualiza os cooldowns de todas as habilidades
+                personagem.getInventarioHabilidade().atualizarCooldowns();
+                //aplica todos os efeitos no personagem
+                personagem.processarEfeitosAtivos(); 
+                turnoIniciado = true;
+            }
+
             if(personagem.isMorto()) break;
 
             std::cout << "Seu HP: " << personagem.getVida() << " | HP do " << _inimigo->getNome() << ": " << _inimigo->getVida() << std::endl;
@@ -213,6 +218,7 @@ int SalaCombate::executarSala(Personagem& personagem){
         } else {
             std::cout << "\n=== VEZ DO INIMIGO ===" << std::endl;
             _inimigo->combateInimigo(personagem);
+            turnoIniciado = false;
         }
         turnoDoJogador = !turnoDoJogador;
     }

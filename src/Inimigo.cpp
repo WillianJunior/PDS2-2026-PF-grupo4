@@ -58,10 +58,15 @@ void Inimigo::combateInimigo(Personagem& personagem) {
     Habilidade& habInimigo = this->escolherHabilidade(posicaoEscolhida);
 
     if(habInimigo.getAlvo()) {
+        int vidaPersonagemAntesDaCura = this->getVida();
         int impacto = habInimigo.calcularImpacto();
         habInimigo.iniciarCooldown(); 
+        
         this->alterarVida(impacto);
-        std::cout << "> " << this->getNome() << " recuperou " << std::abs(impacto) << " de vida!" << std::endl;
+        this->receberEfeito(habInimigo.getEfeito());
+        
+        int vidaRealmenteRecuperada = this->getVida() - vidaPersonagemAntesDaCura;
+        std::cout << "> " << this->getNome() << " recuperou " << vidaRealmenteRecuperada << " de vida!" << std::endl;
     } else {
         int impacto = habInimigo.calcularImpacto();
         habInimigo.iniciarCooldown(); 
