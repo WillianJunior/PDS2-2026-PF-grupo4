@@ -11,7 +11,7 @@ namespace FabricaSC {
 
 if (nome == "Maycon") {
             if (idInimigo == 1) { 
-                std::string intro = "Você se depara com um inimigo silencioso, que consome toda sua vontade de codar.\nO inimigo sussurra: 'Não se preocupe, tem muito tempo ainda para terminar...'\nA Procrastinação começa a atacar!";
+                std::string intro = "Você se depara com um inimigo silencioso, que consome toda sua vontade de codar.\nO inimigo sussurra: 'Não se preocupe, tem muito tempo ainda para terminar...'\nJogar um ClashRoyale não vai te matar\nA Procrastinação começa a atacar!";
                 std::string vit = "Você venceu a procrastinação e agora tem ânimo suficiente para enfrentar os próximos desafios!";
                 std::string der = "Você perdeu para a procrastinação, não consegue mais agir, está fraco e desanimado.";
                 return std::unique_ptr<SalaCombate>(new SalaCombate(tituloAndar, intro, vit, der, nome, idInimigo));
