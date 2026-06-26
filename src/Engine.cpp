@@ -161,7 +161,7 @@ void Engine::iniciar(){
             std::cout << "\n========================================\n";
             std::cout << "   VITÓRIA! O PROJETO FOI ENTREGUE!       \n";
             std::cout << "========================================\n";
-            std::cout << "\nHISTORIA FINAL DO JOGO" << std::endl;
+            std::cout << "\nWilliam ficou muito contente em ver o projeto finalmente entregue\n Apesar de todos os desafios, batalhas arduas foi possivel entregar um codigo quase perfeito\n Mas as ameaças ainda estão presentes\n Se prepare pois os novos desafios serão ainda maiores " << std::endl;
             // apaga save na vitória
             std::remove("save.txt");
         }
