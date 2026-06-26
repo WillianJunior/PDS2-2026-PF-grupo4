@@ -147,11 +147,17 @@ int SalaCombate::executarSala(Personagem& personagem){
                         std::cout << "> " << _inimigo->getNome() << " sofreu " << std::abs(impacto) << " de dano!" << std::endl;
                     }
                     else{
+                        int vidaPersonagemAntesDaCura = personagem.getVida();
                         personagem.alterarVida(impacto);
                         personagem.receberEfeito(habEscolhida.getEfeito());
                         Utils::coutDigitado(350) << "...";
                         Utils::esperar(350);
-                        std::cout << "> " << personagem.getNome() << " recuperou " << std::abs(impacto) << " de vida!" << std::endl;
+                        int vidaRealmenteRecuperada = personagem.getVida() - vidaPersonagemAntesDaCura;
+                        if(vidaRealmenteRecuperada == 0) {
+                            std::cout << "> " << personagem.getNome() << " recuperou " << vidaRealmenteRecuperada << " de vida! (a vida do personagem tem um limite, nao se esqueca disso!)" << std::endl;
+                        } else {
+                            std::cout << "> " << personagem.getNome() << " recuperou " << vidaRealmenteRecuperada << " de vida!" << std::endl;
+                        }
                     }
                 } catch (const std::exception& e) {
                     std::cout << "\n[ERRO] " << e.what() << "\n" << std::endl;
@@ -182,11 +188,17 @@ int SalaCombate::executarSala(Personagem& personagem){
                         std::cout << "> " << _inimigo->getNome() << " sofreu " << std::abs(impacto) << " de dano!" << std::endl;
                     }
                     else{
+                        int vidaPersonagemAntesDaCura = personagem.getVida();
                         personagem.alterarVida(impacto);
                         personagem.receberEfeito(itEscolhido.getEfeito());
                         Utils::coutDigitado(350) << "...\n[";
                         Utils::esperar(350);
-                        std::cout << "> " << personagem.getNome() << " recuperou " << std::abs(impacto) << " de vida!" << std::endl;
+                        int vidaRealmenteRecuperada = personagem.getVida() - vidaPersonagemAntesDaCura;
+                        if(vidaRealmenteRecuperada == 0) {
+                            std::cout << "> " << personagem.getNome() << " recuperou " << vidaRealmenteRecuperada << " de vida! (a vida do personagem tem um limite, nao se esqueca disso!)" << std::endl;
+                        } else {
+                            std::cout << "> " << personagem.getNome() << " recuperou " << vidaRealmenteRecuperada << " de vida!" << std::endl;
+                        }
                     }
                 } catch (const std::exception& e) {
                     std::cout << "FALHA " << e.what() << std::endl;
