@@ -9,6 +9,14 @@ namespace FabricaSC {
     std::unique_ptr<SalaCombate> criarSalas(std::string nome, int idInimigo) {
         std::string tituloAndar = "Combate";
 
+//Boss (é igual para todos os personagens)
+if (idInimigo == 6) {
+    std::string intro = "Apos superar todos os desafios, as luzes se apagam. O ar fica gelado e o terminal comeca a piscar.\nO temido Trabalho Final de PDS surge diante de voce!\n'Voce achou que tinha terminado? Eu sou o relatorio, a apresentacao e o vazamento de memoria em um so!'";
+    std::string vit = "VOCE COMPILOU SEM ERROS! O Trabalho de PDS foi derrotado! O semestre esta salvo!";
+    std::string der = "Segmentation fault (core dumped). O Trabalho de PDS destruiu o seu projeto e sua mente.";
+    return std::unique_ptr<SalaCombate>(new SalaCombate("SALA DO BOSS FINAL", intro, vit, der, nome, idInimigo));
+}
+
 if (nome == "Maycon") {
             if (idInimigo == 1) { 
                 std::string intro = "Você se depara com um inimigo silencioso, que consome toda sua vontade de codar.\nO inimigo sussurra: 'Não se preocupe, tem muito tempo ainda para terminar...'\nA Procrastinação começa a atacar!";

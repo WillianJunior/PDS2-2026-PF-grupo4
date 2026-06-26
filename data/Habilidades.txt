@@ -27,3 +27,6 @@ Bencao da Salvia;1;20;1;Nenhum;0
 Ataque Basico;0;15;0;Nenhum;0
 Ataque Forte;0;30;0;Nenhum;0
 Investida;0;20;0;Nenhum;0
+Vazamento de Memoria;0;30;0;Veneno;1
+Desespero da Madrugada;0;50;0;Queimadura;2
+Gambiarra Suprema;1;50;1;Regeneracao;3
