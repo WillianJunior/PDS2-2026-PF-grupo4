@@ -163,6 +163,12 @@ void Engine::iniciar(){
             std::remove("save.txt");
         }
 
+        // Pausa a tela para que o jogador tenha tempo de ler a tela de vitória ou derrota antes de o menu apagar tudo.
+        if (rodando) {
+            Utils::esperar(4000); 
+            Utils::limparTela();
+        }
+
         
     } // Fim do Laço da Aplicação -- retorna ao Menu
 }
