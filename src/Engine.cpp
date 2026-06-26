@@ -51,6 +51,9 @@ void Engine::prepararSalas(std::string nome){
             qtdCombate++;
         }
     }
+
+    // Sala do boss
+    _salasDoJogo.push_back(FabricaSC::criarSalas(nome, 6)); 
 }
 
 void Engine::iniciar(){
@@ -94,7 +97,7 @@ void Engine::iniciar(){
         }
 
         // maquina de estados
-        while (salaID < 8 && !_personagem->isMorto()) {
+        while (salaID < 9 && !_personagem->isMorto()) {
             std::unique_ptr<SalaBase> salaAtual = fabricarProximaSala(salaID);
             if (!salaAtual) {
                 std::cerr << "ERRO DE ROTEAMENTO - Ponteiro nulo retornado para a sala ID: " << salaID << std::endl;
@@ -118,7 +121,7 @@ void Engine::iniciar(){
             }
             salaAtual->encerrarSala();
             
-            if(!_personagem->isMorto() && salaID < 8){
+            if(!_personagem->isMorto() && salaID < 9){
                 int escolhaSaida = 0;
                 while(true){
                     std::cout << "\n========================================================\n";
@@ -154,7 +157,7 @@ void Engine::iniciar(){
         } // Fim do loop principal da partida
 
         // Finalização e encerramento da história Vitória
-        if (_personagem && !_personagem->isMorto() && salaID >= 8){
+        if (_personagem && !_personagem->isMorto() && salaID >= 9){
             std::cout << "\n========================================\n";
             std::cout << "   VITÓRIA! O PROJETO FOI ENTREGUE!       \n";
             std::cout << "========================================\n";

@@ -3,3 +3,4 @@
 3;Missel Antiaereo;120;Ataque Basico,Investida
 4;Erro de Compilacao;150;Ataque Forte
 5;Prova de Calculo 2;200;Ataque Forte,Investida
+6;Trabalho de PDS;250;Vazamento de Memoria,Desespero da Madrugada,Gambiarra Suprema

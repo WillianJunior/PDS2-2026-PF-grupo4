@@ -3,3 +3,4 @@
 3;Fome;120;Ataque Forte
 4;Tun Tun Sahur;160;Ataque Forte,Investida
 5;Kick Buttowski;200;Ataque Forte
+6;Trabalho de PDS;250;Vazamento de Memoria,Desespero da Madrugada,Gambiarra Suprema
