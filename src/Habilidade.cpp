@@ -23,7 +23,7 @@ int Habilidade::getCooldownAtual(){
 }
 
 void Habilidade::iniciarCooldown(){
-    this->_cooldownAtual = this->_cooldown;
+    this->_cooldownAtual = this->_cooldown + 1;
 }
 
 void Habilidade::atualizarCooldown(){
