@@ -16,8 +16,6 @@ bool Engine::modoTeste = false;
 
 Engine::Engine() : _personagem(nullptr) {
     srand(time(NULL));
-    // reservado para carregar configurações gerais
-    // leitura de arquivos de save.
 }
 
 //cria a sequencia aleatoria de salas que tera na run atual, 5 combates e 3 escolhas, finalizando em um boss
@@ -26,11 +24,11 @@ void Engine::prepararSalas(std::string nome){
     int qtdEscolha = 0;
 
     //// a logica de escolha dos inimigos aleatorios fica aqui, ela seleciona um numero aleatorio e manda pra fabrica que criar com o numero
-    //// correspondente
+    //correspondente
     std::vector<int> idsInimigos = {1, 2, 3, 4, 5};
     std::random_shuffle(idsInimigos.begin(), idsInimigos.end());
 
-    //// aqui alterei o loop pra 8 interações, 5 combates e 3 escolhas, se tiver boss final em conjunto teria que mudar
+    //loop pra 8 interações, 5 combates e 3 escolhas, se tiver boss final em conjunto teria que mudar
     for(int i = 0; i < 8; i++){
         int sala = rand() % 2;
        
@@ -56,98 +54,117 @@ void Engine::prepararSalas(std::string nome){
 }
 
 void Engine::iniciar(){
-    Menu menuPrincipal;
-    int salaID = 0;
-    bool existeSave = false;
+    bool rodando = true;
 
-    if(!Engine::modoTeste) {
-        existeSave = SaveManager::existeSave();
-    }
-    _personagem = menuPrincipal.executarMenuInicial(existeSave);
+    // LAÇO DA APLICAÇÃO: Mantém o jogo aberto, voltando ao menu após o fim da partida
+    while (rodando) {
+        Menu menuPrincipal;
+        int salaID = 0;
+        bool existeSave = false;
 
-    if (!_personagem) {
-        std::cout << "Inicialização abortada. Encerrando o sistema." << std::endl;
-        return;
-    }
+        // AÇÃO CRÍTICA: Limpa as salas e destrói o personagem da partida anterior.
+        // Evita vazamento de memória e falhas de índice ao jogar uma segunda vez sem fechar o terminal.
+        _salasDoJogo.clear();
+        _personagem.reset(); // Garante que o ponteiro inteligente do personagem anterior seja destruído
 
-    if(_personagem->getNome() == "PersonagemSalvo")
-    {
-        _personagem = SaveManager::carregar(salaID, _salasDoJogo);
+        if(!Engine::modoTeste) {
+            existeSave = SaveManager::existeSave();
+        }
+        
+        _personagem = menuPrincipal.executarMenuInicial(existeSave);
+
+        // Condição de encerramento do binário (escolheu sair no menu inicial)
         if (!_personagem) {
-            std::cerr << "Erro ao carregar o save. Arquivo corrompido ou inacessível.\n";
-            return;
+            std::cout << "Encerrando o sistema. Até a próxima compilação!" << std::endl;
+            rodando = false;
+            break; // Quebra o laço de aplicação e encerra o programa
         }
-        std::cout << "Jogo carregado! Continuando na sala " << salaID + 1 << "...\n";
-    } else {
-        this->prepararSalas(_personagem->getNome());
-    }
 
-    // loop principal - maquina de estados
-    while (salaID < 8 && !_personagem->isMorto()) {
-        std::unique_ptr<SalaBase> salaAtual = fabricarProximaSala(salaID);
-        if (!salaAtual) {
-            std::cerr << "ERRO DE ROTEAMENTO - Ponteiro nulo retornado para a sala ID: " << salaID << std::endl;
-            break;
-        }
-        salaAtual->mostrarSala();
-        
-        // A sala assume o controle até sua lógica interna terminar, 
-        // alterando os estados do personagem passado por raw pointer (.get()).
-        if(salaAtual->executarSala(*_personagem.get()) == 0){
-            std::cout << "\nGAME OVER" << std::endl;
-            // apaga save em game over
-            std::remove("save.txt");
-            break;
+        if(_personagem->getNome() == "PersonagemSalvo")
+        {
+            _personagem = SaveManager::carregar(salaID, _salasDoJogo);
+            if (!_personagem) {
+                std::cerr << "Erro ao carregar o save. Arquivo corrompido ou inacessível.\n";
+                Utils::esperar(2000);
+                continue; // Volta para o início do laço (Menu Principal)
+            }
+            std::cout << "Jogo carregado! Continuando na sala " << salaID + 1 << "...\n";
         } else {
-            salaID++;
-            // salva após cada sala
-            SaveManager::salvar(salaID, *_personagem, _salasDoJogo);
+            this->prepararSalas(_personagem->getNome());
         }
-        salaAtual->encerrarSala();
-        
-        if(!_personagem->isMorto() && salaID < 8){
-            int escolhaSaida = 0;
-            while(true){
-                std::cout << "\n========================================================\n";
-                std::cout << "  SALA CONCLUIDA! O jogo foi salvo automaticamente.\n";
-                std::cout << "========================================================\n";
-                std::cout << "[ 1 ] - Seguir para a proxima sala\n";
-                std::cout << "[ 2 ] - Sair\n";
-                std::cout << "Escolha: ";
-            
-                std::cin >> escolhaSaida;
-                if(std::cin.fail()){
-                    std::cin.clear();
-                    std::cin.ignore(10000, '\n'); // Limpa o "lixo" do buffer
-                    std::cout << "Entrada invalida! Digite apenas o numero 1 ou 2.\n";
-                    continue; 
-                }
-                if(escolhaSaida == 1){
-                    break;
-                } 
-                else if(escolhaSaida == 2){
-                    std::cout << "\nFechando o terminal...\n";
-                    break;
-                } 
-                else{
-                    std::cout << "Opcao inexistente! Escolha 1 ou 2.\n";
-                }
-            }
-            //se escolheu 2, sai da engine
-            if (escolhaSaida == 2){
-                break; 
-            }
-        }
-        // O escopo do while garante que salaAtual seja destruída 
-    }
 
-    // Finalização e encerramento da história
-    if (!_personagem->isMorto() && salaID >= 8){
-        std::cout << "\nHISTORIA FINAL DO JOGO" << std::endl;
-        // apaga save na vitória
-        std::remove("save.txt");
-    }
-    
+        // maquina de estados
+        while (salaID < 8 && !_personagem->isMorto()) {
+            std::unique_ptr<SalaBase> salaAtual = fabricarProximaSala(salaID);
+            if (!salaAtual) {
+                std::cerr << "ERRO DE ROTEAMENTO - Ponteiro nulo retornado para a sala ID: " << salaID << std::endl;
+                break;
+            }
+            salaAtual->mostrarSala();
+            
+            // A sala assume o controle até sua lógica interna terminar, 
+            // alterando os estados do personagem passado por raw pointer (.get()).
+            if(salaAtual->executarSala(*_personagem.get()) == 0){
+                std::cout << "\n========================================\n";
+                std::cout << "               GAME OVER                  \n";
+                std::cout << "========================================\n";
+                // apaga save em game over
+                std::remove("save.txt");
+                break; // Quebra o laço da partida e vai para a pausa de tela antes de voltar ao menu
+            } else {
+                salaID++;
+                // salva após cada sala
+                SaveManager::salvar(salaID, *_personagem, _salasDoJogo);
+            }
+            salaAtual->encerrarSala();
+            
+            if(!_personagem->isMorto() && salaID < 8){
+                int escolhaSaida = 0;
+                while(true){
+                    std::cout << "\n========================================================\n";
+                    std::cout << "  SALA CONCLUIDA! O jogo foi salvo automaticamente.\n";
+                    std::cout << "========================================================\n";
+                    std::cout << "[ 1 ] - Seguir para a proxima sala\n";
+                    std::cout << "[ 2 ] - Voltar ao Menu Principal\n";
+                    std::cout << "Escolha: ";
+                
+                    std::cin >> escolhaSaida;
+                    if(std::cin.fail()){
+                        std::cin.clear();
+                        std::cin.ignore(10000, '\n'); // Limpa o "lixo" do buffer
+                        std::cout << "Entrada invalida! Digite apenas o numero 1 ou 2.\n";
+                        continue; 
+                    }
+                    if(escolhaSaida == 1){
+                        break;
+                    } 
+                    else if(escolhaSaida == 2){
+                        std::cout << "\nVoltando ao menu principal...\n";
+                        break;
+                    } 
+                    else{
+                        std::cout << "Opcao inexistente! Escolha 1 ou 2.\n";
+                    }
+                }
+                // se escolheu 2, sai da engine da partida atual
+                if (escolhaSaida == 2){
+                    break; 
+                }
+            }
+        } // Fim do loop principal da partida
+
+        // Finalização e encerramento da história Vitória
+        if (_personagem && !_personagem->isMorto() && salaID >= 8){
+            std::cout << "\n========================================\n";
+            std::cout << "   VITÓRIA! O PROJETO FOI ENTREGUE!       \n";
+            std::cout << "========================================\n";
+            std::cout << "\nHISTORIA FINAL DO JOGO" << std::endl;
+            // apaga save na vitória
+            std::remove("save.txt");
+        }
+
+        
+    } // Fim do Laço da Aplicação -- retorna ao Menu
 }
 
 std::unique_ptr<SalaBase> Engine::fabricarProximaSala(int idSala) {
