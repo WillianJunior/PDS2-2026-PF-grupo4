@@ -59,16 +59,14 @@ void Engine::prepararSalas(std::string nome){
 void Engine::iniciar(){
     bool rodando = true;
 
-    // LAÇO DA APLICAÇÃO: Mantém o jogo aberto, voltando ao menu após o fim da partida
     while (rodando) {
         Menu menuPrincipal;
         int salaID = 0;
         bool existeSave = false;
 
-        // AÇÃO CRÍTICA: Limpa as salas e destrói o personagem da partida anterior.
-        // Evita vazamento de memória e falhas de índice ao jogar uma segunda vez sem fechar o terminal.
+        // Evita vazamento de memória
         _salasDoJogo.clear();
-        _personagem.reset(); // Garante que o ponteiro inteligente do personagem anterior seja destruído
+        _personagem.reset(); 
 
         if(!Engine::modoTeste) {
             existeSave = SaveManager::existeSave();
@@ -76,11 +74,11 @@ void Engine::iniciar(){
         
         _personagem = menuPrincipal.executarMenuInicial(existeSave);
 
-        // Condição de encerramento do binário (escolheu sair no menu inicial)
+        // Condição de encerramento escolheu sair do menu inicial
         if (!_personagem) {
             std::cout << "Encerrando o sistema. Até a próxima compilação!" << std::endl;
             rodando = false;
-            break; // Quebra o laço de aplicação e encerra o programa
+            break; 
         }
 
         if(_personagem->getNome() == "PersonagemSalvo")
@@ -89,7 +87,7 @@ void Engine::iniciar(){
             if (!_personagem) {
                 std::cerr << "Erro ao carregar o save. Arquivo corrompido ou inacessível.\n";
                 Utils::esperar(2000);
-                continue; // Volta para o início do laço (Menu Principal)
+                continue; 
             }
             std::cout << "Jogo carregado! Continuando na sala " << salaID + 1 << "...\n";
         } else {
@@ -113,7 +111,7 @@ void Engine::iniciar(){
                 std::cout << "========================================\n";
                 // apaga save em game over
                 std::remove("save.txt");
-                break; // Quebra o laço da partida e vai para a pausa de tela antes de voltar ao menu
+                break; 
             } else {
                 salaID++;
                 // salva após cada sala
@@ -154,9 +152,8 @@ void Engine::iniciar(){
                     break; 
                 }
             }
-        } // Fim do loop principal da partida
+        } 
 
-        // Finalização e encerramento da história Vitória
         if (_personagem && !_personagem->isMorto() && salaID >= 9){
             std::cout << "\n========================================\n";
             std::cout << "   VITÓRIA! O PROJETO FOI ENTREGUE!       \n";
@@ -166,7 +163,6 @@ void Engine::iniciar(){
             std::remove("save.txt");
         }
 
-        // Pausa a tela para que o jogador tenha tempo de ler a tela de vitória ou derrota antes de o menu apagar tudo.
         if (rodando) {
             Utils::esperar(4000); 
             Utils::limparTela();
