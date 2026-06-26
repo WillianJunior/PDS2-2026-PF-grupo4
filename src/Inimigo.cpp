@@ -22,45 +22,55 @@ bool Inimigo::isMorto(){
 }
 
 void Inimigo::combateInimigo(Personagem& personagem) {
-    double vidaBase = this->getVida();
-    //atualiza os cooldowns de todas as habilidades
+    // atualiza os cooldowns de todas as habilidades
     this->getInventarioHabilidade().atualizarCooldowns();
-    //aplica todos os efeitos no inimigo
+    // aplica todos os efeitos no inimigo
     this->processarEfeitosAtivos();
     if(this->isMorto()) return;
 
-    while(true){
-        int numHabilidades = this->getInventarioHabilidade().getTamanho();
-        int posicao = rand() % numHabilidades;
+    std::vector<int> opcoesValidas;
+    int numHabilidades = this->getInventarioHabilidade().getTamanho();
+    for(int i = 0; i < numHabilidades; i++) {
+        Habilidade& hab = this->getInventarioHabilidade().getHabilidade(i);
         
-        Habilidade& habInimigo = this->escolherHabilidade(posicao);
-        
-        if(habInimigo.getCooldownAtual() > 0){
-            continue; // Recarregando, repete o while para ele sortear outra
+        if(hab.getCooldownAtual() == 0) {
+            if(hab.getAlvo() == true) { 
+                if(this->getVida() < 0.5 * this->_vidaMaxima) {
+                    opcoesValidas.push_back(i);
+                }
+            } else { 
+                opcoesValidas.push_back(i);
+            }
         }
+    }
 
-        if(habInimigo.getAlvo()){
-            if(this->getVida() < 0.5 * vidaBase){
-                int impacto = habInimigo.calcularImpacto();
-                habInimigo.iniciarCooldown(); // <--- Inicia o cooldown da cura!
-                this->alterarVida(impacto);
-                std::cout << "> " << this->getNome() << " recuperou " << std::abs(impacto) << " de vida!" << std::endl;
-                break;
-            }
-            else{
-                continue;
-            }
-        }
-        else{
-            int impacto = habInimigo.calcularImpacto();
-            habInimigo.iniciarCooldown(); // <--- Inicia o cooldown do ataque!
-            personagem.alterarVida(impacto);
-            personagem.receberEfeito(habInimigo.getEfeito());
-            Utils::coutDigitado(350) << "...\n[";
-                Utils::esperar(350);
-            std::cout << "> " << this->getNome() << " atacou e causou " << std::abs(impacto) << " de dano!" << std::endl;
-            break;
-        }
+    /// proteção contra Loop Infinito (se não tem o que usar, passa o turno)
+    if(opcoesValidas.empty()) {
+        Utils::coutDigitado(350) << "...\n[";
+        Utils::esperar(350);
+        std::cout << "> " << this->getNome() << " está exausto e não conseguiu agir neste turno!" << std::endl;
+        return;
+    }
+
+    int indexSorteado = rand() % opcoesValidas.size();
+    int posicaoEscolhida = opcoesValidas[indexSorteado];
+    
+    Habilidade& habInimigo = this->escolherHabilidade(posicaoEscolhida);
+
+    if(habInimigo.getAlvo()) {
+        int impacto = habInimigo.calcularImpacto();
+        habInimigo.iniciarCooldown(); 
+        this->alterarVida(impacto);
+        std::cout << "> " << this->getNome() << " recuperou " << std::abs(impacto) << " de vida!" << std::endl;
+    } else {
+        int impacto = habInimigo.calcularImpacto();
+        habInimigo.iniciarCooldown(); 
+        personagem.alterarVida(impacto);
+        personagem.receberEfeito(habInimigo.getEfeito());
+        
+        Utils::coutDigitado(350) << "...\n[";
+        Utils::esperar(350);
+        std::cout << "> " << this->getNome() << " atacou e causou " << std::abs(impacto) << " de dano!" << std::endl;
     }
 }
 
